@@ -1,0 +1,3786 @@
+{
+  "record": {
+    "testId": "LAT-01",
+    "provider": "supermemory",
+    "client": "supermemory-python-sdk",
+    "sdkVersion": "5.0.1",
+    "apiVersion": "v5",
+    "date": "2026-10-30T16:36:56.952231+00:00",
+    "run": 1,
+    "checkpoints": [
+      {
+        "samples": [
+          {
+            "i": 0,
+            "add_ms": 1480.0,
+            "done": 7.854044207982952,
+            "chunk_hit": 6.28981049999129,
+            "failed": false
+          },
+          {
+            "i": 1,
+            "add_ms": 1051.0,
+            "done": 8.392469042009907,
+            "chunk_hit": 5.419619791995501,
+            "failed": false
+          },
+          {
+            "i": 2,
+            "add_ms": 1341.0,
+            "done": 10.191014709009323,
+            "chunk_hit": 7.041808250010945,
+            "failed": false
+          },
+          {
+            "i": 3,
+            "add_ms": 1455.0,
+            "done": 7.542667959001847,
+            "chunk_hit": 6.06939279200742,
+            "failed": false
+          },
+          {
+            "i": 4,
+            "add_ms": 1091.0,
+            "done": 8.444509916007519,
+            "chunk_hit": 5.491003291012021,
+            "failed": false
+          },
+          {
+            "i": 5,
+            "add_ms": 1062.0,
+            "done": 9.238838709017728,
+            "chunk_hit": 5.614503874996444,
+            "failed": false
+          },
+          {
+            "i": 6,
+            "add_ms": 1368.0,
+            "done": 8.1221053339832,
+            "chunk_hit": 5.211839166993741,
+            "failed": false
+          },
+          {
+            "i": 7,
+            "add_ms": 996.0,
+            "done": 8.391787333006505,
+            "chunk_hit": 5.365240374987479,
+            "failed": false
+          },
+          {
+            "i": 8,
+            "add_ms": 1045.0,
+            "done": 8.01402141698054,
+            "chunk_hit": 6.537232207978377,
+            "failed": false
+          },
+          {
+            "i": 9,
+            "add_ms": 938.0,
+            "done": 9.186578124994412,
+            "chunk_hit": 6.123409791995073,
+            "failed": false
+          }
+        ]
+      }
+    ],
+    "result": "DOCUMENTED",
+    "timeToConsistencySec": null,
+    "notes": "done p50 8.4s p95 10.2s* max 10.2s (n=10); first chunk hit p50 5.6s p95 7.0s* max 7.0s (n=10); add call p50 1062ms p95 1480ms* max 1480ms (n=10)",
+    "rawArtifacts": "smoke/pilot/runs/2026-10-30/LAT-01-run1.json"
+  },
+  "extra": {
+    "samples": [
+      {
+        "i": 0,
+        "add_ms": 1480.0,
+        "done": 7.854044207982952,
+        "chunk_hit": 6.28981049999129,
+        "failed": false
+      },
+      {
+        "i": 1,
+        "add_ms": 1051.0,
+        "done": 8.392469042009907,
+        "chunk_hit": 5.419619791995501,
+        "failed": false
+      },
+      {
+        "i": 2,
+        "add_ms": 1341.0,
+        "done": 10.191014709009323,
+        "chunk_hit": 7.041808250010945,
+        "failed": false
+      },
+      {
+        "i": 3,
+        "add_ms": 1455.0,
+        "done": 7.542667959001847,
+        "chunk_hit": 6.06939279200742,
+        "failed": false
+      },
+      {
+        "i": 4,
+        "add_ms": 1091.0,
+        "done": 8.444509916007519,
+        "chunk_hit": 5.491003291012021,
+        "failed": false
+      },
+      {
+        "i": 5,
+        "add_ms": 1062.0,
+        "done": 9.238838709017728,
+        "chunk_hit": 5.614503874996444,
+        "failed": false
+      },
+      {
+        "i": 6,
+        "add_ms": 1368.0,
+        "done": 8.1221053339832,
+        "chunk_hit": 5.211839166993741,
+        "failed": false
+      },
+      {
+        "i": 7,
+        "add_ms": 996.0,
+        "done": 8.391787333006505,
+        "chunk_hit": 5.365240374987479,
+        "failed": false
+      },
+      {
+        "i": 8,
+        "add_ms": 1045.0,
+        "done": 8.01402141698054,
+        "chunk_hit": 6.537232207978377,
+        "failed": false
+      },
+      {
+        "i": 9,
+        "add_ms": 938.0,
+        "done": 9.186578124994412,
+        "chunk_hit": 6.123409791995073,
+        "failed": false
+      }
+    ],
+    "stats": {
+      "done": {
+        "n": 10,
+        "n_total": 10,
+        "min": 7.542667959001847,
+        "p50": 8.391787333006505,
+        "p95": 10.191014709009323,
+        "p95_is_max": true,
+        "max": 10.191014709009323
+      },
+      "chunk_hit": {
+        "n": 10,
+        "n_total": 10,
+        "min": 5.211839166993741,
+        "p50": 5.614503874996444,
+        "p95": 7.041808250010945,
+        "p95_is_max": true,
+        "max": 7.041808250010945
+      }
+    },
+    "dreaming": "default"
+  },
+  "exchanges": [
+    {
+      "t": "2026-10-30T16:35:20",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document",
+      "request_body": {
+        "content": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "S3QnKXGNWDyYeG6ErqQ4h4",
+        "status": "queued"
+      },
+      "ms": 1480
+    },
+    {
+      "t": "2026-10-30T16:35:20",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/S3QnKXGNWDyYeG6ErqQ4h4",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "S3QnKXGNWDyYeG6ErqQ4h4",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:20.117Z",
+          "updatedAt": "2026-10-30T16:35:20.117Z",
+          "filepath": null
+        }
+      },
+      "ms": 497
+    },
+    {
+      "t": "2026-10-30T16:35:22",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 0?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 191
+      },
+      "ms": 1448
+    },
+    {
+      "t": "2026-10-30T16:35:23",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/S3QnKXGNWDyYeG6ErqQ4h4",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "S3QnKXGNWDyYeG6ErqQ4h4",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:20.117Z",
+          "updatedAt": "2026-10-30T16:35:20.117Z",
+          "filepath": null
+        }
+      },
+      "ms": 455
+    },
+    {
+      "t": "2026-10-30T16:35:24",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 0?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 133
+      },
+      "ms": 650
+    },
+    {
+      "t": "2026-10-30T16:35:26",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/S3QnKXGNWDyYeG6ErqQ4h4",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "S3QnKXGNWDyYeG6ErqQ4h4",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:20.117Z",
+          "updatedAt": "2026-10-30T16:35:20.117Z",
+          "filepath": null
+        }
+      },
+      "ms": 485
+    },
+    {
+      "t": "2026-10-30T16:35:26",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 0?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.79828417,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:20.117Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 165
+      },
+      "ms": 712
+    },
+    {
+      "t": "2026-10-30T16:35:28",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/S3QnKXGNWDyYeG6ErqQ4h4",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "S3QnKXGNWDyYeG6ErqQ4h4",
+        "title": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2a...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:20.117Z",
+          "updatedAt": "2026-10-30T16:35:26.663Z",
+          "filepath": null
+        }
+      },
+      "ms": 561
+    },
+    {
+      "t": "2026-10-30T16:35:29",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document",
+      "request_body": {
+        "content": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "Sd77MyHGNZXBTJQTzorfCa",
+        "status": "queued"
+      },
+      "ms": 1051
+    },
+    {
+      "t": "2026-10-30T16:35:29",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/Sd77MyHGNZXBTJQTzorfCa",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Sd77MyHGNZXBTJQTzorfCa",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:29.118Z",
+          "updatedAt": "2026-10-30T16:35:29.118Z",
+          "filepath": null
+        }
+      },
+      "ms": 526
+    },
+    {
+      "t": "2026-10-30T16:35:30",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 1?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.7895700999999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 149
+      },
+      "ms": 626
+    },
+    {
+      "t": "2026-10-30T16:35:32",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/Sd77MyHGNZXBTJQTzorfCa",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Sd77MyHGNZXBTJQTzorfCa",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:29.118Z",
+          "updatedAt": "2026-10-30T16:35:29.118Z",
+          "filepath": null
+        }
+      },
+      "ms": 465
+    },
+    {
+      "t": "2026-10-30T16:35:32",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 1?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.7895700999999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 138
+      },
+      "ms": 616
+    },
+    {
+      "t": "2026-10-30T16:35:34",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/Sd77MyHGNZXBTJQTzorfCa",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Sd77MyHGNZXBTJQTzorfCa",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:29.118Z",
+          "updatedAt": "2026-10-30T16:35:29.118Z",
+          "filepath": null
+        }
+      },
+      "ms": 559
+    },
+    {
+      "t": "2026-10-30T16:35:34",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 1?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.80619997,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:29.118Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.7895700999999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 160
+      },
+      "ms": 610
+    },
+    {
+      "t": "2026-10-30T16:35:36",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/Sd77MyHGNZXBTJQTzorfCa",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Sd77MyHGNZXBTJQTzorfCa",
+        "title": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c5...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:29.118Z",
+          "updatedAt": "2026-10-30T16:35:35.938Z",
+          "filepath": null
+        }
+      },
+      "ms": 458
+    },
+    {
+      "t": "2026-10-30T16:35:37",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/Sd77MyHGNZXBTJQTzorfCa",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Sd77MyHGNZXBTJQTzorfCa",
+        "title": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c5...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:29.118Z",
+          "updatedAt": "2026-10-30T16:35:35.938Z",
+          "filepath": null
+        }
+      },
+      "ms": 502
+    },
+    {
+      "t": "2026-10-30T16:35:39",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document",
+      "request_body": {
+        "content": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "fbJfCe8R4XBzkUWwLrinPX",
+        "status": "queued"
+      },
+      "ms": 1341
+    },
+    {
+      "t": "2026-10-30T16:35:39",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/fbJfCe8R4XBzkUWwLrinPX",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fbJfCe8R4XBzkUWwLrinPX",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:38.780Z",
+          "updatedAt": "2026-10-30T16:35:38.780Z",
+          "filepath": null
+        }
+      },
+      "ms": 446
+    },
+    {
+      "t": "2026-10-30T16:35:40",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 2?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.79034835,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.78511566,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 163
+      },
+      "ms": 642
+    },
+    {
+      "t": "2026-10-30T16:35:41",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/fbJfCe8R4XBzkUWwLrinPX",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fbJfCe8R4XBzkUWwLrinPX",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:38.780Z",
+          "updatedAt": "2026-10-30T16:35:38.780Z",
+          "filepath": null
+        }
+      },
+      "ms": 454
+    },
+    {
+      "t": "2026-10-30T16:35:42",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 2?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.79034835,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.78511566,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 191
+      },
+      "ms": 898
+    },
+    {
+      "t": "2026-10-30T16:35:44",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/fbJfCe8R4XBzkUWwLrinPX",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fbJfCe8R4XBzkUWwLrinPX",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:38.780Z",
+          "updatedAt": "2026-10-30T16:35:38.780Z",
+          "filepath": null
+        }
+      },
+      "ms": 493
+    },
+    {
+      "t": "2026-10-30T16:35:46",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 2?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.81988382,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:38.780Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.79034835,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.78511566,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 293
+      },
+      "ms": 2089
+    },
+    {
+      "t": "2026-10-30T16:35:47",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/fbJfCe8R4XBzkUWwLrinPX",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fbJfCe8R4XBzkUWwLrinPX",
+        "title": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7f...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:38.780Z",
+          "updatedAt": "2026-10-30T16:35:47.311Z",
+          "filepath": null
+        }
+      },
+      "ms": 570
+    },
+    {
+      "t": "2026-10-30T16:35:49",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/fbJfCe8R4XBzkUWwLrinPX",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fbJfCe8R4XBzkUWwLrinPX",
+        "title": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7f...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:38.780Z",
+          "updatedAt": "2026-10-30T16:35:47.311Z",
+          "filepath": null
+        }
+      },
+      "ms": 567
+    },
+    {
+      "t": "2026-10-30T16:35:50",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document",
+      "request_body": {
+        "content": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77afe."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "1Qxd43LrQJGg99otW9gKpM",
+        "status": "queued"
+      },
+      "ms": 1455
+    },
+    {
+      "t": "2026-10-30T16:35:51",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/1Qxd43LrQJGg99otW9gKpM",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "1Qxd43LrQJGg99otW9gKpM",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:50.364Z",
+          "updatedAt": "2026-10-30T16:35:50.364Z",
+          "filepath": null
+        }
+      },
+      "ms": 426
+    },
+    {
+      "t": "2026-10-30T16:35:51",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 3?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.79885942,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:47.311Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.77733433,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.77412868,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 151
+      },
+      "ms": 650
+    },
+    {
+      "t": "2026-10-30T16:35:54",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/1Qxd43LrQJGg99otW9gKpM",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "1Qxd43LrQJGg99otW9gKpM",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:50.364Z",
+          "updatedAt": "2026-10-30T16:35:50.364Z",
+          "filepath": null
+        }
+      },
+      "ms": 1183
+    },
+    {
+      "t": "2026-10-30T16:35:54",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 3?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.79885942,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:47.311Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.77733433,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.77412868,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 203
+      },
+      "ms": 695
+    },
+    {
+      "t": "2026-10-30T16:35:56",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/1Qxd43LrQJGg99otW9gKpM",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "1Qxd43LrQJGg99otW9gKpM",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:50.364Z",
+          "updatedAt": "2026-10-30T16:35:50.364Z",
+          "filepath": null
+        }
+      },
+      "ms": 452
+    },
+    {
+      "t": "2026-10-30T16:35:56",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 3?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "37ec6320091ad66cc1c8e7",
+            "chunk": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77afe.",
+            "metadata": {},
+            "similarity": 0.80855018,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:50.364Z",
+              "createdAt": "2026-10-30T16:35:50.364Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.79885942,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:47.311Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.77733433,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.77412868,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 169
+      },
+      "ms": 646
+    },
+    {
+      "t": "2026-10-30T16:35:58",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/1Qxd43LrQJGg99otW9gKpM",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "1Qxd43LrQJGg99otW9gKpM",
+        "title": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77af...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77afe.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:50.364Z",
+          "updatedAt": "2026-10-30T16:35:57.063Z",
+          "filepath": null
+        }
+      },
+      "ms": 467
+    },
+    {
+      "t": "2026-10-30T16:35:59",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document",
+      "request_body": {
+        "content": "Memo 4: the ticket reference is ZQ-LAT-c5b2a1f223a7."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "yt4UgCUXp5iM4YwjMCNAMS",
+        "status": "queued"
+      },
+      "ms": 1091
+    },
+    {
+      "t": "2026-10-30T16:35:59",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/yt4UgCUXp5iM4YwjMCNAMS",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "yt4UgCUXp5iM4YwjMCNAMS",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:59.106Z",
+          "updatedAt": "2026-10-30T16:35:59.106Z",
+          "filepath": null
+        }
+      },
+      "ms": 469
+    },
+    {
+      "t": "2026-10-30T16:36:00",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 4?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.79204148,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:47.311Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "37ec6320091ad66cc1c8e7",
+            "chunk": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77afe.",
+            "metadata": {},
+            "similarity": 0.77891737,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:57.063Z",
+              "createdAt": "2026-10-30T16:35:50.364Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.77501386,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.77217907,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 156
+      },
+      "ms": 643
+    },
+    {
+      "t": "2026-10-30T16:36:01",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/yt4UgCUXp5iM4YwjMCNAMS",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "yt4UgCUXp5iM4YwjMCNAMS",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:59.106Z",
+          "updatedAt": "2026-10-30T16:35:59.106Z",
+          "filepath": null
+        }
+      },
+      "ms": 449
+    },
+    {
+      "t": "2026-10-30T16:36:02",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 4?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.79204148,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:47.311Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "37ec6320091ad66cc1c8e7",
+            "chunk": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77afe.",
+            "metadata": {},
+            "similarity": 0.77891737,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:57.063Z",
+              "createdAt": "2026-10-30T16:35:50.364Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.77501386,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.77217907,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 165
+      },
+      "ms": 673
+    },
+    {
+      "t": "2026-10-30T16:36:04",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/yt4UgCUXp5iM4YwjMCNAMS",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "yt4UgCUXp5iM4YwjMCNAMS",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:59.106Z",
+          "updatedAt": "2026-10-30T16:35:59.106Z",
+          "filepath": null
+        }
+      },
+      "ms": 582
+    },
+    {
+      "t": "2026-10-30T16:36:04",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 4?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "7c168af8c267aeb6010572",
+            "chunk": "Memo 4: the ticket reference is ZQ-LAT-c5b2a1f223a7.",
+            "metadata": {},
+            "similarity": 0.81475031,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:59.106Z",
+              "createdAt": "2026-10-30T16:35:59.106Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.79204148,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:47.311Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "37ec6320091ad66cc1c8e7",
+            "chunk": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77afe.",
+            "metadata": {},
+            "similarity": 0.77891737,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:57.063Z",
+              "createdAt": "2026-10-30T16:35:50.364Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.77501386,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.77217907,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 183
+      },
+      "ms": 658
+    },
+    {
+      "t": "2026-10-30T16:36:06",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/yt4UgCUXp5iM4YwjMCNAMS",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "yt4UgCUXp5iM4YwjMCNAMS",
+        "title": "Memo 4: the ticket reference is ZQ-LAT-c5b2a1f223a...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 4: the ticket reference is ZQ-LAT-c5b2a1f223a7.",
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:59.106Z",
+          "updatedAt": "2026-10-30T16:36:06.040Z",
+          "filepath": null
+        }
+      },
+      "ms": 469
+    },
+    {
+      "t": "2026-10-30T16:36:07",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/yt4UgCUXp5iM4YwjMCNAMS",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "yt4UgCUXp5iM4YwjMCNAMS",
+        "title": "Memo 4: the ticket reference is ZQ-LAT-c5b2a1f223a...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 4: the ticket reference is ZQ-LAT-c5b2a1f223a7.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:35:59.106Z",
+          "updatedAt": "2026-10-30T16:36:06.040Z",
+          "filepath": null
+        }
+      },
+      "ms": 476
+    },
+    {
+      "t": "2026-10-30T16:36:08",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document",
+      "request_body": {
+        "content": "Memo 5: the ticket reference is ZQ-LAT-be0b28a28ecd."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "KKeTeyw1WFcR8JJU1Kj8cc",
+        "status": "queued"
+      },
+      "ms": 1062
+    },
+    {
+      "t": "2026-10-30T16:36:09",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/KKeTeyw1WFcR8JJU1Kj8cc",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "KKeTeyw1WFcR8JJU1Kj8cc",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:08.598Z",
+          "updatedAt": "2026-10-30T16:36:08.598Z",
+          "filepath": null
+        }
+      },
+      "ms": 504
+    },
+    {
+      "t": "2026-10-30T16:36:10",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 5?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "7c168af8c267aeb6010572",
+            "chunk": "Memo 4: the ticket reference is ZQ-LAT-c5b2a1f223a7.",
+            "metadata": {},
+            "similarity": 0.79787606,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:06.040Z",
+              "createdAt": "2026-10-30T16:35:59.106Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.79270017,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:47.311Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "37ec6320091ad66cc1c8e7",
+            "chunk": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77afe.",
+            "metadata": {},
+            "similarity": 0.78503746,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:57.063Z",
+              "createdAt": "2026-10-30T16:35:50.364Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.7744163900000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.76614302,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 174
+      },
+      "ms": 724
+    },
+    {
+      "t": "2026-10-30T16:36:11",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/KKeTeyw1WFcR8JJU1Kj8cc",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "KKeTeyw1WFcR8JJU1Kj8cc",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:08.598Z",
+          "updatedAt": "2026-10-30T16:36:08.598Z",
+          "filepath": null
+        }
+      },
+      "ms": 495
+    },
+    {
+      "t": "2026-10-30T16:36:12",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 5?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "7c168af8c267aeb6010572",
+            "chunk": "Memo 4: the ticket reference is ZQ-LAT-c5b2a1f223a7.",
+            "metadata": {},
+            "similarity": 0.79787606,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:06.040Z",
+              "createdAt": "2026-10-30T16:35:59.106Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.79270017,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:47.311Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "37ec6320091ad66cc1c8e7",
+            "chunk": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77afe.",
+            "metadata": {},
+            "similarity": 0.78503746,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:57.063Z",
+              "createdAt": "2026-10-30T16:35:50.364Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.7744163900000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.76614302,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 139
+      },
+      "ms": 740
+    },
+    {
+      "t": "2026-10-30T16:36:13",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/KKeTeyw1WFcR8JJU1Kj8cc",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "KKeTeyw1WFcR8JJU1Kj8cc",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:08.598Z",
+          "updatedAt": "2026-10-30T16:36:08.598Z",
+          "filepath": null
+        }
+      },
+      "ms": 466
+    },
+    {
+      "t": "2026-10-30T16:36:14",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 5?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "571db173601bc871c1dfec",
+            "chunk": "Memo 5: the ticket reference is ZQ-LAT-be0b28a28ecd.",
+            "metadata": {},
+            "similarity": 0.83289355,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:08.598Z",
+              "createdAt": "2026-10-30T16:36:08.598Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "7c168af8c267aeb6010572",
+            "chunk": "Memo 4: the ticket reference is ZQ-LAT-c5b2a1f223a7.",
+            "metadata": {},
+            "similarity": 0.79787606,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:06.040Z",
+              "createdAt": "2026-10-30T16:35:59.106Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.79270017,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:47.311Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "37ec6320091ad66cc1c8e7",
+            "chunk": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77afe.",
+            "metadata": {},
+            "similarity": 0.78503746,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:57.063Z",
+              "createdAt": "2026-10-30T16:35:50.364Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.7744163900000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.76614302,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 168
+      },
+      "ms": 664
+    },
+    {
+      "t": "2026-10-30T16:36:16",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/KKeTeyw1WFcR8JJU1Kj8cc",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "KKeTeyw1WFcR8JJU1Kj8cc",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:08.598Z",
+          "updatedAt": "2026-10-30T16:36:08.598Z",
+          "filepath": null
+        }
+      },
+      "ms": 525
+    },
+    {
+      "t": "2026-10-30T16:36:18",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/KKeTeyw1WFcR8JJU1Kj8cc",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "KKeTeyw1WFcR8JJU1Kj8cc",
+        "title": "Memo 5: the ticket reference is ZQ-LAT-be0b28a28ec...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 5: the ticket reference is ZQ-LAT-be0b28a28ecd.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:08.598Z",
+          "updatedAt": "2026-10-30T16:36:16.350Z",
+          "filepath": null
+        }
+      },
+      "ms": 1087
+    },
+    {
+      "t": "2026-10-30T16:36:19",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document",
+      "request_body": {
+        "content": "Memo 6: the ticket reference is ZQ-LAT-9d0139558002."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "dzBUJzzNnssD32E78aYVCx",
+        "status": "queued"
+      },
+      "ms": 1368
+    },
+    {
+      "t": "2026-10-30T16:36:19",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/dzBUJzzNnssD32E78aYVCx",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "dzBUJzzNnssD32E78aYVCx",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:19.210Z",
+          "updatedAt": "2026-10-30T16:36:19.210Z",
+          "filepath": null
+        }
+      },
+      "ms": 429
+    },
+    {
+      "t": "2026-10-30T16:36:20",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 6?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "571db173601bc871c1dfec",
+            "chunk": "Memo 5: the ticket reference is ZQ-LAT-be0b28a28ecd.",
+            "metadata": {},
+            "similarity": 0.79932296,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:16.350Z",
+              "createdAt": "2026-10-30T16:36:08.598Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.78579998,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:47.311Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "7c168af8c267aeb6010572",
+            "chunk": "Memo 4: the ticket reference is ZQ-LAT-c5b2a1f223a7.",
+            "metadata": {},
+            "similarity": 0.7803962799999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:06.040Z",
+              "createdAt": "2026-10-30T16:35:59.106Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.77267665,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "37ec6320091ad66cc1c8e7",
+            "chunk": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77afe.",
+            "metadata": {},
+            "similarity": 0.76858252,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:57.063Z",
+              "createdAt": "2026-10-30T16:35:50.364Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.76665783,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 149
+      },
+      "ms": 611
+    },
+    {
+      "t": "2026-10-30T16:36:21",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/dzBUJzzNnssD32E78aYVCx",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "dzBUJzzNnssD32E78aYVCx",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:19.210Z",
+          "updatedAt": "2026-10-30T16:36:19.210Z",
+          "filepath": null
+        }
+      },
+      "ms": 436
+    },
+    {
+      "t": "2026-10-30T16:36:22",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 6?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "571db173601bc871c1dfec",
+            "chunk": "Memo 5: the ticket reference is ZQ-LAT-be0b28a28ecd.",
+            "metadata": {},
+            "similarity": 0.79932296,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:16.350Z",
+              "createdAt": "2026-10-30T16:36:08.598Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.78579998,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:47.311Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "7c168af8c267aeb6010572",
+            "chunk": "Memo 4: the ticket reference is ZQ-LAT-c5b2a1f223a7.",
+            "metadata": {},
+            "similarity": 0.7803962799999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:06.040Z",
+              "createdAt": "2026-10-30T16:35:59.106Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.77267665,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "37ec6320091ad66cc1c8e7",
+            "chunk": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77afe.",
+            "metadata": {},
+            "similarity": 0.76858252,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:57.063Z",
+              "createdAt": "2026-10-30T16:35:50.364Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.76665783,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 162
+      },
+      "ms": 631
+    },
+    {
+      "t": "2026-10-30T16:36:24",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/dzBUJzzNnssD32E78aYVCx",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "dzBUJzzNnssD32E78aYVCx",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:19.210Z",
+          "updatedAt": "2026-10-30T16:36:19.210Z",
+          "filepath": null
+        }
+      },
+      "ms": 428
+    },
+    {
+      "t": "2026-10-30T16:36:24",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 6?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "8a1c59a0a8a4dcfcbe602a",
+            "chunk": "Memo 6: the ticket reference is ZQ-LAT-9d0139558002.",
+            "metadata": {},
+            "similarity": 0.80799627,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:19.210Z",
+              "createdAt": "2026-10-30T16:36:19.210Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "571db173601bc871c1dfec",
+            "chunk": "Memo 5: the ticket reference is ZQ-LAT-be0b28a28ecd.",
+            "metadata": {},
+            "similarity": 0.79932296,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:16.350Z",
+              "createdAt": "2026-10-30T16:36:08.598Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.78579998,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:47.311Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "7c168af8c267aeb6010572",
+            "chunk": "Memo 4: the ticket reference is ZQ-LAT-c5b2a1f223a7.",
+            "metadata": {},
+            "similarity": 0.7803962799999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:06.040Z",
+              "createdAt": "2026-10-30T16:35:59.106Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.77267665,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "37ec6320091ad66cc1c8e7",
+            "chunk": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77afe.",
+            "metadata": {},
+            "similarity": 0.76858252,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:57.063Z",
+              "createdAt": "2026-10-30T16:35:50.364Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.76665783,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 163
+      },
+      "ms": 655
+    },
+    {
+      "t": "2026-10-30T16:36:26",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/dzBUJzzNnssD32E78aYVCx",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "dzBUJzzNnssD32E78aYVCx",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:19.210Z",
+          "updatedAt": "2026-10-30T16:36:19.210Z",
+          "filepath": null
+        }
+      },
+      "ms": 446
+    },
+    {
+      "t": "2026-10-30T16:36:27",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/dzBUJzzNnssD32E78aYVCx",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "dzBUJzzNnssD32E78aYVCx",
+        "title": "Memo 6: the ticket reference is ZQ-LAT-9d013955800...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 6: the ticket reference is ZQ-LAT-9d0139558002.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:19.210Z",
+          "updatedAt": "2026-10-30T16:36:26.227Z",
+          "filepath": null
+        }
+      },
+      "ms": 452
+    },
+    {
+      "t": "2026-10-30T16:36:28",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document",
+      "request_body": {
+        "content": "Memo 7: the ticket reference is ZQ-LAT-d53abb971c3b."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "gqEK3MJZ1qTvBEHDV7eoim",
+        "status": "queued"
+      },
+      "ms": 996
+    },
+    {
+      "t": "2026-10-30T16:36:29",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/gqEK3MJZ1qTvBEHDV7eoim",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "gqEK3MJZ1qTvBEHDV7eoim",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:28.306Z",
+          "updatedAt": "2026-10-30T16:36:28.306Z",
+          "filepath": null
+        }
+      },
+      "ms": 524
+    },
+    {
+      "t": "2026-10-30T16:36:29",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 7?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.78387147,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:47.311Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "571db173601bc871c1dfec",
+            "chunk": "Memo 5: the ticket reference is ZQ-LAT-be0b28a28ecd.",
+            "metadata": {},
+            "similarity": 0.78257996,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:16.350Z",
+              "createdAt": "2026-10-30T16:36:08.598Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "7c168af8c267aeb6010572",
+            "chunk": "Memo 4: the ticket reference is ZQ-LAT-c5b2a1f223a7.",
+            "metadata": {},
+            "similarity": 0.77624285,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:06.040Z",
+              "createdAt": "2026-10-30T16:35:59.106Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.77467597,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "37ec6320091ad66cc1c8e7",
+            "chunk": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77afe.",
+            "metadata": {},
+            "similarity": 0.77130675,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:57.063Z",
+              "createdAt": "2026-10-30T16:35:50.364Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "8a1c59a0a8a4dcfcbe602a",
+            "chunk": "Memo 6: the ticket reference is ZQ-LAT-9d0139558002.",
+            "metadata": {},
+            "similarity": 0.7689661999999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:26.227Z",
+              "createdAt": "2026-10-30T16:36:19.210Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.76688749,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 137
+      },
+      "ms": 601
+    },
+    {
+      "t": "2026-10-30T16:36:31",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/gqEK3MJZ1qTvBEHDV7eoim",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "gqEK3MJZ1qTvBEHDV7eoim",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:28.306Z",
+          "updatedAt": "2026-10-30T16:36:28.306Z",
+          "filepath": null
+        }
+      },
+      "ms": 483
+    },
+    {
+      "t": "2026-10-30T16:36:31",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 7?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.78387147,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:47.311Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "571db173601bc871c1dfec",
+            "chunk": "Memo 5: the ticket reference is ZQ-LAT-be0b28a28ecd.",
+            "metadata": {},
+            "similarity": 0.78257996,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:16.350Z",
+              "createdAt": "2026-10-30T16:36:08.598Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "7c168af8c267aeb6010572",
+            "chunk": "Memo 4: the ticket reference is ZQ-LAT-c5b2a1f223a7.",
+            "metadata": {},
+            "similarity": 0.77624285,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:06.040Z",
+              "createdAt": "2026-10-30T16:35:59.106Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.77467597,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "37ec6320091ad66cc1c8e7",
+            "chunk": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77afe.",
+            "metadata": {},
+            "similarity": 0.77130675,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:57.063Z",
+              "createdAt": "2026-10-30T16:35:50.364Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "8a1c59a0a8a4dcfcbe602a",
+            "chunk": "Memo 6: the ticket reference is ZQ-LAT-9d0139558002.",
+            "metadata": {},
+            "similarity": 0.7689661999999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:26.227Z",
+              "createdAt": "2026-10-30T16:36:19.210Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.76688749,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 175
+      },
+      "ms": 635
+    },
+    {
+      "t": "2026-10-30T16:36:33",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/gqEK3MJZ1qTvBEHDV7eoim",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "gqEK3MJZ1qTvBEHDV7eoim",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:28.306Z",
+          "updatedAt": "2026-10-30T16:36:28.306Z",
+          "filepath": null
+        }
+      },
+      "ms": 464
+    },
+    {
+      "t": "2026-10-30T16:36:33",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 7?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "f29e1addef1bc585e9aeab",
+            "chunk": "Memo 7: the ticket reference is ZQ-LAT-d53abb971c3b.",
+            "metadata": {},
+            "similarity": 0.81319493,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:28.306Z",
+              "createdAt": "2026-10-30T16:36:28.306Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.78387147,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:47.311Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "571db173601bc871c1dfec",
+            "chunk": "Memo 5: the ticket reference is ZQ-LAT-be0b28a28ecd.",
+            "metadata": {},
+            "similarity": 0.78257996,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:16.350Z",
+              "createdAt": "2026-10-30T16:36:08.598Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "7c168af8c267aeb6010572",
+            "chunk": "Memo 4: the ticket reference is ZQ-LAT-c5b2a1f223a7.",
+            "metadata": {},
+            "similarity": 0.77624285,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:06.040Z",
+              "createdAt": "2026-10-30T16:35:59.106Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.77467597,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "37ec6320091ad66cc1c8e7",
+            "chunk": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77afe.",
+            "metadata": {},
+            "similarity": 0.77130675,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:57.063Z",
+              "createdAt": "2026-10-30T16:35:50.364Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "8a1c59a0a8a4dcfcbe602a",
+            "chunk": "Memo 6: the ticket reference is ZQ-LAT-9d0139558002.",
+            "metadata": {},
+            "similarity": 0.7689661999999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:26.227Z",
+              "createdAt": "2026-10-30T16:36:19.210Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.76688749,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 159
+      },
+      "ms": 640
+    },
+    {
+      "t": "2026-10-30T16:36:35",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/gqEK3MJZ1qTvBEHDV7eoim",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "gqEK3MJZ1qTvBEHDV7eoim",
+        "title": "Memo 7: the ticket reference is ZQ-LAT-d53abb971c3...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 7: the ticket reference is ZQ-LAT-d53abb971c3b.",
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:28.306Z",
+          "updatedAt": "2026-10-30T16:36:34.805Z",
+          "filepath": null
+        }
+      },
+      "ms": 446
+    },
+    {
+      "t": "2026-10-30T16:36:37",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/gqEK3MJZ1qTvBEHDV7eoim",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "gqEK3MJZ1qTvBEHDV7eoim",
+        "title": "Memo 7: the ticket reference is ZQ-LAT-d53abb971c3...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 7: the ticket reference is ZQ-LAT-d53abb971c3b.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:28.306Z",
+          "updatedAt": "2026-10-30T16:36:34.805Z",
+          "filepath": null
+        }
+      },
+      "ms": 573
+    },
+    {
+      "t": "2026-10-30T16:36:38",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document",
+      "request_body": {
+        "content": "Memo 8: the ticket reference is ZQ-LAT-d6a71c6751f9."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "czYfQeoCw6h2VJiqpiFEv9",
+        "status": "queued"
+      },
+      "ms": 1045
+    },
+    {
+      "t": "2026-10-30T16:36:38",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/czYfQeoCw6h2VJiqpiFEv9",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "czYfQeoCw6h2VJiqpiFEv9",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:37.790Z",
+          "updatedAt": "2026-10-30T16:36:37.790Z",
+          "filepath": null
+        }
+      },
+      "ms": 523
+    },
+    {
+      "t": "2026-10-30T16:36:39",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 8?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.8020363500000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:47.311Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "571db173601bc871c1dfec",
+            "chunk": "Memo 5: the ticket reference is ZQ-LAT-be0b28a28ecd.",
+            "metadata": {},
+            "similarity": 0.7998358,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:16.350Z",
+              "createdAt": "2026-10-30T16:36:08.598Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "f29e1addef1bc585e9aeab",
+            "chunk": "Memo 7: the ticket reference is ZQ-LAT-d53abb971c3b.",
+            "metadata": {},
+            "similarity": 0.7908268,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:34.805Z",
+              "createdAt": "2026-10-30T16:36:28.306Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.78636694,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "7c168af8c267aeb6010572",
+            "chunk": "Memo 4: the ticket reference is ZQ-LAT-c5b2a1f223a7.",
+            "metadata": {},
+            "similarity": 0.7818358,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:06.040Z",
+              "createdAt": "2026-10-30T16:35:59.106Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.7808002199999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "8a1c59a0a8a4dcfcbe602a",
+            "chunk": "Memo 6: the ticket reference is ZQ-LAT-9d0139558002.",
+            "metadata": {},
+            "similarity": 0.78005588,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:26.227Z",
+              "createdAt": "2026-10-30T16:36:19.210Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "37ec6320091ad66cc1c8e7",
+            "chunk": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77afe.",
+            "metadata": {},
+            "similarity": 0.77494901,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:57.063Z",
+              "createdAt": "2026-10-30T16:35:50.364Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 188
+      },
+      "ms": 687
+    },
+    {
+      "t": "2026-10-30T16:36:40",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/czYfQeoCw6h2VJiqpiFEv9",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "czYfQeoCw6h2VJiqpiFEv9",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:37.790Z",
+          "updatedAt": "2026-10-30T16:36:37.790Z",
+          "filepath": null
+        }
+      },
+      "ms": 431
+    },
+    {
+      "t": "2026-10-30T16:36:41",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 8?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.8020363500000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:47.311Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "571db173601bc871c1dfec",
+            "chunk": "Memo 5: the ticket reference is ZQ-LAT-be0b28a28ecd.",
+            "metadata": {},
+            "similarity": 0.7998358,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:16.350Z",
+              "createdAt": "2026-10-30T16:36:08.598Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "f29e1addef1bc585e9aeab",
+            "chunk": "Memo 7: the ticket reference is ZQ-LAT-d53abb971c3b.",
+            "metadata": {},
+            "similarity": 0.7908268,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:34.805Z",
+              "createdAt": "2026-10-30T16:36:28.306Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.78636694,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "7c168af8c267aeb6010572",
+            "chunk": "Memo 4: the ticket reference is ZQ-LAT-c5b2a1f223a7.",
+            "metadata": {},
+            "similarity": 0.7818358,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:06.040Z",
+              "createdAt": "2026-10-30T16:35:59.106Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.7808002199999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "8a1c59a0a8a4dcfcbe602a",
+            "chunk": "Memo 6: the ticket reference is ZQ-LAT-9d0139558002.",
+            "metadata": {},
+            "similarity": 0.78005588,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:26.227Z",
+              "createdAt": "2026-10-30T16:36:19.210Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "37ec6320091ad66cc1c8e7",
+            "chunk": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77afe.",
+            "metadata": {},
+            "similarity": 0.77494901,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:57.063Z",
+              "createdAt": "2026-10-30T16:35:50.364Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 145
+      },
+      "ms": 606
+    },
+    {
+      "t": "2026-10-30T16:36:43",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/czYfQeoCw6h2VJiqpiFEv9",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "czYfQeoCw6h2VJiqpiFEv9",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:37.790Z",
+          "updatedAt": "2026-10-30T16:36:37.790Z",
+          "filepath": null
+        }
+      },
+      "ms": 1622
+    },
+    {
+      "t": "2026-10-30T16:36:44",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 8?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "613c4226e6cd4b28f256bc",
+            "chunk": "Memo 8: the ticket reference is ZQ-LAT-d6a71c6751f9.",
+            "metadata": {},
+            "similarity": 0.81515491,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:37.790Z",
+              "createdAt": "2026-10-30T16:36:37.790Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.8020363500000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:47.311Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "571db173601bc871c1dfec",
+            "chunk": "Memo 5: the ticket reference is ZQ-LAT-be0b28a28ecd.",
+            "metadata": {},
+            "similarity": 0.7998358,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:16.350Z",
+              "createdAt": "2026-10-30T16:36:08.598Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "f29e1addef1bc585e9aeab",
+            "chunk": "Memo 7: the ticket reference is ZQ-LAT-d53abb971c3b.",
+            "metadata": {},
+            "similarity": 0.7908268,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:34.805Z",
+              "createdAt": "2026-10-30T16:36:28.306Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.78636694,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "7c168af8c267aeb6010572",
+            "chunk": "Memo 4: the ticket reference is ZQ-LAT-c5b2a1f223a7.",
+            "metadata": {},
+            "similarity": 0.7818358,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:06.040Z",
+              "createdAt": "2026-10-30T16:35:59.106Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.7808002199999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "8a1c59a0a8a4dcfcbe602a",
+            "chunk": "Memo 6: the ticket reference is ZQ-LAT-9d0139558002.",
+            "metadata": {},
+            "similarity": 0.78005588,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:26.227Z",
+              "createdAt": "2026-10-30T16:36:19.210Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "37ec6320091ad66cc1c8e7",
+            "chunk": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77afe.",
+            "metadata": {},
+            "similarity": 0.77494901,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:57.063Z",
+              "createdAt": "2026-10-30T16:35:50.364Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 172
+      },
+      "ms": 652
+    },
+    {
+      "t": "2026-10-30T16:36:46",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/czYfQeoCw6h2VJiqpiFEv9",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "czYfQeoCw6h2VJiqpiFEv9",
+        "title": "Memo 8: the ticket reference is ZQ-LAT-d6a71c6751f...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 8: the ticket reference is ZQ-LAT-d6a71c6751f9.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:37.790Z",
+          "updatedAt": "2026-10-30T16:36:44.771Z",
+          "filepath": null
+        }
+      },
+      "ms": 474
+    },
+    {
+      "t": "2026-10-30T16:36:47",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document",
+      "request_body": {
+        "content": "Memo 9: the ticket reference is ZQ-LAT-19d737c56ad8."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "4QtSxhDcb5zN5REb1X2veg",
+        "status": "queued"
+      },
+      "ms": 938
+    },
+    {
+      "t": "2026-10-30T16:36:47",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/4QtSxhDcb5zN5REb1X2veg",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "4QtSxhDcb5zN5REb1X2veg",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:46.738Z",
+          "updatedAt": "2026-10-30T16:36:46.738Z",
+          "filepath": null
+        }
+      },
+      "ms": 480
+    },
+    {
+      "t": "2026-10-30T16:36:48",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 9?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "8a1c59a0a8a4dcfcbe602a",
+            "chunk": "Memo 6: the ticket reference is ZQ-LAT-9d0139558002.",
+            "metadata": {},
+            "similarity": 0.7891181700000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:26.227Z",
+              "createdAt": "2026-10-30T16:36:19.210Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.78505927,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:47.311Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "571db173601bc871c1dfec",
+            "chunk": "Memo 5: the ticket reference is ZQ-LAT-be0b28a28ecd.",
+            "metadata": {},
+            "similarity": 0.7845138899999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:16.350Z",
+              "createdAt": "2026-10-30T16:36:08.598Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "613c4226e6cd4b28f256bc",
+            "chunk": "Memo 8: the ticket reference is ZQ-LAT-d6a71c6751f9.",
+            "metadata": {},
+            "similarity": 0.78222781,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:44.771Z",
+              "createdAt": "2026-10-30T16:36:37.790Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "7c168af8c267aeb6010572",
+            "chunk": "Memo 4: the ticket reference is ZQ-LAT-c5b2a1f223a7.",
+            "metadata": {},
+            "similarity": 0.77800626,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:06.040Z",
+              "createdAt": "2026-10-30T16:35:59.106Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "f29e1addef1bc585e9aeab",
+            "chunk": "Memo 7: the ticket reference is ZQ-LAT-d53abb971c3b.",
+            "metadata": {},
+            "similarity": 0.7717849,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:34.805Z",
+              "createdAt": "2026-10-30T16:36:28.306Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.76928163,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "37ec6320091ad66cc1c8e7",
+            "chunk": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77afe.",
+            "metadata": {},
+            "similarity": 0.76503795,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:57.063Z",
+              "createdAt": "2026-10-30T16:35:50.364Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.76480025,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 164
+      },
+      "ms": 609
+    },
+    {
+      "t": "2026-10-30T16:36:49",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/4QtSxhDcb5zN5REb1X2veg",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "4QtSxhDcb5zN5REb1X2veg",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:46.738Z",
+          "updatedAt": "2026-10-30T16:36:46.738Z",
+          "filepath": null
+        }
+      },
+      "ms": 493
+    },
+    {
+      "t": "2026-10-30T16:36:50",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 9?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "8a1c59a0a8a4dcfcbe602a",
+            "chunk": "Memo 6: the ticket reference is ZQ-LAT-9d0139558002.",
+            "metadata": {},
+            "similarity": 0.7891181700000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:26.227Z",
+              "createdAt": "2026-10-30T16:36:19.210Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.78505927,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:47.311Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "571db173601bc871c1dfec",
+            "chunk": "Memo 5: the ticket reference is ZQ-LAT-be0b28a28ecd.",
+            "metadata": {},
+            "similarity": 0.7845138899999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:16.350Z",
+              "createdAt": "2026-10-30T16:36:08.598Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "613c4226e6cd4b28f256bc",
+            "chunk": "Memo 8: the ticket reference is ZQ-LAT-d6a71c6751f9.",
+            "metadata": {},
+            "similarity": 0.78222781,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:44.771Z",
+              "createdAt": "2026-10-30T16:36:37.790Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "7c168af8c267aeb6010572",
+            "chunk": "Memo 4: the ticket reference is ZQ-LAT-c5b2a1f223a7.",
+            "metadata": {},
+            "similarity": 0.77800626,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:06.040Z",
+              "createdAt": "2026-10-30T16:35:59.106Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "f29e1addef1bc585e9aeab",
+            "chunk": "Memo 7: the ticket reference is ZQ-LAT-d53abb971c3b.",
+            "metadata": {},
+            "similarity": 0.7717849,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:34.805Z",
+              "createdAt": "2026-10-30T16:36:28.306Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.76928163,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "37ec6320091ad66cc1c8e7",
+            "chunk": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77afe.",
+            "metadata": {},
+            "similarity": 0.76503795,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:57.063Z",
+              "createdAt": "2026-10-30T16:35:50.364Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.76480025,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 273
+      },
+      "ms": 1061
+    },
+    {
+      "t": "2026-10-30T16:36:52",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/4QtSxhDcb5zN5REb1X2veg",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "4QtSxhDcb5zN5REb1X2veg",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:46.738Z",
+          "updatedAt": "2026-10-30T16:36:46.738Z",
+          "filepath": null
+        }
+      },
+      "ms": 648
+    },
+    {
+      "t": "2026-10-30T16:36:53",
+      "method": "POST",
+      "path": "/ns/memtrust_lat01_3dbece5c95/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 9?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "28b7f02b41558ab6a5e73a",
+            "chunk": "Memo 9: the ticket reference is ZQ-LAT-19d737c56ad8.",
+            "metadata": {},
+            "similarity": 0.8218829,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:46.738Z",
+              "createdAt": "2026-10-30T16:36:46.738Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "8a1c59a0a8a4dcfcbe602a",
+            "chunk": "Memo 6: the ticket reference is ZQ-LAT-9d0139558002.",
+            "metadata": {},
+            "similarity": 0.7891181700000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:26.227Z",
+              "createdAt": "2026-10-30T16:36:19.210Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "cf89e8526aab07b880e0b0",
+            "chunk": "Memo 2: the ticket reference is ZQ-LAT-baa50f8aa7fd.",
+            "metadata": {},
+            "similarity": 0.78505927,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:47.311Z",
+              "createdAt": "2026-10-30T16:35:38.780Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "571db173601bc871c1dfec",
+            "chunk": "Memo 5: the ticket reference is ZQ-LAT-be0b28a28ecd.",
+            "metadata": {},
+            "similarity": 0.7845138899999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:16.350Z",
+              "createdAt": "2026-10-30T16:36:08.598Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "613c4226e6cd4b28f256bc",
+            "chunk": "Memo 8: the ticket reference is ZQ-LAT-d6a71c6751f9.",
+            "metadata": {},
+            "similarity": 0.78222781,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:44.771Z",
+              "createdAt": "2026-10-30T16:36:37.790Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "7c168af8c267aeb6010572",
+            "chunk": "Memo 4: the ticket reference is ZQ-LAT-c5b2a1f223a7.",
+            "metadata": {},
+            "similarity": 0.77800626,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:06.040Z",
+              "createdAt": "2026-10-30T16:35:59.106Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "f29e1addef1bc585e9aeab",
+            "chunk": "Memo 7: the ticket reference is ZQ-LAT-d53abb971c3b.",
+            "metadata": {},
+            "similarity": 0.7717849,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:36:34.805Z",
+              "createdAt": "2026-10-30T16:36:28.306Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "96eee688a5e9d9c3b4d64c",
+            "chunk": "Memo 0: the ticket reference is ZQ-LAT-e842afb0f2aa.",
+            "metadata": {},
+            "similarity": 0.76928163,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:26.663Z",
+              "createdAt": "2026-10-30T16:35:20.117Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "37ec6320091ad66cc1c8e7",
+            "chunk": "Memo 3: the ticket reference is ZQ-LAT-1c83f5c77afe.",
+            "metadata": {},
+            "similarity": 0.76503795,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:57.063Z",
+              "createdAt": "2026-10-30T16:35:50.364Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "2d2c30c15346ce67a932e3",
+            "chunk": "Memo 1: the ticket reference is ZQ-LAT-b8e0b5b27c50.",
+            "metadata": {},
+            "similarity": 0.76480025,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T16:35:35.938Z",
+              "createdAt": "2026-10-30T16:35:29.118Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 220
+      },
+      "ms": 809
+    },
+    {
+      "t": "2026-10-30T16:36:54",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/4QtSxhDcb5zN5REb1X2veg",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "4QtSxhDcb5zN5REb1X2veg",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:46.738Z",
+          "updatedAt": "2026-10-30T16:36:46.738Z",
+          "filepath": null
+        }
+      },
+      "ms": 535
+    },
+    {
+      "t": "2026-10-30T16:36:56",
+      "method": "GET",
+      "path": "/ns/memtrust_lat01_3dbece5c95/document/4QtSxhDcb5zN5REb1X2veg",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "4QtSxhDcb5zN5REb1X2veg",
+        "title": "Memo 9: the ticket reference is ZQ-LAT-19d737c56ad...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 9: the ticket reference is ZQ-LAT-19d737c56ad8.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T16:36:46.738Z",
+          "updatedAt": "2026-10-30T16:36:54.415Z",
+          "filepath": null
+        }
+      },
+      "ms": 516
+    },
+    {
+      "t": "2026-10-30T16:36:56",
+      "method": "DELETE",
+      "path": "/ns/memtrust_lat01_3dbece5c95",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_lat01_3dbece5c95",
+        "deletedDocumentsCount": 10,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 718
+    }
+  ]
+}

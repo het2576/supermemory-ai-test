@@ -1,0 +1,3540 @@
+{
+  "record": {
+    "testId": "LAT-03",
+    "provider": "supermemory",
+    "client": "supermemory-python-sdk",
+    "sdkVersion": "5.0.1",
+    "apiVersion": "v5",
+    "date": "2026-10-30T17:15:11.387224+00:00",
+    "run": 3,
+    "checkpoints": [
+      {
+        "samples": [
+          {
+            "i": 0,
+            "add_ms": 1203.0,
+            "done": 7.320285374997184,
+            "dreaming_done": 22.937598416989204,
+            "memory_hit": 23.896721124998294,
+            "failed": false
+          },
+          {
+            "i": 1,
+            "add_ms": 1048.0,
+            "done": 9.504509541002335,
+            "dreaming_done": 33.03450712500489,
+            "memory_hit": 33.68978783302009,
+            "failed": false
+          },
+          {
+            "i": 2,
+            "add_ms": 915.0,
+            "done": 9.34271841699956,
+            "dreaming_done": 25.23675620899303,
+            "memory_hit": 23.45645704198978,
+            "failed": false
+          },
+          {
+            "i": 3,
+            "add_ms": 1032.0,
+            "done": 7.687637041002745,
+            "dreaming_done": 25.154161041020416,
+            "memory_hit": 26.06041350000305,
+            "failed": false
+          },
+          {
+            "i": 4,
+            "add_ms": 1007.0,
+            "done": 7.125634916999843,
+            "dreaming_done": 22.679176875011763,
+            "memory_hit": 23.33502254198538,
+            "failed": false
+          }
+        ]
+      }
+    ],
+    "result": "DOCUMENTED",
+    "timeToConsistencySec": null,
+    "notes": "done p50 7.7s p95 9.5s* max 9.5s (n=5); dreaming done p50 25.2s p95 33.0s* max 33.0s (n=5); first memory hit p50 23.9s p95 33.7s* max 33.7s (n=5); add call p50 1032ms p95 1203ms* max 1203ms (n=5)",
+    "rawArtifacts": "results/runs/2026-10-30/LAT-03-run3.json"
+  },
+  "extra": {
+    "samples": [
+      {
+        "i": 0,
+        "add_ms": 1203.0,
+        "done": 7.320285374997184,
+        "dreaming_done": 22.937598416989204,
+        "memory_hit": 23.896721124998294,
+        "failed": false
+      },
+      {
+        "i": 1,
+        "add_ms": 1048.0,
+        "done": 9.504509541002335,
+        "dreaming_done": 33.03450712500489,
+        "memory_hit": 33.68978783302009,
+        "failed": false
+      },
+      {
+        "i": 2,
+        "add_ms": 915.0,
+        "done": 9.34271841699956,
+        "dreaming_done": 25.23675620899303,
+        "memory_hit": 23.45645704198978,
+        "failed": false
+      },
+      {
+        "i": 3,
+        "add_ms": 1032.0,
+        "done": 7.687637041002745,
+        "dreaming_done": 25.154161041020416,
+        "memory_hit": 26.06041350000305,
+        "failed": false
+      },
+      {
+        "i": 4,
+        "add_ms": 1007.0,
+        "done": 7.125634916999843,
+        "dreaming_done": 22.679176875011763,
+        "memory_hit": 23.33502254198538,
+        "failed": false
+      }
+    ],
+    "stats": {
+      "done": {
+        "n": 5,
+        "n_total": 5,
+        "min": 7.125634916999843,
+        "p50": 7.687637041002745,
+        "p95": 9.504509541002335,
+        "p95_is_max": true,
+        "max": 9.504509541002335
+      },
+      "dreaming_done": {
+        "n": 5,
+        "n_total": 5,
+        "min": 22.679176875011763,
+        "p50": 25.154161041020416,
+        "p95": 33.03450712500489,
+        "p95_is_max": true,
+        "max": 33.03450712500489
+      },
+      "memory_hit": {
+        "n": 5,
+        "n_total": 5,
+        "min": 23.33502254198538,
+        "p50": 23.896721124998294,
+        "p95": 33.68978783302009,
+        "p95_is_max": true,
+        "max": 33.68978783302009
+      }
+    },
+    "dreaming": "instant"
+  },
+  "exchanges": [
+    {
+      "t": "2026-10-30T17:12:54",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document",
+      "request_body": {
+        "content": "Memo 0: the ticket reference is ZQ-LAT-680b2d2c7e7b.",
+        "dreaming": "instant"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "B2JqW9TKuEMGcpXBPDaePV",
+        "status": "queued"
+      },
+      "ms": 1203
+    },
+    {
+      "t": "2026-10-30T17:12:55",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/B2JqW9TKuEMGcpXBPDaePV",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "B2JqW9TKuEMGcpXBPDaePV",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:12:54.291Z",
+          "updatedAt": "2026-10-30T17:12:54.291Z",
+          "filepath": null
+        }
+      },
+      "ms": 730
+    },
+    {
+      "t": "2026-10-30T17:12:56",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 0?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 117
+      },
+      "ms": 696
+    },
+    {
+      "t": "2026-10-30T17:12:57",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/B2JqW9TKuEMGcpXBPDaePV",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "B2JqW9TKuEMGcpXBPDaePV",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:12:54.291Z",
+          "updatedAt": "2026-10-30T17:12:54.291Z",
+          "filepath": null
+        }
+      },
+      "ms": 537
+    },
+    {
+      "t": "2026-10-30T17:12:58",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 0?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 186
+      },
+      "ms": 608
+    },
+    {
+      "t": "2026-10-30T17:12:59",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/B2JqW9TKuEMGcpXBPDaePV",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "B2JqW9TKuEMGcpXBPDaePV",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:12:54.291Z",
+          "updatedAt": "2026-10-30T17:12:54.291Z",
+          "filepath": null
+        }
+      },
+      "ms": 534
+    },
+    {
+      "t": "2026-10-30T17:13:00",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 0?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 303
+      },
+      "ms": 786
+    },
+    {
+      "t": "2026-10-30T17:13:01",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/B2JqW9TKuEMGcpXBPDaePV",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "B2JqW9TKuEMGcpXBPDaePV",
+        "title": "Memo 0: the ticket reference is ZQ-LAT-680b2d2c7e7...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 0: the ticket reference is ZQ-LAT-680b2d2c7e7b.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:12:54.291Z",
+          "updatedAt": "2026-10-30T17:13:00.933Z",
+          "filepath": null
+        }
+      },
+      "ms": 411
+    },
+    {
+      "t": "2026-10-30T17:13:02",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 0?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 271
+      },
+      "ms": 714
+    },
+    {
+      "t": "2026-10-30T17:13:04",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/B2JqW9TKuEMGcpXBPDaePV",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "B2JqW9TKuEMGcpXBPDaePV",
+        "title": "Memo 0: the ticket reference is ZQ-LAT-680b2d2c7e7...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 0: the ticket reference is ZQ-LAT-680b2d2c7e7b.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:12:54.291Z",
+          "updatedAt": "2026-10-30T17:13:00.933Z",
+          "filepath": null
+        }
+      },
+      "ms": 479
+    },
+    {
+      "t": "2026-10-30T17:13:04",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 0?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 217
+      },
+      "ms": 745
+    },
+    {
+      "t": "2026-10-30T17:13:06",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/B2JqW9TKuEMGcpXBPDaePV",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "B2JqW9TKuEMGcpXBPDaePV",
+        "title": "Memo 0: the ticket reference is ZQ-LAT-680b2d2c7e7...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 0: the ticket reference is ZQ-LAT-680b2d2c7e7b.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:12:54.291Z",
+          "updatedAt": "2026-10-30T17:13:00.933Z",
+          "filepath": null
+        }
+      },
+      "ms": 609
+    },
+    {
+      "t": "2026-10-30T17:13:07",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 0?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 266
+      },
+      "ms": 703
+    },
+    {
+      "t": "2026-10-30T17:13:08",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/B2JqW9TKuEMGcpXBPDaePV",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "B2JqW9TKuEMGcpXBPDaePV",
+        "title": "Memo 0: the ticket reference is ZQ-LAT-680b2d2c7e7...",
+        "type": "text",
+        "summary": "This memo records the ticket reference number ZQ\u2011LAT\u2011680b2d2c7e7b, presumably used for tracking or referencing a support or issue ticket within the organization.",
+        "content": "Memo 0: the ticket reference is ZQ-LAT-680b2d2c7e7b.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:12:54.291Z",
+          "updatedAt": "2026-10-30T17:13:00.933Z",
+          "filepath": null
+        }
+      },
+      "ms": 425
+    },
+    {
+      "t": "2026-10-30T17:13:09",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 0?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 149
+      },
+      "ms": 567
+    },
+    {
+      "t": "2026-10-30T17:13:10",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/B2JqW9TKuEMGcpXBPDaePV",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "B2JqW9TKuEMGcpXBPDaePV",
+        "title": "Memo 0: the ticket reference is ZQ-LAT-680b2d2c7e7...",
+        "type": "text",
+        "summary": "This memo records the ticket reference number ZQ\u2011LAT\u2011680b2d2c7e7b, presumably used for tracking or referencing a support or issue ticket within the organization.",
+        "content": "Memo 0: the ticket reference is ZQ-LAT-680b2d2c7e7b.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:12:54.291Z",
+          "updatedAt": "2026-10-30T17:13:00.933Z",
+          "filepath": null
+        }
+      },
+      "ms": 438
+    },
+    {
+      "t": "2026-10-30T17:13:11",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 0?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 169
+      },
+      "ms": 646
+    },
+    {
+      "t": "2026-10-30T17:13:12",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/B2JqW9TKuEMGcpXBPDaePV",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "B2JqW9TKuEMGcpXBPDaePV",
+        "title": "Memo 0: the ticket reference is ZQ-LAT-680b2d2c7e7...",
+        "type": "text",
+        "summary": "This memo records the ticket reference number ZQ\u2011LAT\u2011680b2d2c7e7b, presumably used for tracking or referencing a support or issue ticket within the organization.",
+        "content": "Memo 0: the ticket reference is ZQ-LAT-680b2d2c7e7b.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:12:54.291Z",
+          "updatedAt": "2026-10-30T17:13:00.933Z",
+          "filepath": null
+        }
+      },
+      "ms": 447
+    },
+    {
+      "t": "2026-10-30T17:13:13",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 0?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 297
+      },
+      "ms": 814
+    },
+    {
+      "t": "2026-10-30T17:13:15",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/B2JqW9TKuEMGcpXBPDaePV",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "B2JqW9TKuEMGcpXBPDaePV",
+        "title": "Memo 0: the ticket reference is ZQ-LAT-680b2d2c7e7...",
+        "type": "text",
+        "summary": "This memo records the ticket reference number ZQ\u2011LAT\u2011680b2d2c7e7b, presumably used for tracking or referencing a support or issue ticket within the organization.",
+        "content": "Memo 0: the ticket reference is ZQ-LAT-680b2d2c7e7b.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:12:54.291Z",
+          "updatedAt": "2026-10-30T17:13:00.933Z",
+          "filepath": null
+        }
+      },
+      "ms": 492
+    },
+    {
+      "t": "2026-10-30T17:13:15",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 0?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 329
+      },
+      "ms": 835
+    },
+    {
+      "t": "2026-10-30T17:13:17",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/B2JqW9TKuEMGcpXBPDaePV",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "B2JqW9TKuEMGcpXBPDaePV",
+        "title": "Memo 0: the ticket reference is ZQ-LAT-680b2d2c7e7...",
+        "type": "text",
+        "summary": "This memo records the ticket reference number ZQ\u2011LAT\u2011680b2d2c7e7b, presumably used for tracking or referencing a support or issue ticket within the organization.",
+        "content": "Memo 0: the ticket reference is ZQ-LAT-680b2d2c7e7b.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "done",
+          "createdAt": "2026-10-30T17:12:54.291Z",
+          "updatedAt": "2026-10-30T17:13:15.532Z",
+          "filepath": null
+        }
+      },
+      "ms": 657
+    },
+    {
+      "t": "2026-10-30T17:13:18",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 0?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJaKRFhoHgUFLgt9m6F6wz",
+            "memory": "Ticket reference is ZQ-LAT-680b2d2c7e7b.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.69538033,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:15.532Z",
+              "createdAt": "2026-10-30T17:13:15.532Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 425
+      },
+      "ms": 957
+    },
+    {
+      "t": "2026-10-30T17:13:19",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document",
+      "request_body": {
+        "content": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c2.",
+        "dreaming": "instant"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "fM7gNEcHyN8sT69u56jxXg",
+        "status": "queued"
+      },
+      "ms": 1048
+    },
+    {
+      "t": "2026-10-30T17:13:19",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fM7gNEcHyN8sT69u56jxXg",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fM7gNEcHyN8sT69u56jxXg",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:19.194Z",
+          "updatedAt": "2026-10-30T17:13:19.194Z",
+          "filepath": null
+        }
+      },
+      "ms": 413
+    },
+    {
+      "t": "2026-10-30T17:13:20",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 1?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJaKRFhoHgUFLgt9m6F6wz",
+            "memory": "Ticket reference is ZQ-LAT-680b2d2c7e7b.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7176479,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:15.532Z",
+              "createdAt": "2026-10-30T17:13:15.532Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 367
+      },
+      "ms": 785
+    },
+    {
+      "t": "2026-10-30T17:13:22",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fM7gNEcHyN8sT69u56jxXg",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fM7gNEcHyN8sT69u56jxXg",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:19.194Z",
+          "updatedAt": "2026-10-30T17:13:19.194Z",
+          "filepath": null
+        }
+      },
+      "ms": 414
+    },
+    {
+      "t": "2026-10-30T17:13:22",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 1?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJaKRFhoHgUFLgt9m6F6wz",
+            "memory": "Ticket reference is ZQ-LAT-680b2d2c7e7b.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7176479,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:15.532Z",
+              "createdAt": "2026-10-30T17:13:15.532Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 182
+      },
+      "ms": 642
+    },
+    {
+      "t": "2026-10-30T17:13:24",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fM7gNEcHyN8sT69u56jxXg",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fM7gNEcHyN8sT69u56jxXg",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:19.194Z",
+          "updatedAt": "2026-10-30T17:13:19.194Z",
+          "filepath": null
+        }
+      },
+      "ms": 447
+    },
+    {
+      "t": "2026-10-30T17:13:24",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 1?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJaKRFhoHgUFLgt9m6F6wz",
+            "memory": "Ticket reference is ZQ-LAT-680b2d2c7e7b.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7176479,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:15.532Z",
+              "createdAt": "2026-10-30T17:13:15.532Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 258
+      },
+      "ms": 684
+    },
+    {
+      "t": "2026-10-30T17:13:26",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fM7gNEcHyN8sT69u56jxXg",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fM7gNEcHyN8sT69u56jxXg",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:19.194Z",
+          "updatedAt": "2026-10-30T17:13:19.194Z",
+          "filepath": null
+        }
+      },
+      "ms": 421
+    },
+    {
+      "t": "2026-10-30T17:13:27",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 1?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJaKRFhoHgUFLgt9m6F6wz",
+            "memory": "Ticket reference is ZQ-LAT-680b2d2c7e7b.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7176479,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:15.532Z",
+              "createdAt": "2026-10-30T17:13:15.532Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 365
+      },
+      "ms": 1035
+    },
+    {
+      "t": "2026-10-30T17:13:29",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fM7gNEcHyN8sT69u56jxXg",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fM7gNEcHyN8sT69u56jxXg",
+        "title": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c2.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:19.194Z",
+          "updatedAt": "2026-10-30T17:13:26.289Z",
+          "filepath": null
+        }
+      },
+      "ms": 642
+    },
+    {
+      "t": "2026-10-30T17:13:30",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 1?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJaKRFhoHgUFLgt9m6F6wz",
+            "memory": "Ticket reference is ZQ-LAT-680b2d2c7e7b.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7176479,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:15.532Z",
+              "createdAt": "2026-10-30T17:13:15.532Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 252
+      },
+      "ms": 1659
+    },
+    {
+      "t": "2026-10-30T17:13:32",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fM7gNEcHyN8sT69u56jxXg",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fM7gNEcHyN8sT69u56jxXg",
+        "title": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c2.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:19.194Z",
+          "updatedAt": "2026-10-30T17:13:26.289Z",
+          "filepath": null
+        }
+      },
+      "ms": 770
+    },
+    {
+      "t": "2026-10-30T17:13:33",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 1?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJaKRFhoHgUFLgt9m6F6wz",
+            "memory": "Ticket reference is ZQ-LAT-680b2d2c7e7b.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7176479,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:15.532Z",
+              "createdAt": "2026-10-30T17:13:15.532Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 191
+      },
+      "ms": 690
+    },
+    {
+      "t": "2026-10-30T17:13:34",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fM7gNEcHyN8sT69u56jxXg",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fM7gNEcHyN8sT69u56jxXg",
+        "title": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c...",
+        "type": "text",
+        "summary": "This memo records the ticket reference code `ZQ-LAT-8022ee86e9c2`, which serves as a unique identifier within a ticketing or support system. The note is likely used to flag a specific incident, request, or issue for tracking, review, or completion purposes.",
+        "content": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c2.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:19.194Z",
+          "updatedAt": "2026-10-30T17:13:26.289Z",
+          "filepath": null
+        }
+      },
+      "ms": 661
+    },
+    {
+      "t": "2026-10-30T17:13:35",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 1?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJaKRFhoHgUFLgt9m6F6wz",
+            "memory": "Ticket reference is ZQ-LAT-680b2d2c7e7b.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7176479,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:15.532Z",
+              "createdAt": "2026-10-30T17:13:15.532Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 175
+      },
+      "ms": 999
+    },
+    {
+      "t": "2026-10-30T17:13:37",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fM7gNEcHyN8sT69u56jxXg",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fM7gNEcHyN8sT69u56jxXg",
+        "title": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c...",
+        "type": "text",
+        "summary": "This memo records the ticket reference code `ZQ-LAT-8022ee86e9c2`, which serves as a unique identifier within a ticketing or support system. The note is likely used to flag a specific incident, request, or issue for tracking, review, or completion purposes.",
+        "content": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c2.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:19.194Z",
+          "updatedAt": "2026-10-30T17:13:26.289Z",
+          "filepath": null
+        }
+      },
+      "ms": 551
+    },
+    {
+      "t": "2026-10-30T17:13:38",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 1?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJaKRFhoHgUFLgt9m6F6wz",
+            "memory": "Ticket reference is ZQ-LAT-680b2d2c7e7b.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7176479,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:15.532Z",
+              "createdAt": "2026-10-30T17:13:15.532Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 161
+      },
+      "ms": 715
+    },
+    {
+      "t": "2026-10-30T17:13:39",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fM7gNEcHyN8sT69u56jxXg",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fM7gNEcHyN8sT69u56jxXg",
+        "title": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c...",
+        "type": "text",
+        "summary": "This memo records the ticket reference code `ZQ-LAT-8022ee86e9c2`, which serves as a unique identifier within a ticketing or support system. The note is likely used to flag a specific incident, request, or issue for tracking, review, or completion purposes.",
+        "content": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c2.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:19.194Z",
+          "updatedAt": "2026-10-30T17:13:26.289Z",
+          "filepath": null
+        }
+      },
+      "ms": 462
+    },
+    {
+      "t": "2026-10-30T17:13:40",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 1?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJaKRFhoHgUFLgt9m6F6wz",
+            "memory": "Ticket reference is ZQ-LAT-680b2d2c7e7b.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7176479,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:15.532Z",
+              "createdAt": "2026-10-30T17:13:15.532Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 220
+      },
+      "ms": 673
+    },
+    {
+      "t": "2026-10-30T17:13:41",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fM7gNEcHyN8sT69u56jxXg",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fM7gNEcHyN8sT69u56jxXg",
+        "title": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c...",
+        "type": "text",
+        "summary": "This memo records the ticket reference code `ZQ-LAT-8022ee86e9c2`, which serves as a unique identifier within a ticketing or support system. The note is likely used to flag a specific incident, request, or issue for tracking, review, or completion purposes.",
+        "content": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c2.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:19.194Z",
+          "updatedAt": "2026-10-30T17:13:26.289Z",
+          "filepath": null
+        }
+      },
+      "ms": 427
+    },
+    {
+      "t": "2026-10-30T17:13:42",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 1?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJaKRFhoHgUFLgt9m6F6wz",
+            "memory": "Ticket reference is ZQ-LAT-680b2d2c7e7b.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7176479,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:15.532Z",
+              "createdAt": "2026-10-30T17:13:15.532Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 223
+      },
+      "ms": 720
+    },
+    {
+      "t": "2026-10-30T17:13:43",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fM7gNEcHyN8sT69u56jxXg",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fM7gNEcHyN8sT69u56jxXg",
+        "title": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c...",
+        "type": "text",
+        "summary": "This memo records the ticket reference code `ZQ-LAT-8022ee86e9c2`, which serves as a unique identifier within a ticketing or support system. The note is likely used to flag a specific incident, request, or issue for tracking, review, or completion purposes.",
+        "content": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c2.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:19.194Z",
+          "updatedAt": "2026-10-30T17:13:26.289Z",
+          "filepath": null
+        }
+      },
+      "ms": 410
+    },
+    {
+      "t": "2026-10-30T17:13:44",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 1?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJaKRFhoHgUFLgt9m6F6wz",
+            "memory": "Ticket reference is ZQ-LAT-680b2d2c7e7b.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7176479,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:15.532Z",
+              "createdAt": "2026-10-30T17:13:15.532Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 288
+      },
+      "ms": 761
+    },
+    {
+      "t": "2026-10-30T17:13:46",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fM7gNEcHyN8sT69u56jxXg",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fM7gNEcHyN8sT69u56jxXg",
+        "title": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c...",
+        "type": "text",
+        "summary": "This memo records the ticket reference code `ZQ-LAT-8022ee86e9c2`, which serves as a unique identifier within a ticketing or support system. The note is likely used to flag a specific incident, request, or issue for tracking, review, or completion purposes.",
+        "content": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c2.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:19.194Z",
+          "updatedAt": "2026-10-30T17:13:26.289Z",
+          "filepath": null
+        }
+      },
+      "ms": 406
+    },
+    {
+      "t": "2026-10-30T17:13:46",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 1?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJaKRFhoHgUFLgt9m6F6wz",
+            "memory": "Ticket reference is ZQ-LAT-680b2d2c7e7b.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7176479,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:15.532Z",
+              "createdAt": "2026-10-30T17:13:15.532Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 147
+      },
+      "ms": 577
+    },
+    {
+      "t": "2026-10-30T17:13:48",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fM7gNEcHyN8sT69u56jxXg",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fM7gNEcHyN8sT69u56jxXg",
+        "title": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c...",
+        "type": "text",
+        "summary": "This memo records the ticket reference code `ZQ-LAT-8022ee86e9c2`, which serves as a unique identifier within a ticketing or support system. The note is likely used to flag a specific incident, request, or issue for tracking, review, or completion purposes.",
+        "content": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c2.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:19.194Z",
+          "updatedAt": "2026-10-30T17:13:26.289Z",
+          "filepath": null
+        }
+      },
+      "ms": 427
+    },
+    {
+      "t": "2026-10-30T17:13:48",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 1?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJaKRFhoHgUFLgt9m6F6wz",
+            "memory": "Ticket reference is ZQ-LAT-680b2d2c7e7b.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7176479,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:15.532Z",
+              "createdAt": "2026-10-30T17:13:15.532Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 219
+      },
+      "ms": 751
+    },
+    {
+      "t": "2026-10-30T17:13:50",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fM7gNEcHyN8sT69u56jxXg",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fM7gNEcHyN8sT69u56jxXg",
+        "title": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c...",
+        "type": "text",
+        "summary": "This memo records the ticket reference code `ZQ-LAT-8022ee86e9c2`, which serves as a unique identifier within a ticketing or support system. The note is likely used to flag a specific incident, request, or issue for tracking, review, or completion purposes.",
+        "content": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c2.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:19.194Z",
+          "updatedAt": "2026-10-30T17:13:26.289Z",
+          "filepath": null
+        }
+      },
+      "ms": 526
+    },
+    {
+      "t": "2026-10-30T17:13:51",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 1?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJaKRFhoHgUFLgt9m6F6wz",
+            "memory": "Ticket reference is ZQ-LAT-680b2d2c7e7b.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7176479,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:15.532Z",
+              "createdAt": "2026-10-30T17:13:15.532Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 241
+      },
+      "ms": 741
+    },
+    {
+      "t": "2026-10-30T17:13:52",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fM7gNEcHyN8sT69u56jxXg",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fM7gNEcHyN8sT69u56jxXg",
+        "title": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c...",
+        "type": "text",
+        "summary": "This memo records the ticket reference code `ZQ-LAT-8022ee86e9c2`, which serves as a unique identifier within a ticketing or support system. The note is likely used to flag a specific incident, request, or issue for tracking, review, or completion purposes.",
+        "content": "Memo 1: the ticket reference is ZQ-LAT-8022ee86e9c2.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "done",
+          "createdAt": "2026-10-30T17:13:19.194Z",
+          "updatedAt": "2026-10-30T17:13:52.116Z",
+          "filepath": null
+        }
+      },
+      "ms": 527
+    },
+    {
+      "t": "2026-10-30T17:13:53",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 1?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "kn6EyT7HfzCXnKcvFoyQEy",
+            "memory": "Ticket reference is ZQ-LAT-8022ee86e9c2.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.71316028,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:52.116Z",
+              "createdAt": "2026-10-30T17:13:52.116Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 234
+      },
+      "ms": 654
+    },
+    {
+      "t": "2026-10-30T17:13:54",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document",
+      "request_body": {
+        "content": "Memo 2: the ticket reference is ZQ-LAT-9531ce80f5db.",
+        "dreaming": "instant"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "fnbEjZeQbgMA6gZNBsAG2f",
+        "status": "queued"
+      },
+      "ms": 915
+    },
+    {
+      "t": "2026-10-30T17:13:54",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fnbEjZeQbgMA6gZNBsAG2f",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fnbEjZeQbgMA6gZNBsAG2f",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:53.934Z",
+          "updatedAt": "2026-10-30T17:13:53.934Z",
+          "filepath": null
+        }
+      },
+      "ms": 424
+    },
+    {
+      "t": "2026-10-30T17:13:55",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 2?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "kn6EyT7HfzCXnKcvFoyQEy",
+            "memory": "Ticket reference is ZQ-LAT-8022ee86e9c2.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7090072000000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:52.116Z",
+              "createdAt": "2026-10-30T17:13:52.116Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 287
+      },
+      "ms": 792
+    },
+    {
+      "t": "2026-10-30T17:13:56",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fnbEjZeQbgMA6gZNBsAG2f",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fnbEjZeQbgMA6gZNBsAG2f",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:53.934Z",
+          "updatedAt": "2026-10-30T17:13:53.934Z",
+          "filepath": null
+        }
+      },
+      "ms": 401
+    },
+    {
+      "t": "2026-10-30T17:13:57",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 2?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "kn6EyT7HfzCXnKcvFoyQEy",
+            "memory": "Ticket reference is ZQ-LAT-8022ee86e9c2.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7090072000000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:52.116Z",
+              "createdAt": "2026-10-30T17:13:52.116Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 316
+      },
+      "ms": 736
+    },
+    {
+      "t": "2026-10-30T17:13:58",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fnbEjZeQbgMA6gZNBsAG2f",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fnbEjZeQbgMA6gZNBsAG2f",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:53.934Z",
+          "updatedAt": "2026-10-30T17:13:53.934Z",
+          "filepath": null
+        }
+      },
+      "ms": 466
+    },
+    {
+      "t": "2026-10-30T17:13:59",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 2?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "kn6EyT7HfzCXnKcvFoyQEy",
+            "memory": "Ticket reference is ZQ-LAT-8022ee86e9c2.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7090072000000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:52.116Z",
+              "createdAt": "2026-10-30T17:13:52.116Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 194
+      },
+      "ms": 670
+    },
+    {
+      "t": "2026-10-30T17:14:01",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fnbEjZeQbgMA6gZNBsAG2f",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fnbEjZeQbgMA6gZNBsAG2f",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:53.934Z",
+          "updatedAt": "2026-10-30T17:13:53.934Z",
+          "filepath": null
+        }
+      },
+      "ms": 493
+    },
+    {
+      "t": "2026-10-30T17:14:02",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 2?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "kn6EyT7HfzCXnKcvFoyQEy",
+            "memory": "Ticket reference is ZQ-LAT-8022ee86e9c2.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7090072000000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:52.116Z",
+              "createdAt": "2026-10-30T17:13:52.116Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 370
+      },
+      "ms": 918
+    },
+    {
+      "t": "2026-10-30T17:14:03",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fnbEjZeQbgMA6gZNBsAG2f",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fnbEjZeQbgMA6gZNBsAG2f",
+        "title": "Memo 2: the ticket reference is ZQ-LAT-9531ce80f5d...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 2: the ticket reference is ZQ-LAT-9531ce80f5db.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:53.934Z",
+          "updatedAt": "2026-10-30T17:14:02.234Z",
+          "filepath": null
+        }
+      },
+      "ms": 413
+    },
+    {
+      "t": "2026-10-30T17:14:04",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 2?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "kn6EyT7HfzCXnKcvFoyQEy",
+            "memory": "Ticket reference is ZQ-LAT-8022ee86e9c2.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7090072000000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:52.116Z",
+              "createdAt": "2026-10-30T17:13:52.116Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 329
+      },
+      "ms": 846
+    },
+    {
+      "t": "2026-10-30T17:14:06",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fnbEjZeQbgMA6gZNBsAG2f",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fnbEjZeQbgMA6gZNBsAG2f",
+        "title": "Memo 2: the ticket reference is ZQ-LAT-9531ce80f5d...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 2: the ticket reference is ZQ-LAT-9531ce80f5db.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:53.934Z",
+          "updatedAt": "2026-10-30T17:14:02.234Z",
+          "filepath": null
+        }
+      },
+      "ms": 669
+    },
+    {
+      "t": "2026-10-30T17:14:06",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 2?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "kn6EyT7HfzCXnKcvFoyQEy",
+            "memory": "Ticket reference is ZQ-LAT-8022ee86e9c2.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7090072000000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:52.116Z",
+              "createdAt": "2026-10-30T17:13:52.116Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 297
+      },
+      "ms": 854
+    },
+    {
+      "t": "2026-10-30T17:14:08",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fnbEjZeQbgMA6gZNBsAG2f",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fnbEjZeQbgMA6gZNBsAG2f",
+        "title": "Memo 2: the ticket reference is ZQ-LAT-9531ce80f5d...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 2: the ticket reference is ZQ-LAT-9531ce80f5db.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:53.934Z",
+          "updatedAt": "2026-10-30T17:14:02.234Z",
+          "filepath": null
+        }
+      },
+      "ms": 558
+    },
+    {
+      "t": "2026-10-30T17:14:09",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 2?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "kn6EyT7HfzCXnKcvFoyQEy",
+            "memory": "Ticket reference is ZQ-LAT-8022ee86e9c2.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7090072000000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:52.116Z",
+              "createdAt": "2026-10-30T17:13:52.116Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 182
+      },
+      "ms": 713
+    },
+    {
+      "t": "2026-10-30T17:14:10",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fnbEjZeQbgMA6gZNBsAG2f",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fnbEjZeQbgMA6gZNBsAG2f",
+        "title": "Memo 2: the ticket reference is ZQ-LAT-9531ce80f5d...",
+        "type": "text",
+        "summary": "This document contains a brief memo identifying ticket reference code \"ZQ-LAT-9531ce80f5db\" presumably linked to an internal help desk or incident management system. The memo likely serves to notify relevant parties of the ticket ID for reference or tracking purposes.",
+        "content": "Memo 2: the ticket reference is ZQ-LAT-9531ce80f5db.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:53.934Z",
+          "updatedAt": "2026-10-30T17:14:02.234Z",
+          "filepath": null
+        }
+      },
+      "ms": 396
+    },
+    {
+      "t": "2026-10-30T17:14:11",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 2?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "kn6EyT7HfzCXnKcvFoyQEy",
+            "memory": "Ticket reference is ZQ-LAT-8022ee86e9c2.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7090072000000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:52.116Z",
+              "createdAt": "2026-10-30T17:13:52.116Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 259
+      },
+      "ms": 674
+    },
+    {
+      "t": "2026-10-30T17:14:12",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fnbEjZeQbgMA6gZNBsAG2f",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fnbEjZeQbgMA6gZNBsAG2f",
+        "title": "Memo 2: the ticket reference is ZQ-LAT-9531ce80f5d...",
+        "type": "text",
+        "summary": "This document contains a brief memo identifying ticket reference code \"ZQ-LAT-9531ce80f5db\" presumably linked to an internal help desk or incident management system. The memo likely serves to notify relevant parties of the ticket ID for reference or tracking purposes.",
+        "content": "Memo 2: the ticket reference is ZQ-LAT-9531ce80f5db.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:53.934Z",
+          "updatedAt": "2026-10-30T17:14:02.234Z",
+          "filepath": null
+        }
+      },
+      "ms": 412
+    },
+    {
+      "t": "2026-10-30T17:14:13",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 2?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "kn6EyT7HfzCXnKcvFoyQEy",
+            "memory": "Ticket reference is ZQ-LAT-8022ee86e9c2.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7090072000000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:52.116Z",
+              "createdAt": "2026-10-30T17:13:52.116Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 251
+      },
+      "ms": 701
+    },
+    {
+      "t": "2026-10-30T17:14:14",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fnbEjZeQbgMA6gZNBsAG2f",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fnbEjZeQbgMA6gZNBsAG2f",
+        "title": "Memo 2: the ticket reference is ZQ-LAT-9531ce80f5d...",
+        "type": "text",
+        "summary": "This document contains a brief memo identifying ticket reference code \"ZQ-LAT-9531ce80f5db\" presumably linked to an internal help desk or incident management system. The memo likely serves to notify relevant parties of the ticket ID for reference or tracking purposes.",
+        "content": "Memo 2: the ticket reference is ZQ-LAT-9531ce80f5db.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:53.934Z",
+          "updatedAt": "2026-10-30T17:14:02.234Z",
+          "filepath": null
+        }
+      },
+      "ms": 433
+    },
+    {
+      "t": "2026-10-30T17:14:15",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 2?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "kn6EyT7HfzCXnKcvFoyQEy",
+            "memory": "Ticket reference is ZQ-LAT-8022ee86e9c2.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7090072000000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:13:52.116Z",
+              "createdAt": "2026-10-30T17:13:52.116Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 263
+      },
+      "ms": 715
+    },
+    {
+      "t": "2026-10-30T17:14:16",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fnbEjZeQbgMA6gZNBsAG2f",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fnbEjZeQbgMA6gZNBsAG2f",
+        "title": "Memo 2: the ticket reference is ZQ-LAT-9531ce80f5d...",
+        "type": "text",
+        "summary": "This document contains a brief memo identifying ticket reference code \"ZQ-LAT-9531ce80f5db\" presumably linked to an internal help desk or incident management system. The memo likely serves to notify relevant parties of the ticket ID for reference or tracking purposes.",
+        "content": "Memo 2: the ticket reference is ZQ-LAT-9531ce80f5db.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:13:53.934Z",
+          "updatedAt": "2026-10-30T17:14:02.234Z",
+          "filepath": null
+        }
+      },
+      "ms": 379
+    },
+    {
+      "t": "2026-10-30T17:14:17",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 2?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "jQSqPF2e88Gw3PZEzr3wQZ",
+            "memory": "Ticket reference is ZQ-LAT-9531ce80f5db.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.71687835,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:16.697Z",
+              "createdAt": "2026-10-30T17:14:16.697Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 265
+      },
+      "ms": 723
+    },
+    {
+      "t": "2026-10-30T17:14:19",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/fnbEjZeQbgMA6gZNBsAG2f",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fnbEjZeQbgMA6gZNBsAG2f",
+        "title": "Memo 2: the ticket reference is ZQ-LAT-9531ce80f5d...",
+        "type": "text",
+        "summary": "This document contains a brief memo identifying ticket reference code \"ZQ-LAT-9531ce80f5db\" presumably linked to an internal help desk or incident management system. The memo likely serves to notify relevant parties of the ticket ID for reference or tracking purposes.",
+        "content": "Memo 2: the ticket reference is ZQ-LAT-9531ce80f5db.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "done",
+          "createdAt": "2026-10-30T17:13:53.934Z",
+          "updatedAt": "2026-10-30T17:14:16.697Z",
+          "filepath": null
+        }
+      },
+      "ms": 775
+    },
+    {
+      "t": "2026-10-30T17:14:20",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document",
+      "request_body": {
+        "content": "Memo 3: the ticket reference is ZQ-LAT-3614b3ae8c13.",
+        "dreaming": "instant"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "FP9i4xXpRmmktpvyyP1ta6",
+        "status": "queued"
+      },
+      "ms": 1032
+    },
+    {
+      "t": "2026-10-30T17:14:20",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/FP9i4xXpRmmktpvyyP1ta6",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "FP9i4xXpRmmktpvyyP1ta6",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:14:20.145Z",
+          "updatedAt": "2026-10-30T17:14:20.145Z",
+          "filepath": null
+        }
+      },
+      "ms": 502
+    },
+    {
+      "t": "2026-10-30T17:14:21",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 3?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "jQSqPF2e88Gw3PZEzr3wQZ",
+            "memory": "Ticket reference is ZQ-LAT-9531ce80f5db.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.70596963,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:16.697Z",
+              "createdAt": "2026-10-30T17:14:16.697Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 328
+      },
+      "ms": 1035
+    },
+    {
+      "t": "2026-10-30T17:14:23",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/FP9i4xXpRmmktpvyyP1ta6",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "FP9i4xXpRmmktpvyyP1ta6",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:14:20.145Z",
+          "updatedAt": "2026-10-30T17:14:20.145Z",
+          "filepath": null
+        }
+      },
+      "ms": 547
+    },
+    {
+      "t": "2026-10-30T17:14:24",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 3?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "jQSqPF2e88Gw3PZEzr3wQZ",
+            "memory": "Ticket reference is ZQ-LAT-9531ce80f5db.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.70596963,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:16.697Z",
+              "createdAt": "2026-10-30T17:14:16.697Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 256
+      },
+      "ms": 754
+    },
+    {
+      "t": "2026-10-30T17:14:25",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/FP9i4xXpRmmktpvyyP1ta6",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "FP9i4xXpRmmktpvyyP1ta6",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:14:20.145Z",
+          "updatedAt": "2026-10-30T17:14:20.145Z",
+          "filepath": null
+        }
+      },
+      "ms": 426
+    },
+    {
+      "t": "2026-10-30T17:14:26",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 3?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "jQSqPF2e88Gw3PZEzr3wQZ",
+            "memory": "Ticket reference is ZQ-LAT-9531ce80f5db.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.70596963,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:16.697Z",
+              "createdAt": "2026-10-30T17:14:16.697Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 333
+      },
+      "ms": 979
+    },
+    {
+      "t": "2026-10-30T17:14:28",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/FP9i4xXpRmmktpvyyP1ta6",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "FP9i4xXpRmmktpvyyP1ta6",
+        "title": "Memo 3: the ticket reference is ZQ-LAT-3614b3ae8c1...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 3: the ticket reference is ZQ-LAT-3614b3ae8c13.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:14:20.145Z",
+          "updatedAt": "2026-10-30T17:14:27.244Z",
+          "filepath": null
+        }
+      },
+      "ms": 422
+    },
+    {
+      "t": "2026-10-30T17:14:28",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 3?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "jQSqPF2e88Gw3PZEzr3wQZ",
+            "memory": "Ticket reference is ZQ-LAT-9531ce80f5db.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.70596963,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:16.697Z",
+              "createdAt": "2026-10-30T17:14:16.697Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 205
+      },
+      "ms": 643
+    },
+    {
+      "t": "2026-10-30T17:14:30",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/FP9i4xXpRmmktpvyyP1ta6",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "FP9i4xXpRmmktpvyyP1ta6",
+        "title": "Memo 3: the ticket reference is ZQ-LAT-3614b3ae8c1...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 3: the ticket reference is ZQ-LAT-3614b3ae8c13.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:14:20.145Z",
+          "updatedAt": "2026-10-30T17:14:27.244Z",
+          "filepath": null
+        }
+      },
+      "ms": 821
+    },
+    {
+      "t": "2026-10-30T17:14:31",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 3?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "jQSqPF2e88Gw3PZEzr3wQZ",
+            "memory": "Ticket reference is ZQ-LAT-9531ce80f5db.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.70596963,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:16.697Z",
+              "createdAt": "2026-10-30T17:14:16.697Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 209
+      },
+      "ms": 631
+    },
+    {
+      "t": "2026-10-30T17:14:32",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/FP9i4xXpRmmktpvyyP1ta6",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "FP9i4xXpRmmktpvyyP1ta6",
+        "title": "Memo 3: the ticket reference is ZQ-LAT-3614b3ae8c1...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 3: the ticket reference is ZQ-LAT-3614b3ae8c13.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:14:20.145Z",
+          "updatedAt": "2026-10-30T17:14:27.244Z",
+          "filepath": null
+        }
+      },
+      "ms": 418
+    },
+    {
+      "t": "2026-10-30T17:14:33",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 3?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "jQSqPF2e88Gw3PZEzr3wQZ",
+            "memory": "Ticket reference is ZQ-LAT-9531ce80f5db.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.70596963,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:16.697Z",
+              "createdAt": "2026-10-30T17:14:16.697Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 383
+      },
+      "ms": 838
+    },
+    {
+      "t": "2026-10-30T17:14:34",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/FP9i4xXpRmmktpvyyP1ta6",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "FP9i4xXpRmmktpvyyP1ta6",
+        "title": "Memo 3: the ticket reference is ZQ-LAT-3614b3ae8c1...",
+        "type": "text",
+        "summary": "This document is a brief memo noting that the relevant support ticket identifier is ZQ-LAT-3614b3ae8c13. It serves as a quick reference for team members or support agents to locate the associated issue in the ticketing system and to confirm that the correct ticket is being discussed or acted upon. The memo format underscores its role as a lightweight communication aid rather than a detailed report.",
+        "content": "Memo 3: the ticket reference is ZQ-LAT-3614b3ae8c13.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:14:20.145Z",
+          "updatedAt": "2026-10-30T17:14:27.244Z",
+          "filepath": null
+        }
+      },
+      "ms": 476
+    },
+    {
+      "t": "2026-10-30T17:14:36",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 3?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "jQSqPF2e88Gw3PZEzr3wQZ",
+            "memory": "Ticket reference is ZQ-LAT-9531ce80f5db.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.70596963,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:16.697Z",
+              "createdAt": "2026-10-30T17:14:16.697Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 465
+      },
+      "ms": 1136
+    },
+    {
+      "t": "2026-10-30T17:14:37",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/FP9i4xXpRmmktpvyyP1ta6",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "FP9i4xXpRmmktpvyyP1ta6",
+        "title": "Memo 3: the ticket reference is ZQ-LAT-3614b3ae8c1...",
+        "type": "text",
+        "summary": "This document is a brief memo noting that the relevant support ticket identifier is ZQ-LAT-3614b3ae8c13. It serves as a quick reference for team members or support agents to locate the associated issue in the ticketing system and to confirm that the correct ticket is being discussed or acted upon. The memo format underscores its role as a lightweight communication aid rather than a detailed report.",
+        "content": "Memo 3: the ticket reference is ZQ-LAT-3614b3ae8c13.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:14:20.145Z",
+          "updatedAt": "2026-10-30T17:14:27.244Z",
+          "filepath": null
+        }
+      },
+      "ms": 581
+    },
+    {
+      "t": "2026-10-30T17:14:38",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 3?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "jQSqPF2e88Gw3PZEzr3wQZ",
+            "memory": "Ticket reference is ZQ-LAT-9531ce80f5db.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.70596963,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:16.697Z",
+              "createdAt": "2026-10-30T17:14:16.697Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 123
+      },
+      "ms": 524
+    },
+    {
+      "t": "2026-10-30T17:14:39",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/FP9i4xXpRmmktpvyyP1ta6",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "FP9i4xXpRmmktpvyyP1ta6",
+        "title": "Memo 3: the ticket reference is ZQ-LAT-3614b3ae8c1...",
+        "type": "text",
+        "summary": "This document is a brief memo noting that the relevant support ticket identifier is ZQ-LAT-3614b3ae8c13. It serves as a quick reference for team members or support agents to locate the associated issue in the ticketing system and to confirm that the correct ticket is being discussed or acted upon. The memo format underscores its role as a lightweight communication aid rather than a detailed report.",
+        "content": "Memo 3: the ticket reference is ZQ-LAT-3614b3ae8c13.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:14:20.145Z",
+          "updatedAt": "2026-10-30T17:14:27.244Z",
+          "filepath": null
+        }
+      },
+      "ms": 449
+    },
+    {
+      "t": "2026-10-30T17:14:41",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 3?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "jQSqPF2e88Gw3PZEzr3wQZ",
+            "memory": "Ticket reference is ZQ-LAT-9531ce80f5db.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.70596963,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:16.697Z",
+              "createdAt": "2026-10-30T17:14:16.697Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 302
+      },
+      "ms": 2233
+    },
+    {
+      "t": "2026-10-30T17:14:43",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/FP9i4xXpRmmktpvyyP1ta6",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "FP9i4xXpRmmktpvyyP1ta6",
+        "title": "Memo 3: the ticket reference is ZQ-LAT-3614b3ae8c1...",
+        "type": "text",
+        "summary": "This document is a brief memo noting that the relevant support ticket identifier is ZQ-LAT-3614b3ae8c13. It serves as a quick reference for team members or support agents to locate the associated issue in the ticketing system and to confirm that the correct ticket is being discussed or acted upon. The memo format underscores its role as a lightweight communication aid rather than a detailed report.",
+        "content": "Memo 3: the ticket reference is ZQ-LAT-3614b3ae8c13.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:14:20.145Z",
+          "updatedAt": "2026-10-30T17:14:27.244Z",
+          "filepath": null
+        }
+      },
+      "ms": 538
+    },
+    {
+      "t": "2026-10-30T17:14:44",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 3?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "jQSqPF2e88Gw3PZEzr3wQZ",
+            "memory": "Ticket reference is ZQ-LAT-9531ce80f5db.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.70596963,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:16.697Z",
+              "createdAt": "2026-10-30T17:14:16.697Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 310
+      },
+      "ms": 733
+    },
+    {
+      "t": "2026-10-30T17:14:45",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/FP9i4xXpRmmktpvyyP1ta6",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "FP9i4xXpRmmktpvyyP1ta6",
+        "title": "Memo 3: the ticket reference is ZQ-LAT-3614b3ae8c1...",
+        "type": "text",
+        "summary": "This document is a brief memo noting that the relevant support ticket identifier is ZQ-LAT-3614b3ae8c13. It serves as a quick reference for team members or support agents to locate the associated issue in the ticketing system and to confirm that the correct ticket is being discussed or acted upon. The memo format underscores its role as a lightweight communication aid rather than a detailed report.",
+        "content": "Memo 3: the ticket reference is ZQ-LAT-3614b3ae8c13.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "done",
+          "createdAt": "2026-10-30T17:14:20.145Z",
+          "updatedAt": "2026-10-30T17:14:45.119Z",
+          "filepath": null
+        }
+      },
+      "ms": 399
+    },
+    {
+      "t": "2026-10-30T17:14:46",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 3?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJv6TKJNFyLcyDbZvGKqvW",
+            "memory": "Ticket reference is ZQ-LAT-3614b3ae8c13.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.69586432,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:45.119Z",
+              "createdAt": "2026-10-30T17:14:45.119Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 257
+      },
+      "ms": 905
+    },
+    {
+      "t": "2026-10-30T17:14:47",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document",
+      "request_body": {
+        "content": "Memo 4: the ticket reference is ZQ-LAT-69285e9e5960.",
+        "dreaming": "instant"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "3G7LCawVNWQPyLwKDdMBCG",
+        "status": "queued"
+      },
+      "ms": 1007
+    },
+    {
+      "t": "2026-10-30T17:14:47",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/3G7LCawVNWQPyLwKDdMBCG",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "3G7LCawVNWQPyLwKDdMBCG",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:14:47.263Z",
+          "updatedAt": "2026-10-30T17:14:47.263Z",
+          "filepath": null
+        }
+      },
+      "ms": 468
+    },
+    {
+      "t": "2026-10-30T17:14:48",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 4?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJv6TKJNFyLcyDbZvGKqvW",
+            "memory": "Ticket reference is ZQ-LAT-3614b3ae8c13.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.6840889,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:45.119Z",
+              "createdAt": "2026-10-30T17:14:45.119Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 268
+      },
+      "ms": 714
+    },
+    {
+      "t": "2026-10-30T17:14:50",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/3G7LCawVNWQPyLwKDdMBCG",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "3G7LCawVNWQPyLwKDdMBCG",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:14:47.263Z",
+          "updatedAt": "2026-10-30T17:14:47.263Z",
+          "filepath": null
+        }
+      },
+      "ms": 633
+    },
+    {
+      "t": "2026-10-30T17:14:51",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 4?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJv6TKJNFyLcyDbZvGKqvW",
+            "memory": "Ticket reference is ZQ-LAT-3614b3ae8c13.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.6840889,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:45.119Z",
+              "createdAt": "2026-10-30T17:14:45.119Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 259
+      },
+      "ms": 777
+    },
+    {
+      "t": "2026-10-30T17:14:52",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/3G7LCawVNWQPyLwKDdMBCG",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "3G7LCawVNWQPyLwKDdMBCG",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:14:47.263Z",
+          "updatedAt": "2026-10-30T17:14:47.263Z",
+          "filepath": null
+        }
+      },
+      "ms": 397
+    },
+    {
+      "t": "2026-10-30T17:14:53",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 4?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJv6TKJNFyLcyDbZvGKqvW",
+            "memory": "Ticket reference is ZQ-LAT-3614b3ae8c13.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.6840889,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:45.119Z",
+              "createdAt": "2026-10-30T17:14:45.119Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 205
+      },
+      "ms": 642
+    },
+    {
+      "t": "2026-10-30T17:14:54",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/3G7LCawVNWQPyLwKDdMBCG",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "3G7LCawVNWQPyLwKDdMBCG",
+        "title": "Memo 4: the ticket reference is ZQ-LAT-69285e9e596...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 4: the ticket reference is ZQ-LAT-69285e9e5960.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:14:47.263Z",
+          "updatedAt": "2026-10-30T17:14:53.653Z",
+          "filepath": null
+        }
+      },
+      "ms": 471
+    },
+    {
+      "t": "2026-10-30T17:14:55",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 4?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJv6TKJNFyLcyDbZvGKqvW",
+            "memory": "Ticket reference is ZQ-LAT-3614b3ae8c13.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.6840889,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:45.119Z",
+              "createdAt": "2026-10-30T17:14:45.119Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 247
+      },
+      "ms": 943
+    },
+    {
+      "t": "2026-10-30T17:14:56",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/3G7LCawVNWQPyLwKDdMBCG",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "3G7LCawVNWQPyLwKDdMBCG",
+        "title": "Memo 4: the ticket reference is ZQ-LAT-69285e9e596...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 4: the ticket reference is ZQ-LAT-69285e9e5960.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:14:47.263Z",
+          "updatedAt": "2026-10-30T17:14:53.653Z",
+          "filepath": null
+        }
+      },
+      "ms": 396
+    },
+    {
+      "t": "2026-10-30T17:14:57",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 4?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJv6TKJNFyLcyDbZvGKqvW",
+            "memory": "Ticket reference is ZQ-LAT-3614b3ae8c13.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.6840889,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:45.119Z",
+              "createdAt": "2026-10-30T17:14:45.119Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 170
+      },
+      "ms": 621
+    },
+    {
+      "t": "2026-10-30T17:14:59",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/3G7LCawVNWQPyLwKDdMBCG",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "3G7LCawVNWQPyLwKDdMBCG",
+        "title": "Memo 4: the ticket reference is ZQ-LAT-69285e9e596...",
+        "type": "text",
+        "summary": null,
+        "content": "Memo 4: the ticket reference is ZQ-LAT-69285e9e5960.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:14:47.263Z",
+          "updatedAt": "2026-10-30T17:14:53.653Z",
+          "filepath": null
+        }
+      },
+      "ms": 575
+    },
+    {
+      "t": "2026-10-30T17:14:59",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 4?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJv6TKJNFyLcyDbZvGKqvW",
+            "memory": "Ticket reference is ZQ-LAT-3614b3ae8c13.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.6840889,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:45.119Z",
+              "createdAt": "2026-10-30T17:14:45.119Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 184
+      },
+      "ms": 600
+    },
+    {
+      "t": "2026-10-30T17:15:01",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/3G7LCawVNWQPyLwKDdMBCG",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "3G7LCawVNWQPyLwKDdMBCG",
+        "title": "Memo 4: the ticket reference is ZQ-LAT-69285e9e596...",
+        "type": "text",
+        "summary": "The memo states that for Memo 4, the associated ticket reference is \"ZQ-LAT-69285e9e5960\". It is a brief note confirming the ticket link for this memo.",
+        "content": "Memo 4: the ticket reference is ZQ-LAT-69285e9e5960.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:14:47.263Z",
+          "updatedAt": "2026-10-30T17:14:53.653Z",
+          "filepath": null
+        }
+      },
+      "ms": 489
+    },
+    {
+      "t": "2026-10-30T17:15:01",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 4?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJv6TKJNFyLcyDbZvGKqvW",
+            "memory": "Ticket reference is ZQ-LAT-3614b3ae8c13.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.6840889,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:45.119Z",
+              "createdAt": "2026-10-30T17:14:45.119Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 147
+      },
+      "ms": 604
+    },
+    {
+      "t": "2026-10-30T17:15:03",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/3G7LCawVNWQPyLwKDdMBCG",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "3G7LCawVNWQPyLwKDdMBCG",
+        "title": "Memo 4: the ticket reference is ZQ-LAT-69285e9e596...",
+        "type": "text",
+        "summary": "The memo states that for Memo 4, the associated ticket reference is \"ZQ-LAT-69285e9e5960\". It is a brief note confirming the ticket link for this memo.",
+        "content": "Memo 4: the ticket reference is ZQ-LAT-69285e9e5960.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:14:47.263Z",
+          "updatedAt": "2026-10-30T17:14:53.653Z",
+          "filepath": null
+        }
+      },
+      "ms": 487
+    },
+    {
+      "t": "2026-10-30T17:15:03",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 4?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJv6TKJNFyLcyDbZvGKqvW",
+            "memory": "Ticket reference is ZQ-LAT-3614b3ae8c13.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.6840889,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:45.119Z",
+              "createdAt": "2026-10-30T17:14:45.119Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 136
+      },
+      "ms": 590
+    },
+    {
+      "t": "2026-10-30T17:15:05",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/3G7LCawVNWQPyLwKDdMBCG",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "3G7LCawVNWQPyLwKDdMBCG",
+        "title": "Memo 4: the ticket reference is ZQ-LAT-69285e9e596...",
+        "type": "text",
+        "summary": "The memo states that for Memo 4, the associated ticket reference is \"ZQ-LAT-69285e9e5960\". It is a brief note confirming the ticket link for this memo.",
+        "content": "Memo 4: the ticket reference is ZQ-LAT-69285e9e5960.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:14:47.263Z",
+          "updatedAt": "2026-10-30T17:14:53.653Z",
+          "filepath": null
+        }
+      },
+      "ms": 499
+    },
+    {
+      "t": "2026-10-30T17:15:06",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 4?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJv6TKJNFyLcyDbZvGKqvW",
+            "memory": "Ticket reference is ZQ-LAT-3614b3ae8c13.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.6840889,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:45.119Z",
+              "createdAt": "2026-10-30T17:14:45.119Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 158
+      },
+      "ms": 587
+    },
+    {
+      "t": "2026-10-30T17:15:07",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/3G7LCawVNWQPyLwKDdMBCG",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "3G7LCawVNWQPyLwKDdMBCG",
+        "title": "Memo 4: the ticket reference is ZQ-LAT-69285e9e596...",
+        "type": "text",
+        "summary": "The memo states that for Memo 4, the associated ticket reference is \"ZQ-LAT-69285e9e5960\". It is a brief note confirming the ticket link for this memo.",
+        "content": "Memo 4: the ticket reference is ZQ-LAT-69285e9e5960.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T17:14:47.263Z",
+          "updatedAt": "2026-10-30T17:14:53.653Z",
+          "filepath": null
+        }
+      },
+      "ms": 502
+    },
+    {
+      "t": "2026-10-30T17:15:08",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 4?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "AJv6TKJNFyLcyDbZvGKqvW",
+            "memory": "Ticket reference is ZQ-LAT-3614b3ae8c13.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.6840889,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:45.119Z",
+              "createdAt": "2026-10-30T17:14:45.119Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 183
+      },
+      "ms": 1047
+    },
+    {
+      "t": "2026-10-30T17:15:10",
+      "method": "GET",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/document/3G7LCawVNWQPyLwKDdMBCG",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "3G7LCawVNWQPyLwKDdMBCG",
+        "title": "Memo 4: the ticket reference is ZQ-LAT-69285e9e596...",
+        "type": "text",
+        "summary": "The memo states that for Memo 4, the associated ticket reference is \"ZQ-LAT-69285e9e5960\". It is a brief note confirming the ticket link for this memo.",
+        "content": "Memo 4: the ticket reference is ZQ-LAT-69285e9e5960.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "done",
+          "createdAt": "2026-10-30T17:14:47.263Z",
+          "updatedAt": "2026-10-30T17:15:08.440Z",
+          "filepath": null
+        }
+      },
+      "ms": 565
+    },
+    {
+      "t": "2026-10-30T17:15:10",
+      "method": "POST",
+      "path": "/ns/memtrust_lat03_108a4aeb5a/search",
+      "request_body": {
+        "query": "What is the ticket reference in memo 4?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "VxDE8ZvDJn2oiiDYBpYqBv",
+            "memory": "Ticket reference is ZQ-LAT-69285e9e5960.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.68976063,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:15:08.440Z",
+              "createdAt": "2026-10-30T17:15:08.440Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "AJv6TKJNFyLcyDbZvGKqvW",
+            "memory": "Ticket reference is ZQ-LAT-3614b3ae8c13.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.6840889,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T17:14:45.119Z",
+              "createdAt": "2026-10-30T17:14:45.119Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 172
+      },
+      "ms": 654
+    },
+    {
+      "t": "2026-10-30T17:15:11",
+      "method": "DELETE",
+      "path": "/ns/memtrust_lat03_108a4aeb5a",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_lat03_108a4aeb5a",
+        "deletedDocumentsCount": 5,
+        "deletedMemoriesCount": 5
+      },
+      "ms": 552
+    }
+  ]
+}

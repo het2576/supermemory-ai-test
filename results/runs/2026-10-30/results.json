@@ -3372,6 +3372,531 @@
       "timeToConsistencySec": null,
       "notes": "",
       "rawArtifacts": "results/runs/2026-10-30/COR-04-run3.json"
+    },
+    {
+      "testId": "LAT-01",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T16:48:16.973965+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "samples": [
+            {
+              "i": 0,
+              "add_ms": 1678.0,
+              "done": 9.166261916980147,
+              "chunk_hit": 7.699585249996744,
+              "failed": false
+            },
+            {
+              "i": 1,
+              "add_ms": 1690.0,
+              "done": 11.47340724998503,
+              "chunk_hit": 7.773628208000446,
+              "failed": false
+            },
+            {
+              "i": 2,
+              "add_ms": 1100.0,
+              "done": 9.953353042015806,
+              "chunk_hit": 8.496642417012481,
+              "failed": false
+            },
+            {
+              "i": 3,
+              "add_ms": 1203.0,
+              "done": 9.116074332996504,
+              "chunk_hit": 6.046631291974336,
+              "failed": false
+            },
+            {
+              "i": 4,
+              "add_ms": 2119.0,
+              "done": 8.830045042006532,
+              "chunk_hit": 5.806960791989695,
+              "failed": false
+            },
+            {
+              "i": 5,
+              "add_ms": 1073.0,
+              "done": 9.314515167003265,
+              "chunk_hit": 7.832841499999631,
+              "failed": false
+            },
+            {
+              "i": 6,
+              "add_ms": 1182.0,
+              "done": 9.017213750019437,
+              "chunk_hit": 7.483514083025511,
+              "failed": false
+            },
+            {
+              "i": 7,
+              "add_ms": 1260.0,
+              "done": 10.123225333023584,
+              "chunk_hit": 6.111739750020206,
+              "failed": false
+            },
+            {
+              "i": 8,
+              "add_ms": 1048.0,
+              "done": 9.349088417016901,
+              "chunk_hit": 6.503923792013666,
+              "failed": false
+            },
+            {
+              "i": 9,
+              "add_ms": 1457.0,
+              "done": 7.1917617919971235,
+              "chunk_hit": 5.739096208999399,
+              "failed": false
+            }
+          ]
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "done p50 9.2s p95 11.5s* max 11.5s (n=10); first chunk hit p50 6.5s p95 8.5s* max 8.5s (n=10); add call p50 1203ms p95 2119ms* max 2119ms (n=10)",
+      "rawArtifacts": "results/runs/2026-10-30/LAT-01-run1.json"
+    },
+    {
+      "testId": "LAT-01",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T16:49:54.050317+00:00",
+      "run": 2,
+      "checkpoints": [
+        {
+          "samples": [
+            {
+              "i": 0,
+              "add_ms": 1013.0,
+              "done": 8.003734415979125,
+              "chunk_hit": 6.555331457988359,
+              "failed": false
+            },
+            {
+              "i": 1,
+              "add_ms": 973.0,
+              "done": 7.906525958009297,
+              "chunk_hit": 6.42795791599201,
+              "failed": false
+            },
+            {
+              "i": 2,
+              "add_ms": 1111.0,
+              "done": 9.450773084012326,
+              "chunk_hit": 8.013169709010981,
+              "failed": false
+            },
+            {
+              "i": 3,
+              "add_ms": 1394.0,
+              "done": 9.31951158400625,
+              "chunk_hit": 7.85974233399611,
+              "failed": false
+            },
+            {
+              "i": 4,
+              "add_ms": 1162.0,
+              "done": 8.294872750004288,
+              "chunk_hit": 6.820130833017174,
+              "failed": false
+            },
+            {
+              "i": 5,
+              "add_ms": 1147.0,
+              "done": 8.507278790988494,
+              "chunk_hit": 5.49727824999718,
+              "failed": false
+            },
+            {
+              "i": 6,
+              "add_ms": 1102.0,
+              "done": 8.799556416022824,
+              "chunk_hit": 5.831477750005433,
+              "failed": false
+            },
+            {
+              "i": 7,
+              "add_ms": 1118.0,
+              "done": 8.096547958004521,
+              "chunk_hit": 6.562775124999462,
+              "failed": false
+            },
+            {
+              "i": 8,
+              "add_ms": 1203.0,
+              "done": 7.395039082999574,
+              "chunk_hit": 5.898785375000443,
+              "failed": false
+            },
+            {
+              "i": 9,
+              "add_ms": 1522.0,
+              "done": 8.908229292021133,
+              "chunk_hit": 5.820237750012893,
+              "failed": false
+            }
+          ]
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "done p50 8.3s p95 9.5s* max 9.5s (n=10); first chunk hit p50 6.4s p95 8.0s* max 8.0s (n=10); add call p50 1118ms p95 1522ms* max 1522ms (n=10)",
+      "rawArtifacts": "results/runs/2026-10-30/LAT-01-run2.json"
+    },
+    {
+      "testId": "LAT-01",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T16:51:37.786451+00:00",
+      "run": 3,
+      "checkpoints": [
+        {
+          "samples": [
+            {
+              "i": 0,
+              "add_ms": 1115.0,
+              "done": 7.2711802090052515,
+              "chunk_hit": 5.675624625000637,
+              "failed": false
+            },
+            {
+              "i": 1,
+              "add_ms": 1532.0,
+              "done": 7.793969834019663,
+              "chunk_hit": 6.248067834007088,
+              "failed": false
+            },
+            {
+              "i": 2,
+              "add_ms": 1111.0,
+              "done": 8.850059499993222,
+              "chunk_hit": 7.368094207980903,
+              "failed": false
+            },
+            {
+              "i": 3,
+              "add_ms": 1598.0,
+              "done": 11.092276124982163,
+              "chunk_hit": 8.159065374988131,
+              "failed": false
+            },
+            {
+              "i": 4,
+              "add_ms": 1051.0,
+              "done": 8.12923854199471,
+              "chunk_hit": 6.590164208988426,
+              "failed": false
+            },
+            {
+              "i": 5,
+              "add_ms": 1266.0,
+              "done": 8.463317665999057,
+              "chunk_hit": 6.918638832983561,
+              "failed": false
+            },
+            {
+              "i": 6,
+              "add_ms": 1175.0,
+              "done": 8.778136040986283,
+              "chunk_hit": 7.27209358298569,
+              "failed": false
+            },
+            {
+              "i": 7,
+              "add_ms": 1240.0,
+              "done": 9.851111458003288,
+              "chunk_hit": 8.37041699999827,
+              "failed": false
+            },
+            {
+              "i": 8,
+              "add_ms": 1233.0,
+              "done": 10.333735541003989,
+              "chunk_hit": 8.512102499982575,
+              "failed": false
+            },
+            {
+              "i": 9,
+              "add_ms": 1175.0,
+              "done": 10.099949666997418,
+              "chunk_hit": 8.537925958022242,
+              "failed": false
+            }
+          ]
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "done p50 8.8s p95 11.1s* max 11.1s (n=10); first chunk hit p50 7.3s p95 8.5s* max 8.5s (n=10); add call p50 1175ms p95 1598ms* max 1598ms (n=10)",
+      "rawArtifacts": "results/runs/2026-10-30/LAT-01-run3.json"
+    },
+    {
+      "testId": "LAT-02",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T16:57:40.997745+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "seeded",
+          "documents": 6,
+          "last_id": "z9PbHaAbf9AGcz13cwqkYX"
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "cold 1002ms (HTTP 200); chunks p50 675ms p95 1053ms max 1270ms (n=30); memories p50 682ms p95 918ms max 941ms (n=30); hybrid p50 739ms p95 1026ms max 1031ms (n=30)",
+      "rawArtifacts": "results/runs/2026-10-30/LAT-02-run1.json"
+    },
+    {
+      "testId": "LAT-02",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T17:03:42.525511+00:00",
+      "run": 2,
+      "checkpoints": [
+        {
+          "step": "seeded",
+          "documents": 6,
+          "last_id": "eydRUVPBSzq6MkwCBeqxxv"
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "cold 609ms (HTTP 200); chunks p50 687ms p95 1027ms max 2045ms (n=30); memories p50 634ms p95 1047ms max 1274ms (n=30); hybrid p50 727ms p95 1142ms max 1526ms (n=30)",
+      "rawArtifacts": "results/runs/2026-10-30/LAT-02-run2.json"
+    },
+    {
+      "testId": "LAT-02",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T17:08:08.303363+00:00",
+      "run": 3,
+      "checkpoints": [
+        {
+          "step": "seeded",
+          "documents": 6,
+          "last_id": "FopcGxG264WQSSgtDeSkki"
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "cold 773ms (HTTP 200); chunks p50 773ms p95 1194ms max 1212ms (n=30); memories p50 756ms p95 1211ms max 1291ms (n=30); hybrid p50 703ms p95 1104ms max 1165ms (n=30)",
+      "rawArtifacts": "results/runs/2026-10-30/LAT-02-run3.json"
+    },
+    {
+      "testId": "LAT-03",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T17:10:18.165638+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "samples": [
+            {
+              "i": 0,
+              "add_ms": 981.0,
+              "done": 9.421105499990517,
+              "dreaming_done": 22.16447116699419,
+              "memory_hit": 22.894425166974543,
+              "failed": false
+            },
+            {
+              "i": 1,
+              "add_ms": 945.0,
+              "done": 11.18183066698839,
+              "dreaming_done": 24.537278874980984,
+              "memory_hit": 25.4308512089774,
+              "failed": false
+            },
+            {
+              "i": 2,
+              "add_ms": 1008.0,
+              "done": 8.704873083013808,
+              "dreaming_done": 23.859872875007568,
+              "memory_hit": 24.47623995799222,
+              "failed": false
+            },
+            {
+              "i": 3,
+              "add_ms": 920.0,
+              "done": 8.586641208006768,
+              "dreaming_done": 23.269135333015583,
+              "memory_hit": 23.88719145799405,
+              "failed": false
+            },
+            {
+              "i": 4,
+              "add_ms": 1011.0,
+              "done": 9.376947790995473,
+              "dreaming_done": 26.154851750005037,
+              "memory_hit": 26.76635229101521,
+              "failed": false
+            }
+          ]
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "done p50 9.4s p95 11.2s* max 11.2s (n=5); dreaming done p50 23.9s p95 26.2s* max 26.2s (n=5); first memory hit p50 24.5s p95 26.8s* max 26.8s (n=5); add call p50 981ms p95 1011ms* max 1011ms (n=5)",
+      "rawArtifacts": "results/runs/2026-10-30/LAT-03-run1.json"
+    },
+    {
+      "testId": "LAT-03",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T17:12:53.399796+00:00",
+      "run": 2,
+      "checkpoints": [
+        {
+          "samples": [
+            {
+              "i": 0,
+              "add_ms": 1039.0,
+              "done": 8.88822395799798,
+              "dreaming_done": 27.767670417000772,
+              "memory_hit": 26.381705207983032,
+              "failed": false
+            },
+            {
+              "i": 1,
+              "add_ms": 1048.0,
+              "done": 10.88012954199803,
+              "dreaming_done": 27.965672291989904,
+              "memory_hit": 28.555897166981595,
+              "failed": false
+            },
+            {
+              "i": 2,
+              "add_ms": 944.0,
+              "done": 18.214841249980964,
+              "dreaming_done": 31.030851916002575,
+              "memory_hit": 33.848192915989785,
+              "failed": false
+            },
+            {
+              "i": 3,
+              "add_ms": 1143.0,
+              "done": 6.8076979579927865,
+              "dreaming_done": 26.734128166979644,
+              "memory_hit": 27.31478658298147,
+              "failed": false
+            },
+            {
+              "i": 4,
+              "add_ms": 993.0,
+              "done": 9.08443920800346,
+              "dreaming_done": 32.102335250005126,
+              "memory_hit": 30.679634290980175,
+              "failed": false
+            }
+          ]
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "done p50 9.1s p95 18.2s* max 18.2s (n=5); dreaming done p50 28.0s p95 32.1s* max 32.1s (n=5); first memory hit p50 28.6s p95 33.8s* max 33.8s (n=5); add call p50 1039ms p95 1143ms* max 1143ms (n=5)",
+      "rawArtifacts": "results/runs/2026-10-30/LAT-03-run2.json"
+    },
+    {
+      "testId": "LAT-03",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T17:15:11.387224+00:00",
+      "run": 3,
+      "checkpoints": [
+        {
+          "samples": [
+            {
+              "i": 0,
+              "add_ms": 1203.0,
+              "done": 7.320285374997184,
+              "dreaming_done": 22.937598416989204,
+              "memory_hit": 23.896721124998294,
+              "failed": false
+            },
+            {
+              "i": 1,
+              "add_ms": 1048.0,
+              "done": 9.504509541002335,
+              "dreaming_done": 33.03450712500489,
+              "memory_hit": 33.68978783302009,
+              "failed": false
+            },
+            {
+              "i": 2,
+              "add_ms": 915.0,
+              "done": 9.34271841699956,
+              "dreaming_done": 25.23675620899303,
+              "memory_hit": 23.45645704198978,
+              "failed": false
+            },
+            {
+              "i": 3,
+              "add_ms": 1032.0,
+              "done": 7.687637041002745,
+              "dreaming_done": 25.154161041020416,
+              "memory_hit": 26.06041350000305,
+              "failed": false
+            },
+            {
+              "i": 4,
+              "add_ms": 1007.0,
+              "done": 7.125634916999843,
+              "dreaming_done": 22.679176875011763,
+              "memory_hit": 23.33502254198538,
+              "failed": false
+            }
+          ]
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "done p50 7.7s p95 9.5s* max 9.5s (n=5); dreaming done p50 25.2s p95 33.0s* max 33.0s (n=5); first memory hit p50 23.9s p95 33.7s* max 33.7s (n=5); add call p50 1032ms p95 1203ms* max 1203ms (n=5)",
+      "rawArtifacts": "results/runs/2026-10-30/LAT-03-run3.json"
+    },
+    {
+      "testId": "LAT-04",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T17:45:28.512664+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "added",
+          "documents": 5,
+          "cap_s": 1800.0,
+          "interval_s": 15.0
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "A1: done 27s, dreaming not within cap, memory not within cap; B1: done 27s, dreaming not within cap, memory not within cap; C1: done 28s, dreaming not within cap, memory not within cap; C2: done 26s, dreaming not within cap, memory not within cap; C3: done 26s, dreaming not within cap, memory not within cap (cap 1800s)",
+      "rawArtifacts": "results/runs/2026-10-30/LAT-04-run1.json"
     }
   ],
   "summary": [
@@ -3517,6 +4042,40 @@
         "PASS",
         "PASS",
         "PASS"
+      ]
+    },
+    {
+      "testId": "LAT-01",
+      "final": "DOCUMENTED",
+      "perRun": [
+        "DOCUMENTED",
+        "DOCUMENTED",
+        "DOCUMENTED"
+      ]
+    },
+    {
+      "testId": "LAT-02",
+      "final": "DOCUMENTED",
+      "perRun": [
+        "DOCUMENTED",
+        "DOCUMENTED",
+        "DOCUMENTED"
+      ]
+    },
+    {
+      "testId": "LAT-03",
+      "final": "DOCUMENTED",
+      "perRun": [
+        "DOCUMENTED",
+        "DOCUMENTED",
+        "DOCUMENTED"
+      ]
+    },
+    {
+      "testId": "LAT-04",
+      "final": "DOCUMENTED",
+      "perRun": [
+        "DOCUMENTED"
       ]
     }
   ]

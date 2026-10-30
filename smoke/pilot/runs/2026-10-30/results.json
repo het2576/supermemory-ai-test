@@ -908,6 +908,195 @@
       "timeToConsistencySec": null,
       "notes": "",
       "rawArtifacts": "smoke/pilot/runs/2026-10-30/COR-06-run1.json"
+    },
+    {
+      "testId": "LAT-01",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T16:36:56.952231+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "samples": [
+            {
+              "i": 0,
+              "add_ms": 1480.0,
+              "done": 7.854044207982952,
+              "chunk_hit": 6.28981049999129,
+              "failed": false
+            },
+            {
+              "i": 1,
+              "add_ms": 1051.0,
+              "done": 8.392469042009907,
+              "chunk_hit": 5.419619791995501,
+              "failed": false
+            },
+            {
+              "i": 2,
+              "add_ms": 1341.0,
+              "done": 10.191014709009323,
+              "chunk_hit": 7.041808250010945,
+              "failed": false
+            },
+            {
+              "i": 3,
+              "add_ms": 1455.0,
+              "done": 7.542667959001847,
+              "chunk_hit": 6.06939279200742,
+              "failed": false
+            },
+            {
+              "i": 4,
+              "add_ms": 1091.0,
+              "done": 8.444509916007519,
+              "chunk_hit": 5.491003291012021,
+              "failed": false
+            },
+            {
+              "i": 5,
+              "add_ms": 1062.0,
+              "done": 9.238838709017728,
+              "chunk_hit": 5.614503874996444,
+              "failed": false
+            },
+            {
+              "i": 6,
+              "add_ms": 1368.0,
+              "done": 8.1221053339832,
+              "chunk_hit": 5.211839166993741,
+              "failed": false
+            },
+            {
+              "i": 7,
+              "add_ms": 996.0,
+              "done": 8.391787333006505,
+              "chunk_hit": 5.365240374987479,
+              "failed": false
+            },
+            {
+              "i": 8,
+              "add_ms": 1045.0,
+              "done": 8.01402141698054,
+              "chunk_hit": 6.537232207978377,
+              "failed": false
+            },
+            {
+              "i": 9,
+              "add_ms": 938.0,
+              "done": 9.186578124994412,
+              "chunk_hit": 6.123409791995073,
+              "failed": false
+            }
+          ]
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "done p50 8.4s p95 10.2s* max 10.2s (n=10); first chunk hit p50 5.6s p95 7.0s* max 7.0s (n=10); add call p50 1062ms p95 1480ms* max 1480ms (n=10)",
+      "rawArtifacts": "smoke/pilot/runs/2026-10-30/LAT-01-run1.json"
+    },
+    {
+      "testId": "LAT-02",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T16:42:32.499252+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "seeded",
+          "documents": 6,
+          "last_id": "2fweRLfGpsZ3dEgGRyG1zu"
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "cold 920ms (HTTP 200); chunks p50 698ms p95 1175ms max 1419ms (n=30); memories p50 715ms p95 890ms max 925ms (n=30); hybrid p50 730ms p95 1021ms max 1021ms (n=30)",
+      "rawArtifacts": "smoke/pilot/runs/2026-10-30/LAT-02-run1.json"
+    },
+    {
+      "testId": "LAT-03",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T16:44:49.923714+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "samples": [
+            {
+              "i": 0,
+              "add_ms": 1043.0,
+              "done": 7.705806457990548,
+              "dreaming_done": 20.948737208003877,
+              "memory_hit": 21.844226665998576,
+              "failed": false
+            },
+            {
+              "i": 1,
+              "add_ms": 1198.0,
+              "done": 7.342966249998426,
+              "dreaming_done": 27.902890833007405,
+              "memory_hit": 28.721938125003362,
+              "failed": false
+            },
+            {
+              "i": 2,
+              "add_ms": 1189.0,
+              "done": 8.489887082978385,
+              "dreaming_done": 29.008427582972217,
+              "memory_hit": 29.73490499999025,
+              "failed": false
+            },
+            {
+              "i": 3,
+              "add_ms": 1226.0,
+              "done": 7.375355166994268,
+              "dreaming_done": 23.860371791990474,
+              "memory_hit": 24.57792562499526,
+              "failed": false
+            },
+            {
+              "i": 4,
+              "add_ms": 1188.0,
+              "done": 7.824223000003258,
+              "dreaming_done": 25.153743625007337,
+              "memory_hit": 25.82567258301424,
+              "failed": false
+            }
+          ]
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "done p50 7.7s p95 8.5s* max 8.5s (n=5); dreaming done p50 25.2s p95 29.0s* max 29.0s (n=5); first memory hit p50 25.8s p95 29.7s* max 29.7s (n=5); add call p50 1189ms p95 1226ms* max 1226ms (n=5)",
+      "rawArtifacts": "smoke/pilot/runs/2026-10-30/LAT-03-run1.json"
+    },
+    {
+      "testId": "LAT-04",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T16:46:04.531686+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "added",
+          "documents": 5,
+          "cap_s": 60.0,
+          "interval_s": 5.0
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "A1: done 17s, dreaming not within cap, memory not within cap; B1: done 17s, dreaming not within cap, memory not within cap; C1: done 17s, dreaming not within cap, memory not within cap; C2: done 17s, dreaming not within cap, memory not within cap; C3: done 17s, dreaming not within cap, memory not within cap (cap 60s)",
+      "rawArtifacts": "smoke/pilot/runs/2026-10-30/LAT-04-run1.json"
     }
   ],
   "summary": [
@@ -993,6 +1182,34 @@
       "final": "PASS",
       "perRun": [
         "PASS"
+      ]
+    },
+    {
+      "testId": "LAT-01",
+      "final": "DOCUMENTED",
+      "perRun": [
+        "DOCUMENTED"
+      ]
+    },
+    {
+      "testId": "LAT-02",
+      "final": "DOCUMENTED",
+      "perRun": [
+        "DOCUMENTED"
+      ]
+    },
+    {
+      "testId": "LAT-03",
+      "final": "DOCUMENTED",
+      "perRun": [
+        "DOCUMENTED"
+      ]
+    },
+    {
+      "testId": "LAT-04",
+      "final": "DOCUMENTED",
+      "perRun": [
+        "DOCUMENTED"
       ]
     }
   ]
