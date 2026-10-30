@@ -58,6 +58,7 @@ class Bugs:
     forget_noop: bool = False  # forget() reports success but removes nothing
     forget_delay_s: float = 0.0  # a forgotten memory stays visible this long
     forget_leaves_profile: bool = False  # forgotten memories are gone from search but still in the profile
+    mark_untrusted: bool = False  # returned text is wrapped in <untrusted> tags and each item gets a "trust" field
     ignore_threshold: bool = False  # the threshold parameter is accepted but does nothing
     unframed_old_value: bool = False  # "used to X, but now Y" yields a bare "lives in X" memory with no past framing, plus the new fact
     corrections_delay_s: float = 0.0  # a superseded fact stays current this long after the newer memory exists
@@ -69,6 +70,7 @@ class MockConfig:
     memory_delay_s: float = 1.0  # extra time after done until derived memories exist
     dynamic_memory_delay_s: float | None = None  # same, for documents added without dreaming="instant" (None = same as instant)
     search_ms: float = 50.0  # what last_latency_ms() reports after a search
+    memory_rewriter: Callable[[str], str] | None = None  # models the extractor: content -> memory wording
     scorer: Callable[[str, str], float] | None = None  # (query, text) -> similarity; None = every hit scores 0.8
     bugs: Bugs = field(default_factory=Bugs)
 
@@ -196,7 +198,8 @@ class MockProvider:
             old, new = rest.split(", but now lives in ", 1)
             texts = [f"Fact: {subject} lives in {old}", f"Fact: {subject} now lives in {new}"]
         else:
-            texts = [f"Fact: {d.content}"]
+            rewrite = self.config.memory_rewriter or (lambda c: c)
+            texts = [f"Fact: {rewrite(d.content)}"]
         if d.seq <= self.config.bugs.mangle_first_n_memories:
             texts = [re.sub(r"(ZQ-[A-Z]+-[0-9a-f]{4})[0-9a-f]{2}", r"\1", t) for t in texts]  # drop two characters of the token
         return texts
@@ -250,10 +253,14 @@ class MockProvider:
             docs = sorted(self._docs[s].values(), key=lambda x: x.seq, reverse=not b.old_ranks_first)
             for d in docs:
                 if o.mode in ("chunks", "hybrid") and self._chunk_visible(d):
-                    hits.append(SearchHit(id=f"chunk_{d.id}", kind="chunk", text=d.content, score=score(d.content), is_latest=True, is_inference=False, raw={"scope": s}))
+                    hits.append(SearchHit(id=f"chunk_{d.id}", kind="chunk", text=d.content, score=score(d.content), is_latest=True, is_inference=False, raw={}))
                 if o.mode in ("memories", "hybrid") and self._memory_current(s, d):
                     for k, text in enumerate(self._mem_texts(d)):
-                        hits.append(SearchHit(id=f"mem_{d.id}" if k == 0 else f"mem_{d.id}.{k}", kind="memory", text=text, score=score(text), is_latest=self._is_latest(s, d), is_inference=False, raw={"scope": s}))
+                        hits.append(SearchHit(id=f"mem_{d.id}" if k == 0 else f"mem_{d.id}.{k}", kind="memory", text=text, score=score(text), is_latest=self._is_latest(s, d), is_inference=False, raw={}))
+        if b.mark_untrusted:
+            for h in hits:
+                h.text = f"<untrusted>{h.text}</untrusted>"
+                h.raw = {**(h.raw or {}), "trust": "untrusted"}
         threshold = 0.3 if o.threshold is None else o.threshold  # documented default
         if not b.ignore_threshold:
             hits = [h for h in hits if h.score >= threshold]
@@ -330,7 +337,7 @@ class MockProvider:
             return SearchResult(400, body, [])
         scopes = list(self._docs) if container_tag is None else [container_tag] if container_tag in self._docs else []
         hits = [
-            SearchHit(id=f"chunk_{d.id}", kind="chunk", text=d.content, score=0.8, raw={"scope": s})
+            SearchHit(id=f"chunk_{d.id}", kind="chunk", text=d.content, score=0.8, raw={})
             for s in scopes
             for d in self._docs[s].values()
             if self._chunk_visible(d)

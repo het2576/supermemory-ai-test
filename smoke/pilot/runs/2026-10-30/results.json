@@ -1097,6 +1097,81 @@
       "timeToConsistencySec": null,
       "notes": "A1: done 17s, dreaming not within cap, memory not within cap; B1: done 17s, dreaming not within cap, memory not within cap; C1: done 17s, dreaming not within cap, memory not within cap; C2: done 17s, dreaming not within cap, memory not within cap; C3: done 17s, dreaming not within cap, memory not within cap (cap 60s)",
       "rawArtifacts": "smoke/pilot/runs/2026-10-30/LAT-04-run1.json"
+    },
+    {
+      "testId": "ABS-01",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T17:55:37.170961+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "seeded",
+          "documents": 20,
+          "not_done": 0
+        },
+        {
+          "step": "precondition",
+          "answerable_retrieved": 20,
+          "required": 18
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "chunks@0: answerable min 0.65 p50 0.70 max 0.76, 0/20 empty; unanswerable min 0.54 p50 0.60 max 0.65, 0/20 empty; AUC 0.99, gap -0.00, separable no; memories@0: answerable min 0.63 p50 0.68 max 0.76, 0/20 empty; unanswerable min 0.54 p50 0.59 max 0.64, 0/20 empty; AUC 0.98, gap -0.01, separable no; hybrid@0: answerable min 0.65 p50 0.70 max 0.76, 0/20 empty; unanswerable min 0.54 p50 0.60 max 0.65, 0/20 empty; AUC 0.99, gap -0.00, separable no; hybrid at the default threshold, unanswerable queries returning something: near_miss 20/20",
+      "rawArtifacts": "smoke/pilot/runs/2026-10-30/ABS-01-run1.json"
+    },
+    {
+      "testId": "ABS-02",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T17:58:33.611525+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "seeded",
+          "documents": 20,
+          "not_done": 0
+        },
+        {
+          "step": "precondition",
+          "answerable_retrieved": 20,
+          "required": 18
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "chunks@0: answerable min 0.65 p50 0.70 max 0.76, 0/20 empty; unanswerable min 0.45 p50 0.50 max 0.59, 0/15 empty; AUC 1.00, gap +0.06, separable yes; memories@0: answerable min 0.51 p50 0.67 max 0.74, 0/20 empty; unanswerable min 0.45 p50 0.50 max 0.59, 0/15 empty; AUC 0.98, gap -0.08, separable no; hybrid@0: answerable min 0.65 p50 0.70 max 0.76, 0/20 empty; unanswerable min 0.45 p50 0.50 max 0.59, 0/15 empty; AUC 1.00, gap +0.06, separable yes; hybrid at the default threshold, unanswerable queries returning something: off_domain 10/10, nonsense 5/5",
+      "rawArtifacts": "smoke/pilot/runs/2026-10-30/ABS-02-run1.json"
+    },
+    {
+      "testId": "ABS-03",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T18:05:40.383005+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "seeded",
+          "documents": 20,
+          "not_done": 0
+        },
+        {
+          "step": "precondition",
+          "answerable_retrieved": 20,
+          "required": 18
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "t=omitted: answerable correct 100%, unanswerable with results 35/35; t=0: answerable correct 100%, unanswerable with results 35/35; t=0.3: answerable correct 100%, unanswerable with results 35/35; t=0.4: answerable correct 100%, unanswerable with results 35/35; t=0.5: answerable correct 100%, unanswerable with results 29/35; t=0.6: answerable correct 100%, unanswerable with results 13/35; t=0.7: answerable correct 45%, unanswerable with results 0/35; t=0.8: answerable correct 0%, unanswerable with results 0/35; omitted == 0.3: True; server filter == client filter of threshold-0 results: {'0.3': '55/55', '0.4': '55/55', '0.5': '55/55', '0.6': '55/55', '0.7': '55/55', '0.8': '55/55'}",
+      "rawArtifacts": "smoke/pilot/runs/2026-10-30/ABS-03-run1.json"
     }
   ],
   "summary": [
@@ -1207,6 +1282,27 @@
     },
     {
       "testId": "LAT-04",
+      "final": "DOCUMENTED",
+      "perRun": [
+        "DOCUMENTED"
+      ]
+    },
+    {
+      "testId": "ABS-01",
+      "final": "DOCUMENTED",
+      "perRun": [
+        "DOCUMENTED"
+      ]
+    },
+    {
+      "testId": "ABS-02",
+      "final": "DOCUMENTED",
+      "perRun": [
+        "DOCUMENTED"
+      ]
+    },
+    {
+      "testId": "ABS-03",
       "final": "DOCUMENTED",
       "perRun": [
         "DOCUMENTED"

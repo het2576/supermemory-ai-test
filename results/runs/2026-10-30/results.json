@@ -3897,6 +3897,231 @@
       "timeToConsistencySec": null,
       "notes": "A1: done 27s, dreaming not within cap, memory not within cap; B1: done 27s, dreaming not within cap, memory not within cap; C1: done 28s, dreaming not within cap, memory not within cap; C2: done 26s, dreaming not within cap, memory not within cap; C3: done 26s, dreaming not within cap, memory not within cap (cap 1800s)",
       "rawArtifacts": "results/runs/2026-10-30/LAT-04-run1.json"
+    },
+    {
+      "testId": "ABS-01",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T18:09:21.332912+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "seeded",
+          "documents": 20,
+          "not_done": 0
+        },
+        {
+          "step": "precondition",
+          "answerable_retrieved": 20,
+          "required": 18
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "chunks@0: answerable min 0.65 p50 0.70 max 0.76, 0/20 empty; unanswerable min 0.54 p50 0.60 max 0.65, 0/20 empty; AUC 0.99, gap -0.00, separable no; memories@0: answerable min 0.53 p50 0.67 max 0.74, 0/20 empty; unanswerable min 0.52 p50 0.57 max 0.65, 0/20 empty; AUC 0.92, gap -0.12, separable no; hybrid@0: answerable min 0.65 p50 0.70 max 0.76, 0/20 empty; unanswerable min 0.54 p50 0.60 max 0.65, 0/20 empty; AUC 0.99, gap -0.00, separable no; hybrid at the default threshold, unanswerable queries returning something: near_miss 20/20",
+      "rawArtifacts": "results/runs/2026-10-30/ABS-01-run1.json"
+    },
+    {
+      "testId": "ABS-01",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T18:12:44.898089+00:00",
+      "run": 2,
+      "checkpoints": [
+        {
+          "step": "seeded",
+          "documents": 20,
+          "not_done": 0
+        },
+        {
+          "step": "precondition",
+          "answerable_retrieved": 20,
+          "required": 18
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "chunks@0: answerable min 0.65 p50 0.70 max 0.76, 0/20 empty; unanswerable min 0.54 p50 0.60 max 0.65, 0/20 empty; AUC 0.99, gap -0.00, separable no; memories@0: answerable min 0.60 p50 0.66 max 0.76, 0/20 empty; unanswerable min 0.53 p50 0.58 max 0.65, 0/20 empty; AUC 0.94, gap -0.05, separable no; hybrid@0: answerable min 0.65 p50 0.70 max 0.76, 0/20 empty; unanswerable min 0.54 p50 0.60 max 0.65, 0/20 empty; AUC 0.99, gap -0.00, separable no; hybrid at the default threshold, unanswerable queries returning something: near_miss 20/20",
+      "rawArtifacts": "results/runs/2026-10-30/ABS-01-run2.json"
+    },
+    {
+      "testId": "ABS-01",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T18:16:08.626173+00:00",
+      "run": 3,
+      "checkpoints": [
+        {
+          "step": "seeded",
+          "documents": 20,
+          "not_done": 0
+        },
+        {
+          "step": "precondition",
+          "answerable_retrieved": 20,
+          "required": 18
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "chunks@0: answerable min 0.65 p50 0.70 max 0.76, 0/20 empty; unanswerable min 0.54 p50 0.60 max 0.65, 0/20 empty; AUC 0.99, gap -0.00, separable no; memories@0: answerable min 0.62 p50 0.68 max 0.74, 0/20 empty; unanswerable min 0.53 p50 0.59 max 0.65, 0/20 empty; AUC 0.96, gap -0.03, separable no; hybrid@0: answerable min 0.65 p50 0.70 max 0.76, 0/20 empty; unanswerable min 0.54 p50 0.60 max 0.65, 0/20 empty; AUC 0.99, gap -0.00, separable no; hybrid at the default threshold, unanswerable queries returning something: near_miss 20/20",
+      "rawArtifacts": "results/runs/2026-10-30/ABS-01-run3.json"
+    },
+    {
+      "testId": "ABS-02",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T18:19:00.335520+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "seeded",
+          "documents": 20,
+          "not_done": 0
+        },
+        {
+          "step": "precondition",
+          "answerable_retrieved": 20,
+          "required": 18
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "chunks@0: answerable min 0.65 p50 0.70 max 0.76, 0/20 empty; unanswerable min 0.45 p50 0.50 max 0.59, 0/15 empty; AUC 1.00, gap +0.06, separable yes; memories@0: answerable min 0.62 p50 0.67 max 0.74, 0/20 empty; unanswerable min 0.45 p50 0.50 max 0.59, 0/15 empty; AUC 1.00, gap +0.03, separable yes; hybrid@0: answerable min 0.65 p50 0.70 max 0.76, 0/20 empty; unanswerable min 0.45 p50 0.51 max 0.59, 0/15 empty; AUC 1.00, gap +0.06, separable yes; hybrid at the default threshold, unanswerable queries returning something: off_domain 10/10, nonsense 5/5",
+      "rawArtifacts": "results/runs/2026-10-30/ABS-02-run1.json"
+    },
+    {
+      "testId": "ABS-02",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T18:22:08.233631+00:00",
+      "run": 2,
+      "checkpoints": [
+        {
+          "step": "seeded",
+          "documents": 20,
+          "not_done": 0
+        },
+        {
+          "step": "precondition",
+          "answerable_retrieved": 20,
+          "required": 18
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "chunks@0: answerable min 0.65 p50 0.70 max 0.76, 0/20 empty; unanswerable min 0.45 p50 0.50 max 0.59, 0/15 empty; AUC 1.00, gap +0.06, separable yes; memories@0: answerable min 0.58 p50 0.67 max 0.76, 0/20 empty; unanswerable min 0.45 p50 0.50 max 0.59, 0/15 empty; AUC 0.99, gap -0.02, separable no; hybrid@0: answerable min 0.65 p50 0.70 max 0.76, 0/20 empty; unanswerable min 0.45 p50 0.50 max 0.59, 0/15 empty; AUC 1.00, gap +0.06, separable yes; hybrid at the default threshold, unanswerable queries returning something: off_domain 10/10, nonsense 5/5",
+      "rawArtifacts": "results/runs/2026-10-30/ABS-02-run2.json"
+    },
+    {
+      "testId": "ABS-02",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T18:25:16.855903+00:00",
+      "run": 3,
+      "checkpoints": [
+        {
+          "step": "seeded",
+          "documents": 20,
+          "not_done": 0
+        },
+        {
+          "step": "precondition",
+          "answerable_retrieved": 20,
+          "required": 18
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "chunks@0: answerable min 0.65 p50 0.70 max 0.76, 0/20 empty; unanswerable min 0.45 p50 0.50 max 0.59, 0/15 empty; AUC 1.00, gap +0.06, separable yes; memories@0: answerable min 0.61 p50 0.67 max 0.76, 0/20 empty; unanswerable min 0.46 p50 0.50 max 0.59, 0/15 empty; AUC 1.00, gap +0.02, separable yes; hybrid@0: answerable min 0.65 p50 0.70 max 0.76, 0/20 empty; unanswerable min 0.46 p50 0.50 max 0.59, 0/15 empty; AUC 1.00, gap +0.06, separable yes; hybrid at the default threshold, unanswerable queries returning something: off_domain 10/10, nonsense 5/5",
+      "rawArtifacts": "results/runs/2026-10-30/ABS-02-run3.json"
+    },
+    {
+      "testId": "ABS-03",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T18:32:36.149669+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "seeded",
+          "documents": 20,
+          "not_done": 0
+        },
+        {
+          "step": "precondition",
+          "answerable_retrieved": 20,
+          "required": 18
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "t=omitted: answerable correct 100%, unanswerable with results 35/35; t=0: answerable correct 100%, unanswerable with results 35/35; t=0.3: answerable correct 100%, unanswerable with results 35/35; t=0.4: answerable correct 100%, unanswerable with results 35/35; t=0.5: answerable correct 100%, unanswerable with results 29/35; t=0.6: answerable correct 100%, unanswerable with results 16/35; t=0.7: answerable correct 50%, unanswerable with results 0/35; t=0.8: answerable correct 0%, unanswerable with results 0/35; omitted == 0.3: True; server filter == client filter of threshold-0 results: {'0.3': '55/55', '0.4': '55/55', '0.5': '55/55', '0.6': '55/55', '0.7': '55/55', '0.8': '55/55'}",
+      "rawArtifacts": "results/runs/2026-10-30/ABS-03-run1.json"
+    },
+    {
+      "testId": "ABS-03",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T18:49:13.259864+00:00",
+      "run": 2,
+      "checkpoints": [
+        {
+          "step": "seeded",
+          "documents": 20,
+          "not_done": 0
+        },
+        {
+          "step": "precondition",
+          "answerable_retrieved": 20,
+          "required": 18
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "t=omitted: answerable correct 100%, unanswerable with results 35/35; t=0: answerable correct 100%, unanswerable with results 35/35; t=0.3: answerable correct 100%, unanswerable with results 35/35; t=0.4: answerable correct 100%, unanswerable with results 35/35; t=0.5: answerable correct 100%, unanswerable with results 29/35; t=0.6: answerable correct 100%, unanswerable with results 13/35; t=0.7: answerable correct 45%, unanswerable with results 0/35; t=0.8: answerable correct 0%, unanswerable with results 0/35; omitted == 0.3: True; server filter == client filter of threshold-0 results: {'0.3': '55/55', '0.4': '55/55', '0.5': '55/55', '0.6': '55/55', '0.7': '55/55', '0.8': '55/55'}",
+      "rawArtifacts": "results/runs/2026-10-30/ABS-03-run2.json"
+    },
+    {
+      "testId": "ABS-03",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T18:56:04.589492+00:00",
+      "run": 3,
+      "checkpoints": [
+        {
+          "step": "seeded",
+          "documents": 20,
+          "not_done": 0
+        },
+        {
+          "step": "precondition",
+          "answerable_retrieved": 20,
+          "required": 18
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "t=omitted: answerable correct 100%, unanswerable with results 35/35; t=0: answerable correct 100%, unanswerable with results 35/35; t=0.3: answerable correct 100%, unanswerable with results 35/35; t=0.4: answerable correct 100%, unanswerable with results 35/35; t=0.5: answerable correct 100%, unanswerable with results 29/35; t=0.6: answerable correct 100%, unanswerable with results 13/35; t=0.7: answerable correct 45%, unanswerable with results 0/35; t=0.8: answerable correct 0%, unanswerable with results 0/35; omitted == 0.3: True; server filter == client filter of threshold-0 results: {'0.3': '55/55', '0.4': '55/55', '0.5': '55/55', '0.6': '55/55', '0.7': '55/55', '0.8': '55/55'}",
+      "rawArtifacts": "results/runs/2026-10-30/ABS-03-run3.json"
     }
   ],
   "summary": [
@@ -4075,6 +4300,33 @@
       "testId": "LAT-04",
       "final": "DOCUMENTED",
       "perRun": [
+        "DOCUMENTED"
+      ]
+    },
+    {
+      "testId": "ABS-01",
+      "final": "DOCUMENTED",
+      "perRun": [
+        "DOCUMENTED",
+        "DOCUMENTED",
+        "DOCUMENTED"
+      ]
+    },
+    {
+      "testId": "ABS-02",
+      "final": "DOCUMENTED",
+      "perRun": [
+        "DOCUMENTED",
+        "DOCUMENTED",
+        "DOCUMENTED"
+      ]
+    },
+    {
+      "testId": "ABS-03",
+      "final": "DOCUMENTED",
+      "perRun": [
+        "DOCUMENTED",
+        "DOCUMENTED",
         "DOCUMENTED"
       ]
     }
