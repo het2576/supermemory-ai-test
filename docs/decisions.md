@@ -97,3 +97,24 @@ Written after a 1-scope pilot (`smoke/pilot/cor_pilot.py`, excluded from results
 | COR-06 explicit forget call | after `memories.forget`, the memory is gone from every judged surface within 120s | still current at 120s | Documented guarantee: forgotten memories are "excluded from search results but preserved". Chunks of the source document legitimately remain |
 
 A stale-current hit is an S2 candidate only after 3/3 repro, a docs check and an issue-tracker check (PRD section 10).
+
+## D9. LAT protocol, pre-registered 2026-10-30 before any LAT code or run
+
+Numbers only, no pass/fail (matrix section 2.6). Every LAT test reports `DOCUMENTED`, meaning "characterized"; the numbers are in the evidence files and the report. A test that cannot produce any sample is INCONCLUSIVE.
+
+**What is measured and where the clock starts.** All times are seconds from the moment the `add` call returns (the add call's own duration is recorded separately). Polling is sequential from one machine (India, home network), so every figure includes network time to the API. Resolution is about 1 to 2 seconds for the 1s-interval tests: each poll round makes one status call and one or two search calls at 0.2s pacing, and an event is stamped when the poll that sees it returns.
+
+| Test | What | Samples per run | Polling | Cap |
+|---|---|---|---|---|
+| LAT-01 | Ingest, default `dreaming`: time to `status: done` and, separately, time until the canary is returned by `chunks` search | 10 short documents, one at a time | 1s | 120s per document |
+| LAT-02 | Search round-trip time (HTTP request sent to response read, excluding the client's pacing sleep) for `chunks`, `memories`, `hybrid`; the first call is recorded separately as "cold" | 30 searches per mode over 5 fixed queries, sequential, against a scope of 6 documents | back to back | none |
+| LAT-03 | Instant dreaming: time to `status: done`, to `dreamingStatus: done`, and to the canary in `memories` search | 5 short documents, one at a time | 1s | 300s per document |
+| LAT-04 | Default (`dynamic`) dreaming: time to `dreamingStatus: done` and to the canary in `memories` search, 3 namespaces at once: A one document, B one document, C three related documents about one subject (tests the docs' "batches related docs") | 4 documents in 3 scopes | 15s | 1800s |
+
+LAT-01..03 run 3 times (pooled n is reported per statistic). LAT-04 runs **once** (it can take 30 minutes); its n is small and is reported as raw per-document values, not percentiles.
+
+**Statistics.** Nearest-rank percentiles (p50 = value at rank ceil(0.50 n), p95 likewise) on the pooled samples, plus min and max, with n always printed. With n below 20, p95 equals the maximum and is labeled as such. A document that did not reach an event within its cap is reported as "not within cap" and counted in n_total but not in the percentile, never silently dropped.
+
+**Search latency is from the HTTP exchange**, not a wall-clock timer around the SDK call, so client-side pacing and SDK overhead are excluded. Searches are sequential (about 3 per second at most): this is not a load test (PRD non-goals).
+
+**Caveats stated up front.** Free plan, one account, short text only, one machine and region, one day. Throughput, long documents and PDFs/URLs are not measured. Results describe this setup, not the service in general.
