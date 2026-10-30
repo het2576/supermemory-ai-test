@@ -1,0 +1,1 @@
+First default-mode (`dynamic`) COR-01 timing sample (2026-10-30): ERROR after about 260 calls with `APIConnectionError: Connection error.` (no HTTP response; a network error on the test machine). Kept for transparency. The provider was then changed to retry read-only calls on dropped connections (docs/sdk-notes.md) and the sample was rerun.

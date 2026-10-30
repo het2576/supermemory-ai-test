@@ -17,6 +17,7 @@ from typing import Any, Callable
 import httpx
 from supermemory import Supermemory
 from supermemory.core.api_error import ApiError
+from supermemory._compat import APIConnectionError
 from supermemory.errors import NotFoundError, TooManyRequestsError
 
 from ..adapter import (
@@ -35,6 +36,7 @@ from ..recorder import Recorder
 
 MIN_GAP_S = 0.2  # ~5 req/s, far under the documented 500/min per key
 MAX_429_RETRIES = 5
+TRANSPORT_RETRY_DELAYS_S = (1.0, 2.0, 4.0)  # read-only calls only; a dropped connection is not a product result
 TIMEOUT_S = 60.0
 
 
@@ -54,6 +56,7 @@ class SupermemoryProvider:
             event_hooks={"request": [self._on_request], "response": [self._on_response]},
         )
         self._http = http
+        self._transport_events: list[dict[str, Any]] = []
         self.client = Supermemory(
             api_key=api_key,
             base_url=base_url or os.environ.get("SUPERMEMORY_BASE_URL"),  # override only for harness self-tests
@@ -95,25 +98,43 @@ class SupermemoryProvider:
         )
 
     def drain_exchanges(self) -> list[dict[str, Any]]:
-        return self._rec.drain()
+        events, self._transport_events = self._transport_events, []
+        return self._rec.drain() + events
 
     # --- call plumbing -----------------------------------------------------------------------
 
-    def _call(self, fn: Callable[[], Any]) -> tuple[Any, int, Any]:
-        """Run one SDK call. Returns (parsed model or None, http status, raw body). Pacing + 429 handling live here."""
+    def _call(self, fn: Callable[[], Any], *, read_only: bool = False) -> tuple[Any, int, Any]:
+        """Run one SDK call. Returns (parsed model or None, http status, raw body). Pacing + 429 handling live here.
+
+        A dropped connection (no HTTP response at all) is retried only for read-only calls, 3 times with backoff, and every
+        retry is written to the evidence. Writes are never retried: the first attempt may have landed, and repeating it
+        would change what a test measures. When retries run out the error is raised (the run is an ERROR, not a verdict)."""
         error: ApiError | None = None
         data: Any = None
-        for attempt in range(MAX_429_RETRIES + 1):
+        transport_failures = 0
+        attempt = 0
+        while attempt <= MAX_429_RETRIES:
             gap = self._last_call + MIN_GAP_S - time.monotonic()
             if gap > 0:
                 time.sleep(gap)
             self._last_call = time.monotonic()
             try:
                 data, error = fn(), None
+            except APIConnectionError as e:
+                if read_only and transport_failures < len(TRANSPORT_RETRY_DELAYS_S):
+                    delay = TRANSPORT_RETRY_DELAYS_S[transport_failures]
+                    transport_failures += 1
+                    self._transport_events.append(
+                        {"t": time.strftime("%Y-%m-%dT%H:%M:%S", time.gmtime()), "method": "(transport)", "path": "", "error": f"{type(e).__name__}: {e}"[:200], "retry": transport_failures, "after_s": delay}
+                    )
+                    time.sleep(delay)
+                    continue
+                raise
             except TooManyRequestsError as e:
                 if attempt < MAX_429_RETRIES:
                     retry_after = float((e.headers or {}).get("retry-after", 2))
                     time.sleep(max(1.0, retry_after))
+                    attempt += 1
                     continue
                 data, error = None, e
             except ApiError as e:
@@ -164,7 +185,7 @@ class SupermemoryProvider:
             include["related"] = True
         if include:
             kwargs["include"] = include
-        data, status, raw = self._call(lambda: self.client.search(scope, **kwargs))
+        data, status, raw = self._call(lambda: self.client.search(scope, **kwargs), read_only=True)
         hits: list[SearchHit] = []
         for r in (data.results if data is not None else []):
             memory = getattr(r, "memory", None)
@@ -193,7 +214,7 @@ class SupermemoryProvider:
         )
 
     def status(self, scope: str, doc_id: str) -> StatusResult | None:
-        data, status, raw = self._call(lambda: self.client.documents.get(scope, doc_id))
+        data, status, raw = self._call(lambda: self.client.documents.get(scope, doc_id), read_only=True)
         if data is None:
             return None if status == 404 else StatusResult(http_status=status, raw=raw, status=f"http_{status}")
         sys = data.system
@@ -205,7 +226,7 @@ class SupermemoryProvider:
         )
 
     def profile(self, scope: str) -> ProfileResult:
-        data, status, raw = self._call(lambda: self.client.profile(scope))
+        data, status, raw = self._call(lambda: self.client.profile(scope), read_only=True)
         entries: list[str] = []
         if data is not None:
             entries = [f.memory for f in data.profile.static] + [f.memory for f in data.profile.dynamic]
@@ -254,12 +275,12 @@ class SupermemoryProvider:
     # --- extras used by later tests (not part of the adapter) ---------------------------------
 
     def list_documents(self, scope: str, limit: int = 100) -> tuple[int, Any]:
-        _, status, raw = self._call(lambda: self.client.list(scope, "documents", limit=limit))
+        _, status, raw = self._call(lambda: self.client.list(scope, "documents", limit=limit), read_only=True)
         return status, raw
 
     def list_memories(self, scope: str, include_forgotten: bool = False, limit: int = 100) -> tuple[int, Any]:
         kwargs: dict[str, Any] = {"limit": limit}
         if include_forgotten:
             kwargs["include"] = {"forgotten": True}
-        _, status, raw = self._call(lambda: self.client.list(scope, "memories", **kwargs))
+        _, status, raw = self._call(lambda: self.client.list(scope, "memories", **kwargs), read_only=True)
         return status, raw

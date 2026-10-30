@@ -35,3 +35,7 @@ Every method also has `extra_headers`, `extra_query`, `extra_body`, `timeout`, `
 - The error type and status for an invalid namespace (`user 1`, `user/1`).
 - That `client.namespaces.delete` works with a free-plan key (docs say it needs org admin or owner).
 - Whether `list(..., "memories", include={"forgotten": True})` returns the shape the docs describe.
+
+## Dropped connections (added 2026-10-30, during COR)
+
+Two official-run attempts today died with `APIConnectionError: Connection error.` (COR-04 run 1, and the long default-mode COR-01 sample after about 260 calls). No HTTP response was received, so neither says anything about the product. The provider now retries **read-only** calls (search, status, profile, list) up to 3 times with 1/2/4s backoff and records every retry in the run's evidence file as a `(transport)` entry. Writes (add, delete, forget, namespace delete) are never retried, because the first attempt may have landed and repeating it would change what a test measures. When retries run out the error is raised, so the run is an ERROR, never a made-up status. DEL, ISO and COR results produced before this change had no such failures except the superseded COR-04 attempt.
