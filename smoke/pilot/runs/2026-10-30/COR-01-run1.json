@@ -1,0 +1,1356 @@
+{
+  "record": {
+    "testId": "COR-01",
+    "provider": "supermemory",
+    "client": "supermemory-python-sdk",
+    "sdkVersion": "5.0.1",
+    "apiVersion": "v5",
+    "date": "2026-10-30T12:33:27.791401+00:00",
+    "run": 1,
+    "checkpoints": [
+      {
+        "step": "add_doc1",
+        "attempt": 1,
+        "scope": "memtrust_cor01_8d25c777bc",
+        "http": 200,
+        "id": "Azm4QCcuc3YRwb5w8tYfDZ"
+      },
+      {
+        "step": "processed_doc1",
+        "attempt": 1,
+        "status": "done",
+        "dreaming": "done",
+        "elapsed_s": 59.45760416597477
+      },
+      {
+        "step": "memory_for_doc1",
+        "attempt": 1,
+        "token": "ZQ-COR-257d09740a72",
+        "found": true,
+        "elapsed_s": 1.05044566700235
+      },
+      {
+        "step": "add_doc2",
+        "attempt": 1,
+        "scope": "memtrust_cor01_8d25c777bc",
+        "http": 200,
+        "id": "AuKfU5gWHhc91QBZeR2SA7"
+      },
+      {
+        "step": "processed_doc2",
+        "attempt": 1,
+        "status": "done",
+        "dreaming": "done",
+        "elapsed_s": 41.50204358398332
+      },
+      {
+        "step": "memory_for_doc2",
+        "attempt": 1,
+        "token": "ZQ-COR-f6ea466074a3",
+        "found": true,
+        "elapsed_s": 0.6840407089912333
+      },
+      {
+        "t": 0,
+        "ok": true,
+        "problem": "",
+        "new_rank": 0,
+        "stale": [],
+        "profile_has_new": true,
+        "chunks": {
+          "ZQ-COR-f6ea466074a3": 1,
+          "ZQ-COR-257d09740a72": 0
+        }
+      },
+      {
+        "t": 10,
+        "ok": true,
+        "problem": "",
+        "new_rank": 0,
+        "stale": [],
+        "profile_has_new": true,
+        "chunks": {
+          "ZQ-COR-f6ea466074a3": 1,
+          "ZQ-COR-257d09740a72": 0
+        }
+      },
+      {
+        "t": 30,
+        "ok": true,
+        "problem": "",
+        "new_rank": 0,
+        "stale": [],
+        "profile_has_new": true,
+        "chunks": {
+          "ZQ-COR-f6ea466074a3": 1,
+          "ZQ-COR-257d09740a72": 0
+        }
+      }
+    ],
+    "result": "PASS",
+    "timeToConsistencySec": null,
+    "notes": "",
+    "rawArtifacts": "smoke/pilot/runs/2026-10-30/COR-01-run1.json"
+  },
+  "extra": {
+    "tokens": {
+      "old": [
+        "ZQ-COR-257d09740a72"
+      ],
+      "new": "ZQ-COR-f6ea466074a3"
+    },
+    "dreaming": "instant",
+    "converged_at_s": 0
+  },
+  "exchanges": [
+    {
+      "t": "2026-10-30T12:31:10",
+      "method": "POST",
+      "path": "/ns/memtrust_cor01_8d25c777bc/document",
+      "request_body": {
+        "content": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+        "dreaming": "instant"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "Azm4QCcuc3YRwb5w8tYfDZ",
+        "status": "queued"
+      },
+      "ms": 1482
+    },
+    {
+      "t": "2026-10-30T12:31:10",
+      "method": "GET",
+      "path": "/ns/memtrust_cor01_8d25c777bc/document/Azm4QCcuc3YRwb5w8tYfDZ",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Azm4QCcuc3YRwb5w8tYfDZ",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T12:31:09.790Z",
+          "updatedAt": "2026-10-30T12:31:09.790Z",
+          "filepath": null
+        }
+      },
+      "ms": 447
+    },
+    {
+      "t": "2026-10-30T12:31:16",
+      "method": "GET",
+      "path": "/ns/memtrust_cor01_8d25c777bc/document/Azm4QCcuc3YRwb5w8tYfDZ",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Azm4QCcuc3YRwb5w8tYfDZ",
+        "title": "Ravi lives in the city of Zorvania-ZQ-COR-257d0974...",
+        "type": "text",
+        "summary": null,
+        "content": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T12:31:09.790Z",
+          "updatedAt": "2026-10-30T12:31:16.020Z",
+          "filepath": null
+        }
+      },
+      "ms": 865
+    },
+    {
+      "t": "2026-10-30T12:31:22",
+      "method": "GET",
+      "path": "/ns/memtrust_cor01_8d25c777bc/document/Azm4QCcuc3YRwb5w8tYfDZ",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Azm4QCcuc3YRwb5w8tYfDZ",
+        "title": "Ravi lives in the city of Zorvania-ZQ-COR-257d0974...",
+        "type": "text",
+        "summary": null,
+        "content": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T12:31:09.790Z",
+          "updatedAt": "2026-10-30T12:31:16.020Z",
+          "filepath": null
+        }
+      },
+      "ms": 1007
+    },
+    {
+      "t": "2026-10-30T12:31:28",
+      "method": "GET",
+      "path": "/ns/memtrust_cor01_8d25c777bc/document/Azm4QCcuc3YRwb5w8tYfDZ",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Azm4QCcuc3YRwb5w8tYfDZ",
+        "title": "Ravi lives in the city of Zorvania-ZQ-COR-257d0974...",
+        "type": "text",
+        "summary": null,
+        "content": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T12:31:09.790Z",
+          "updatedAt": "2026-10-30T12:31:16.020Z",
+          "filepath": null
+        }
+      },
+      "ms": 1394
+    },
+    {
+      "t": "2026-10-30T12:31:34",
+      "method": "GET",
+      "path": "/ns/memtrust_cor01_8d25c777bc/document/Azm4QCcuc3YRwb5w8tYfDZ",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Azm4QCcuc3YRwb5w8tYfDZ",
+        "title": "Ravi lives in the city of Zorvania-ZQ-COR-257d0974...",
+        "type": "text",
+        "summary": "The document records Ravi as a resident of the city of Zorvania, identified by the alphanumeric code ZQ-COR-257d09740a72. No additional personal or demographic details are supplied.",
+        "content": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T12:31:09.790Z",
+          "updatedAt": "2026-10-30T12:31:16.020Z",
+          "filepath": null
+        }
+      },
+      "ms": 647
+    },
+    {
+      "t": "2026-10-30T12:31:40",
+      "method": "GET",
+      "path": "/ns/memtrust_cor01_8d25c777bc/document/Azm4QCcuc3YRwb5w8tYfDZ",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Azm4QCcuc3YRwb5w8tYfDZ",
+        "title": "Ravi lives in the city of Zorvania-ZQ-COR-257d0974...",
+        "type": "text",
+        "summary": "The document records Ravi as a resident of the city of Zorvania, identified by the alphanumeric code ZQ-COR-257d09740a72. No additional personal or demographic details are supplied.",
+        "content": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T12:31:09.790Z",
+          "updatedAt": "2026-10-30T12:31:16.020Z",
+          "filepath": null
+        }
+      },
+      "ms": 768
+    },
+    {
+      "t": "2026-10-30T12:31:45",
+      "method": "GET",
+      "path": "/ns/memtrust_cor01_8d25c777bc/document/Azm4QCcuc3YRwb5w8tYfDZ",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Azm4QCcuc3YRwb5w8tYfDZ",
+        "title": "Ravi lives in the city of Zorvania-ZQ-COR-257d0974...",
+        "type": "text",
+        "summary": "The document records Ravi as a resident of the city of Zorvania, identified by the alphanumeric code ZQ-COR-257d09740a72. No additional personal or demographic details are supplied.",
+        "content": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T12:31:09.790Z",
+          "updatedAt": "2026-10-30T12:31:16.020Z",
+          "filepath": null
+        }
+      },
+      "ms": 731
+    },
+    {
+      "t": "2026-10-30T12:31:51",
+      "method": "GET",
+      "path": "/ns/memtrust_cor01_8d25c777bc/document/Azm4QCcuc3YRwb5w8tYfDZ",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Azm4QCcuc3YRwb5w8tYfDZ",
+        "title": "Ravi lives in the city of Zorvania-ZQ-COR-257d0974...",
+        "type": "text",
+        "summary": "The document records Ravi as a resident of the city of Zorvania, identified by the alphanumeric code ZQ-COR-257d09740a72. No additional personal or demographic details are supplied.",
+        "content": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T12:31:09.790Z",
+          "updatedAt": "2026-10-30T12:31:16.020Z",
+          "filepath": null
+        }
+      },
+      "ms": 713
+    },
+    {
+      "t": "2026-10-30T12:31:57",
+      "method": "GET",
+      "path": "/ns/memtrust_cor01_8d25c777bc/document/Azm4QCcuc3YRwb5w8tYfDZ",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Azm4QCcuc3YRwb5w8tYfDZ",
+        "title": "Ravi lives in the city of Zorvania-ZQ-COR-257d0974...",
+        "type": "text",
+        "summary": "The document records Ravi as a resident of the city of Zorvania, identified by the alphanumeric code ZQ-COR-257d09740a72. No additional personal or demographic details are supplied.",
+        "content": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T12:31:09.790Z",
+          "updatedAt": "2026-10-30T12:31:16.020Z",
+          "filepath": null
+        }
+      },
+      "ms": 754
+    },
+    {
+      "t": "2026-10-30T12:32:03",
+      "method": "GET",
+      "path": "/ns/memtrust_cor01_8d25c777bc/document/Azm4QCcuc3YRwb5w8tYfDZ",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Azm4QCcuc3YRwb5w8tYfDZ",
+        "title": "Ravi lives in the city of Zorvania-ZQ-COR-257d0974...",
+        "type": "text",
+        "summary": "The document records Ravi as a resident of the city of Zorvania, identified by the alphanumeric code ZQ-COR-257d09740a72. No additional personal or demographic details are supplied.",
+        "content": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T12:31:09.790Z",
+          "updatedAt": "2026-10-30T12:31:16.020Z",
+          "filepath": null
+        }
+      },
+      "ms": 767
+    },
+    {
+      "t": "2026-10-30T12:32:09",
+      "method": "GET",
+      "path": "/ns/memtrust_cor01_8d25c777bc/document/Azm4QCcuc3YRwb5w8tYfDZ",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Azm4QCcuc3YRwb5w8tYfDZ",
+        "title": "Ravi lives in the city of Zorvania-ZQ-COR-257d0974...",
+        "type": "text",
+        "summary": "The document records Ravi as a resident of the city of Zorvania, identified by the alphanumeric code ZQ-COR-257d09740a72. No additional personal or demographic details are supplied.",
+        "content": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "done",
+          "createdAt": "2026-10-30T12:31:09.790Z",
+          "updatedAt": "2026-10-30T12:32:02.961Z",
+          "filepath": null
+        }
+      },
+      "ms": 1290
+    },
+    {
+      "t": "2026-10-30T12:32:10",
+      "method": "POST",
+      "path": "/ns/memtrust_cor01_8d25c777bc/search",
+      "request_body": {
+        "query": "Which city does Ravi live in?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "Tf8fufe7f7u9XVxqWcqVGD",
+            "memory": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7826795,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T12:32:02.961Z",
+              "createdAt": "2026-10-30T12:32:02.961Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 385
+      },
+      "ms": 1042
+    },
+    {
+      "t": "2026-10-30T12:32:11",
+      "method": "POST",
+      "path": "/ns/memtrust_cor01_8d25c777bc/document",
+      "request_body": {
+        "content": "Ravi moved. Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3.",
+        "dreaming": "instant"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "AuKfU5gWHhc91QBZeR2SA7",
+        "status": "queued"
+      },
+      "ms": 1220
+    },
+    {
+      "t": "2026-10-30T12:32:12",
+      "method": "GET",
+      "path": "/ns/memtrust_cor01_8d25c777bc/document/AuKfU5gWHhc91QBZeR2SA7",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "AuKfU5gWHhc91QBZeR2SA7",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T12:32:11.532Z",
+          "updatedAt": "2026-10-30T12:32:11.532Z",
+          "filepath": null
+        }
+      },
+      "ms": 416
+    },
+    {
+      "t": "2026-10-30T12:32:18",
+      "method": "GET",
+      "path": "/ns/memtrust_cor01_8d25c777bc/document/AuKfU5gWHhc91QBZeR2SA7",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "AuKfU5gWHhc91QBZeR2SA7",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T12:32:11.532Z",
+          "updatedAt": "2026-10-30T12:32:11.532Z",
+          "filepath": null
+        }
+      },
+      "ms": 950
+    },
+    {
+      "t": "2026-10-30T12:32:24",
+      "method": "GET",
+      "path": "/ns/memtrust_cor01_8d25c777bc/document/AuKfU5gWHhc91QBZeR2SA7",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "AuKfU5gWHhc91QBZeR2SA7",
+        "title": "Ravi moved. Ravi now lives in the city of Quentari...",
+        "type": "text",
+        "summary": null,
+        "content": "Ravi moved. Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T12:32:11.532Z",
+          "updatedAt": "2026-10-30T12:32:19.863Z",
+          "filepath": null
+        }
+      },
+      "ms": 1031
+    },
+    {
+      "t": "2026-10-30T12:32:29",
+      "method": "GET",
+      "path": "/ns/memtrust_cor01_8d25c777bc/document/AuKfU5gWHhc91QBZeR2SA7",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "AuKfU5gWHhc91QBZeR2SA7",
+        "title": "Ravi moved. Ravi now lives in the city of Quentari...",
+        "type": "text",
+        "summary": null,
+        "content": "Ravi moved. Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T12:32:11.532Z",
+          "updatedAt": "2026-10-30T12:32:19.863Z",
+          "filepath": null
+        }
+      },
+      "ms": 757
+    },
+    {
+      "t": "2026-10-30T12:32:35",
+      "method": "GET",
+      "path": "/ns/memtrust_cor01_8d25c777bc/document/AuKfU5gWHhc91QBZeR2SA7",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "AuKfU5gWHhc91QBZeR2SA7",
+        "title": "Ravi moved. Ravi now lives in the city of Quentari...",
+        "type": "text",
+        "summary": "Ravi, previously residing elsewhere, has recently relocated to the city of Quentaria, identified as Quentaria\u2011ZQ\u2011COR\u2011f6ea466074a3. This update signals a change in his residential address, potentially impacting local services, utilities, and community engagement within Quentaria.",
+        "content": "Ravi moved. Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T12:32:11.532Z",
+          "updatedAt": "2026-10-30T12:32:19.863Z",
+          "filepath": null
+        }
+      },
+      "ms": 778
+    },
+    {
+      "t": "2026-10-30T12:32:41",
+      "method": "GET",
+      "path": "/ns/memtrust_cor01_8d25c777bc/document/AuKfU5gWHhc91QBZeR2SA7",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "AuKfU5gWHhc91QBZeR2SA7",
+        "title": "Ravi moved. Ravi now lives in the city of Quentari...",
+        "type": "text",
+        "summary": "Ravi, previously residing elsewhere, has recently relocated to the city of Quentaria, identified as Quentaria\u2011ZQ\u2011COR\u2011f6ea466074a3. This update signals a change in his residential address, potentially impacting local services, utilities, and community engagement within Quentaria.",
+        "content": "Ravi moved. Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T12:32:11.532Z",
+          "updatedAt": "2026-10-30T12:32:19.863Z",
+          "filepath": null
+        }
+      },
+      "ms": 830
+    },
+    {
+      "t": "2026-10-30T12:32:47",
+      "method": "GET",
+      "path": "/ns/memtrust_cor01_8d25c777bc/document/AuKfU5gWHhc91QBZeR2SA7",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "AuKfU5gWHhc91QBZeR2SA7",
+        "title": "Ravi moved. Ravi now lives in the city of Quentari...",
+        "type": "text",
+        "summary": "Ravi, previously residing elsewhere, has recently relocated to the city of Quentaria, identified as Quentaria\u2011ZQ\u2011COR\u2011f6ea466074a3. This update signals a change in his residential address, potentially impacting local services, utilities, and community engagement within Quentaria.",
+        "content": "Ravi moved. Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T12:32:11.532Z",
+          "updatedAt": "2026-10-30T12:32:19.863Z",
+          "filepath": null
+        }
+      },
+      "ms": 680
+    },
+    {
+      "t": "2026-10-30T12:32:53",
+      "method": "GET",
+      "path": "/ns/memtrust_cor01_8d25c777bc/document/AuKfU5gWHhc91QBZeR2SA7",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "AuKfU5gWHhc91QBZeR2SA7",
+        "title": "Ravi moved. Ravi now lives in the city of Quentari...",
+        "type": "text",
+        "summary": "Ravi, previously residing elsewhere, has recently relocated to the city of Quentaria, identified as Quentaria\u2011ZQ\u2011COR\u2011f6ea466074a3. This update signals a change in his residential address, potentially impacting local services, utilities, and community engagement within Quentaria.",
+        "content": "Ravi moved. Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "done",
+          "createdAt": "2026-10-30T12:32:11.532Z",
+          "updatedAt": "2026-10-30T12:32:48.873Z",
+          "filepath": null
+        }
+      },
+      "ms": 1019
+    },
+    {
+      "t": "2026-10-30T12:32:53",
+      "method": "POST",
+      "path": "/ns/memtrust_cor01_8d25c777bc/search",
+      "request_body": {
+        "query": "Which city does Ravi live in?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "sF2yx6MjwnRxUdR3MpWVDD",
+            "memory": "Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7838754,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T12:32:48.873Z",
+              "createdAt": "2026-10-30T12:32:48.873Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 153
+      },
+      "ms": 682
+    },
+    {
+      "t": "2026-10-30T12:32:54",
+      "method": "POST",
+      "path": "/ns/memtrust_cor01_8d25c777bc/search",
+      "request_body": {
+        "query": "Which city does Ravi live in?",
+        "searchMode": "memories",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "sF2yx6MjwnRxUdR3MpWVDD",
+            "memory": "Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7838754,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T12:32:48.873Z",
+              "createdAt": "2026-10-30T12:32:48.873Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "Tf8fufe7f7u9XVxqWcqVGD",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 12:32:48.873"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 175
+      },
+      "ms": 644
+    },
+    {
+      "t": "2026-10-30T12:32:55",
+      "method": "POST",
+      "path": "/ns/memtrust_cor01_8d25c777bc/search",
+      "request_body": {
+        "query": "Which city does Ravi live in?",
+        "searchMode": "hybrid",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "sF2yx6MjwnRxUdR3MpWVDD",
+            "memory": "Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7838754,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T12:32:48.873Z",
+              "createdAt": "2026-10-30T12:32:48.873Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "Tf8fufe7f7u9XVxqWcqVGD",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 12:32:48.873"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "341a7446fdaf76be6074e3",
+            "chunk": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+            "metadata": {},
+            "similarity": 0.7826795,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T12:32:02.961Z",
+              "createdAt": "2026-10-30T12:31:09.790Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "8171539545b760d7009243",
+            "chunk": "Ravi moved. Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3.",
+            "metadata": {},
+            "similarity": 0.76708573,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T12:32:48.873Z",
+              "createdAt": "2026-10-30T12:32:11.532Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 158
+      },
+      "ms": 610
+    },
+    {
+      "t": "2026-10-30T12:32:55",
+      "method": "POST",
+      "path": "/ns/memtrust_cor01_8d25c777bc/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [
+            {
+              "id": "sF2yx6MjwnRxUdR3MpWVDD",
+              "memory": "[2026-10-30] Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3."
+            }
+          ],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 645
+    },
+    {
+      "t": "2026-10-30T12:32:56",
+      "method": "POST",
+      "path": "/ns/memtrust_cor01_8d25c777bc/search",
+      "request_body": {
+        "query": "Which city does Ravi live in?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "341a7446fdaf76be6074e3",
+            "chunk": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+            "metadata": {},
+            "similarity": 0.7826795,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T12:32:02.961Z",
+              "createdAt": "2026-10-30T12:31:09.790Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "8171539545b760d7009243",
+            "chunk": "Ravi moved. Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3.",
+            "metadata": {},
+            "similarity": 0.76708573,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T12:32:48.873Z",
+              "createdAt": "2026-10-30T12:32:11.532Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 170
+      },
+      "ms": 815
+    },
+    {
+      "t": "2026-10-30T12:33:04",
+      "method": "POST",
+      "path": "/ns/memtrust_cor01_8d25c777bc/search",
+      "request_body": {
+        "query": "Which city does Ravi live in?",
+        "searchMode": "memories",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "sF2yx6MjwnRxUdR3MpWVDD",
+            "memory": "Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7838754,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T12:32:48.873Z",
+              "createdAt": "2026-10-30T12:32:48.873Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "Tf8fufe7f7u9XVxqWcqVGD",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 12:32:48.873"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 168
+      },
+      "ms": 818
+    },
+    {
+      "t": "2026-10-30T12:33:05",
+      "method": "POST",
+      "path": "/ns/memtrust_cor01_8d25c777bc/search",
+      "request_body": {
+        "query": "Which city does Ravi live in?",
+        "searchMode": "hybrid",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "sF2yx6MjwnRxUdR3MpWVDD",
+            "memory": "Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7838754,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T12:32:48.873Z",
+              "createdAt": "2026-10-30T12:32:48.873Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "Tf8fufe7f7u9XVxqWcqVGD",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 12:32:48.873"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "341a7446fdaf76be6074e3",
+            "chunk": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+            "metadata": {},
+            "similarity": 0.7826795,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T12:32:02.961Z",
+              "createdAt": "2026-10-30T12:31:09.790Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "8171539545b760d7009243",
+            "chunk": "Ravi moved. Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3.",
+            "metadata": {},
+            "similarity": 0.76708573,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T12:32:48.873Z",
+              "createdAt": "2026-10-30T12:32:11.532Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 217
+      },
+      "ms": 822
+    },
+    {
+      "t": "2026-10-30T12:33:06",
+      "method": "POST",
+      "path": "/ns/memtrust_cor01_8d25c777bc/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [
+            {
+              "id": "sF2yx6MjwnRxUdR3MpWVDD",
+              "memory": "[2026-10-30] Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3."
+            }
+          ],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 579
+    },
+    {
+      "t": "2026-10-30T12:33:06",
+      "method": "POST",
+      "path": "/ns/memtrust_cor01_8d25c777bc/search",
+      "request_body": {
+        "query": "Which city does Ravi live in?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "341a7446fdaf76be6074e3",
+            "chunk": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+            "metadata": {},
+            "similarity": 0.7826795,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T12:32:02.961Z",
+              "createdAt": "2026-10-30T12:31:09.790Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "8171539545b760d7009243",
+            "chunk": "Ravi moved. Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3.",
+            "metadata": {},
+            "similarity": 0.76708573,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T12:32:48.873Z",
+              "createdAt": "2026-10-30T12:32:11.532Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 154
+      },
+      "ms": 638
+    },
+    {
+      "t": "2026-10-30T12:33:25",
+      "method": "POST",
+      "path": "/ns/memtrust_cor01_8d25c777bc/search",
+      "request_body": {
+        "query": "Which city does Ravi live in?",
+        "searchMode": "memories",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "sF2yx6MjwnRxUdR3MpWVDD",
+            "memory": "Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7838754,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T12:32:48.873Z",
+              "createdAt": "2026-10-30T12:32:48.873Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "Tf8fufe7f7u9XVxqWcqVGD",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 12:32:48.873"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 195
+      },
+      "ms": 1175
+    },
+    {
+      "t": "2026-10-30T12:33:25",
+      "method": "POST",
+      "path": "/ns/memtrust_cor01_8d25c777bc/search",
+      "request_body": {
+        "query": "Which city does Ravi live in?",
+        "searchMode": "hybrid",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "sF2yx6MjwnRxUdR3MpWVDD",
+            "memory": "Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7838754,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T12:32:48.873Z",
+              "createdAt": "2026-10-30T12:32:48.873Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "Tf8fufe7f7u9XVxqWcqVGD",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 12:32:48.873"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "341a7446fdaf76be6074e3",
+            "chunk": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+            "metadata": {},
+            "similarity": 0.7826795,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T12:32:02.961Z",
+              "createdAt": "2026-10-30T12:31:09.790Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "8171539545b760d7009243",
+            "chunk": "Ravi moved. Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3.",
+            "metadata": {},
+            "similarity": 0.76708573,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T12:32:48.873Z",
+              "createdAt": "2026-10-30T12:32:11.532Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 180
+      },
+      "ms": 641
+    },
+    {
+      "t": "2026-10-30T12:33:26",
+      "method": "POST",
+      "path": "/ns/memtrust_cor01_8d25c777bc/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [
+            {
+              "id": "sF2yx6MjwnRxUdR3MpWVDD",
+              "memory": "[2026-10-30] Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3."
+            }
+          ],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 588
+    },
+    {
+      "t": "2026-10-30T12:33:27",
+      "method": "POST",
+      "path": "/ns/memtrust_cor01_8d25c777bc/search",
+      "request_body": {
+        "query": "Which city does Ravi live in?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "341a7446fdaf76be6074e3",
+            "chunk": "Ravi lives in the city of Zorvania-ZQ-COR-257d09740a72.",
+            "metadata": {},
+            "similarity": 0.7826795,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T12:32:02.961Z",
+              "createdAt": "2026-10-30T12:31:09.790Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "8171539545b760d7009243",
+            "chunk": "Ravi moved. Ravi now lives in the city of Quentaria-ZQ-COR-f6ea466074a3.",
+            "metadata": {},
+            "similarity": 0.76708573,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T12:32:48.873Z",
+              "createdAt": "2026-10-30T12:32:11.532Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 147
+      },
+      "ms": 720
+    },
+    {
+      "t": "2026-10-30T12:33:27",
+      "method": "DELETE",
+      "path": "/ns/memtrust_cor01_8d25c777bc",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_cor01_8d25c777bc",
+        "deletedDocumentsCount": 2,
+        "deletedMemoriesCount": 2
+      },
+      "ms": 649
+    }
+  ]
+}

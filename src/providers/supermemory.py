@@ -211,6 +211,18 @@ class SupermemoryProvider:
             entries = [f.memory for f in data.profile.static] + [f.memory for f in data.profile.dynamic]
         return ProfileResult(http_status=status, raw=raw, entries=entries)
 
+    def forget(self, scope: str, memory_ids: list[str]) -> DeleteResult:
+        """Forget memories: DELETE /ns/{ns}/memories. A soft delete (docs: excluded from search, preserved)."""
+        data, status, raw = self._call(lambda: self.client.memories.forget(scope, ids=memory_ids))
+        if data is None:
+            return DeleteResult(http_status=status, raw=raw)
+        return DeleteResult(
+            http_status=status,
+            raw=raw,
+            count=data.count,
+            errors=[{"id": getattr(e, "id", None), "error": getattr(e, "error", str(e))} for e in (data.errors or [])],
+        )
+
     def delete_scope(self, scope: str) -> Outcome:
         _, status, raw = self._call(lambda: self.client.namespaces.delete(scope))
         return Outcome(http_status=status, raw=raw)

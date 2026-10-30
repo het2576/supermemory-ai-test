@@ -48,6 +48,18 @@ class Bugs:
     unscoped_search_empty: bool = False  # unscoped call is accepted but returns nothing (e.g. defaults to another namespace)
     mangle_first_n_memories: int = 0  # the first N documents' derived memories come back with an altered token (extractor noise)
     legacy_route_blind: bool = False  # the legacy route cannot see this data even when scoped
+    corrections_ignored: bool = False  # a newer fact never supersedes an older one: both stay current
+    stale_wins: bool = False  # reversed: the OLD fact stays current and the new one is marked not latest
+    only_first_superseded: bool = False  # in a chain of updates only the first fact is superseded (middle ones stay current)
+    profile_keeps_stale: bool = False  # superseded facts still appear in the profile
+    return_superseded: bool = False  # superseded facts are returned by memory search, correctly marked isLatest=false
+    old_ranks_first: bool = False  # when two facts are current, the older one is returned first
+    honor_text_retraction: bool = False  # a later "forget ..." document retracts the earlier fact in its slot
+    forget_noop: bool = False  # forget() reports success but removes nothing
+    forget_delay_s: float = 0.0  # a forgotten memory stays visible this long
+    forget_leaves_profile: bool = False  # forgotten memories are gone from search but still in the profile
+    unframed_old_value: bool = False  # "used to X, but now Y" yields a bare "lives in X" memory with no past framing, plus the new fact
+    corrections_delay_s: float = 0.0  # a superseded fact stays current this long after the newer memory exists
 
 
 @dataclass
@@ -65,6 +77,7 @@ class _Doc:
     deleted_at: float | None = None
     deleted_while_processing: bool = False
     seq: int = 0
+    forgotten_at: float | None = None
 
 
 class MockProvider:
@@ -114,6 +127,45 @@ class MockProvider:
             return True
         return not self._gone(d)
 
+    # Fact versioning. Modeling rule for the mock: documents in one scope that start with the same word describe the
+    # same "slot" (e.g. "Ravi ..."), and a later one updates an earlier one. A document that asks to forget something
+    # is a retraction. This models the *documented* relational-versioning behavior; the real service decides its own.
+
+    @staticmethod
+    def _slot(d: _Doc) -> str:
+        return d.content.split(" ", 1)[0]
+
+    @staticmethod
+    def _is_retraction(d: _Doc) -> bool:
+        return "forget what i" in d.content.lower()
+
+    def _forgotten(self, d: _Doc) -> bool:
+        b = self.config.bugs
+        return d.forgotten_at is not None and not b.forget_noop and self.clock.now() - d.forgotten_at >= b.forget_delay_s
+
+    def _is_latest(self, scope: str, d: _Doc) -> bool:
+        b = self.config.bugs
+        if b.corrections_ignored:
+            return True
+        same = sorted((x for x in self._docs[scope].values() if self._slot(x) == self._slot(d) and x.deleted_at is None), key=lambda x: x.seq)
+        newer = [x for x in same if x.seq > d.seq and self._memory_ready(x) and self.clock.now() - x.created >= b.corrections_delay_s + self.config.ingest_delay_s + self.config.memory_delay_s]
+        if b.stale_wins:
+            older_exists = any(x.seq < d.seq for x in same)
+            return not older_exists
+        if b.only_first_superseded:
+            return not (same and same[0].seq == d.seq and newer)
+        if not newer:
+            return True
+        if self._is_retraction(newer[-1]) or any(self._is_retraction(x) for x in newer):
+            return not b.honor_text_retraction
+        return False
+
+    def _memory_current(self, scope: str, d: _Doc) -> bool:
+        """Visible AND not forgotten AND (latest, unless the provider returns superseded facts too). Retraction docs yield no fact."""
+        if not self._memory_visible(d) or self._forgotten(d) or self._is_retraction(d):
+            return False
+        return self._is_latest(scope, d) or self.config.bugs.return_superseded
+
     _VALID = re.compile(r"^[a-zA-Z0-9_:-]{1,100}$")
 
     def _resolve(self, scope: str) -> str | None:
@@ -127,11 +179,17 @@ class MockProvider:
                 return None
         return scope.lower() if b.case_insensitive_scopes else scope
 
-    def _mem_text(self, d: _Doc) -> str:
-        text = f"Fact: {d.content}"
+    def _mem_texts(self, d: _Doc) -> list[str]:
+        """The derived memories of one document (normally one)."""
+        if self.config.bugs.unframed_old_value and " used to live in " in d.content and ", but now lives in " in d.content:
+            subject, rest = d.content.split(" used to live in ", 1)
+            old, new = rest.split(", but now lives in ", 1)
+            texts = [f"Fact: {subject} lives in {old}", f"Fact: {subject} now lives in {new}"]
+        else:
+            texts = [f"Fact: {d.content}"]
         if d.seq <= self.config.bugs.mangle_first_n_memories:
-            text = re.sub(r"(ZQ-[A-Z]+-[0-9a-f]{4})[0-9a-f]{2}", r"\1", text)  # drop two characters of the token
-        return text
+            texts = [re.sub(r"(ZQ-[A-Z]+-[0-9a-f]{4})[0-9a-f]{2}", r"\1", t) for t in texts]  # drop two characters of the token
+        return texts
 
     def _scopes_for(self, scope: str) -> list[str]:
         b = self.config.bugs
@@ -175,12 +233,16 @@ class MockProvider:
             self._record("POST", f"/ns/{raw_scope}/search", {"query": query}, 400, body)
             return SearchResult(400, body, [])
         hits: list[SearchHit] = []
+        b = self.config.bugs
         for s in self._scopes_for(scope):
-            for d in self._docs[s].values():
+            # newest first is the healthy ranking; old_ranks_first reverses it
+            docs = sorted(self._docs[s].values(), key=lambda x: x.seq, reverse=not b.old_ranks_first)
+            for d in docs:
                 if o.mode in ("chunks", "hybrid") and self._chunk_visible(d):
                     hits.append(SearchHit(id=f"chunk_{d.id}", kind="chunk", text=d.content, score=0.8, is_latest=True, is_inference=False, raw={"scope": s}))
-                if o.mode in ("memories", "hybrid") and self._memory_visible(d):
-                    hits.append(SearchHit(id=f"mem_{d.id}", kind="memory", text=self._mem_text(d), score=0.8, is_latest=True, is_inference=False, raw={"scope": s}))
+                if o.mode in ("memories", "hybrid") and self._memory_current(s, d):
+                    for k, text in enumerate(self._mem_texts(d)):
+                        hits.append(SearchHit(id=f"mem_{d.id}" if k == 0 else f"mem_{d.id}.{k}", kind="memory", text=text, score=0.8, is_latest=self._is_latest(s, d), is_inference=False, raw={"scope": s}))
         body = {"results": [{"id": h.id, "chunk" if h.kind == "chunk" else "memory": h.text, "similarity": h.score} for h in hits]}
         self._record("POST", f"/ns/{scope}/search", {"query": query, "searchMode": o.mode}, 200, body)
         return SearchResult(200, body, hits)
@@ -221,11 +283,16 @@ class MockProvider:
     def profile(self, scope: str) -> ProfileResult:
         scope = self._resolve(scope) or scope
         scopes = list(self._docs) if self.config.bugs.profile_bleed else [scope] if scope in self._docs else []
+        b = self.config.bugs
         entries = [
-            self._mem_text(d)
+            text
             for s in scopes
-            for d in self._docs[s].values()
+            for d in sorted(self._docs[s].values(), key=lambda x: x.seq)
+            for text in self._mem_texts(d)
             if self._memory_visible(d)
+            and not self._is_retraction(d)
+            and (not self._forgotten(d) or b.forget_leaves_profile)
+            and (self._is_latest(s, d) or b.profile_keeps_stale)
         ]
         body = {"profile": {"static": [{"id": "m", "memory": e} for e in entries], "dynamic": [], "buckets": {}}}
         self._record("POST", f"/ns/{scope}/profile", None, 200, body)
@@ -251,6 +318,20 @@ class MockProvider:
         body = {"results": [{"id": h.id, "chunk": h.text, "similarity": h.score} for h in hits]}
         self._record("POST", "/v4/search", {"q": query, "containerTag": container_tag}, 200, body)
         return SearchResult(200, body, hits)
+
+    def forget(self, scope: str, memory_ids: list[str]) -> DeleteResult:
+        scope = self._resolve(scope) or scope
+        count, errors = 0, []
+        for mid in memory_ids:
+            d = self._docs.get(scope, {}).get(mid.removeprefix("mem_"))
+            if d is None or not self._memory_visible(d):
+                errors.append({"id": mid, "error": "not found"})
+            else:
+                count += 1
+                d.forgotten_at = self.clock.now()
+        body = {"count": count, "errors": errors}
+        self._record("DELETE", f"/ns/{scope}/memories", {"ids": memory_ids}, 200, body)
+        return DeleteResult(200, body, count, errors)
 
     def delete_scope(self, scope: str) -> Outcome:
         scope = self._resolve(scope) or scope

@@ -377,6 +377,537 @@
       "timeToConsistencySec": null,
       "notes": "unscoped legacy search accepted but returned nothing, while the same route scoped to each tenant found its canary: unscoped is not org-wide (it must default elsewhere)",
       "rawArtifacts": "smoke/pilot/runs/2026-10-30/ISO-02-run1.json"
+    },
+    {
+      "testId": "COR-01",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T12:33:27.791401+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "add_doc1",
+          "attempt": 1,
+          "scope": "memtrust_cor01_8d25c777bc",
+          "http": 200,
+          "id": "Azm4QCcuc3YRwb5w8tYfDZ"
+        },
+        {
+          "step": "processed_doc1",
+          "attempt": 1,
+          "status": "done",
+          "dreaming": "done",
+          "elapsed_s": 59.45760416597477
+        },
+        {
+          "step": "memory_for_doc1",
+          "attempt": 1,
+          "token": "ZQ-COR-257d09740a72",
+          "found": true,
+          "elapsed_s": 1.05044566700235
+        },
+        {
+          "step": "add_doc2",
+          "attempt": 1,
+          "scope": "memtrust_cor01_8d25c777bc",
+          "http": 200,
+          "id": "AuKfU5gWHhc91QBZeR2SA7"
+        },
+        {
+          "step": "processed_doc2",
+          "attempt": 1,
+          "status": "done",
+          "dreaming": "done",
+          "elapsed_s": 41.50204358398332
+        },
+        {
+          "step": "memory_for_doc2",
+          "attempt": 1,
+          "token": "ZQ-COR-f6ea466074a3",
+          "found": true,
+          "elapsed_s": 0.6840407089912333
+        },
+        {
+          "t": 0,
+          "ok": true,
+          "problem": "",
+          "new_rank": 0,
+          "stale": [],
+          "profile_has_new": true,
+          "chunks": {
+            "ZQ-COR-f6ea466074a3": 1,
+            "ZQ-COR-257d09740a72": 0
+          }
+        },
+        {
+          "t": 10,
+          "ok": true,
+          "problem": "",
+          "new_rank": 0,
+          "stale": [],
+          "profile_has_new": true,
+          "chunks": {
+            "ZQ-COR-f6ea466074a3": 1,
+            "ZQ-COR-257d09740a72": 0
+          }
+        },
+        {
+          "t": 30,
+          "ok": true,
+          "problem": "",
+          "new_rank": 0,
+          "stale": [],
+          "profile_has_new": true,
+          "chunks": {
+            "ZQ-COR-f6ea466074a3": 1,
+            "ZQ-COR-257d09740a72": 0
+          }
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "",
+      "rawArtifacts": "smoke/pilot/runs/2026-10-30/COR-01-run1.json"
+    },
+    {
+      "testId": "COR-02",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T12:35:06.498349+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "add_doc1",
+          "attempt": 1,
+          "scope": "memtrust_cor02_e74525543d",
+          "http": 200,
+          "id": "kAAH8cDfMb64eggsKb6raK"
+        },
+        {
+          "step": "processed_doc1",
+          "attempt": 1,
+          "status": "done",
+          "dreaming": "done",
+          "elapsed_s": 24.103371833014535
+        },
+        {
+          "step": "memory_for_doc1",
+          "attempt": 1,
+          "token": "ZQ-COR-d0e0f68e93bd",
+          "found": true,
+          "elapsed_s": 0.9425561249954626
+        },
+        {
+          "step": "add_doc2",
+          "attempt": 1,
+          "scope": "memtrust_cor02_e74525543d",
+          "http": 200,
+          "id": "rxQekuaH76CSwiS9dqs4rM"
+        },
+        {
+          "step": "processed_doc2",
+          "attempt": 1,
+          "status": "done",
+          "dreaming": "done",
+          "elapsed_s": 36.70904016599525
+        },
+        {
+          "step": "memory_for_doc2",
+          "attempt": 1,
+          "token": "ZQ-COR-68f091276944",
+          "found": true,
+          "elapsed_s": 1.4929925419855863
+        },
+        {
+          "t": 0,
+          "ok": true,
+          "problem": "",
+          "new_rank": 0,
+          "stale": [],
+          "profile_has_new": true,
+          "chunks": {
+            "ZQ-COR-68f091276944": 0,
+            "ZQ-COR-d0e0f68e93bd": 1
+          }
+        },
+        {
+          "t": 10,
+          "ok": true,
+          "problem": "",
+          "new_rank": 0,
+          "stale": [],
+          "profile_has_new": true,
+          "chunks": {
+            "ZQ-COR-68f091276944": 0,
+            "ZQ-COR-d0e0f68e93bd": 1
+          }
+        },
+        {
+          "t": 30,
+          "ok": true,
+          "problem": "",
+          "new_rank": 0,
+          "stale": [],
+          "profile_has_new": true,
+          "chunks": {
+            "ZQ-COR-68f091276944": 0,
+            "ZQ-COR-d0e0f68e93bd": 1
+          }
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "",
+      "rawArtifacts": "smoke/pilot/runs/2026-10-30/COR-02-run1.json"
+    },
+    {
+      "testId": "COR-03",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T12:36:18.800183+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "add_doc1",
+          "attempt": 1,
+          "scope": "memtrust_cor03_4311366dc9",
+          "http": 200,
+          "id": "81EEGtKaBnF2KS6XNuZQma"
+        },
+        {
+          "step": "processed_doc1",
+          "attempt": 1,
+          "status": "done",
+          "dreaming": "done",
+          "elapsed_s": 36.92800466599874
+        },
+        {
+          "step": "memory_for_doc1",
+          "attempt": 1,
+          "token": "ZQ-COR-8e4c70c682ff",
+          "found": true,
+          "elapsed_s": 0.8147367080091499
+        },
+        {
+          "t": 0,
+          "ok": true,
+          "problem": "",
+          "history_kept_as_memory": true,
+          "old_texts": [
+            "Meera no longer lives in Alpheria-ZQ-COR-25979adecf0b.",
+            "Meera no longer lives in Alpheria-ZQ-COR-25979adecf0b.",
+            "[2026-10-30] Meera no longer lives in Alpheria-ZQ-COR-25979adecf0b."
+          ],
+          "chunks": {
+            "ZQ-COR-8e4c70c682ff": 0,
+            "ZQ-COR-25979adecf0b": 0
+          }
+        },
+        {
+          "t": 10,
+          "ok": true,
+          "problem": "",
+          "history_kept_as_memory": true,
+          "old_texts": [
+            "Meera no longer lives in Alpheria-ZQ-COR-25979adecf0b.",
+            "Meera no longer lives in Alpheria-ZQ-COR-25979adecf0b.",
+            "[2026-10-30] Meera no longer lives in Alpheria-ZQ-COR-25979adecf0b."
+          ],
+          "chunks": {
+            "ZQ-COR-8e4c70c682ff": 0,
+            "ZQ-COR-25979adecf0b": 0
+          }
+        },
+        {
+          "t": 30,
+          "ok": true,
+          "problem": "",
+          "history_kept_as_memory": true,
+          "old_texts": [
+            "Meera no longer lives in Alpheria-ZQ-COR-25979adecf0b.",
+            "Meera no longer lives in Alpheria-ZQ-COR-25979adecf0b.",
+            "[2026-10-30] Meera no longer lives in Alpheria-ZQ-COR-25979adecf0b."
+          ],
+          "chunks": {
+            "ZQ-COR-8e4c70c682ff": 0,
+            "ZQ-COR-25979adecf0b": 0
+          }
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "history kept as a memory with past framing",
+      "rawArtifacts": "smoke/pilot/runs/2026-10-30/COR-03-run1.json"
+    },
+    {
+      "testId": "COR-04",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T12:38:35.972774+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "add_doc1",
+          "attempt": 1,
+          "scope": "memtrust_cor04_456ef18aa9",
+          "http": 200,
+          "id": "i9Z9ce3X7hrqdGZFAvasGa"
+        },
+        {
+          "step": "processed_doc1",
+          "attempt": 1,
+          "status": "done",
+          "dreaming": "done",
+          "elapsed_s": 24.28030183300143
+        },
+        {
+          "step": "memory_for_doc1",
+          "attempt": 1,
+          "token": "ZQ-COR-c9ebcf461eb9",
+          "found": true,
+          "elapsed_s": 0.8315420839935541
+        },
+        {
+          "step": "add_doc2",
+          "attempt": 1,
+          "scope": "memtrust_cor04_456ef18aa9",
+          "http": 200,
+          "id": "Rbs8cfxenjHbZbungBUGui"
+        },
+        {
+          "step": "processed_doc2",
+          "attempt": 1,
+          "status": "done",
+          "dreaming": "done",
+          "elapsed_s": 42.2249002919998
+        },
+        {
+          "step": "memory_for_doc2",
+          "attempt": 1,
+          "token": "ZQ-COR-08e7b604653a",
+          "found": true,
+          "elapsed_s": 0.6189894999843091
+        },
+        {
+          "step": "add_doc3",
+          "attempt": 1,
+          "scope": "memtrust_cor04_456ef18aa9",
+          "http": 200,
+          "id": "Bavy6mvdvVFmC65tns2dC4"
+        },
+        {
+          "step": "processed_doc3",
+          "attempt": 1,
+          "status": "done",
+          "dreaming": "done",
+          "elapsed_s": 30.788604000001214
+        },
+        {
+          "step": "memory_for_doc3",
+          "attempt": 1,
+          "token": "ZQ-COR-58ec1ce275cd",
+          "found": true,
+          "elapsed_s": 0.9029374580131844
+        },
+        {
+          "t": 0,
+          "ok": true,
+          "problem": "",
+          "new_rank": 0,
+          "stale": [],
+          "profile_has_new": true,
+          "chunks": {
+            "ZQ-COR-58ec1ce275cd": 1,
+            "ZQ-COR-c9ebcf461eb9": 0,
+            "ZQ-COR-08e7b604653a": 2
+          }
+        },
+        {
+          "t": 10,
+          "ok": true,
+          "problem": "",
+          "new_rank": 0,
+          "stale": [],
+          "profile_has_new": true,
+          "chunks": {
+            "ZQ-COR-58ec1ce275cd": 1,
+            "ZQ-COR-c9ebcf461eb9": 0,
+            "ZQ-COR-08e7b604653a": 2
+          }
+        },
+        {
+          "t": 30,
+          "ok": true,
+          "problem": "",
+          "new_rank": 0,
+          "stale": [],
+          "profile_has_new": true,
+          "chunks": {
+            "ZQ-COR-58ec1ce275cd": 1,
+            "ZQ-COR-c9ebcf461eb9": 0,
+            "ZQ-COR-08e7b604653a": 2
+          }
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "",
+      "rawArtifacts": "smoke/pilot/runs/2026-10-30/COR-04-run1.json"
+    },
+    {
+      "testId": "COR-05",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T12:40:13.542372+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "add_doc1",
+          "attempt": 1,
+          "scope": "memtrust_cor05_151e74d27b",
+          "http": 200,
+          "id": "sBknsHhp6GBeouQmDj4JVs"
+        },
+        {
+          "step": "processed_doc1",
+          "attempt": 1,
+          "status": "done",
+          "dreaming": "done",
+          "elapsed_s": 30.169469499989646
+        },
+        {
+          "step": "memory_for_doc1",
+          "attempt": 1,
+          "token": "ZQ-COR-1256f8b3301a",
+          "found": true,
+          "elapsed_s": 0.8548135420132894
+        },
+        {
+          "step": "add_doc2",
+          "attempt": 1,
+          "scope": "memtrust_cor05_151e74d27b",
+          "http": 200,
+          "id": "JsxF3jufupj1626JKw3uHW"
+        },
+        {
+          "step": "processed_doc2",
+          "attempt": 1,
+          "status": "done",
+          "dreaming": "done",
+          "elapsed_s": 30.58860275000916
+        },
+        {
+          "t": 0,
+          "ok": true,
+          "problem": "",
+          "chunks": {
+            "ZQ-COR-1256f8b3301a": 0
+          }
+        },
+        {
+          "t": 10,
+          "ok": true,
+          "problem": "",
+          "chunks": {
+            "ZQ-COR-1256f8b3301a": 0
+          }
+        },
+        {
+          "t": 30,
+          "ok": true,
+          "problem": "",
+          "chunks": {
+            "ZQ-COR-1256f8b3301a": 0
+          }
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "",
+      "rawArtifacts": "smoke/pilot/runs/2026-10-30/COR-05-run1.json"
+    },
+    {
+      "testId": "COR-06",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T12:41:22.721858+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "add_doc1",
+          "attempt": 1,
+          "scope": "memtrust_cor06_057541bd9b",
+          "http": 200,
+          "id": "8MAYkAvJuBgEmYjT5iRjtZ"
+        },
+        {
+          "step": "processed_doc1",
+          "attempt": 1,
+          "status": "done",
+          "dreaming": "done",
+          "elapsed_s": 31.005991165991873
+        },
+        {
+          "step": "memory_for_doc1",
+          "attempt": 1,
+          "token": "ZQ-COR-279c8a505937",
+          "found": true,
+          "elapsed_s": 0.760741208010586
+        },
+        {
+          "step": "forget",
+          "ids": [
+            "AYsBt8wxTeAecRAGWwXDdn"
+          ],
+          "http": 200,
+          "count": 1,
+          "errors": []
+        },
+        {
+          "step": "evidence_include_forgotten",
+          "returned_with_flag": true
+        },
+        {
+          "t": 0,
+          "ok": true,
+          "problem": "",
+          "chunks": {
+            "ZQ-COR-279c8a505937": 0
+          }
+        },
+        {
+          "t": 10,
+          "ok": true,
+          "problem": "",
+          "chunks": {
+            "ZQ-COR-279c8a505937": 0
+          }
+        },
+        {
+          "t": 30,
+          "ok": true,
+          "problem": "",
+          "chunks": {
+            "ZQ-COR-279c8a505937": 0
+          }
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "",
+      "rawArtifacts": "smoke/pilot/runs/2026-10-30/COR-06-run1.json"
     }
   ],
   "summary": [
@@ -417,6 +948,48 @@
     },
     {
       "testId": "ISO-02",
+      "final": "PASS",
+      "perRun": [
+        "PASS"
+      ]
+    },
+    {
+      "testId": "COR-01",
+      "final": "PASS",
+      "perRun": [
+        "PASS"
+      ]
+    },
+    {
+      "testId": "COR-02",
+      "final": "PASS",
+      "perRun": [
+        "PASS"
+      ]
+    },
+    {
+      "testId": "COR-03",
+      "final": "PASS",
+      "perRun": [
+        "PASS"
+      ]
+    },
+    {
+      "testId": "COR-04",
+      "final": "PASS",
+      "perRun": [
+        "PASS"
+      ]
+    },
+    {
+      "testId": "COR-05",
+      "final": "PASS",
+      "perRun": [
+        "PASS"
+      ]
+    },
+    {
+      "testId": "COR-06",
       "final": "PASS",
       "perRun": [
         "PASS"
