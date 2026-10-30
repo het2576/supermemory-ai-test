@@ -807,6 +807,1002 @@
       "timeToConsistencySec": 0.0,
       "notes": "",
       "rawArtifacts": "results/runs/2026-10-30/DEL-05-run3.json"
+    },
+    {
+      "testId": "ISO-01",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T09:37:41.233753+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "add_A",
+          "scope": "memtrust_iso01a_2ac84d7e1b",
+          "http": 200,
+          "id": "xXZ26oRqzFFkFGoRQAo6Pq"
+        },
+        {
+          "step": "own_content_retrievable_A",
+          "elapsed_s": 0.8942295830056537,
+          "found": true
+        },
+        {
+          "step": "add_B",
+          "scope": "memtrust_iso01b_78f589f3e9",
+          "http": 200,
+          "id": "Ju3XBRAAbZkCVvzHGkqb42"
+        },
+        {
+          "step": "own_content_retrievable_B",
+          "elapsed_s": 0.9747913339815568,
+          "found": true
+        },
+        {
+          "t": 0,
+          "leaks": []
+        },
+        {
+          "t": 5,
+          "leaks": []
+        },
+        {
+          "t": 30,
+          "leaks": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "",
+      "rawArtifacts": "results/runs/2026-10-30/ISO-01-run1.json"
+    },
+    {
+      "testId": "ISO-01",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T09:38:39.505048+00:00",
+      "run": 2,
+      "checkpoints": [
+        {
+          "step": "add_A",
+          "scope": "memtrust_iso01a_0523e8d6a9",
+          "http": 200,
+          "id": "ECAikkmmkoApLoFLsozgfF"
+        },
+        {
+          "step": "own_content_retrievable_A",
+          "elapsed_s": 0.8773284170019906,
+          "found": true
+        },
+        {
+          "step": "add_B",
+          "scope": "memtrust_iso01b_9617525804",
+          "http": 200,
+          "id": "RFXGukeWxKit74nJFToVUz"
+        },
+        {
+          "step": "own_content_retrievable_B",
+          "elapsed_s": 0.6504120419849642,
+          "found": true
+        },
+        {
+          "t": 0,
+          "leaks": []
+        },
+        {
+          "t": 5,
+          "leaks": []
+        },
+        {
+          "t": 30,
+          "leaks": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "",
+      "rawArtifacts": "results/runs/2026-10-30/ISO-01-run2.json"
+    },
+    {
+      "testId": "ISO-01",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T09:39:40.228490+00:00",
+      "run": 3,
+      "checkpoints": [
+        {
+          "step": "add_A",
+          "scope": "memtrust_iso01a_bec8fc3990",
+          "http": 200,
+          "id": "7xSP1ZEsDS7FxnqL4qh9vk"
+        },
+        {
+          "step": "own_content_retrievable_A",
+          "elapsed_s": 0.5768261660123244,
+          "found": true
+        },
+        {
+          "step": "add_B",
+          "scope": "memtrust_iso01b_0ebc6af2d1",
+          "http": 200,
+          "id": "uyv33kJAZD4nUnPJ9F71HD"
+        },
+        {
+          "step": "own_content_retrievable_B",
+          "elapsed_s": 0.5710624170023948,
+          "found": true
+        },
+        {
+          "t": 0,
+          "leaks": []
+        },
+        {
+          "t": 5,
+          "leaks": []
+        },
+        {
+          "t": 30,
+          "leaks": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "",
+      "rawArtifacts": "results/runs/2026-10-30/ISO-01-run3.json"
+    },
+    {
+      "testId": "ISO-02",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T09:40:05.298883+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "add_A",
+          "scope": "memtrust_iso02a_4ebb7e4048",
+          "http": 200,
+          "id": "jmvrom1dMY7dzZPZ4ZLNk8"
+        },
+        {
+          "step": "own_content_retrievable_A",
+          "elapsed_s": 0.5587734580039978,
+          "found": true
+        },
+        {
+          "step": "add_B",
+          "scope": "memtrust_iso02b_108276b2d8",
+          "http": 200,
+          "id": "aYnULi1Juwcm1YTaCJGKPY"
+        },
+        {
+          "step": "own_content_retrievable_B",
+          "elapsed_s": 0.6821426250098739,
+          "found": true
+        },
+        {
+          "step": "unscoped_search",
+          "http_statuses": [
+            200,
+            200,
+            200,
+            200
+          ],
+          "saw_A": false,
+          "saw_B": false
+        },
+        {
+          "step": "positive_control_scoped_legacy_search",
+          "found": {
+            "A": true,
+            "B": true
+          }
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "unscoped legacy search accepted but returned nothing, while the same route scoped to each tenant found its canary: unscoped is not org-wide (it must default elsewhere)",
+      "rawArtifacts": "results/runs/2026-10-30/ISO-02-run1.json"
+    },
+    {
+      "testId": "ISO-02",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T09:40:35.225761+00:00",
+      "run": 2,
+      "checkpoints": [
+        {
+          "step": "add_A",
+          "scope": "memtrust_iso02a_ab581ecd68",
+          "http": 200,
+          "id": "9hu7wWijrMxkDK6iNyH2YW"
+        },
+        {
+          "step": "own_content_retrievable_A",
+          "elapsed_s": 0.5831550000002608,
+          "found": true
+        },
+        {
+          "step": "add_B",
+          "scope": "memtrust_iso02b_83f724744a",
+          "http": 200,
+          "id": "d4ZhDx2SsK33G8D8mNwnDm"
+        },
+        {
+          "step": "own_content_retrievable_B",
+          "elapsed_s": 0.6137613340106327,
+          "found": true
+        },
+        {
+          "step": "unscoped_search",
+          "http_statuses": [
+            200,
+            200,
+            200,
+            200
+          ],
+          "saw_A": false,
+          "saw_B": false
+        },
+        {
+          "step": "positive_control_scoped_legacy_search",
+          "found": {
+            "A": true,
+            "B": true
+          }
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "unscoped legacy search accepted but returned nothing, while the same route scoped to each tenant found its canary: unscoped is not org-wide (it must default elsewhere)",
+      "rawArtifacts": "results/runs/2026-10-30/ISO-02-run2.json"
+    },
+    {
+      "testId": "ISO-02",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T09:40:58.777977+00:00",
+      "run": 3,
+      "checkpoints": [
+        {
+          "step": "add_A",
+          "scope": "memtrust_iso02a_1ed9615cef",
+          "http": 200,
+          "id": "4T5vTaGASMTTpMMoTgQZfj"
+        },
+        {
+          "step": "own_content_retrievable_A",
+          "elapsed_s": 0.7191784579772502,
+          "found": true
+        },
+        {
+          "step": "add_B",
+          "scope": "memtrust_iso02b_b68bd7c83b",
+          "http": 200,
+          "id": "QcA86Z32tHYVRHodVw8SaG"
+        },
+        {
+          "step": "own_content_retrievable_B",
+          "elapsed_s": 0.5827715000195894,
+          "found": true
+        },
+        {
+          "step": "unscoped_search",
+          "http_statuses": [
+            200,
+            200,
+            200,
+            200
+          ],
+          "saw_A": false,
+          "saw_B": false
+        },
+        {
+          "step": "positive_control_scoped_legacy_search",
+          "found": {
+            "A": true,
+            "B": true
+          }
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "unscoped legacy search accepted but returned nothing, while the same route scoped to each tenant found its canary: unscoped is not org-wide (it must default elsewhere)",
+      "rawArtifacts": "results/runs/2026-10-30/ISO-02-run3.json"
+    },
+    {
+      "testId": "ISO-03",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T09:41:54.996288+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "add_A",
+          "scope": "memtrust_iso03a_9704029259",
+          "http": 200,
+          "id": "kywByvEcitbPiQWPPdbgFf"
+        },
+        {
+          "step": "own_content_retrievable_A",
+          "elapsed_s": 1.0988252089882735,
+          "found": true
+        },
+        {
+          "step": "add_B",
+          "scope": "memtrust_iso03b_0c922d29e4",
+          "http": 200,
+          "id": "UwxWXfUV5XrdZ2r4ThtwNF"
+        },
+        {
+          "step": "own_content_retrievable_B",
+          "elapsed_s": 0.8238232499861624,
+          "found": true
+        },
+        {
+          "t": 0,
+          "leaks": [],
+          "own_present": {
+            "A": true,
+            "B": true
+          }
+        },
+        {
+          "t": 5,
+          "leaks": [],
+          "own_present": {
+            "A": true,
+            "B": true
+          }
+        },
+        {
+          "t": 30,
+          "leaks": [],
+          "own_present": {
+            "A": true,
+            "B": true
+          }
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "",
+      "rawArtifacts": "results/runs/2026-10-30/ISO-03-run1.json"
+    },
+    {
+      "testId": "ISO-03",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T09:42:51.623360+00:00",
+      "run": 2,
+      "checkpoints": [
+        {
+          "step": "add_A",
+          "scope": "memtrust_iso03a_c667d0b0b0",
+          "http": 200,
+          "id": "8W5AVUZHEckL9fzaFg25t8"
+        },
+        {
+          "step": "own_content_retrievable_A",
+          "elapsed_s": 0.6358757079869974,
+          "found": true
+        },
+        {
+          "step": "add_B",
+          "scope": "memtrust_iso03b_9cd0aff4f2",
+          "http": 200,
+          "id": "z71B6FkRdkYUJGcd5sbrnC"
+        },
+        {
+          "step": "own_content_retrievable_B",
+          "elapsed_s": 0.8199862079927698,
+          "found": true
+        },
+        {
+          "t": 0,
+          "leaks": [],
+          "own_present": {
+            "A": true,
+            "B": true
+          }
+        },
+        {
+          "t": 5,
+          "leaks": [],
+          "own_present": {
+            "A": true,
+            "B": true
+          }
+        },
+        {
+          "t": 30,
+          "leaks": [],
+          "own_present": {
+            "A": true,
+            "B": true
+          }
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "",
+      "rawArtifacts": "results/runs/2026-10-30/ISO-03-run2.json"
+    },
+    {
+      "testId": "ISO-03",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T09:43:47.505431+00:00",
+      "run": 3,
+      "checkpoints": [
+        {
+          "step": "add_A",
+          "scope": "memtrust_iso03a_b57df9a541",
+          "http": 200,
+          "id": "wDWdiffwS5cSJvr61tztif"
+        },
+        {
+          "step": "own_content_retrievable_A",
+          "elapsed_s": 0.5980947499920148,
+          "found": true
+        },
+        {
+          "step": "add_B",
+          "scope": "memtrust_iso03b_8f2ff8e10c",
+          "http": 200,
+          "id": "b8zsbVSemjD5UV8f7GXJP9"
+        },
+        {
+          "step": "own_content_retrievable_B",
+          "elapsed_s": 0.6119887919921894,
+          "found": true
+        },
+        {
+          "t": 0,
+          "leaks": [],
+          "own_present": {
+            "A": true,
+            "B": true
+          }
+        },
+        {
+          "t": 5,
+          "leaks": [],
+          "own_present": {
+            "A": true,
+            "B": true
+          }
+        },
+        {
+          "t": 30,
+          "leaks": [],
+          "own_present": {
+            "A": true,
+            "B": true
+          }
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "",
+      "rawArtifacts": "results/runs/2026-10-30/ISO-03-run3.json"
+    },
+    {
+      "testId": "ISO-04",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T09:45:34.337626+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "add_base",
+          "scope": "memtrust_1305b407_1",
+          "http": 200,
+          "id": "mAasaCYBL8KZPVcw75Yp9p"
+        },
+        {
+          "step": "own_content_retrievable_base",
+          "elapsed_s": 0.6176627080130856,
+          "found": true
+        },
+        {
+          "step": "add_ten",
+          "scope": "memtrust_1305b407_10",
+          "http": 200,
+          "id": "oUj5kowmDsyyfcrw67gEkT"
+        },
+        {
+          "step": "own_content_retrievable_ten",
+          "elapsed_s": 0.8506722079764586,
+          "found": true
+        },
+        {
+          "step": "add_colon",
+          "scope": "memtrust_1305b407_1:x",
+          "http": 200,
+          "id": "teqne4cfc8WrTC6bjNAMGH"
+        },
+        {
+          "step": "own_content_retrievable_colon",
+          "elapsed_s": 0.6042818329879083,
+          "found": true
+        },
+        {
+          "step": "add_upper",
+          "scope": "MEMTRUST_1305b407_1",
+          "http": 200,
+          "id": "6Pd1dHefPm6vU8TKuQxgNd"
+        },
+        {
+          "step": "own_content_retrievable_upper",
+          "elapsed_s": 0.5599201669974718,
+          "found": true
+        },
+        {
+          "step": "add_hyphen",
+          "scope": "memtrust_1305b407-1",
+          "http": 200,
+          "id": "PoECyQk2JYB5sXQuPURBzz"
+        },
+        {
+          "step": "own_content_retrievable_hyphen",
+          "elapsed_s": 0.715658250002889,
+          "found": true
+        },
+        {
+          "step": "add_trailing_underscore",
+          "scope": "memtrust_1305b407_1_",
+          "http": 200,
+          "id": "vbzJDSUoJrWLDBvz2WDBeK"
+        },
+        {
+          "step": "own_content_retrievable_trailing_underscore",
+          "elapsed_s": 0.5220210000115912,
+          "found": true
+        },
+        {
+          "step": "invalid_scope_attempts",
+          "attempts": {
+            "trailing_space": {
+              "http": 400,
+              "accepted": false
+            },
+            "slash": {
+              "http": 404,
+              "accepted": false
+            },
+            "at": {
+              "http": 400,
+              "accepted": false
+            }
+          }
+        },
+        {
+          "t": 0,
+          "leaks": []
+        },
+        {
+          "t": 30,
+          "leaks": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "invalid IDs rejected",
+      "rawArtifacts": "results/runs/2026-10-30/ISO-04-run1.json"
+    },
+    {
+      "testId": "ISO-04",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T09:47:21.244554+00:00",
+      "run": 2,
+      "checkpoints": [
+        {
+          "step": "add_base",
+          "scope": "memtrust_fc0b8ea1_1",
+          "http": 200,
+          "id": "Ho7cRTmGqbx4f1a3oe95Cc"
+        },
+        {
+          "step": "own_content_retrievable_base",
+          "elapsed_s": 0.5840437079896219,
+          "found": true
+        },
+        {
+          "step": "add_ten",
+          "scope": "memtrust_fc0b8ea1_10",
+          "http": 200,
+          "id": "y2NC45TQB79JP6JegiDBnG"
+        },
+        {
+          "step": "own_content_retrievable_ten",
+          "elapsed_s": 0.598493708006572,
+          "found": true
+        },
+        {
+          "step": "add_colon",
+          "scope": "memtrust_fc0b8ea1_1:x",
+          "http": 200,
+          "id": "WhUdqVggteJoBnH4zhu7zH"
+        },
+        {
+          "step": "own_content_retrievable_colon",
+          "elapsed_s": 0.5920010000118054,
+          "found": true
+        },
+        {
+          "step": "add_upper",
+          "scope": "MEMTRUST_fc0b8ea1_1",
+          "http": 200,
+          "id": "7VnbvzzexuR4yimcbVY8ih"
+        },
+        {
+          "step": "own_content_retrievable_upper",
+          "elapsed_s": 0.9923189579858445,
+          "found": true
+        },
+        {
+          "step": "add_hyphen",
+          "scope": "memtrust_fc0b8ea1-1",
+          "http": 200,
+          "id": "gVHeBrT5RhSsob7e397Kme"
+        },
+        {
+          "step": "own_content_retrievable_hyphen",
+          "elapsed_s": 0.5919835829990916,
+          "found": true
+        },
+        {
+          "step": "add_trailing_underscore",
+          "scope": "memtrust_fc0b8ea1_1_",
+          "http": 200,
+          "id": "VdN9ZzJuRJGg4TfXv22Juz"
+        },
+        {
+          "step": "own_content_retrievable_trailing_underscore",
+          "elapsed_s": 0.5995173750270624,
+          "found": true
+        },
+        {
+          "step": "invalid_scope_attempts",
+          "attempts": {
+            "trailing_space": {
+              "http": 400,
+              "accepted": false
+            },
+            "slash": {
+              "http": 404,
+              "accepted": false
+            },
+            "at": {
+              "http": 400,
+              "accepted": false
+            }
+          }
+        },
+        {
+          "t": 0,
+          "leaks": []
+        },
+        {
+          "t": 30,
+          "leaks": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "invalid IDs rejected",
+      "rawArtifacts": "results/runs/2026-10-30/ISO-04-run2.json"
+    },
+    {
+      "testId": "ISO-04",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T09:48:59.659148+00:00",
+      "run": 3,
+      "checkpoints": [
+        {
+          "step": "add_base",
+          "scope": "memtrust_0d5683a9_1",
+          "http": 200,
+          "id": "mrbz3wCna39fiEhjrJ3rxr"
+        },
+        {
+          "step": "own_content_retrievable_base",
+          "elapsed_s": 0.702580459008459,
+          "found": true
+        },
+        {
+          "step": "add_ten",
+          "scope": "memtrust_0d5683a9_10",
+          "http": 200,
+          "id": "h8ekRfYHmHXm3CU1CF8rFa"
+        },
+        {
+          "step": "own_content_retrievable_ten",
+          "elapsed_s": 0.6719988329859916,
+          "found": true
+        },
+        {
+          "step": "add_colon",
+          "scope": "memtrust_0d5683a9_1:x",
+          "http": 200,
+          "id": "mgayQb8TM6CAaHciKfbgQ8"
+        },
+        {
+          "step": "own_content_retrievable_colon",
+          "elapsed_s": 0.8399196249956731,
+          "found": true
+        },
+        {
+          "step": "add_upper",
+          "scope": "MEMTRUST_0d5683a9_1",
+          "http": 200,
+          "id": "QVZWZLmm6d8fpLy385LHFQ"
+        },
+        {
+          "step": "own_content_retrievable_upper",
+          "elapsed_s": 0.6387623749906197,
+          "found": true
+        },
+        {
+          "step": "add_hyphen",
+          "scope": "memtrust_0d5683a9-1",
+          "http": 200,
+          "id": "bdjysiGsTbSu5kiYAUXtAx"
+        },
+        {
+          "step": "own_content_retrievable_hyphen",
+          "elapsed_s": 0.7013764170114882,
+          "found": true
+        },
+        {
+          "step": "add_trailing_underscore",
+          "scope": "memtrust_0d5683a9_1_",
+          "http": 200,
+          "id": "Ctzgmjfv4WPfam7mFZ5FuZ"
+        },
+        {
+          "step": "own_content_retrievable_trailing_underscore",
+          "elapsed_s": 0.7412140420055948,
+          "found": true
+        },
+        {
+          "step": "invalid_scope_attempts",
+          "attempts": {
+            "trailing_space": {
+              "http": 400,
+              "accepted": false
+            },
+            "slash": {
+              "http": 404,
+              "accepted": false
+            },
+            "at": {
+              "http": 400,
+              "accepted": false
+            }
+          }
+        },
+        {
+          "t": 0,
+          "leaks": []
+        },
+        {
+          "t": 30,
+          "leaks": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "invalid IDs rejected",
+      "rawArtifacts": "results/runs/2026-10-30/ISO-04-run3.json"
+    },
+    {
+      "testId": "ISO-05",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T09:59:06.836111+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "add_A1",
+          "scope": "memtrust_iso05a_011ea31207",
+          "http": 200,
+          "id": "2M6T9nCh9Ukb8Q7YaYS54a"
+        },
+        {
+          "step": "own_content_retrievable_A1",
+          "elapsed_s": 0.735526041011326,
+          "found": true
+        },
+        {
+          "step": "memory_A",
+          "attempt": 1,
+          "found": true,
+          "elapsed_s": 0.5374290829931851
+        },
+        {
+          "step": "add_B1",
+          "scope": "memtrust_iso05b_1b5a129f3c",
+          "http": 200,
+          "id": "7X2zBM9MAguzY8oCQDa7qR"
+        },
+        {
+          "step": "own_content_retrievable_B1",
+          "elapsed_s": 0.8081586670014076,
+          "found": true
+        },
+        {
+          "step": "memory_B",
+          "attempt": 1,
+          "found": true,
+          "elapsed_s": 1.8141708330076654
+        },
+        {
+          "t": 0,
+          "leaks": []
+        },
+        {
+          "t": 5,
+          "leaks": []
+        },
+        {
+          "t": 30,
+          "leaks": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "",
+      "rawArtifacts": "results/runs/2026-10-30/ISO-05-run1.json"
+    },
+    {
+      "testId": "ISO-05",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T10:00:46.521734+00:00",
+      "run": 2,
+      "checkpoints": [
+        {
+          "step": "add_A1",
+          "scope": "memtrust_iso05a_fbd18c99a3",
+          "http": 200,
+          "id": "s82zqGzuGHvkEtfZsFpZm5"
+        },
+        {
+          "step": "own_content_retrievable_A1",
+          "elapsed_s": 0.7140787910029758,
+          "found": true
+        },
+        {
+          "step": "memory_A",
+          "attempt": 1,
+          "found": true,
+          "elapsed_s": 0.637577457993757
+        },
+        {
+          "step": "add_B1",
+          "scope": "memtrust_iso05b_dadd9af737",
+          "http": 200,
+          "id": "R6q6BHuay1siE6m6gnwLQ9"
+        },
+        {
+          "step": "own_content_retrievable_B1",
+          "elapsed_s": 1.2640817500068806,
+          "found": true
+        },
+        {
+          "step": "memory_B",
+          "attempt": 1,
+          "found": true,
+          "elapsed_s": 0.9583545839996077
+        },
+        {
+          "t": 0,
+          "leaks": []
+        },
+        {
+          "t": 5,
+          "leaks": []
+        },
+        {
+          "t": 30,
+          "leaks": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "",
+      "rawArtifacts": "results/runs/2026-10-30/ISO-05-run2.json"
+    },
+    {
+      "testId": "ISO-05",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T10:02:48.073062+00:00",
+      "run": 3,
+      "checkpoints": [
+        {
+          "step": "add_A1",
+          "scope": "memtrust_iso05a_2b0ca0e1ce",
+          "http": 200,
+          "id": "UfyhQKX4PAgTD6KQUUL483"
+        },
+        {
+          "step": "own_content_retrievable_A1",
+          "elapsed_s": 0.8197014579782262,
+          "found": true
+        },
+        {
+          "step": "memory_A",
+          "attempt": 1,
+          "found": true,
+          "elapsed_s": 0.5869288750109263
+        },
+        {
+          "step": "add_B1",
+          "scope": "memtrust_iso05b_19f63b489b",
+          "http": 200,
+          "id": "bVbDTR2eziWpeSNpXMZNw1"
+        },
+        {
+          "step": "own_content_retrievable_B1",
+          "elapsed_s": 0.7227118330192752,
+          "found": true
+        },
+        {
+          "step": "memory_B",
+          "attempt": 1,
+          "found": true,
+          "elapsed_s": 0.6023556670115795
+        },
+        {
+          "t": 0,
+          "leaks": []
+        },
+        {
+          "t": 5,
+          "leaks": []
+        },
+        {
+          "t": 30,
+          "leaks": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "",
+      "rawArtifacts": "results/runs/2026-10-30/ISO-05-run3.json"
     }
   ],
   "summary": [
@@ -848,6 +1844,51 @@
     },
     {
       "testId": "DEL-05",
+      "final": "PASS",
+      "perRun": [
+        "PASS",
+        "PASS",
+        "PASS"
+      ]
+    },
+    {
+      "testId": "ISO-01",
+      "final": "PASS",
+      "perRun": [
+        "PASS",
+        "PASS",
+        "PASS"
+      ]
+    },
+    {
+      "testId": "ISO-02",
+      "final": "PASS",
+      "perRun": [
+        "PASS",
+        "PASS",
+        "PASS"
+      ]
+    },
+    {
+      "testId": "ISO-03",
+      "final": "PASS",
+      "perRun": [
+        "PASS",
+        "PASS",
+        "PASS"
+      ]
+    },
+    {
+      "testId": "ISO-04",
+      "final": "PASS",
+      "perRun": [
+        "PASS",
+        "PASS",
+        "PASS"
+      ]
+    },
+    {
+      "testId": "ISO-05",
       "final": "PASS",
       "perRun": [
         "PASS",

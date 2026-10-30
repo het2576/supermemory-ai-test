@@ -48,6 +48,10 @@ These two points were not spelled out in 2.1 and are fixed here before the first
 1. **Which surfaces count.** "Present" means the content (the canary, or for DEL-02/03 a unique fake name that only that document contains) comes back from any normal retrieval surface: `search` in `chunks`, `memories` or `hybrid` mode, and for DEL-03 also the profile. Evidence-only surfaces never decide a verdict: search with `include.forgotten`, and the memories list with `include.forgotten`. The docs describe forgotten memories as soft-deleted and preserved, so their presence there is recorded as documented behavior.
 2. **Stays gone.** The first checkpoint at which nothing is present must hold on one more probe 10 seconds later. If the content reappears, that is recorded (`reappeared: true`), the watch continues on the normal schedule, and the time-to-consistency is the first checkpoint that holds.
 
+### 2.2a Amendment A2 (made after the first ISO run, before any COR, ABS, POI or LAT run)
+
+The first ISO-05 attempt (2 PASS, 1 SKIPPED, aggregate INCONCLUSIVE) was skipped in run 3 because Supermemory's memory extractor altered the test token: `ZQ-ISO-bfca9b4a60ab` was stored as `ZQ-ISO-bfca9b60ab`. The skip guard worked (no false pass), but it left only two valid runs. For tests that need a derived memory or profile entry to carry the token (ISO-05 and, from now on, COR), the harness now retries up to 3 times with a fresh token and scope, records every attempt, and SKIPs only if all attempts fail. No pass/fail threshold changed. The first attempt's files are kept under `results/superseded/`. DEL-03 was not changed (all its tokens survived extraction).
+
 ### 2.2 ISO (isolation)
 
 | Outcome | Verdict |

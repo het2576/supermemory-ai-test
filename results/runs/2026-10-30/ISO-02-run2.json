@@ -1,0 +1,575 @@
+{
+  "record": {
+    "testId": "ISO-02",
+    "provider": "supermemory",
+    "client": "supermemory-python-sdk",
+    "sdkVersion": "5.0.1",
+    "apiVersion": "v5",
+    "date": "2026-10-30T09:40:35.225761+00:00",
+    "run": 2,
+    "checkpoints": [
+      {
+        "step": "add_A",
+        "scope": "memtrust_iso02a_ab581ecd68",
+        "http": 200,
+        "id": "9hu7wWijrMxkDK6iNyH2YW"
+      },
+      {
+        "step": "own_content_retrievable_A",
+        "elapsed_s": 0.5831550000002608,
+        "found": true
+      },
+      {
+        "step": "add_B",
+        "scope": "memtrust_iso02b_83f724744a",
+        "http": 200,
+        "id": "d4ZhDx2SsK33G8D8mNwnDm"
+      },
+      {
+        "step": "own_content_retrievable_B",
+        "elapsed_s": 0.6137613340106327,
+        "found": true
+      },
+      {
+        "step": "unscoped_search",
+        "http_statuses": [
+          200,
+          200,
+          200,
+          200
+        ],
+        "saw_A": false,
+        "saw_B": false
+      },
+      {
+        "step": "positive_control_scoped_legacy_search",
+        "found": {
+          "A": true,
+          "B": true
+        }
+      }
+    ],
+    "result": "PASS",
+    "timeToConsistencySec": null,
+    "notes": "unscoped legacy search accepted but returned nothing, while the same route scoped to each tenant found its canary: unscoped is not org-wide (it must default elsewhere)",
+    "rawArtifacts": "results/runs/2026-10-30/ISO-02-run2.json"
+  },
+  "extra": {
+    "canaries": {
+      "A": "ZQ-ISO-092da586a5dc",
+      "B": "ZQ-ISO-4a45f61dc9e4"
+    },
+    "statuses": [
+      200,
+      200,
+      200,
+      200
+    ],
+    "seen": {
+      "A": false,
+      "B": false
+    },
+    "control": {
+      "A": true,
+      "B": true
+    }
+  },
+  "exchanges": [
+    {
+      "t": "2026-10-30T09:40:06",
+      "method": "POST",
+      "path": "/ns/memtrust_iso02a_ab581ecd68/document",
+      "request_body": {
+        "content": "Tenant A shipping note: the container seal number is ZQ-ISO-092da586a5dc."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "9hu7wWijrMxkDK6iNyH2YW",
+        "status": "queued"
+      },
+      "ms": 1114
+    },
+    {
+      "t": "2026-10-30T09:40:06",
+      "method": "GET",
+      "path": "/ns/memtrust_iso02a_ab581ecd68/document/9hu7wWijrMxkDK6iNyH2YW",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "9hu7wWijrMxkDK6iNyH2YW",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:40:06.167Z",
+          "updatedAt": "2026-10-30T09:40:06.167Z",
+          "filepath": null
+        }
+      },
+      "ms": 448
+    },
+    {
+      "t": "2026-10-30T09:40:09",
+      "method": "GET",
+      "path": "/ns/memtrust_iso02a_ab581ecd68/document/9hu7wWijrMxkDK6iNyH2YW",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "9hu7wWijrMxkDK6iNyH2YW",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:40:06.167Z",
+          "updatedAt": "2026-10-30T09:40:06.167Z",
+          "filepath": null
+        }
+      },
+      "ms": 547
+    },
+    {
+      "t": "2026-10-30T09:40:11",
+      "method": "GET",
+      "path": "/ns/memtrust_iso02a_ab581ecd68/document/9hu7wWijrMxkDK6iNyH2YW",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "9hu7wWijrMxkDK6iNyH2YW",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:40:06.167Z",
+          "updatedAt": "2026-10-30T09:40:06.167Z",
+          "filepath": null
+        }
+      },
+      "ms": 415
+    },
+    {
+      "t": "2026-10-30T09:40:14",
+      "method": "GET",
+      "path": "/ns/memtrust_iso02a_ab581ecd68/document/9hu7wWijrMxkDK6iNyH2YW",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "9hu7wWijrMxkDK6iNyH2YW",
+        "title": "Tenant A shipping note: the container seal number...",
+        "type": "text",
+        "summary": null,
+        "content": "Tenant A shipping note: the container seal number is ZQ-ISO-092da586a5dc.",
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:40:06.167Z",
+          "updatedAt": "2026-10-30T09:40:14.141Z",
+          "filepath": null
+        }
+      },
+      "ms": 660
+    },
+    {
+      "t": "2026-10-30T09:40:18",
+      "method": "GET",
+      "path": "/ns/memtrust_iso02a_ab581ecd68/document/9hu7wWijrMxkDK6iNyH2YW",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "9hu7wWijrMxkDK6iNyH2YW",
+        "title": "Tenant A shipping note: the container seal number...",
+        "type": "text",
+        "summary": null,
+        "content": "Tenant A shipping note: the container seal number is ZQ-ISO-092da586a5dc.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:40:06.167Z",
+          "updatedAt": "2026-10-30T09:40:14.141Z",
+          "filepath": null
+        }
+      },
+      "ms": 1594
+    },
+    {
+      "t": "2026-10-30T09:40:18",
+      "method": "POST",
+      "path": "/ns/memtrust_iso02a_ab581ecd68/search",
+      "request_body": {
+        "query": "ZQ-ISO-092da586a5dc",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "be986dc703196e30d08c2d",
+            "chunk": "Tenant A shipping note: the container seal number is ZQ-ISO-092da586a5dc.",
+            "metadata": {},
+            "similarity": 0.7615248,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:40:14.141Z",
+              "createdAt": "2026-10-30T09:40:06.167Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 141
+      },
+      "ms": 581
+    },
+    {
+      "t": "2026-10-30T09:40:19",
+      "method": "POST",
+      "path": "/ns/memtrust_iso02b_83f724744a/document",
+      "request_body": {
+        "content": "Tenant B shipping note: the container seal number is ZQ-ISO-4a45f61dc9e4."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "d4ZhDx2SsK33G8D8mNwnDm",
+        "status": "queued"
+      },
+      "ms": 878
+    },
+    {
+      "t": "2026-10-30T09:40:20",
+      "method": "GET",
+      "path": "/ns/memtrust_iso02b_83f724744a/document/d4ZhDx2SsK33G8D8mNwnDm",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "d4ZhDx2SsK33G8D8mNwnDm",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:40:19.335Z",
+          "updatedAt": "2026-10-30T09:40:19.335Z",
+          "filepath": null
+        }
+      },
+      "ms": 481
+    },
+    {
+      "t": "2026-10-30T09:40:22",
+      "method": "GET",
+      "path": "/ns/memtrust_iso02b_83f724744a/document/d4ZhDx2SsK33G8D8mNwnDm",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "d4ZhDx2SsK33G8D8mNwnDm",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:40:19.335Z",
+          "updatedAt": "2026-10-30T09:40:19.335Z",
+          "filepath": null
+        }
+      },
+      "ms": 405
+    },
+    {
+      "t": "2026-10-30T09:40:24",
+      "method": "GET",
+      "path": "/ns/memtrust_iso02b_83f724744a/document/d4ZhDx2SsK33G8D8mNwnDm",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "d4ZhDx2SsK33G8D8mNwnDm",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:40:19.335Z",
+          "updatedAt": "2026-10-30T09:40:19.335Z",
+          "filepath": null
+        }
+      },
+      "ms": 438
+    },
+    {
+      "t": "2026-10-30T09:40:27",
+      "method": "GET",
+      "path": "/ns/memtrust_iso02b_83f724744a/document/d4ZhDx2SsK33G8D8mNwnDm",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "d4ZhDx2SsK33G8D8mNwnDm",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:40:19.335Z",
+          "updatedAt": "2026-10-30T09:40:19.335Z",
+          "filepath": null
+        }
+      },
+      "ms": 415
+    },
+    {
+      "t": "2026-10-30T09:40:29",
+      "method": "GET",
+      "path": "/ns/memtrust_iso02b_83f724744a/document/d4ZhDx2SsK33G8D8mNwnDm",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "d4ZhDx2SsK33G8D8mNwnDm",
+        "title": "Tenant B shipping note: the container seal number...",
+        "type": "text",
+        "summary": null,
+        "content": "Tenant B shipping note: the container seal number is ZQ-ISO-4a45f61dc9e4.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:40:19.335Z",
+          "updatedAt": "2026-10-30T09:40:27.617Z",
+          "filepath": null
+        }
+      },
+      "ms": 439
+    },
+    {
+      "t": "2026-10-30T09:40:30",
+      "method": "POST",
+      "path": "/ns/memtrust_iso02b_83f724744a/search",
+      "request_body": {
+        "query": "ZQ-ISO-4a45f61dc9e4",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "da11644b8af1e4e73433b3",
+            "chunk": "Tenant B shipping note: the container seal number is ZQ-ISO-4a45f61dc9e4.",
+            "metadata": {},
+            "similarity": 0.7588753699999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:40:27.617Z",
+              "createdAt": "2026-10-30T09:40:19.335Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 132
+      },
+      "ms": 611
+    },
+    {
+      "t": "2026-10-30T09:40:31",
+      "method": "POST",
+      "path": "/v4/search",
+      "request_body": {
+        "q": "ZQ-ISO-092da586a5dc",
+        "searchMode": "hybrid",
+        "threshold": 0,
+        "limit": 20
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "timing": 125,
+        "total": 0
+      },
+      "ms": 736
+    },
+    {
+      "t": "2026-10-30T09:40:31",
+      "method": "POST",
+      "path": "/v4/search",
+      "request_body": {
+        "q": "ZQ-ISO-4a45f61dc9e4",
+        "searchMode": "hybrid",
+        "threshold": 0,
+        "limit": 20
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "timing": 116,
+        "total": 0
+      },
+      "ms": 606
+    },
+    {
+      "t": "2026-10-30T09:40:32",
+      "method": "POST",
+      "path": "/v4/search",
+      "request_body": {
+        "q": "ZQ-ISO-092da586a5dc",
+        "searchMode": "hybrid",
+        "threshold": 0,
+        "limit": 20
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "timing": 80,
+        "total": 0
+      },
+      "ms": 525
+    },
+    {
+      "t": "2026-10-30T09:40:32",
+      "method": "POST",
+      "path": "/v4/search",
+      "request_body": {
+        "q": "ZQ-ISO-4a45f61dc9e4",
+        "searchMode": "hybrid",
+        "threshold": 0,
+        "limit": 20
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "timing": 121,
+        "total": 0
+      },
+      "ms": 558
+    },
+    {
+      "t": "2026-10-30T09:40:33",
+      "method": "POST",
+      "path": "/v4/search",
+      "request_body": {
+        "q": "ZQ-ISO-092da586a5dc",
+        "searchMode": "hybrid",
+        "threshold": 0,
+        "limit": 20,
+        "containerTag": "memtrust_iso02a_ab581ecd68"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "be986dc703196e30d08c2d",
+            "chunk": "Tenant A shipping note: the container seal number is ZQ-ISO-092da586a5dc.",
+            "metadata": null,
+            "filepath": null,
+            "updatedAt": "2026-10-30T09:40:14.141Z",
+            "similarity": 0.7615248,
+            "version": 1,
+            "documents": [
+              {
+                "id": "9hu7wWijrMxkDK6iNyH2YW",
+                "title": "Tenant A shipping note: the container seal number...",
+                "type": "text",
+                "metadata": null,
+                "createdAt": "2026-10-30T09:40:06.167Z",
+                "updatedAt": "2026-10-30T09:40:14.141Z"
+              }
+            ],
+            "chunks": []
+          }
+        ],
+        "timing": 139,
+        "total": 1
+      },
+      "ms": 849
+    },
+    {
+      "t": "2026-10-30T09:40:34",
+      "method": "POST",
+      "path": "/v4/search",
+      "request_body": {
+        "q": "ZQ-ISO-4a45f61dc9e4",
+        "searchMode": "hybrid",
+        "threshold": 0,
+        "limit": 20,
+        "containerTag": "memtrust_iso02b_83f724744a"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "da11644b8af1e4e73433b3",
+            "chunk": "Tenant B shipping note: the container seal number is ZQ-ISO-4a45f61dc9e4.",
+            "metadata": null,
+            "filepath": null,
+            "updatedAt": "2026-10-30T09:40:27.617Z",
+            "similarity": 0.7588753699999999,
+            "version": 1,
+            "documents": [
+              {
+                "id": "d4ZhDx2SsK33G8D8mNwnDm",
+                "title": "Tenant B shipping note: the container seal number...",
+                "type": "text",
+                "metadata": null,
+                "createdAt": "2026-10-30T09:40:19.335Z",
+                "updatedAt": "2026-10-30T09:40:27.617Z"
+              }
+            ],
+            "chunks": []
+          }
+        ],
+        "timing": 154,
+        "total": 1
+      },
+      "ms": 571
+    },
+    {
+      "t": "2026-10-30T09:40:34",
+      "method": "DELETE",
+      "path": "/ns/memtrust_iso02a_ab581ecd68",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_iso02a_ab581ecd68",
+        "deletedDocumentsCount": 1,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 493
+    },
+    {
+      "t": "2026-10-30T09:40:35",
+      "method": "DELETE",
+      "path": "/ns/memtrust_iso02b_83f724744a",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_iso02b_83f724744a",
+        "deletedDocumentsCount": 1,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 472
+    }
+  ]
+}

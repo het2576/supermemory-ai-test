@@ -103,6 +103,10 @@ class MemoryProvider(Protocol):
 
     def profile(self, scope: str) -> ProfileResult: ...
 
+    # Optional: providers that have a way to search without naming a scope implement
+    #   search_unscoped(self, query: str, mode: str = "hybrid", container_tag: str | None = None) -> SearchResult
+    # Tests look it up with getattr and SKIP when it is absent.
+
     def delete_scope(self, scope: str) -> Outcome:
         """Remove a whole scope. Cleanup only; may need elevated credentials."""
         ...

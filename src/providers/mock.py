@@ -8,6 +8,7 @@ are forgotten with their source) when no bug is set; it says nothing about how t
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 from typing import Any
 
@@ -38,6 +39,15 @@ class Bugs:
     resurrect_after_processing: bool = False  # a doc deleted while processing becomes searchable anyway
     readd_ghost: bool = False  # re-adding a deleted id leaves a visible duplicate of the old content
     reappear_after_s: float = 0.0  # a deleted doc is gone, then comes back this many seconds after the delete
+    leak_every_n_searches: int = 0  # every Nth search leaks across scopes (intermittent isolation bug)
+    leak_after_searches: int = 0  # cross-scope leak that only starts after this many searches (a delayed one)
+    profile_bleed: bool = False  # profile() includes other scopes' memories
+    case_insensitive_scopes: bool = False  # "User_1" and "user_1" are the same scope
+    normalize_invalid_scopes: bool = False  # invalid IDs are silently sanitised into a (possibly colliding) valid one
+    unscoped_search_returns_all: bool = False  # search_unscoped returns every scope's docs (default: rejected with 400)
+    unscoped_search_empty: bool = False  # unscoped call is accepted but returns nothing (e.g. defaults to another namespace)
+    mangle_first_n_memories: int = 0  # the first N documents' derived memories come back with an altered token (extractor noise)
+    legacy_route_blind: bool = False  # the legacy route cannot see this data even when scoped
 
 
 @dataclass
@@ -54,6 +64,7 @@ class _Doc:
     created: float
     deleted_at: float | None = None
     deleted_while_processing: bool = False
+    seq: int = 0
 
 
 class MockProvider:
@@ -65,6 +76,7 @@ class MockProvider:
         self._docs: dict[str, dict[str, _Doc]] = {}
         self._n = 0
         self._deletes = 0
+        self._searches = 0
         self._log: list[dict[str, Any]] = []
 
     # --- helpers -----------------------------------------------------------------------------
@@ -102,9 +114,30 @@ class MockProvider:
             return True
         return not self._gone(d)
 
+    _VALID = re.compile(r"^[a-zA-Z0-9_:-]{1,100}$")
+
+    def _resolve(self, scope: str) -> str | None:
+        """Documented rule: ^[a-zA-Z0-9_:-]+$, max 100. None = rejected."""
+        b = self.config.bugs
+        if not self._VALID.match(scope):
+            if not b.normalize_invalid_scopes:
+                return None
+            scope = re.sub(r"[^a-zA-Z0-9_:-]", "", scope)
+            if not scope:
+                return None
+        return scope.lower() if b.case_insensitive_scopes else scope
+
+    def _mem_text(self, d: _Doc) -> str:
+        text = f"Fact: {d.content}"
+        if d.seq <= self.config.bugs.mangle_first_n_memories:
+            text = re.sub(r"(ZQ-[A-Z]+-[0-9a-f]{4})[0-9a-f]{2}", r"\1", text)  # drop two characters of the token
+        return text
+
     def _scopes_for(self, scope: str) -> list[str]:
         b = self.config.bugs
-        if b.cross_namespace_leak:
+        self._searches += 1
+        delayed = b.leak_after_searches and self._searches > b.leak_after_searches
+        if b.cross_namespace_leak or delayed or (b.leak_every_n_searches and self._searches % b.leak_every_n_searches == 0):
             return list(self._docs)
         if b.prefix_scope_leak:
             return [s for s in self._docs if s.startswith(scope)]
@@ -117,6 +150,11 @@ class MockProvider:
 
     def add(self, scope: str, content: str, opts: AddOptions | None = None) -> AddResult:
         o = opts or AddOptions()
+        raw_scope, scope = scope, self._resolve(scope)  # type: ignore[assignment]
+        if scope is None:
+            body = {"error": "invalid namespace"}
+            self._record("POST", f"/ns/{raw_scope}/document", {"content": content}, 400, body)
+            return AddResult(400, body, "")
         self._n += 1
         doc_id = o.id or f"doc_{self._n}"
         docs = self._docs.setdefault(scope, {})
@@ -124,26 +162,32 @@ class MockProvider:
         if old is not None and old.deleted_at is not None and self.config.bugs.readd_ghost:
             ghost = _Doc(f"{doc_id}~ghost", old.content, old.created)
             docs[ghost.id] = ghost
-        docs[doc_id] = _Doc(doc_id, content, self.clock.now())
+        docs[doc_id] = _Doc(doc_id, content, self.clock.now(), seq=self._n)
         body = {"id": doc_id, "status": "queued"}
         self._record("POST", f"/ns/{scope}/document", {"content": content, "id": o.id}, 200, body)
         return AddResult(200, body, doc_id)
 
     def search(self, scope: str, query: str, opts: SearchOptions | None = None) -> SearchResult:
         o = opts or SearchOptions()
+        raw_scope, scope = scope, self._resolve(scope)  # type: ignore[assignment]
+        if scope is None:
+            body = {"error": "invalid namespace"}
+            self._record("POST", f"/ns/{raw_scope}/search", {"query": query}, 400, body)
+            return SearchResult(400, body, [])
         hits: list[SearchHit] = []
         for s in self._scopes_for(scope):
             for d in self._docs[s].values():
                 if o.mode in ("chunks", "hybrid") and self._chunk_visible(d):
                     hits.append(SearchHit(id=f"chunk_{d.id}", kind="chunk", text=d.content, score=0.8, is_latest=True, is_inference=False, raw={"scope": s}))
                 if o.mode in ("memories", "hybrid") and self._memory_visible(d):
-                    hits.append(SearchHit(id=f"mem_{d.id}", kind="memory", text=f"Fact: {d.content}", score=0.8, is_latest=True, is_inference=False, raw={"scope": s}))
+                    hits.append(SearchHit(id=f"mem_{d.id}", kind="memory", text=self._mem_text(d), score=0.8, is_latest=True, is_inference=False, raw={"scope": s}))
         body = {"results": [{"id": h.id, "chunk" if h.kind == "chunk" else "memory": h.text, "similarity": h.score} for h in hits]}
         self._record("POST", f"/ns/{scope}/search", {"query": query, "searchMode": o.mode}, 200, body)
         return SearchResult(200, body, hits)
 
     def delete(self, scope: str, doc_ids: list[str]) -> DeleteResult:
         b = self.config.bugs
+        scope = self._resolve(scope) or scope
         self._deletes += 1
         flaky = b.flaky_delete_every > 0 and self._deletes % b.flaky_delete_every == 0
         count, errors = 0, []
@@ -163,6 +207,7 @@ class MockProvider:
         return DeleteResult(200, body, count, errors)
 
     def status(self, scope: str, doc_id: str) -> StatusResult | None:
+        scope = self._resolve(scope) or scope
         d = self._docs.get(scope, {}).get(doc_id)
         if d is None or (d.deleted_at is not None and self._gone(d)):
             self._record("GET", f"/ns/{scope}/document/{doc_id}", None, 404, {"error": "not found"})
@@ -174,9 +219,11 @@ class MockProvider:
         return StatusResult(200, body, state, dreaming)
 
     def profile(self, scope: str) -> ProfileResult:
+        scope = self._resolve(scope) or scope
+        scopes = list(self._docs) if self.config.bugs.profile_bleed else [scope] if scope in self._docs else []
         entries = [
-            f"Fact: {d.content}"
-            for s in self._scopes_for(scope)
+            self._mem_text(d)
+            for s in scopes
             for d in self._docs[s].values()
             if self._memory_visible(d)
         ]
@@ -184,7 +231,29 @@ class MockProvider:
         self._record("POST", f"/ns/{scope}/profile", None, 200, body)
         return ProfileResult(200, body, entries)
 
+    def search_unscoped(self, query: str, mode: str = "hybrid", container_tag: str | None = None) -> SearchResult:
+        b = self.config.bugs
+        if b.legacy_route_blind or (container_tag is None and b.unscoped_search_empty):
+            body = {"results": [], "total": 0}
+            self._record("POST", "/v4/search", {"q": query, "containerTag": container_tag}, 200, body)
+            return SearchResult(200, body, [])
+        if container_tag is None and not b.unscoped_search_returns_all:
+            body = {"error": "containerTag required"}
+            self._record("POST", "/v4/search", {"q": query}, 400, body)
+            return SearchResult(400, body, [])
+        scopes = list(self._docs) if container_tag is None else [container_tag] if container_tag in self._docs else []
+        hits = [
+            SearchHit(id=f"chunk_{d.id}", kind="chunk", text=d.content, score=0.8, raw={"scope": s})
+            for s in scopes
+            for d in self._docs[s].values()
+            if self._chunk_visible(d)
+        ]
+        body = {"results": [{"id": h.id, "chunk": h.text, "similarity": h.score} for h in hits]}
+        self._record("POST", "/v4/search", {"q": query, "containerTag": container_tag}, 200, body)
+        return SearchResult(200, body, hits)
+
     def delete_scope(self, scope: str) -> Outcome:
+        scope = self._resolve(scope) or scope
         self._docs.pop(scope, None)
         self._record("DELETE", f"/ns/{scope}", {}, 200, {"success": True})
         return Outcome(200, {"success": True})

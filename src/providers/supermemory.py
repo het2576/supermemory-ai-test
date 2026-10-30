@@ -46,11 +46,14 @@ class SupermemoryProvider:
             raise ValueError("SUPERMEMORY_API_KEY is not set")
         self._rec = Recorder()
         self._last_call = 0.0
+        self._key = api_key
+        self._base = (base_url or os.environ.get("SUPERMEMORY_BASE_URL") or "https://api.supermemory.ai").rstrip("/")
         http = httpx.Client(
             timeout=TIMEOUT_S,
             follow_redirects=True,
             event_hooks={"request": [self._on_request], "response": [self._on_response]},
         )
+        self._http = http
         self.client = Supermemory(
             api_key=api_key,
             base_url=base_url or os.environ.get("SUPERMEMORY_BASE_URL"),  # override only for harness self-tests
@@ -211,6 +214,30 @@ class SupermemoryProvider:
     def delete_scope(self, scope: str) -> Outcome:
         _, status, raw = self._call(lambda: self.client.namespaces.delete(scope))
         return Outcome(http_status=status, raw=raw)
+
+    def search_unscoped(self, query: str, mode: str = "hybrid", container_tag: str | None = None) -> SearchResult:
+        """Legacy POST /v4/search with no containerTag (documented as optional, "to filter"). v5 has no unscoped route.
+        threshold=0 so an unrelated query cannot hide results; used only for ISO-02 characterization.
+        container_tag is for the positive control: the same route, scoped, must be able to see the data."""
+        self._pace_only()
+        resp = self._http.post(
+            f"{self._base}/v4/search",
+            headers={"Authorization": f"Bearer {self._key}"},
+            json={"q": query, "searchMode": mode, "threshold": 0, "limit": 20, **({"containerTag": container_tag} if container_tag else {})},
+        )
+        last = self._rec.last
+        body = last["response_body"] if last else None
+        hits: list[SearchHit] = []
+        for r in (body or {}).get("results", []) if isinstance(body, dict) else []:
+            text = r.get("memory") if r.get("memory") is not None else (r.get("chunk") or "")
+            hits.append(SearchHit(id=str(r.get("id", "")), kind="memory" if r.get("memory") is not None else "chunk", text=str(text), score=r.get("similarity"), raw=r))
+        return SearchResult(http_status=resp.status_code, raw=body, hits=hits)
+
+    def _pace_only(self) -> None:
+        gap = self._last_call + MIN_GAP_S - time.monotonic()
+        if gap > 0:
+            time.sleep(gap)
+        self._last_call = time.monotonic()
 
     # --- extras used by later tests (not part of the adapter) ---------------------------------
 

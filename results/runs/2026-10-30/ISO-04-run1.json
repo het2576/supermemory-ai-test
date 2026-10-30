@@ -1,0 +1,2006 @@
+{
+  "record": {
+    "testId": "ISO-04",
+    "provider": "supermemory",
+    "client": "supermemory-python-sdk",
+    "sdkVersion": "5.0.1",
+    "apiVersion": "v5",
+    "date": "2026-10-30T09:45:34.337626+00:00",
+    "run": 1,
+    "checkpoints": [
+      {
+        "step": "add_base",
+        "scope": "memtrust_1305b407_1",
+        "http": 200,
+        "id": "mAasaCYBL8KZPVcw75Yp9p"
+      },
+      {
+        "step": "own_content_retrievable_base",
+        "elapsed_s": 0.6176627080130856,
+        "found": true
+      },
+      {
+        "step": "add_ten",
+        "scope": "memtrust_1305b407_10",
+        "http": 200,
+        "id": "oUj5kowmDsyyfcrw67gEkT"
+      },
+      {
+        "step": "own_content_retrievable_ten",
+        "elapsed_s": 0.8506722079764586,
+        "found": true
+      },
+      {
+        "step": "add_colon",
+        "scope": "memtrust_1305b407_1:x",
+        "http": 200,
+        "id": "teqne4cfc8WrTC6bjNAMGH"
+      },
+      {
+        "step": "own_content_retrievable_colon",
+        "elapsed_s": 0.6042818329879083,
+        "found": true
+      },
+      {
+        "step": "add_upper",
+        "scope": "MEMTRUST_1305b407_1",
+        "http": 200,
+        "id": "6Pd1dHefPm6vU8TKuQxgNd"
+      },
+      {
+        "step": "own_content_retrievable_upper",
+        "elapsed_s": 0.5599201669974718,
+        "found": true
+      },
+      {
+        "step": "add_hyphen",
+        "scope": "memtrust_1305b407-1",
+        "http": 200,
+        "id": "PoECyQk2JYB5sXQuPURBzz"
+      },
+      {
+        "step": "own_content_retrievable_hyphen",
+        "elapsed_s": 0.715658250002889,
+        "found": true
+      },
+      {
+        "step": "add_trailing_underscore",
+        "scope": "memtrust_1305b407_1_",
+        "http": 200,
+        "id": "vbzJDSUoJrWLDBvz2WDBeK"
+      },
+      {
+        "step": "own_content_retrievable_trailing_underscore",
+        "elapsed_s": 0.5220210000115912,
+        "found": true
+      },
+      {
+        "step": "invalid_scope_attempts",
+        "attempts": {
+          "trailing_space": {
+            "http": 400,
+            "accepted": false
+          },
+          "slash": {
+            "http": 404,
+            "accepted": false
+          },
+          "at": {
+            "http": 400,
+            "accepted": false
+          }
+        }
+      },
+      {
+        "t": 0,
+        "leaks": []
+      },
+      {
+        "t": 30,
+        "leaks": []
+      }
+    ],
+    "result": "PASS",
+    "timeToConsistencySec": null,
+    "notes": "invalid IDs rejected",
+    "rawArtifacts": "results/runs/2026-10-30/ISO-04-run1.json"
+  },
+  "extra": {
+    "valid": {
+      "base": "memtrust_1305b407_1",
+      "ten": "memtrust_1305b407_10",
+      "colon": "memtrust_1305b407_1:x",
+      "upper": "MEMTRUST_1305b407_1",
+      "hyphen": "memtrust_1305b407-1",
+      "trailing_underscore": "memtrust_1305b407_1_"
+    },
+    "invalid": {
+      "trailing_space": "memtrust_1305b407_1 ",
+      "slash": "memtrust_1305b407/1",
+      "at": "memtrust_1305b407@1"
+    },
+    "attempts": {
+      "trailing_space": {
+        "http": 400,
+        "accepted": false
+      },
+      "slash": {
+        "http": 404,
+        "accepted": false
+      },
+      "at": {
+        "http": 400,
+        "accepted": false
+      }
+    }
+  },
+  "exchanges": [
+    {
+      "t": "2026-10-30T09:43:48",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1/document",
+      "request_body": {
+        "content": "The reference code on file is ZQ-ISO-c705bcf22453."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "mAasaCYBL8KZPVcw75Yp9p",
+        "status": "queued"
+      },
+      "ms": 1040
+    },
+    {
+      "t": "2026-10-30T09:43:48",
+      "method": "GET",
+      "path": "/ns/memtrust_1305b407_1/document/mAasaCYBL8KZPVcw75Yp9p",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "mAasaCYBL8KZPVcw75Yp9p",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:43:48.240Z",
+          "updatedAt": "2026-10-30T09:43:48.240Z",
+          "filepath": null
+        }
+      },
+      "ms": 405
+    },
+    {
+      "t": "2026-10-30T09:43:51",
+      "method": "GET",
+      "path": "/ns/memtrust_1305b407_1/document/mAasaCYBL8KZPVcw75Yp9p",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "mAasaCYBL8KZPVcw75Yp9p",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:43:48.240Z",
+          "updatedAt": "2026-10-30T09:43:48.240Z",
+          "filepath": null
+        }
+      },
+      "ms": 457
+    },
+    {
+      "t": "2026-10-30T09:43:53",
+      "method": "GET",
+      "path": "/ns/memtrust_1305b407_1/document/mAasaCYBL8KZPVcw75Yp9p",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "mAasaCYBL8KZPVcw75Yp9p",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:43:48.240Z",
+          "updatedAt": "2026-10-30T09:43:48.240Z",
+          "filepath": null
+        }
+      },
+      "ms": 451
+    },
+    {
+      "t": "2026-10-30T09:43:56",
+      "method": "GET",
+      "path": "/ns/memtrust_1305b407_1/document/mAasaCYBL8KZPVcw75Yp9p",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "mAasaCYBL8KZPVcw75Yp9p",
+        "title": "The reference code on file is ZQ-ISO-c705bcf22453.",
+        "type": "text",
+        "summary": null,
+        "content": "The reference code on file is ZQ-ISO-c705bcf22453.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:43:48.240Z",
+          "updatedAt": "2026-10-30T09:43:53.838Z",
+          "filepath": null
+        }
+      },
+      "ms": 446
+    },
+    {
+      "t": "2026-10-30T09:43:56",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "eddb363807e1c47f9a98a6",
+            "chunk": "The reference code on file is ZQ-ISO-c705bcf22453.",
+            "metadata": {},
+            "similarity": 0.7521087,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:43:53.838Z",
+              "createdAt": "2026-10-30T09:43:48.240Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 117
+      },
+      "ms": 616
+    },
+    {
+      "t": "2026-10-30T09:43:59",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_10/document",
+      "request_body": {
+        "content": "The reference code on file is ZQ-ISO-52b4bf29e100."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "oUj5kowmDsyyfcrw67gEkT",
+        "status": "queued"
+      },
+      "ms": 2051
+    },
+    {
+      "t": "2026-10-30T09:43:59",
+      "method": "GET",
+      "path": "/ns/memtrust_1305b407_10/document/oUj5kowmDsyyfcrw67gEkT",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "oUj5kowmDsyyfcrw67gEkT",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:43:58.768Z",
+          "updatedAt": "2026-10-30T09:43:58.768Z",
+          "filepath": null
+        }
+      },
+      "ms": 403
+    },
+    {
+      "t": "2026-10-30T09:44:01",
+      "method": "GET",
+      "path": "/ns/memtrust_1305b407_10/document/oUj5kowmDsyyfcrw67gEkT",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "oUj5kowmDsyyfcrw67gEkT",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:43:58.768Z",
+          "updatedAt": "2026-10-30T09:43:58.768Z",
+          "filepath": null
+        }
+      },
+      "ms": 381
+    },
+    {
+      "t": "2026-10-30T09:44:04",
+      "method": "GET",
+      "path": "/ns/memtrust_1305b407_10/document/oUj5kowmDsyyfcrw67gEkT",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "oUj5kowmDsyyfcrw67gEkT",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:43:58.768Z",
+          "updatedAt": "2026-10-30T09:43:58.768Z",
+          "filepath": null
+        }
+      },
+      "ms": 404
+    },
+    {
+      "t": "2026-10-30T09:44:06",
+      "method": "GET",
+      "path": "/ns/memtrust_1305b407_10/document/oUj5kowmDsyyfcrw67gEkT",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "oUj5kowmDsyyfcrw67gEkT",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:43:58.768Z",
+          "updatedAt": "2026-10-30T09:43:58.768Z",
+          "filepath": null
+        }
+      },
+      "ms": 451
+    },
+    {
+      "t": "2026-10-30T09:44:09",
+      "method": "GET",
+      "path": "/ns/memtrust_1305b407_10/document/oUj5kowmDsyyfcrw67gEkT",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "oUj5kowmDsyyfcrw67gEkT",
+        "title": "The reference code on file is ZQ-ISO-52b4bf29e100.",
+        "type": "text",
+        "summary": null,
+        "content": "The reference code on file is ZQ-ISO-52b4bf29e100.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:43:58.768Z",
+          "updatedAt": "2026-10-30T09:44:06.905Z",
+          "filepath": null
+        }
+      },
+      "ms": 422
+    },
+    {
+      "t": "2026-10-30T09:44:09",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_10/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "483b69a0495913948bfb04",
+            "chunk": "The reference code on file is ZQ-ISO-52b4bf29e100.",
+            "metadata": {},
+            "similarity": 0.75144303,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:06.905Z",
+              "createdAt": "2026-10-30T09:43:58.768Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 146
+      },
+      "ms": 848
+    },
+    {
+      "t": "2026-10-30T09:44:10",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1:x/document",
+      "request_body": {
+        "content": "The reference code on file is ZQ-ISO-44cd08d56a29."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "teqne4cfc8WrTC6bjNAMGH",
+        "status": "queued"
+      },
+      "ms": 922
+    },
+    {
+      "t": "2026-10-30T09:44:11",
+      "method": "GET",
+      "path": "/ns/memtrust_1305b407_1:x/document/teqne4cfc8WrTC6bjNAMGH",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "teqne4cfc8WrTC6bjNAMGH",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:44:10.557Z",
+          "updatedAt": "2026-10-30T09:44:10.557Z",
+          "filepath": null
+        }
+      },
+      "ms": 410
+    },
+    {
+      "t": "2026-10-30T09:44:13",
+      "method": "GET",
+      "path": "/ns/memtrust_1305b407_1:x/document/teqne4cfc8WrTC6bjNAMGH",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "teqne4cfc8WrTC6bjNAMGH",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:44:10.557Z",
+          "updatedAt": "2026-10-30T09:44:10.557Z",
+          "filepath": null
+        }
+      },
+      "ms": 446
+    },
+    {
+      "t": "2026-10-30T09:44:16",
+      "method": "GET",
+      "path": "/ns/memtrust_1305b407_1:x/document/teqne4cfc8WrTC6bjNAMGH",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "teqne4cfc8WrTC6bjNAMGH",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:44:10.557Z",
+          "updatedAt": "2026-10-30T09:44:10.557Z",
+          "filepath": null
+        }
+      },
+      "ms": 445
+    },
+    {
+      "t": "2026-10-30T09:44:18",
+      "method": "GET",
+      "path": "/ns/memtrust_1305b407_1:x/document/teqne4cfc8WrTC6bjNAMGH",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "teqne4cfc8WrTC6bjNAMGH",
+        "title": "The reference code on file is ZQ-ISO-44cd08d56a29.",
+        "type": "text",
+        "summary": null,
+        "content": "The reference code on file is ZQ-ISO-44cd08d56a29.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:44:10.557Z",
+          "updatedAt": "2026-10-30T09:44:16.599Z",
+          "filepath": null
+        }
+      },
+      "ms": 450
+    },
+    {
+      "t": "2026-10-30T09:44:19",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1:x/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "b09d91c037dced63234b68",
+            "chunk": "The reference code on file is ZQ-ISO-44cd08d56a29.",
+            "metadata": {},
+            "similarity": 0.7455791199999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:16.599Z",
+              "createdAt": "2026-10-30T09:44:10.557Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 132
+      },
+      "ms": 602
+    },
+    {
+      "t": "2026-10-30T09:44:20",
+      "method": "POST",
+      "path": "/ns/MEMTRUST_1305b407_1/document",
+      "request_body": {
+        "content": "The reference code on file is ZQ-ISO-9ea3c0b24047."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "6Pd1dHefPm6vU8TKuQxgNd",
+        "status": "queued"
+      },
+      "ms": 855
+    },
+    {
+      "t": "2026-10-30T09:44:20",
+      "method": "GET",
+      "path": "/ns/MEMTRUST_1305b407_1/document/6Pd1dHefPm6vU8TKuQxgNd",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "6Pd1dHefPm6vU8TKuQxgNd",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:44:19.890Z",
+          "updatedAt": "2026-10-30T09:44:19.890Z",
+          "filepath": null
+        }
+      },
+      "ms": 429
+    },
+    {
+      "t": "2026-10-30T09:44:23",
+      "method": "GET",
+      "path": "/ns/MEMTRUST_1305b407_1/document/6Pd1dHefPm6vU8TKuQxgNd",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "6Pd1dHefPm6vU8TKuQxgNd",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:44:19.890Z",
+          "updatedAt": "2026-10-30T09:44:19.890Z",
+          "filepath": null
+        }
+      },
+      "ms": 465
+    },
+    {
+      "t": "2026-10-30T09:44:25",
+      "method": "GET",
+      "path": "/ns/MEMTRUST_1305b407_1/document/6Pd1dHefPm6vU8TKuQxgNd",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "6Pd1dHefPm6vU8TKuQxgNd",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:44:19.890Z",
+          "updatedAt": "2026-10-30T09:44:19.890Z",
+          "filepath": null
+        }
+      },
+      "ms": 497
+    },
+    {
+      "t": "2026-10-30T09:44:27",
+      "method": "GET",
+      "path": "/ns/MEMTRUST_1305b407_1/document/6Pd1dHefPm6vU8TKuQxgNd",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "6Pd1dHefPm6vU8TKuQxgNd",
+        "title": "The reference code on file is ZQ-ISO-9ea3c0b24047.",
+        "type": "text",
+        "summary": null,
+        "content": "The reference code on file is ZQ-ISO-9ea3c0b24047.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:44:19.890Z",
+          "updatedAt": "2026-10-30T09:44:26.214Z",
+          "filepath": null
+        }
+      },
+      "ms": 446
+    },
+    {
+      "t": "2026-10-30T09:44:28",
+      "method": "POST",
+      "path": "/ns/MEMTRUST_1305b407_1/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "d4cad03cd7ab58023a3c47",
+            "chunk": "The reference code on file is ZQ-ISO-9ea3c0b24047.",
+            "metadata": {},
+            "similarity": 0.74934715,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:26.214Z",
+              "createdAt": "2026-10-30T09:44:19.890Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 161
+      },
+      "ms": 557
+    },
+    {
+      "t": "2026-10-30T09:44:29",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407-1/document",
+      "request_body": {
+        "content": "The reference code on file is ZQ-ISO-fee049a4e937."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "PoECyQk2JYB5sXQuPURBzz",
+        "status": "queued"
+      },
+      "ms": 974
+    },
+    {
+      "t": "2026-10-30T09:44:29",
+      "method": "GET",
+      "path": "/ns/memtrust_1305b407-1/document/PoECyQk2JYB5sXQuPURBzz",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "PoECyQk2JYB5sXQuPURBzz",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:44:29.284Z",
+          "updatedAt": "2026-10-30T09:44:29.284Z",
+          "filepath": null
+        }
+      },
+      "ms": 387
+    },
+    {
+      "t": "2026-10-30T09:44:32",
+      "method": "GET",
+      "path": "/ns/memtrust_1305b407-1/document/PoECyQk2JYB5sXQuPURBzz",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "PoECyQk2JYB5sXQuPURBzz",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:44:29.284Z",
+          "updatedAt": "2026-10-30T09:44:29.284Z",
+          "filepath": null
+        }
+      },
+      "ms": 374
+    },
+    {
+      "t": "2026-10-30T09:44:34",
+      "method": "GET",
+      "path": "/ns/memtrust_1305b407-1/document/PoECyQk2JYB5sXQuPURBzz",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "PoECyQk2JYB5sXQuPURBzz",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:44:29.284Z",
+          "updatedAt": "2026-10-30T09:44:29.284Z",
+          "filepath": null
+        }
+      },
+      "ms": 436
+    },
+    {
+      "t": "2026-10-30T09:44:37",
+      "method": "GET",
+      "path": "/ns/memtrust_1305b407-1/document/PoECyQk2JYB5sXQuPURBzz",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "PoECyQk2JYB5sXQuPURBzz",
+        "title": "The reference code on file is ZQ-ISO-fee049a4e937.",
+        "type": "text",
+        "summary": null,
+        "content": "The reference code on file is ZQ-ISO-fee049a4e937.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:44:29.284Z",
+          "updatedAt": "2026-10-30T09:44:35.409Z",
+          "filepath": null
+        }
+      },
+      "ms": 445
+    },
+    {
+      "t": "2026-10-30T09:44:37",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407-1/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "d160c4e5356e35a72b0bb2",
+            "chunk": "The reference code on file is ZQ-ISO-fee049a4e937.",
+            "metadata": {},
+            "similarity": 0.76220149,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:35.409Z",
+              "createdAt": "2026-10-30T09:44:29.284Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 241
+      },
+      "ms": 714
+    },
+    {
+      "t": "2026-10-30T09:44:38",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1_/document",
+      "request_body": {
+        "content": "The reference code on file is ZQ-ISO-13c4f67224e6."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "vbzJDSUoJrWLDBvz2WDBeK",
+        "status": "queued"
+      },
+      "ms": 922
+    },
+    {
+      "t": "2026-10-30T09:44:39",
+      "method": "GET",
+      "path": "/ns/memtrust_1305b407_1_/document/vbzJDSUoJrWLDBvz2WDBeK",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "vbzJDSUoJrWLDBvz2WDBeK",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:44:38.545Z",
+          "updatedAt": "2026-10-30T09:44:38.545Z",
+          "filepath": null
+        }
+      },
+      "ms": 596
+    },
+    {
+      "t": "2026-10-30T09:44:41",
+      "method": "GET",
+      "path": "/ns/memtrust_1305b407_1_/document/vbzJDSUoJrWLDBvz2WDBeK",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "vbzJDSUoJrWLDBvz2WDBeK",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:44:38.545Z",
+          "updatedAt": "2026-10-30T09:44:38.545Z",
+          "filepath": null
+        }
+      },
+      "ms": 415
+    },
+    {
+      "t": "2026-10-30T09:44:44",
+      "method": "GET",
+      "path": "/ns/memtrust_1305b407_1_/document/vbzJDSUoJrWLDBvz2WDBeK",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "vbzJDSUoJrWLDBvz2WDBeK",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:44:38.545Z",
+          "updatedAt": "2026-10-30T09:44:38.545Z",
+          "filepath": null
+        }
+      },
+      "ms": 399
+    },
+    {
+      "t": "2026-10-30T09:44:46",
+      "method": "GET",
+      "path": "/ns/memtrust_1305b407_1_/document/vbzJDSUoJrWLDBvz2WDBeK",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "vbzJDSUoJrWLDBvz2WDBeK",
+        "title": "The reference code on file is ZQ-ISO-13c4f67224e6.",
+        "type": "text",
+        "summary": null,
+        "content": "The reference code on file is ZQ-ISO-13c4f67224e6.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:44:38.545Z",
+          "updatedAt": "2026-10-30T09:44:45.920Z",
+          "filepath": null
+        }
+      },
+      "ms": 446
+    },
+    {
+      "t": "2026-10-30T09:44:47",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1_/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "90e9544a2fedc26581bead",
+            "chunk": "The reference code on file is ZQ-ISO-13c4f67224e6.",
+            "metadata": {},
+            "similarity": 0.75055456,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:45.920Z",
+              "createdAt": "2026-10-30T09:44:38.545Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 122
+      },
+      "ms": 519
+    },
+    {
+      "t": "2026-10-30T09:44:47",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1%20/document",
+      "request_body": {
+        "content": "The reference code on file is ZQ-ISO-905431431b64."
+      },
+      "http_status": 400,
+      "response_body": {
+        "data": {
+          "namespace": "memtrust_1305b407_1 "
+        },
+        "error": [
+          {
+            "origin": "string",
+            "code": "invalid_format",
+            "format": "regex",
+            "pattern": "/^[a-zA-Z0-9_:-]+$/",
+            "path": [
+              "namespace"
+            ],
+            "message": "containerTag may only contain alphanumeric characters, hyphens, underscores, and colons"
+          }
+        ],
+        "success": false,
+        "feedback": "If this keeps happening, looks wrong, or the behavior is confusing, tell us: POST https://api.supermemory.ai/feedback"
+      },
+      "ms": 397
+    },
+    {
+      "t": "2026-10-30T09:44:48",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407/1/document",
+      "request_body": {
+        "content": "The reference code on file is ZQ-ISO-ffebd466bb66."
+      },
+      "http_status": 404,
+      "response_body": {
+        "error": "Not found",
+        "message": "No route matches POST /ns/memtrust_1305b407/1/document",
+        "documentation": "https://api.supermemory.ai/openapi.json",
+        "feedback": "If this keeps happening, looks wrong, or the behavior is confusing, tell us: POST https://api.supermemory.ai/feedback"
+      },
+      "ms": 376
+    },
+    {
+      "t": "2026-10-30T09:44:48",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407@1/document",
+      "request_body": {
+        "content": "The reference code on file is ZQ-ISO-04c1b9be8f94."
+      },
+      "http_status": 400,
+      "response_body": {
+        "data": {
+          "namespace": "memtrust_1305b407@1"
+        },
+        "error": [
+          {
+            "origin": "string",
+            "code": "invalid_format",
+            "format": "regex",
+            "pattern": "/^[a-zA-Z0-9_:-]+$/",
+            "path": [
+              "namespace"
+            ],
+            "message": "containerTag may only contain alphanumeric characters, hyphens, underscores, and colons"
+          }
+        ],
+        "success": false,
+        "feedback": "If this keeps happening, looks wrong, or the behavior is confusing, tell us: POST https://api.supermemory.ai/feedback"
+      },
+      "ms": 383
+    },
+    {
+      "t": "2026-10-30T09:44:48",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "eddb363807e1c47f9a98a6",
+            "chunk": "The reference code on file is ZQ-ISO-c705bcf22453.",
+            "metadata": {},
+            "similarity": 0.7521087,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:43:53.838Z",
+              "createdAt": "2026-10-30T09:43:48.240Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 144
+      },
+      "ms": 583
+    },
+    {
+      "t": "2026-10-30T09:44:49",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 132
+      },
+      "ms": 586
+    },
+    {
+      "t": "2026-10-30T09:44:50",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "eddb363807e1c47f9a98a6",
+            "chunk": "The reference code on file is ZQ-ISO-c705bcf22453.",
+            "metadata": {},
+            "similarity": 0.7521087,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:43:53.838Z",
+              "createdAt": "2026-10-30T09:43:48.240Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 171
+      },
+      "ms": 799
+    },
+    {
+      "t": "2026-10-30T09:44:50",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_10/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "483b69a0495913948bfb04",
+            "chunk": "The reference code on file is ZQ-ISO-52b4bf29e100.",
+            "metadata": {},
+            "similarity": 0.75144303,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:06.905Z",
+              "createdAt": "2026-10-30T09:43:58.768Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 174
+      },
+      "ms": 570
+    },
+    {
+      "t": "2026-10-30T09:44:51",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_10/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 155
+      },
+      "ms": 580
+    },
+    {
+      "t": "2026-10-30T09:44:52",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_10/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "483b69a0495913948bfb04",
+            "chunk": "The reference code on file is ZQ-ISO-52b4bf29e100.",
+            "metadata": {},
+            "similarity": 0.75144303,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:06.905Z",
+              "createdAt": "2026-10-30T09:43:58.768Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 120
+      },
+      "ms": 603
+    },
+    {
+      "t": "2026-10-30T09:44:52",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1:x/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "b09d91c037dced63234b68",
+            "chunk": "The reference code on file is ZQ-ISO-44cd08d56a29.",
+            "metadata": {},
+            "similarity": 0.7455791199999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:16.599Z",
+              "createdAt": "2026-10-30T09:44:10.557Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 130
+      },
+      "ms": 612
+    },
+    {
+      "t": "2026-10-30T09:44:53",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1:x/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 137
+      },
+      "ms": 611
+    },
+    {
+      "t": "2026-10-30T09:44:53",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1:x/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "b09d91c037dced63234b68",
+            "chunk": "The reference code on file is ZQ-ISO-44cd08d56a29.",
+            "metadata": {},
+            "similarity": 0.7455791199999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:16.599Z",
+              "createdAt": "2026-10-30T09:44:10.557Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 165
+      },
+      "ms": 615
+    },
+    {
+      "t": "2026-10-30T09:44:54",
+      "method": "POST",
+      "path": "/ns/MEMTRUST_1305b407_1/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "d4cad03cd7ab58023a3c47",
+            "chunk": "The reference code on file is ZQ-ISO-9ea3c0b24047.",
+            "metadata": {},
+            "similarity": 0.74934715,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:26.214Z",
+              "createdAt": "2026-10-30T09:44:19.890Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 140
+      },
+      "ms": 563
+    },
+    {
+      "t": "2026-10-30T09:44:55",
+      "method": "POST",
+      "path": "/ns/MEMTRUST_1305b407_1/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 105
+      },
+      "ms": 560
+    },
+    {
+      "t": "2026-10-30T09:44:55",
+      "method": "POST",
+      "path": "/ns/MEMTRUST_1305b407_1/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "d4cad03cd7ab58023a3c47",
+            "chunk": "The reference code on file is ZQ-ISO-9ea3c0b24047.",
+            "metadata": {},
+            "similarity": 0.74934715,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:26.214Z",
+              "createdAt": "2026-10-30T09:44:19.890Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 121
+      },
+      "ms": 568
+    },
+    {
+      "t": "2026-10-30T09:44:56",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407-1/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "d160c4e5356e35a72b0bb2",
+            "chunk": "The reference code on file is ZQ-ISO-fee049a4e937.",
+            "metadata": {},
+            "similarity": 0.76220149,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:35.409Z",
+              "createdAt": "2026-10-30T09:44:29.284Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 215
+      },
+      "ms": 760
+    },
+    {
+      "t": "2026-10-30T09:44:56",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407-1/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 127
+      },
+      "ms": 516
+    },
+    {
+      "t": "2026-10-30T09:44:57",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407-1/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "d160c4e5356e35a72b0bb2",
+            "chunk": "The reference code on file is ZQ-ISO-fee049a4e937.",
+            "metadata": {},
+            "similarity": 0.76220149,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:35.409Z",
+              "createdAt": "2026-10-30T09:44:29.284Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 175
+      },
+      "ms": 565
+    },
+    {
+      "t": "2026-10-30T09:44:58",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1_/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "90e9544a2fedc26581bead",
+            "chunk": "The reference code on file is ZQ-ISO-13c4f67224e6.",
+            "metadata": {},
+            "similarity": 0.75055456,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:45.920Z",
+              "createdAt": "2026-10-30T09:44:38.545Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 147
+      },
+      "ms": 654
+    },
+    {
+      "t": "2026-10-30T09:44:58",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1_/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 120
+      },
+      "ms": 611
+    },
+    {
+      "t": "2026-10-30T09:44:59",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1_/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "90e9544a2fedc26581bead",
+            "chunk": "The reference code on file is ZQ-ISO-13c4f67224e6.",
+            "metadata": {},
+            "similarity": 0.75055456,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:45.920Z",
+              "createdAt": "2026-10-30T09:44:38.545Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 158
+      },
+      "ms": 613
+    },
+    {
+      "t": "2026-10-30T09:45:19",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "eddb363807e1c47f9a98a6",
+            "chunk": "The reference code on file is ZQ-ISO-c705bcf22453.",
+            "metadata": {},
+            "similarity": 0.7521087,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:43:53.838Z",
+              "createdAt": "2026-10-30T09:43:48.240Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 149
+      },
+      "ms": 874
+    },
+    {
+      "t": "2026-10-30T09:45:20",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 173
+      },
+      "ms": 804
+    },
+    {
+      "t": "2026-10-30T09:45:20",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "eddb363807e1c47f9a98a6",
+            "chunk": "The reference code on file is ZQ-ISO-c705bcf22453.",
+            "metadata": {},
+            "similarity": 0.7521087,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:43:53.838Z",
+              "createdAt": "2026-10-30T09:43:48.240Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 148
+      },
+      "ms": 712
+    },
+    {
+      "t": "2026-10-30T09:45:22",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_10/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "483b69a0495913948bfb04",
+            "chunk": "The reference code on file is ZQ-ISO-52b4bf29e100.",
+            "metadata": {},
+            "similarity": 0.75144303,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:06.905Z",
+              "createdAt": "2026-10-30T09:43:58.768Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 234
+      },
+      "ms": 1629
+    },
+    {
+      "t": "2026-10-30T09:45:23",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_10/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 131
+      },
+      "ms": 619
+    },
+    {
+      "t": "2026-10-30T09:45:23",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_10/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "483b69a0495913948bfb04",
+            "chunk": "The reference code on file is ZQ-ISO-52b4bf29e100.",
+            "metadata": {},
+            "similarity": 0.75144303,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:06.905Z",
+              "createdAt": "2026-10-30T09:43:58.768Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 111
+      },
+      "ms": 612
+    },
+    {
+      "t": "2026-10-30T09:45:24",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1:x/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "b09d91c037dced63234b68",
+            "chunk": "The reference code on file is ZQ-ISO-44cd08d56a29.",
+            "metadata": {},
+            "similarity": 0.7455791199999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:16.599Z",
+              "createdAt": "2026-10-30T09:44:10.557Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 118
+      },
+      "ms": 555
+    },
+    {
+      "t": "2026-10-30T09:45:24",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1:x/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 121
+      },
+      "ms": 671
+    },
+    {
+      "t": "2026-10-30T09:45:25",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1:x/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "b09d91c037dced63234b68",
+            "chunk": "The reference code on file is ZQ-ISO-44cd08d56a29.",
+            "metadata": {},
+            "similarity": 0.7455791199999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:16.599Z",
+              "createdAt": "2026-10-30T09:44:10.557Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 196
+      },
+      "ms": 646
+    },
+    {
+      "t": "2026-10-30T09:45:26",
+      "method": "POST",
+      "path": "/ns/MEMTRUST_1305b407_1/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "d4cad03cd7ab58023a3c47",
+            "chunk": "The reference code on file is ZQ-ISO-9ea3c0b24047.",
+            "metadata": {},
+            "similarity": 0.74934715,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:26.214Z",
+              "createdAt": "2026-10-30T09:44:19.890Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 152
+      },
+      "ms": 681
+    },
+    {
+      "t": "2026-10-30T09:45:26",
+      "method": "POST",
+      "path": "/ns/MEMTRUST_1305b407_1/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 133
+      },
+      "ms": 611
+    },
+    {
+      "t": "2026-10-30T09:45:27",
+      "method": "POST",
+      "path": "/ns/MEMTRUST_1305b407_1/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "d4cad03cd7ab58023a3c47",
+            "chunk": "The reference code on file is ZQ-ISO-9ea3c0b24047.",
+            "metadata": {},
+            "similarity": 0.74934715,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:26.214Z",
+              "createdAt": "2026-10-30T09:44:19.890Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 139
+      },
+      "ms": 603
+    },
+    {
+      "t": "2026-10-30T09:45:28",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407-1/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "d160c4e5356e35a72b0bb2",
+            "chunk": "The reference code on file is ZQ-ISO-fee049a4e937.",
+            "metadata": {},
+            "similarity": 0.76220149,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:35.409Z",
+              "createdAt": "2026-10-30T09:44:29.284Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 128
+      },
+      "ms": 622
+    },
+    {
+      "t": "2026-10-30T09:45:29",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407-1/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 175
+      },
+      "ms": 919
+    },
+    {
+      "t": "2026-10-30T09:45:29",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407-1/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "d160c4e5356e35a72b0bb2",
+            "chunk": "The reference code on file is ZQ-ISO-fee049a4e937.",
+            "metadata": {},
+            "similarity": 0.76220149,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:35.409Z",
+              "createdAt": "2026-10-30T09:44:29.284Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 112
+      },
+      "ms": 554
+    },
+    {
+      "t": "2026-10-30T09:45:30",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1_/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "90e9544a2fedc26581bead",
+            "chunk": "The reference code on file is ZQ-ISO-13c4f67224e6.",
+            "metadata": {},
+            "similarity": 0.75055456,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:45.920Z",
+              "createdAt": "2026-10-30T09:44:38.545Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 148
+      },
+      "ms": 670
+    },
+    {
+      "t": "2026-10-30T09:45:30",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1_/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 134
+      },
+      "ms": 596
+    },
+    {
+      "t": "2026-10-30T09:45:31",
+      "method": "POST",
+      "path": "/ns/memtrust_1305b407_1_/search",
+      "request_body": {
+        "query": "What is the reference code on file?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "90e9544a2fedc26581bead",
+            "chunk": "The reference code on file is ZQ-ISO-13c4f67224e6.",
+            "metadata": {},
+            "similarity": 0.75055456,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:44:45.920Z",
+              "createdAt": "2026-10-30T09:44:38.545Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 150
+      },
+      "ms": 612
+    },
+    {
+      "t": "2026-10-30T09:45:31",
+      "method": "DELETE",
+      "path": "/ns/memtrust_1305b407_1",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_1305b407_1",
+        "deletedDocumentsCount": 1,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 454
+    },
+    {
+      "t": "2026-10-30T09:45:32",
+      "method": "DELETE",
+      "path": "/ns/memtrust_1305b407_10",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_1305b407_10",
+        "deletedDocumentsCount": 1,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 478
+    },
+    {
+      "t": "2026-10-30T09:45:32",
+      "method": "DELETE",
+      "path": "/ns/memtrust_1305b407_1:x",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_1305b407_1:x",
+        "deletedDocumentsCount": 1,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 480
+    },
+    {
+      "t": "2026-10-30T09:45:33",
+      "method": "DELETE",
+      "path": "/ns/MEMTRUST_1305b407_1",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "MEMTRUST_1305b407_1",
+        "deletedDocumentsCount": 1,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 466
+    },
+    {
+      "t": "2026-10-30T09:45:33",
+      "method": "DELETE",
+      "path": "/ns/memtrust_1305b407-1",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_1305b407-1",
+        "deletedDocumentsCount": 1,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 486
+    },
+    {
+      "t": "2026-10-30T09:45:34",
+      "method": "DELETE",
+      "path": "/ns/memtrust_1305b407_1_",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_1305b407_1_",
+        "deletedDocumentsCount": 1,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 510
+    }
+  ]
+}

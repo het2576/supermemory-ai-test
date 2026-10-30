@@ -1,0 +1,1753 @@
+{
+  "record": {
+    "testId": "ISO-05",
+    "provider": "supermemory",
+    "client": "supermemory-python-sdk",
+    "sdkVersion": "5.0.1",
+    "apiVersion": "v5",
+    "date": "2026-10-30T10:02:48.073062+00:00",
+    "run": 3,
+    "checkpoints": [
+      {
+        "step": "add_A1",
+        "scope": "memtrust_iso05a_2b0ca0e1ce",
+        "http": 200,
+        "id": "UfyhQKX4PAgTD6KQUUL483"
+      },
+      {
+        "step": "own_content_retrievable_A1",
+        "elapsed_s": 0.8197014579782262,
+        "found": true
+      },
+      {
+        "step": "memory_A",
+        "attempt": 1,
+        "found": true,
+        "elapsed_s": 0.5869288750109263
+      },
+      {
+        "step": "add_B1",
+        "scope": "memtrust_iso05b_19f63b489b",
+        "http": 200,
+        "id": "bVbDTR2eziWpeSNpXMZNw1"
+      },
+      {
+        "step": "own_content_retrievable_B1",
+        "elapsed_s": 0.7227118330192752,
+        "found": true
+      },
+      {
+        "step": "memory_B",
+        "attempt": 1,
+        "found": true,
+        "elapsed_s": 0.6023556670115795
+      },
+      {
+        "t": 0,
+        "leaks": []
+      },
+      {
+        "t": 5,
+        "leaks": []
+      },
+      {
+        "t": 30,
+        "leaks": []
+      }
+    ],
+    "result": "PASS",
+    "timeToConsistencySec": null,
+    "notes": "",
+    "rawArtifacts": "results/runs/2026-10-30/ISO-05-run3.json"
+  },
+  "extra": {
+    "canaries": {
+      "A": "ZQ-ISO-86225af138d5",
+      "B": "ZQ-ISO-5abedfeaafbd"
+    }
+  },
+  "exchanges": [
+    {
+      "t": "2026-10-30T10:00:47",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce/document",
+      "request_body": {
+        "content": "Anika works at the firm ZQ-ISO-86225af138d5. Anika prefers window seats on every flight.",
+        "dreaming": "instant"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "UfyhQKX4PAgTD6KQUUL483",
+        "status": "queued"
+      },
+      "ms": 961
+    },
+    {
+      "t": "2026-10-30T10:00:47",
+      "method": "GET",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce/document/UfyhQKX4PAgTD6KQUUL483",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "UfyhQKX4PAgTD6KQUUL483",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T10:00:47.241Z",
+          "updatedAt": "2026-10-30T10:00:47.241Z",
+          "filepath": null
+        }
+      },
+      "ms": 432
+    },
+    {
+      "t": "2026-10-30T10:00:54",
+      "method": "GET",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce/document/UfyhQKX4PAgTD6KQUUL483",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "UfyhQKX4PAgTD6KQUUL483",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T10:00:47.241Z",
+          "updatedAt": "2026-10-30T10:00:47.241Z",
+          "filepath": null
+        }
+      },
+      "ms": 1133
+    },
+    {
+      "t": "2026-10-30T10:00:59",
+      "method": "GET",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce/document/UfyhQKX4PAgTD6KQUUL483",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "UfyhQKX4PAgTD6KQUUL483",
+        "title": "Anika works at the firm ZQ-ISO-86225af138d5. Anika...",
+        "type": "text",
+        "summary": null,
+        "content": "Anika works at the firm ZQ-ISO-86225af138d5. Anika prefers window seats on every flight.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T10:00:47.241Z",
+          "updatedAt": "2026-10-30T10:00:53.956Z",
+          "filepath": null
+        }
+      },
+      "ms": 672
+    },
+    {
+      "t": "2026-10-30T10:01:05",
+      "method": "GET",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce/document/UfyhQKX4PAgTD6KQUUL483",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "UfyhQKX4PAgTD6KQUUL483",
+        "title": "Anika works at the firm ZQ-ISO-86225af138d5. Anika...",
+        "type": "text",
+        "summary": "Anika is an employee of the firm identified by the code ZQ-ISO-86225af138d5. She consistently requests window seats on every flight she takes for business travel or personal convenience. The document records her seat choice preference and associates it with her employment at the firm.",
+        "content": "Anika works at the firm ZQ-ISO-86225af138d5. Anika prefers window seats on every flight.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T10:00:47.241Z",
+          "updatedAt": "2026-10-30T10:00:53.956Z",
+          "filepath": null
+        }
+      },
+      "ms": 697
+    },
+    {
+      "t": "2026-10-30T10:01:11",
+      "method": "GET",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce/document/UfyhQKX4PAgTD6KQUUL483",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "UfyhQKX4PAgTD6KQUUL483",
+        "title": "Anika works at the firm ZQ-ISO-86225af138d5. Anika...",
+        "type": "text",
+        "summary": "Anika is an employee of the firm identified by the code ZQ-ISO-86225af138d5. She consistently requests window seats on every flight she takes for business travel or personal convenience. The document records her seat choice preference and associates it with her employment at the firm.",
+        "content": "Anika works at the firm ZQ-ISO-86225af138d5. Anika prefers window seats on every flight.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T10:00:47.241Z",
+          "updatedAt": "2026-10-30T10:00:53.956Z",
+          "filepath": null
+        }
+      },
+      "ms": 624
+    },
+    {
+      "t": "2026-10-30T10:01:16",
+      "method": "GET",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce/document/UfyhQKX4PAgTD6KQUUL483",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "UfyhQKX4PAgTD6KQUUL483",
+        "title": "Anika works at the firm ZQ-ISO-86225af138d5. Anika...",
+        "type": "text",
+        "summary": "Anika is an employee of the firm identified by the code ZQ-ISO-86225af138d5. She consistently requests window seats on every flight she takes for business travel or personal convenience. The document records her seat choice preference and associates it with her employment at the firm.",
+        "content": "Anika works at the firm ZQ-ISO-86225af138d5. Anika prefers window seats on every flight.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T10:00:47.241Z",
+          "updatedAt": "2026-10-30T10:00:53.956Z",
+          "filepath": null
+        }
+      },
+      "ms": 620
+    },
+    {
+      "t": "2026-10-30T10:01:22",
+      "method": "GET",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce/document/UfyhQKX4PAgTD6KQUUL483",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "UfyhQKX4PAgTD6KQUUL483",
+        "title": "Anika works at the firm ZQ-ISO-86225af138d5. Anika...",
+        "type": "text",
+        "summary": "Anika is an employee of the firm identified by the code ZQ-ISO-86225af138d5. She consistently requests window seats on every flight she takes for business travel or personal convenience. The document records her seat choice preference and associates it with her employment at the firm.",
+        "content": "Anika works at the firm ZQ-ISO-86225af138d5. Anika prefers window seats on every flight.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T10:00:47.241Z",
+          "updatedAt": "2026-10-30T10:00:53.956Z",
+          "filepath": null
+        }
+      },
+      "ms": 555
+    },
+    {
+      "t": "2026-10-30T10:01:27",
+      "method": "GET",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce/document/UfyhQKX4PAgTD6KQUUL483",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "UfyhQKX4PAgTD6KQUUL483",
+        "title": "Anika works at the firm ZQ-ISO-86225af138d5. Anika...",
+        "type": "text",
+        "summary": "Anika is an employee of the firm identified by the code ZQ-ISO-86225af138d5. She consistently requests window seats on every flight she takes for business travel or personal convenience. The document records her seat choice preference and associates it with her employment at the firm.",
+        "content": "Anika works at the firm ZQ-ISO-86225af138d5. Anika prefers window seats on every flight.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "done",
+          "createdAt": "2026-10-30T10:00:47.241Z",
+          "updatedAt": "2026-10-30T10:01:24.840Z",
+          "filepath": null
+        }
+      },
+      "ms": 688
+    },
+    {
+      "t": "2026-10-30T10:01:28",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce/search",
+      "request_body": {
+        "query": "Where does this person work and what do they prefer?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "f8f5050f0d76eef64aea64",
+            "chunk": "Anika works at the firm ZQ-ISO-86225af138d5. Anika prefers window seats on every flight.",
+            "metadata": {},
+            "similarity": 0.7141351,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:01:24.840Z",
+              "createdAt": "2026-10-30T10:00:47.241Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "SXBr8XiBnaytSqtrWETYh3",
+            "memory": "Anika prefers window seats on every flight.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.68007404,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:01:24.840Z",
+              "createdAt": "2026-10-30T10:01:24.840Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "w84skWJXqZpW5cLEe7XXBY",
+            "memory": "Anika works at the firm ZQ-ISO-86225af138d5.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.65137237,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:01:24.840Z",
+              "createdAt": "2026-10-30T10:01:24.840Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 288
+      },
+      "ms": 816
+    },
+    {
+      "t": "2026-10-30T10:01:29",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce/search",
+      "request_body": {
+        "query": "Where does this person work and what do they prefer?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "SXBr8XiBnaytSqtrWETYh3",
+            "memory": "Anika prefers window seats on every flight.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.68007404,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:01:24.840Z",
+              "createdAt": "2026-10-30T10:01:24.840Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "w84skWJXqZpW5cLEe7XXBY",
+            "memory": "Anika works at the firm ZQ-ISO-86225af138d5.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.65137237,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:01:24.840Z",
+              "createdAt": "2026-10-30T10:01:24.840Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 153
+      },
+      "ms": 584
+    },
+    {
+      "t": "2026-10-30T10:01:30",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [
+            {
+              "id": "w84skWJXqZpW5cLEe7XXBY",
+              "memory": "Anika works at the firm ZQ-ISO-86225af138d5."
+            }
+          ],
+          "dynamic": [
+            {
+              "id": "SXBr8XiBnaytSqtrWETYh3",
+              "memory": "[2026-10-30] Anika prefers window seats on every flight."
+            }
+          ],
+          "buckets": {
+            "preferences": [
+              {
+                "id": "SXBr8XiBnaytSqtrWETYh3",
+                "memory": "Anika prefers window seats on every flight."
+              }
+            ]
+          }
+        }
+      },
+      "ms": 641
+    },
+    {
+      "t": "2026-10-30T10:01:31",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05b_19f63b489b/document",
+      "request_body": {
+        "content": "Bruno works at the firm ZQ-ISO-5abedfeaafbd. Bruno prefers aisle seats on every flight.",
+        "dreaming": "instant"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "bVbDTR2eziWpeSNpXMZNw1",
+        "status": "queued"
+      },
+      "ms": 1122
+    },
+    {
+      "t": "2026-10-30T10:01:31",
+      "method": "GET",
+      "path": "/ns/memtrust_iso05b_19f63b489b/document/bVbDTR2eziWpeSNpXMZNw1",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "bVbDTR2eziWpeSNpXMZNw1",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T10:01:30.916Z",
+          "updatedAt": "2026-10-30T10:01:30.916Z",
+          "filepath": null
+        }
+      },
+      "ms": 397
+    },
+    {
+      "t": "2026-10-30T10:01:37",
+      "method": "GET",
+      "path": "/ns/memtrust_iso05b_19f63b489b/document/bVbDTR2eziWpeSNpXMZNw1",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "bVbDTR2eziWpeSNpXMZNw1",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T10:01:30.916Z",
+          "updatedAt": "2026-10-30T10:01:30.916Z",
+          "filepath": null
+        }
+      },
+      "ms": 735
+    },
+    {
+      "t": "2026-10-30T10:01:43",
+      "method": "GET",
+      "path": "/ns/memtrust_iso05b_19f63b489b/document/bVbDTR2eziWpeSNpXMZNw1",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "bVbDTR2eziWpeSNpXMZNw1",
+        "title": "Bruno works at the firm ZQ-ISO-5abedfeaafbd. Bruno...",
+        "type": "text",
+        "summary": null,
+        "content": "Bruno works at the firm ZQ-ISO-5abedfeaafbd. Bruno prefers aisle seats on every flight.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T10:01:30.916Z",
+          "updatedAt": "2026-10-30T10:01:37.287Z",
+          "filepath": null
+        }
+      },
+      "ms": 728
+    },
+    {
+      "t": "2026-10-30T10:01:48",
+      "method": "GET",
+      "path": "/ns/memtrust_iso05b_19f63b489b/document/bVbDTR2eziWpeSNpXMZNw1",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "bVbDTR2eziWpeSNpXMZNw1",
+        "title": "Bruno works at the firm ZQ-ISO-5abedfeaafbd. Bruno...",
+        "type": "text",
+        "summary": null,
+        "content": "Bruno works at the firm ZQ-ISO-5abedfeaafbd. Bruno prefers aisle seats on every flight.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T10:01:30.916Z",
+          "updatedAt": "2026-10-30T10:01:37.287Z",
+          "filepath": null
+        }
+      },
+      "ms": 620
+    },
+    {
+      "t": "2026-10-30T10:01:54",
+      "method": "GET",
+      "path": "/ns/memtrust_iso05b_19f63b489b/document/bVbDTR2eziWpeSNpXMZNw1",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "bVbDTR2eziWpeSNpXMZNw1",
+        "title": "Bruno works at the firm ZQ-ISO-5abedfeaafbd. Bruno...",
+        "type": "text",
+        "summary": "Bruno is an employee of the company with the identifier ZQ-ISO-5abedfeaafbd. He consistently requests aisle seats on all flights he takes, indicating a strong preference for space and ease of access during travel. This pattern may be relevant for travel planning or account management within the firm.",
+        "content": "Bruno works at the firm ZQ-ISO-5abedfeaafbd. Bruno prefers aisle seats on every flight.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T10:01:30.916Z",
+          "updatedAt": "2026-10-30T10:01:37.287Z",
+          "filepath": null
+        }
+      },
+      "ms": 625
+    },
+    {
+      "t": "2026-10-30T10:02:00",
+      "method": "GET",
+      "path": "/ns/memtrust_iso05b_19f63b489b/document/bVbDTR2eziWpeSNpXMZNw1",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "bVbDTR2eziWpeSNpXMZNw1",
+        "title": "Bruno works at the firm ZQ-ISO-5abedfeaafbd. Bruno...",
+        "type": "text",
+        "summary": "Bruno is an employee of the company with the identifier ZQ-ISO-5abedfeaafbd. He consistently requests aisle seats on all flights he takes, indicating a strong preference for space and ease of access during travel. This pattern may be relevant for travel planning or account management within the firm.",
+        "content": "Bruno works at the firm ZQ-ISO-5abedfeaafbd. Bruno prefers aisle seats on every flight.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T10:01:30.916Z",
+          "updatedAt": "2026-10-30T10:01:37.287Z",
+          "filepath": null
+        }
+      },
+      "ms": 724
+    },
+    {
+      "t": "2026-10-30T10:02:05",
+      "method": "GET",
+      "path": "/ns/memtrust_iso05b_19f63b489b/document/bVbDTR2eziWpeSNpXMZNw1",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "bVbDTR2eziWpeSNpXMZNw1",
+        "title": "Bruno works at the firm ZQ-ISO-5abedfeaafbd. Bruno...",
+        "type": "text",
+        "summary": "Bruno is an employee of the company with the identifier ZQ-ISO-5abedfeaafbd. He consistently requests aisle seats on all flights he takes, indicating a strong preference for space and ease of access during travel. This pattern may be relevant for travel planning or account management within the firm.",
+        "content": "Bruno works at the firm ZQ-ISO-5abedfeaafbd. Bruno prefers aisle seats on every flight.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T10:01:30.916Z",
+          "updatedAt": "2026-10-30T10:01:37.287Z",
+          "filepath": null
+        }
+      },
+      "ms": 668
+    },
+    {
+      "t": "2026-10-30T10:02:11",
+      "method": "GET",
+      "path": "/ns/memtrust_iso05b_19f63b489b/document/bVbDTR2eziWpeSNpXMZNw1",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "bVbDTR2eziWpeSNpXMZNw1",
+        "title": "Bruno works at the firm ZQ-ISO-5abedfeaafbd. Bruno...",
+        "type": "text",
+        "summary": "Bruno is an employee of the company with the identifier ZQ-ISO-5abedfeaafbd. He consistently requests aisle seats on all flights he takes, indicating a strong preference for space and ease of access during travel. This pattern may be relevant for travel planning or account management within the firm.",
+        "content": "Bruno works at the firm ZQ-ISO-5abedfeaafbd. Bruno prefers aisle seats on every flight.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "done",
+          "createdAt": "2026-10-30T10:01:30.916Z",
+          "updatedAt": "2026-10-30T10:02:10.851Z",
+          "filepath": null
+        }
+      },
+      "ms": 555
+    },
+    {
+      "t": "2026-10-30T10:02:12",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05b_19f63b489b/search",
+      "request_body": {
+        "query": "Where does this person work and what do they prefer?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "0a060d9fbbfeb97d45de35",
+            "chunk": "Bruno works at the firm ZQ-ISO-5abedfeaafbd. Bruno prefers aisle seats on every flight.",
+            "metadata": {},
+            "similarity": 0.72677624,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:02:10.851Z",
+              "createdAt": "2026-10-30T10:01:30.916Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "DGPNM3DqvwFkJSZHagbdtm",
+            "memory": "Bruno works at the firm ZQ-ISO-5abedfeaafbd.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.66700602,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:02:10.851Z",
+              "createdAt": "2026-10-30T10:02:10.851Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "HRE9CBwxUQ4G4JECif4dYS",
+            "memory": "Bruno prefers aisle seats on every flight.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.6587575,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:02:10.851Z",
+              "createdAt": "2026-10-30T10:02:10.851Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 280
+      },
+      "ms": 719
+    },
+    {
+      "t": "2026-10-30T10:02:12",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05b_19f63b489b/search",
+      "request_body": {
+        "query": "Where does this person work and what do they prefer?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "DGPNM3DqvwFkJSZHagbdtm",
+            "memory": "Bruno works at the firm ZQ-ISO-5abedfeaafbd.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.66700602,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:02:10.851Z",
+              "createdAt": "2026-10-30T10:02:10.851Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "HRE9CBwxUQ4G4JECif4dYS",
+            "memory": "Bruno prefers aisle seats on every flight.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.6587575,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:02:10.851Z",
+              "createdAt": "2026-10-30T10:02:10.851Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 139
+      },
+      "ms": 599
+    },
+    {
+      "t": "2026-10-30T10:02:13",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05b_19f63b489b/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [
+            {
+              "id": "DGPNM3DqvwFkJSZHagbdtm",
+              "memory": "Bruno works at the firm ZQ-ISO-5abedfeaafbd."
+            }
+          ],
+          "dynamic": [
+            {
+              "id": "HRE9CBwxUQ4G4JECif4dYS",
+              "memory": "[2026-10-30] Bruno prefers aisle seats on every flight."
+            }
+          ],
+          "buckets": {
+            "preferences": [
+              {
+                "id": "HRE9CBwxUQ4G4JECif4dYS",
+                "memory": "Bruno prefers aisle seats on every flight."
+              }
+            ]
+          }
+        }
+      },
+      "ms": 638
+    },
+    {
+      "t": "2026-10-30T10:02:13",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce/search",
+      "request_body": {
+        "query": "Where does this person work and what do they prefer?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "SXBr8XiBnaytSqtrWETYh3",
+            "memory": "Anika prefers window seats on every flight.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.68007404,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:01:24.840Z",
+              "createdAt": "2026-10-30T10:01:24.840Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "w84skWJXqZpW5cLEe7XXBY",
+            "memory": "Anika works at the firm ZQ-ISO-86225af138d5.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.65137237,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:01:24.840Z",
+              "createdAt": "2026-10-30T10:01:24.840Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 141
+      },
+      "ms": 714
+    },
+    {
+      "t": "2026-10-30T10:02:14",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce/search",
+      "request_body": {
+        "query": "Where does this person work and what do they prefer?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "f8f5050f0d76eef64aea64",
+            "chunk": "Anika works at the firm ZQ-ISO-86225af138d5. Anika prefers window seats on every flight.",
+            "metadata": {},
+            "similarity": 0.7141351,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:01:24.840Z",
+              "createdAt": "2026-10-30T10:00:47.241Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "SXBr8XiBnaytSqtrWETYh3",
+            "memory": "Anika prefers window seats on every flight.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.68007404,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:01:24.840Z",
+              "createdAt": "2026-10-30T10:01:24.840Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "w84skWJXqZpW5cLEe7XXBY",
+            "memory": "Anika works at the firm ZQ-ISO-86225af138d5.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.65137237,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:01:24.840Z",
+              "createdAt": "2026-10-30T10:01:24.840Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 141
+      },
+      "ms": 565
+    },
+    {
+      "t": "2026-10-30T10:02:15",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [
+            {
+              "id": "w84skWJXqZpW5cLEe7XXBY",
+              "memory": "Anika works at the firm ZQ-ISO-86225af138d5."
+            }
+          ],
+          "dynamic": [
+            {
+              "id": "SXBr8XiBnaytSqtrWETYh3",
+              "memory": "[2026-10-30] Anika prefers window seats on every flight."
+            }
+          ],
+          "buckets": {
+            "preferences": [
+              {
+                "id": "SXBr8XiBnaytSqtrWETYh3",
+                "memory": "Anika prefers window seats on every flight."
+              }
+            ]
+          }
+        }
+      },
+      "ms": 558
+    },
+    {
+      "t": "2026-10-30T10:02:16",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05b_19f63b489b/search",
+      "request_body": {
+        "query": "Where does this person work and what do they prefer?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "DGPNM3DqvwFkJSZHagbdtm",
+            "memory": "Bruno works at the firm ZQ-ISO-5abedfeaafbd.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.66700602,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:02:10.851Z",
+              "createdAt": "2026-10-30T10:02:10.851Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "HRE9CBwxUQ4G4JECif4dYS",
+            "memory": "Bruno prefers aisle seats on every flight.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.6587575,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:02:10.851Z",
+              "createdAt": "2026-10-30T10:02:10.851Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 207
+      },
+      "ms": 1629
+    },
+    {
+      "t": "2026-10-30T10:02:17",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05b_19f63b489b/search",
+      "request_body": {
+        "query": "Where does this person work and what do they prefer?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "0a060d9fbbfeb97d45de35",
+            "chunk": "Bruno works at the firm ZQ-ISO-5abedfeaafbd. Bruno prefers aisle seats on every flight.",
+            "metadata": {},
+            "similarity": 0.72677624,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:02:10.851Z",
+              "createdAt": "2026-10-30T10:01:30.916Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "DGPNM3DqvwFkJSZHagbdtm",
+            "memory": "Bruno works at the firm ZQ-ISO-5abedfeaafbd.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.66700602,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:02:10.851Z",
+              "createdAt": "2026-10-30T10:02:10.851Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "HRE9CBwxUQ4G4JECif4dYS",
+            "memory": "Bruno prefers aisle seats on every flight.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.6587575,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:02:10.851Z",
+              "createdAt": "2026-10-30T10:02:10.851Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 127
+      },
+      "ms": 618
+    },
+    {
+      "t": "2026-10-30T10:02:17",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05b_19f63b489b/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [
+            {
+              "id": "DGPNM3DqvwFkJSZHagbdtm",
+              "memory": "Bruno works at the firm ZQ-ISO-5abedfeaafbd."
+            }
+          ],
+          "dynamic": [
+            {
+              "id": "HRE9CBwxUQ4G4JECif4dYS",
+              "memory": "[2026-10-30] Bruno prefers aisle seats on every flight."
+            }
+          ],
+          "buckets": {
+            "preferences": [
+              {
+                "id": "HRE9CBwxUQ4G4JECif4dYS",
+                "memory": "Bruno prefers aisle seats on every flight."
+              }
+            ]
+          }
+        }
+      },
+      "ms": 475
+    },
+    {
+      "t": "2026-10-30T10:02:18",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce/search",
+      "request_body": {
+        "query": "Where does this person work and what do they prefer?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "SXBr8XiBnaytSqtrWETYh3",
+            "memory": "Anika prefers window seats on every flight.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.68007404,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:01:24.840Z",
+              "createdAt": "2026-10-30T10:01:24.840Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "w84skWJXqZpW5cLEe7XXBY",
+            "memory": "Anika works at the firm ZQ-ISO-86225af138d5.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.65137237,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:01:24.840Z",
+              "createdAt": "2026-10-30T10:01:24.840Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 131
+      },
+      "ms": 566
+    },
+    {
+      "t": "2026-10-30T10:02:19",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce/search",
+      "request_body": {
+        "query": "Where does this person work and what do they prefer?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "f8f5050f0d76eef64aea64",
+            "chunk": "Anika works at the firm ZQ-ISO-86225af138d5. Anika prefers window seats on every flight.",
+            "metadata": {},
+            "similarity": 0.7141351,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:01:24.840Z",
+              "createdAt": "2026-10-30T10:00:47.241Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "SXBr8XiBnaytSqtrWETYh3",
+            "memory": "Anika prefers window seats on every flight.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.68007404,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:01:24.840Z",
+              "createdAt": "2026-10-30T10:01:24.840Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "w84skWJXqZpW5cLEe7XXBY",
+            "memory": "Anika works at the firm ZQ-ISO-86225af138d5.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.65137237,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:01:24.840Z",
+              "createdAt": "2026-10-30T10:01:24.840Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 165
+      },
+      "ms": 667
+    },
+    {
+      "t": "2026-10-30T10:02:19",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [
+            {
+              "id": "w84skWJXqZpW5cLEe7XXBY",
+              "memory": "Anika works at the firm ZQ-ISO-86225af138d5."
+            }
+          ],
+          "dynamic": [
+            {
+              "id": "SXBr8XiBnaytSqtrWETYh3",
+              "memory": "[2026-10-30] Anika prefers window seats on every flight."
+            }
+          ],
+          "buckets": {
+            "preferences": [
+              {
+                "id": "SXBr8XiBnaytSqtrWETYh3",
+                "memory": "Anika prefers window seats on every flight."
+              }
+            ]
+          }
+        }
+      },
+      "ms": 492
+    },
+    {
+      "t": "2026-10-30T10:02:20",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05b_19f63b489b/search",
+      "request_body": {
+        "query": "Where does this person work and what do they prefer?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "DGPNM3DqvwFkJSZHagbdtm",
+            "memory": "Bruno works at the firm ZQ-ISO-5abedfeaafbd.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.66700602,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:02:10.851Z",
+              "createdAt": "2026-10-30T10:02:10.851Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "HRE9CBwxUQ4G4JECif4dYS",
+            "memory": "Bruno prefers aisle seats on every flight.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.6587575,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:02:10.851Z",
+              "createdAt": "2026-10-30T10:02:10.851Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 184
+      },
+      "ms": 589
+    },
+    {
+      "t": "2026-10-30T10:02:21",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05b_19f63b489b/search",
+      "request_body": {
+        "query": "Where does this person work and what do they prefer?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "0a060d9fbbfeb97d45de35",
+            "chunk": "Bruno works at the firm ZQ-ISO-5abedfeaafbd. Bruno prefers aisle seats on every flight.",
+            "metadata": {},
+            "similarity": 0.72677624,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:02:10.851Z",
+              "createdAt": "2026-10-30T10:01:30.916Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "DGPNM3DqvwFkJSZHagbdtm",
+            "memory": "Bruno works at the firm ZQ-ISO-5abedfeaafbd.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.66700602,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:02:10.851Z",
+              "createdAt": "2026-10-30T10:02:10.851Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "HRE9CBwxUQ4G4JECif4dYS",
+            "memory": "Bruno prefers aisle seats on every flight.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.6587575,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:02:10.851Z",
+              "createdAt": "2026-10-30T10:02:10.851Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 156
+      },
+      "ms": 614
+    },
+    {
+      "t": "2026-10-30T10:02:21",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05b_19f63b489b/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [
+            {
+              "id": "DGPNM3DqvwFkJSZHagbdtm",
+              "memory": "Bruno works at the firm ZQ-ISO-5abedfeaafbd."
+            }
+          ],
+          "dynamic": [
+            {
+              "id": "HRE9CBwxUQ4G4JECif4dYS",
+              "memory": "[2026-10-30] Bruno prefers aisle seats on every flight."
+            }
+          ],
+          "buckets": {
+            "preferences": [
+              {
+                "id": "HRE9CBwxUQ4G4JECif4dYS",
+                "memory": "Bruno prefers aisle seats on every flight."
+              }
+            ]
+          }
+        }
+      },
+      "ms": 548
+    },
+    {
+      "t": "2026-10-30T10:02:44",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce/search",
+      "request_body": {
+        "query": "Where does this person work and what do they prefer?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "SXBr8XiBnaytSqtrWETYh3",
+            "memory": "Anika prefers window seats on every flight.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.68007404,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:01:24.840Z",
+              "createdAt": "2026-10-30T10:01:24.840Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "w84skWJXqZpW5cLEe7XXBY",
+            "memory": "Anika works at the firm ZQ-ISO-86225af138d5.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.65137237,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:01:24.840Z",
+              "createdAt": "2026-10-30T10:01:24.840Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 116
+      },
+      "ms": 915
+    },
+    {
+      "t": "2026-10-30T10:02:44",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce/search",
+      "request_body": {
+        "query": "Where does this person work and what do they prefer?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "f8f5050f0d76eef64aea64",
+            "chunk": "Anika works at the firm ZQ-ISO-86225af138d5. Anika prefers window seats on every flight.",
+            "metadata": {},
+            "similarity": 0.7141351,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:01:24.840Z",
+              "createdAt": "2026-10-30T10:00:47.241Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "SXBr8XiBnaytSqtrWETYh3",
+            "memory": "Anika prefers window seats on every flight.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.68007404,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:01:24.840Z",
+              "createdAt": "2026-10-30T10:01:24.840Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "w84skWJXqZpW5cLEe7XXBY",
+            "memory": "Anika works at the firm ZQ-ISO-86225af138d5.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.65137237,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:01:24.840Z",
+              "createdAt": "2026-10-30T10:01:24.840Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 164
+      },
+      "ms": 610
+    },
+    {
+      "t": "2026-10-30T10:02:45",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [
+            {
+              "id": "w84skWJXqZpW5cLEe7XXBY",
+              "memory": "Anika works at the firm ZQ-ISO-86225af138d5."
+            }
+          ],
+          "dynamic": [
+            {
+              "id": "SXBr8XiBnaytSqtrWETYh3",
+              "memory": "[2026-10-30] Anika prefers window seats on every flight."
+            }
+          ],
+          "buckets": {
+            "preferences": [
+              {
+                "id": "SXBr8XiBnaytSqtrWETYh3",
+                "memory": "Anika prefers window seats on every flight."
+              }
+            ]
+          }
+        }
+      },
+      "ms": 567
+    },
+    {
+      "t": "2026-10-30T10:02:46",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05b_19f63b489b/search",
+      "request_body": {
+        "query": "Where does this person work and what do they prefer?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "DGPNM3DqvwFkJSZHagbdtm",
+            "memory": "Bruno works at the firm ZQ-ISO-5abedfeaafbd.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.66700602,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:02:10.851Z",
+              "createdAt": "2026-10-30T10:02:10.851Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "HRE9CBwxUQ4G4JECif4dYS",
+            "memory": "Bruno prefers aisle seats on every flight.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.6587575,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:02:10.851Z",
+              "createdAt": "2026-10-30T10:02:10.851Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 136
+      },
+      "ms": 656
+    },
+    {
+      "t": "2026-10-30T10:02:46",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05b_19f63b489b/search",
+      "request_body": {
+        "query": "Where does this person work and what do they prefer?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "0a060d9fbbfeb97d45de35",
+            "chunk": "Bruno works at the firm ZQ-ISO-5abedfeaafbd. Bruno prefers aisle seats on every flight.",
+            "metadata": {},
+            "similarity": 0.72677624,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:02:10.851Z",
+              "createdAt": "2026-10-30T10:01:30.916Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "DGPNM3DqvwFkJSZHagbdtm",
+            "memory": "Bruno works at the firm ZQ-ISO-5abedfeaafbd.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.66700602,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:02:10.851Z",
+              "createdAt": "2026-10-30T10:02:10.851Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "HRE9CBwxUQ4G4JECif4dYS",
+            "memory": "Bruno prefers aisle seats on every flight.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.6587575,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T10:02:10.851Z",
+              "createdAt": "2026-10-30T10:02:10.851Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 139
+      },
+      "ms": 571
+    },
+    {
+      "t": "2026-10-30T10:02:47",
+      "method": "POST",
+      "path": "/ns/memtrust_iso05b_19f63b489b/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [
+            {
+              "id": "DGPNM3DqvwFkJSZHagbdtm",
+              "memory": "Bruno works at the firm ZQ-ISO-5abedfeaafbd."
+            }
+          ],
+          "dynamic": [
+            {
+              "id": "HRE9CBwxUQ4G4JECif4dYS",
+              "memory": "[2026-10-30] Bruno prefers aisle seats on every flight."
+            }
+          ],
+          "buckets": {
+            "preferences": [
+              {
+                "id": "HRE9CBwxUQ4G4JECif4dYS",
+                "memory": "Bruno prefers aisle seats on every flight."
+              }
+            ]
+          }
+        }
+      },
+      "ms": 551
+    },
+    {
+      "t": "2026-10-30T10:02:47",
+      "method": "DELETE",
+      "path": "/ns/memtrust_iso05a_2b0ca0e1ce",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_iso05a_2b0ca0e1ce",
+        "deletedDocumentsCount": 1,
+        "deletedMemoriesCount": 2
+      },
+      "ms": 489
+    },
+    {
+      "t": "2026-10-30T10:02:48",
+      "method": "DELETE",
+      "path": "/ns/memtrust_iso05b_19f63b489b",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_iso05b_19f63b489b",
+        "deletedDocumentsCount": 1,
+        "deletedMemoriesCount": 2
+      },
+      "ms": 433
+    }
+  ]
+}

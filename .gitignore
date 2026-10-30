@@ -7,3 +7,4 @@ __pycache__/
 .agents/
 .claude/
 skills-lock.json
+smoke/*-console.log

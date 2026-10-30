@@ -1,0 +1,1335 @@
+{
+  "record": {
+    "testId": "ISO-01",
+    "provider": "supermemory",
+    "client": "supermemory-python-sdk",
+    "sdkVersion": "5.0.1",
+    "apiVersion": "v5",
+    "date": "2026-10-30T09:39:40.228490+00:00",
+    "run": 3,
+    "checkpoints": [
+      {
+        "step": "add_A",
+        "scope": "memtrust_iso01a_bec8fc3990",
+        "http": 200,
+        "id": "7xSP1ZEsDS7FxnqL4qh9vk"
+      },
+      {
+        "step": "own_content_retrievable_A",
+        "elapsed_s": 0.5768261660123244,
+        "found": true
+      },
+      {
+        "step": "add_B",
+        "scope": "memtrust_iso01b_0ebc6af2d1",
+        "http": 200,
+        "id": "uyv33kJAZD4nUnPJ9F71HD"
+      },
+      {
+        "step": "own_content_retrievable_B",
+        "elapsed_s": 0.5710624170023948,
+        "found": true
+      },
+      {
+        "t": 0,
+        "leaks": []
+      },
+      {
+        "t": 5,
+        "leaks": []
+      },
+      {
+        "t": 30,
+        "leaks": []
+      }
+    ],
+    "result": "PASS",
+    "timeToConsistencySec": null,
+    "notes": "",
+    "rawArtifacts": "results/runs/2026-10-30/ISO-01-run3.json"
+  },
+  "extra": {
+    "canaries": {
+      "A": "ZQ-ISO-08f0b0a194e2",
+      "B": "ZQ-ISO-43c2191d3833"
+    }
+  },
+  "exchanges": [
+    {
+      "t": "2026-10-30T09:38:40",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/document",
+      "request_body": {
+        "content": "Tenant A internal memo: the account recovery phrase is ZQ-ISO-08f0b0a194e2."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "7xSP1ZEsDS7FxnqL4qh9vk",
+        "status": "queued"
+      },
+      "ms": 1195
+    },
+    {
+      "t": "2026-10-30T09:38:41",
+      "method": "GET",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/document/7xSP1ZEsDS7FxnqL4qh9vk",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "7xSP1ZEsDS7FxnqL4qh9vk",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:38:40.457Z",
+          "updatedAt": "2026-10-30T09:38:40.457Z",
+          "filepath": null
+        }
+      },
+      "ms": 432
+    },
+    {
+      "t": "2026-10-30T09:38:43",
+      "method": "GET",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/document/7xSP1ZEsDS7FxnqL4qh9vk",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "7xSP1ZEsDS7FxnqL4qh9vk",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:38:40.457Z",
+          "updatedAt": "2026-10-30T09:38:40.457Z",
+          "filepath": null
+        }
+      },
+      "ms": 446
+    },
+    {
+      "t": "2026-10-30T09:38:46",
+      "method": "GET",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/document/7xSP1ZEsDS7FxnqL4qh9vk",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "7xSP1ZEsDS7FxnqL4qh9vk",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:38:40.457Z",
+          "updatedAt": "2026-10-30T09:38:40.457Z",
+          "filepath": null
+        }
+      },
+      "ms": 466
+    },
+    {
+      "t": "2026-10-30T09:38:48",
+      "method": "GET",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/document/7xSP1ZEsDS7FxnqL4qh9vk",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "7xSP1ZEsDS7FxnqL4qh9vk",
+        "title": "Tenant A internal memo: the account recovery phras...",
+        "type": "text",
+        "summary": null,
+        "content": "Tenant A internal memo: the account recovery phrase is ZQ-ISO-08f0b0a194e2.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:38:40.457Z",
+          "updatedAt": "2026-10-30T09:38:46.197Z",
+          "filepath": null
+        }
+      },
+      "ms": 453
+    },
+    {
+      "t": "2026-10-30T09:38:49",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/search",
+      "request_body": {
+        "query": "ZQ-ISO-08f0b0a194e2",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "0c05c99c13c69f13cdeea5",
+            "chunk": "Tenant A internal memo: the account recovery phrase is ZQ-ISO-08f0b0a194e2.",
+            "metadata": {},
+            "similarity": 0.75663364,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:46.197Z",
+              "createdAt": "2026-10-30T09:38:40.457Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 136
+      },
+      "ms": 575
+    },
+    {
+      "t": "2026-10-30T09:38:49",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/document",
+      "request_body": {
+        "content": "Tenant B internal memo: the account recovery phrase is ZQ-ISO-43c2191d3833."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "uyv33kJAZD4nUnPJ9F71HD",
+        "status": "queued"
+      },
+      "ms": 861
+    },
+    {
+      "t": "2026-10-30T09:38:50",
+      "method": "GET",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/document/uyv33kJAZD4nUnPJ9F71HD",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "uyv33kJAZD4nUnPJ9F71HD",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:38:49.728Z",
+          "updatedAt": "2026-10-30T09:38:49.728Z",
+          "filepath": null
+        }
+      },
+      "ms": 451
+    },
+    {
+      "t": "2026-10-30T09:38:52",
+      "method": "GET",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/document/uyv33kJAZD4nUnPJ9F71HD",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "uyv33kJAZD4nUnPJ9F71HD",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:38:49.728Z",
+          "updatedAt": "2026-10-30T09:38:49.728Z",
+          "filepath": null
+        }
+      },
+      "ms": 506
+    },
+    {
+      "t": "2026-10-30T09:38:55",
+      "method": "GET",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/document/uyv33kJAZD4nUnPJ9F71HD",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "uyv33kJAZD4nUnPJ9F71HD",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:38:49.728Z",
+          "updatedAt": "2026-10-30T09:38:49.728Z",
+          "filepath": null
+        }
+      },
+      "ms": 401
+    },
+    {
+      "t": "2026-10-30T09:38:57",
+      "method": "GET",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/document/uyv33kJAZD4nUnPJ9F71HD",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "uyv33kJAZD4nUnPJ9F71HD",
+        "title": "Tenant B internal memo: the account recovery phras...",
+        "type": "text",
+        "summary": null,
+        "content": "Tenant B internal memo: the account recovery phrase is ZQ-ISO-43c2191d3833.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:38:49.728Z",
+          "updatedAt": "2026-10-30T09:38:55.637Z",
+          "filepath": null
+        }
+      },
+      "ms": 475
+    },
+    {
+      "t": "2026-10-30T09:38:58",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/search",
+      "request_body": {
+        "query": "ZQ-ISO-43c2191d3833",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "c575db69637d304c338d45",
+            "chunk": "Tenant B internal memo: the account recovery phrase is ZQ-ISO-43c2191d3833.",
+            "metadata": {},
+            "similarity": 0.76030838,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:55.637Z",
+              "createdAt": "2026-10-30T09:38:49.728Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 146
+      },
+      "ms": 569
+    },
+    {
+      "t": "2026-10-30T09:38:58",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/search",
+      "request_body": {
+        "query": "ZQ-ISO-08f0b0a194e2",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "c575db69637d304c338d45",
+            "chunk": "Tenant B internal memo: the account recovery phrase is ZQ-ISO-43c2191d3833.",
+            "metadata": {},
+            "similarity": 0.6514204,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:55.637Z",
+              "createdAt": "2026-10-30T09:38:49.728Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 137
+      },
+      "ms": 591
+    },
+    {
+      "t": "2026-10-30T09:38:59",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/search",
+      "request_body": {
+        "query": "ZQ-ISO-08f0b0a194e2",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 177
+      },
+      "ms": 675
+    },
+    {
+      "t": "2026-10-30T09:39:00",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/search",
+      "request_body": {
+        "query": "ZQ-ISO-08f0b0a194e2",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "c575db69637d304c338d45",
+            "chunk": "Tenant B internal memo: the account recovery phrase is ZQ-ISO-43c2191d3833.",
+            "metadata": {},
+            "similarity": 0.6514204,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:55.637Z",
+              "createdAt": "2026-10-30T09:38:49.728Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 121
+      },
+      "ms": 528
+    },
+    {
+      "t": "2026-10-30T09:39:00",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 529
+    },
+    {
+      "t": "2026-10-30T09:39:01",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/search",
+      "request_body": {
+        "query": "What is the account recovery phrase?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "c575db69637d304c338d45",
+            "chunk": "Tenant B internal memo: the account recovery phrase is ZQ-ISO-43c2191d3833.",
+            "metadata": {},
+            "similarity": 0.7409072,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:55.637Z",
+              "createdAt": "2026-10-30T09:38:49.728Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 138
+      },
+      "ms": 710
+    },
+    {
+      "t": "2026-10-30T09:39:02",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/search",
+      "request_body": {
+        "query": "What is the account recovery phrase?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 175
+      },
+      "ms": 595
+    },
+    {
+      "t": "2026-10-30T09:39:02",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/search",
+      "request_body": {
+        "query": "What is the account recovery phrase?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "c575db69637d304c338d45",
+            "chunk": "Tenant B internal memo: the account recovery phrase is ZQ-ISO-43c2191d3833.",
+            "metadata": {},
+            "similarity": 0.7409072,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:55.637Z",
+              "createdAt": "2026-10-30T09:38:49.728Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 143
+      },
+      "ms": 611
+    },
+    {
+      "t": "2026-10-30T09:39:03",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/search",
+      "request_body": {
+        "query": "ZQ-ISO-43c2191d3833",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "0c05c99c13c69f13cdeea5",
+            "chunk": "Tenant A internal memo: the account recovery phrase is ZQ-ISO-08f0b0a194e2.",
+            "metadata": {},
+            "similarity": 0.63411182,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:46.197Z",
+              "createdAt": "2026-10-30T09:38:40.457Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 176
+      },
+      "ms": 610
+    },
+    {
+      "t": "2026-10-30T09:39:04",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/search",
+      "request_body": {
+        "query": "ZQ-ISO-43c2191d3833",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 203
+      },
+      "ms": 782
+    },
+    {
+      "t": "2026-10-30T09:39:05",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/search",
+      "request_body": {
+        "query": "ZQ-ISO-43c2191d3833",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "0c05c99c13c69f13cdeea5",
+            "chunk": "Tenant A internal memo: the account recovery phrase is ZQ-ISO-08f0b0a194e2.",
+            "metadata": {},
+            "similarity": 0.63411182,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:46.197Z",
+              "createdAt": "2026-10-30T09:38:40.457Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 295
+      },
+      "ms": 1046
+    },
+    {
+      "t": "2026-10-30T09:39:05",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 525
+    },
+    {
+      "t": "2026-10-30T09:39:06",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/search",
+      "request_body": {
+        "query": "What is the account recovery phrase?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "0c05c99c13c69f13cdeea5",
+            "chunk": "Tenant A internal memo: the account recovery phrase is ZQ-ISO-08f0b0a194e2.",
+            "metadata": {},
+            "similarity": 0.74841243,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:46.197Z",
+              "createdAt": "2026-10-30T09:38:40.457Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 215
+      },
+      "ms": 613
+    },
+    {
+      "t": "2026-10-30T09:39:07",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/search",
+      "request_body": {
+        "query": "What is the account recovery phrase?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 260
+      },
+      "ms": 1746
+    },
+    {
+      "t": "2026-10-30T09:39:08",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/search",
+      "request_body": {
+        "query": "What is the account recovery phrase?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "0c05c99c13c69f13cdeea5",
+            "chunk": "Tenant A internal memo: the account recovery phrase is ZQ-ISO-08f0b0a194e2.",
+            "metadata": {},
+            "similarity": 0.74841243,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:46.197Z",
+              "createdAt": "2026-10-30T09:38:40.457Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 353
+      },
+      "ms": 831
+    },
+    {
+      "t": "2026-10-30T09:39:09",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/search",
+      "request_body": {
+        "query": "ZQ-ISO-08f0b0a194e2",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "c575db69637d304c338d45",
+            "chunk": "Tenant B internal memo: the account recovery phrase is ZQ-ISO-43c2191d3833.",
+            "metadata": {},
+            "similarity": 0.6514204,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:55.637Z",
+              "createdAt": "2026-10-30T09:38:49.728Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 327
+      },
+      "ms": 741
+    },
+    {
+      "t": "2026-10-30T09:39:10",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/search",
+      "request_body": {
+        "query": "ZQ-ISO-08f0b0a194e2",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 169
+      },
+      "ms": 584
+    },
+    {
+      "t": "2026-10-30T09:39:10",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/search",
+      "request_body": {
+        "query": "ZQ-ISO-08f0b0a194e2",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "c575db69637d304c338d45",
+            "chunk": "Tenant B internal memo: the account recovery phrase is ZQ-ISO-43c2191d3833.",
+            "metadata": {},
+            "similarity": 0.6514204,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:55.637Z",
+              "createdAt": "2026-10-30T09:38:49.728Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 120
+      },
+      "ms": 526
+    },
+    {
+      "t": "2026-10-30T09:39:11",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 497
+    },
+    {
+      "t": "2026-10-30T09:39:11",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/search",
+      "request_body": {
+        "query": "What is the account recovery phrase?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "c575db69637d304c338d45",
+            "chunk": "Tenant B internal memo: the account recovery phrase is ZQ-ISO-43c2191d3833.",
+            "metadata": {},
+            "similarity": 0.7409072,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:55.637Z",
+              "createdAt": "2026-10-30T09:38:49.728Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 155
+      },
+      "ms": 587
+    },
+    {
+      "t": "2026-10-30T09:39:12",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/search",
+      "request_body": {
+        "query": "What is the account recovery phrase?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 150
+      },
+      "ms": 667
+    },
+    {
+      "t": "2026-10-30T09:39:12",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/search",
+      "request_body": {
+        "query": "What is the account recovery phrase?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "c575db69637d304c338d45",
+            "chunk": "Tenant B internal memo: the account recovery phrase is ZQ-ISO-43c2191d3833.",
+            "metadata": {},
+            "similarity": 0.7409072,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:55.637Z",
+              "createdAt": "2026-10-30T09:38:49.728Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 134
+      },
+      "ms": 585
+    },
+    {
+      "t": "2026-10-30T09:39:13",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/search",
+      "request_body": {
+        "query": "ZQ-ISO-43c2191d3833",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "0c05c99c13c69f13cdeea5",
+            "chunk": "Tenant A internal memo: the account recovery phrase is ZQ-ISO-08f0b0a194e2.",
+            "metadata": {},
+            "similarity": 0.63411182,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:46.197Z",
+              "createdAt": "2026-10-30T09:38:40.457Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 126
+      },
+      "ms": 611
+    },
+    {
+      "t": "2026-10-30T09:39:14",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/search",
+      "request_body": {
+        "query": "ZQ-ISO-43c2191d3833",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 114
+      },
+      "ms": 612
+    },
+    {
+      "t": "2026-10-30T09:39:14",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/search",
+      "request_body": {
+        "query": "ZQ-ISO-43c2191d3833",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "0c05c99c13c69f13cdeea5",
+            "chunk": "Tenant A internal memo: the account recovery phrase is ZQ-ISO-08f0b0a194e2.",
+            "metadata": {},
+            "similarity": 0.63411182,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:46.197Z",
+              "createdAt": "2026-10-30T09:38:40.457Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 144
+      },
+      "ms": 543
+    },
+    {
+      "t": "2026-10-30T09:39:15",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 446
+    },
+    {
+      "t": "2026-10-30T09:39:15",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/search",
+      "request_body": {
+        "query": "What is the account recovery phrase?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "0c05c99c13c69f13cdeea5",
+            "chunk": "Tenant A internal memo: the account recovery phrase is ZQ-ISO-08f0b0a194e2.",
+            "metadata": {},
+            "similarity": 0.74841243,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:46.197Z",
+              "createdAt": "2026-10-30T09:38:40.457Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 165
+      },
+      "ms": 593
+    },
+    {
+      "t": "2026-10-30T09:39:16",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/search",
+      "request_body": {
+        "query": "What is the account recovery phrase?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 141
+      },
+      "ms": 662
+    },
+    {
+      "t": "2026-10-30T09:39:17",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/search",
+      "request_body": {
+        "query": "What is the account recovery phrase?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "0c05c99c13c69f13cdeea5",
+            "chunk": "Tenant A internal memo: the account recovery phrase is ZQ-ISO-08f0b0a194e2.",
+            "metadata": {},
+            "similarity": 0.74841243,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:46.197Z",
+              "createdAt": "2026-10-30T09:38:40.457Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 113
+      },
+      "ms": 527
+    },
+    {
+      "t": "2026-10-30T09:39:29",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/search",
+      "request_body": {
+        "query": "ZQ-ISO-08f0b0a194e2",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "c575db69637d304c338d45",
+            "chunk": "Tenant B internal memo: the account recovery phrase is ZQ-ISO-43c2191d3833.",
+            "metadata": {},
+            "similarity": 0.6514204,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:55.637Z",
+              "createdAt": "2026-10-30T09:38:49.728Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 158
+      },
+      "ms": 1495
+    },
+    {
+      "t": "2026-10-30T09:39:30",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/search",
+      "request_body": {
+        "query": "ZQ-ISO-08f0b0a194e2",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 139
+      },
+      "ms": 599
+    },
+    {
+      "t": "2026-10-30T09:39:31",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/search",
+      "request_body": {
+        "query": "ZQ-ISO-08f0b0a194e2",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "c575db69637d304c338d45",
+            "chunk": "Tenant B internal memo: the account recovery phrase is ZQ-ISO-43c2191d3833.",
+            "metadata": {},
+            "similarity": 0.6514204,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:55.637Z",
+              "createdAt": "2026-10-30T09:38:49.728Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 159
+      },
+      "ms": 663
+    },
+    {
+      "t": "2026-10-30T09:39:31",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 574
+    },
+    {
+      "t": "2026-10-30T09:39:32",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/search",
+      "request_body": {
+        "query": "What is the account recovery phrase?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "c575db69637d304c338d45",
+            "chunk": "Tenant B internal memo: the account recovery phrase is ZQ-ISO-43c2191d3833.",
+            "metadata": {},
+            "similarity": 0.7409072,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:55.637Z",
+              "createdAt": "2026-10-30T09:38:49.728Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 142
+      },
+      "ms": 607
+    },
+    {
+      "t": "2026-10-30T09:39:32",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/search",
+      "request_body": {
+        "query": "What is the account recovery phrase?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 110
+      },
+      "ms": 539
+    },
+    {
+      "t": "2026-10-30T09:39:34",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1/search",
+      "request_body": {
+        "query": "What is the account recovery phrase?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "c575db69637d304c338d45",
+            "chunk": "Tenant B internal memo: the account recovery phrase is ZQ-ISO-43c2191d3833.",
+            "metadata": {},
+            "similarity": 0.7409072,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:55.637Z",
+              "createdAt": "2026-10-30T09:38:49.728Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 186
+      },
+      "ms": 1816
+    },
+    {
+      "t": "2026-10-30T09:39:35",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/search",
+      "request_body": {
+        "query": "ZQ-ISO-43c2191d3833",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "0c05c99c13c69f13cdeea5",
+            "chunk": "Tenant A internal memo: the account recovery phrase is ZQ-ISO-08f0b0a194e2.",
+            "metadata": {},
+            "similarity": 0.63411182,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:46.197Z",
+              "createdAt": "2026-10-30T09:38:40.457Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 115
+      },
+      "ms": 616
+    },
+    {
+      "t": "2026-10-30T09:39:35",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/search",
+      "request_body": {
+        "query": "ZQ-ISO-43c2191d3833",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 119
+      },
+      "ms": 550
+    },
+    {
+      "t": "2026-10-30T09:39:36",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/search",
+      "request_body": {
+        "query": "ZQ-ISO-43c2191d3833",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "0c05c99c13c69f13cdeea5",
+            "chunk": "Tenant A internal memo: the account recovery phrase is ZQ-ISO-08f0b0a194e2.",
+            "metadata": {},
+            "similarity": 0.63411182,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:46.197Z",
+              "createdAt": "2026-10-30T09:38:40.457Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 150
+      },
+      "ms": 630
+    },
+    {
+      "t": "2026-10-30T09:39:37",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 529
+    },
+    {
+      "t": "2026-10-30T09:39:37",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/search",
+      "request_body": {
+        "query": "What is the account recovery phrase?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "0c05c99c13c69f13cdeea5",
+            "chunk": "Tenant A internal memo: the account recovery phrase is ZQ-ISO-08f0b0a194e2.",
+            "metadata": {},
+            "similarity": 0.74841243,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:46.197Z",
+              "createdAt": "2026-10-30T09:38:40.457Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 134
+      },
+      "ms": 552
+    },
+    {
+      "t": "2026-10-30T09:39:38",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/search",
+      "request_body": {
+        "query": "What is the account recovery phrase?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 273
+      },
+      "ms": 1108
+    },
+    {
+      "t": "2026-10-30T09:39:39",
+      "method": "POST",
+      "path": "/ns/memtrust_iso01a_bec8fc3990/search",
+      "request_body": {
+        "query": "What is the account recovery phrase?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "0c05c99c13c69f13cdeea5",
+            "chunk": "Tenant A internal memo: the account recovery phrase is ZQ-ISO-08f0b0a194e2.",
+            "metadata": {},
+            "similarity": 0.74841243,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:38:46.197Z",
+              "createdAt": "2026-10-30T09:38:40.457Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 150
+      },
+      "ms": 582
+    },
+    {
+      "t": "2026-10-30T09:39:39",
+      "method": "DELETE",
+      "path": "/ns/memtrust_iso01a_bec8fc3990",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_iso01a_bec8fc3990",
+        "deletedDocumentsCount": 1,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 494
+    },
+    {
+      "t": "2026-10-30T09:39:40",
+      "method": "DELETE",
+      "path": "/ns/memtrust_iso01b_0ebc6af2d1",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_iso01b_0ebc6af2d1",
+        "deletedDocumentsCount": 1,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 445
+    }
+  ]
+}

@@ -1,0 +1,981 @@
+{
+  "record": {
+    "testId": "ISO-03",
+    "provider": "supermemory",
+    "client": "supermemory-python-sdk",
+    "sdkVersion": "5.0.1",
+    "apiVersion": "v5",
+    "date": "2026-10-30T09:29:41.297531+00:00",
+    "run": 1,
+    "checkpoints": [
+      {
+        "step": "add_A",
+        "scope": "memtrust_iso03a_18e4bdffdb",
+        "http": 200,
+        "id": "LCM5wjf9X2955QJJue87Dv"
+      },
+      {
+        "step": "own_content_retrievable_A",
+        "elapsed_s": 0.514967708993936,
+        "found": true
+      },
+      {
+        "step": "add_B",
+        "scope": "memtrust_iso03b_97f51862e2",
+        "http": 200,
+        "id": "swnAeEgrsJMRoCQSJCaCAG"
+      },
+      {
+        "step": "own_content_retrievable_B",
+        "elapsed_s": 0.6517708750034217,
+        "found": true
+      },
+      {
+        "t": 0,
+        "leaks": [],
+        "own_present": {
+          "A": true,
+          "B": true
+        }
+      },
+      {
+        "t": 5,
+        "leaks": [],
+        "own_present": {
+          "A": true,
+          "B": true
+        }
+      },
+      {
+        "t": 30,
+        "leaks": [],
+        "own_present": {
+          "A": true,
+          "B": true
+        }
+      }
+    ],
+    "result": "PASS",
+    "timeToConsistencySec": null,
+    "notes": "",
+    "rawArtifacts": "smoke/pilot/runs/2026-10-30/ISO-03-run1.json"
+  },
+  "extra": {
+    "canaries": {
+      "A": "ZQ-ISO-6083f8082a43",
+      "B": "ZQ-ISO-27c02255d637"
+    }
+  },
+  "exchanges": [
+    {
+      "t": "2026-10-30T09:28:47",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03a_18e4bdffdb/document",
+      "request_body": {
+        "content": "The warehouse alarm code is ZQ-ISO-6083f8082a43 and the night guard starts at nine."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "LCM5wjf9X2955QJJue87Dv",
+        "status": "queued"
+      },
+      "ms": 923
+    },
+    {
+      "t": "2026-10-30T09:28:48",
+      "method": "GET",
+      "path": "/ns/memtrust_iso03a_18e4bdffdb/document/LCM5wjf9X2955QJJue87Dv",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "LCM5wjf9X2955QJJue87Dv",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:28:47.637Z",
+          "updatedAt": "2026-10-30T09:28:47.637Z",
+          "filepath": null
+        }
+      },
+      "ms": 377
+    },
+    {
+      "t": "2026-10-30T09:28:50",
+      "method": "GET",
+      "path": "/ns/memtrust_iso03a_18e4bdffdb/document/LCM5wjf9X2955QJJue87Dv",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "LCM5wjf9X2955QJJue87Dv",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:28:47.637Z",
+          "updatedAt": "2026-10-30T09:28:47.637Z",
+          "filepath": null
+        }
+      },
+      "ms": 394
+    },
+    {
+      "t": "2026-10-30T09:28:53",
+      "method": "GET",
+      "path": "/ns/memtrust_iso03a_18e4bdffdb/document/LCM5wjf9X2955QJJue87Dv",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "LCM5wjf9X2955QJJue87Dv",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:28:47.637Z",
+          "updatedAt": "2026-10-30T09:28:47.637Z",
+          "filepath": null
+        }
+      },
+      "ms": 424
+    },
+    {
+      "t": "2026-10-30T09:28:55",
+      "method": "GET",
+      "path": "/ns/memtrust_iso03a_18e4bdffdb/document/LCM5wjf9X2955QJJue87Dv",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "LCM5wjf9X2955QJJue87Dv",
+        "title": "The warehouse alarm code is ZQ-ISO-6083f8082a43 an...",
+        "type": "text",
+        "summary": null,
+        "content": "The warehouse alarm code is ZQ-ISO-6083f8082a43 and the night guard starts at nine.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:28:47.637Z",
+          "updatedAt": "2026-10-30T09:28:53.049Z",
+          "filepath": null
+        }
+      },
+      "ms": 366
+    },
+    {
+      "t": "2026-10-30T09:28:56",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03a_18e4bdffdb/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "8f6161f1367dca9adccc20",
+            "chunk": "The warehouse alarm code is ZQ-ISO-6083f8082a43 and the night guard starts at nine.",
+            "metadata": {},
+            "similarity": 0.83178967,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:28:53.049Z",
+              "createdAt": "2026-10-30T09:28:47.637Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 110
+      },
+      "ms": 512
+    },
+    {
+      "t": "2026-10-30T09:28:56",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03b_97f51862e2/document",
+      "request_body": {
+        "content": "The warehouse alarm code is ZQ-ISO-27c02255d637 and the night guard starts at nine."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "swnAeEgrsJMRoCQSJCaCAG",
+        "status": "queued"
+      },
+      "ms": 898
+    },
+    {
+      "t": "2026-10-30T09:28:57",
+      "method": "GET",
+      "path": "/ns/memtrust_iso03b_97f51862e2/document/swnAeEgrsJMRoCQSJCaCAG",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "swnAeEgrsJMRoCQSJCaCAG",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:28:56.710Z",
+          "updatedAt": "2026-10-30T09:28:56.710Z",
+          "filepath": null
+        }
+      },
+      "ms": 381
+    },
+    {
+      "t": "2026-10-30T09:28:59",
+      "method": "GET",
+      "path": "/ns/memtrust_iso03b_97f51862e2/document/swnAeEgrsJMRoCQSJCaCAG",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "swnAeEgrsJMRoCQSJCaCAG",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:28:56.710Z",
+          "updatedAt": "2026-10-30T09:28:56.710Z",
+          "filepath": null
+        }
+      },
+      "ms": 482
+    },
+    {
+      "t": "2026-10-30T09:29:02",
+      "method": "GET",
+      "path": "/ns/memtrust_iso03b_97f51862e2/document/swnAeEgrsJMRoCQSJCaCAG",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "swnAeEgrsJMRoCQSJCaCAG",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:28:56.710Z",
+          "updatedAt": "2026-10-30T09:28:56.710Z",
+          "filepath": null
+        }
+      },
+      "ms": 440
+    },
+    {
+      "t": "2026-10-30T09:29:04",
+      "method": "GET",
+      "path": "/ns/memtrust_iso03b_97f51862e2/document/swnAeEgrsJMRoCQSJCaCAG",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "swnAeEgrsJMRoCQSJCaCAG",
+        "title": "The warehouse alarm code is ZQ-ISO-27c02255d637 an...",
+        "type": "text",
+        "summary": null,
+        "content": "The warehouse alarm code is ZQ-ISO-27c02255d637 and the night guard starts at nine.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T09:28:56.710Z",
+          "updatedAt": "2026-10-30T09:29:02.444Z",
+          "filepath": null
+        }
+      },
+      "ms": 409
+    },
+    {
+      "t": "2026-10-30T09:29:05",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03b_97f51862e2/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "ff6a8e94563a227d5acc60",
+            "chunk": "The warehouse alarm code is ZQ-ISO-27c02255d637 and the night guard starts at nine.",
+            "metadata": {},
+            "similarity": 0.81567049,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:29:02.444Z",
+              "createdAt": "2026-10-30T09:28:56.710Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 134
+      },
+      "ms": 649
+    },
+    {
+      "t": "2026-10-30T09:29:05",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03a_18e4bdffdb/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "8f6161f1367dca9adccc20",
+            "chunk": "The warehouse alarm code is ZQ-ISO-6083f8082a43 and the night guard starts at nine.",
+            "metadata": {},
+            "similarity": 0.83178967,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:28:53.049Z",
+              "createdAt": "2026-10-30T09:28:47.637Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 123
+      },
+      "ms": 515
+    },
+    {
+      "t": "2026-10-30T09:29:06",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03a_18e4bdffdb/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "8f6161f1367dca9adccc20",
+            "chunk": "The warehouse alarm code is ZQ-ISO-6083f8082a43 and the night guard starts at nine.",
+            "metadata": {},
+            "similarity": 0.83178967,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:28:53.049Z",
+              "createdAt": "2026-10-30T09:28:47.637Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 182
+      },
+      "ms": 710
+    },
+    {
+      "t": "2026-10-30T09:29:07",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03a_18e4bdffdb/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 177
+      },
+      "ms": 713
+    },
+    {
+      "t": "2026-10-30T09:29:07",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03a_18e4bdffdb/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "8f6161f1367dca9adccc20",
+            "chunk": "The warehouse alarm code is ZQ-ISO-6083f8082a43 and the night guard starts at nine.",
+            "metadata": {},
+            "similarity": 0.83178967,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:28:53.049Z",
+              "createdAt": "2026-10-30T09:28:47.637Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 131
+      },
+      "ms": 531
+    },
+    {
+      "t": "2026-10-30T09:29:08",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03b_97f51862e2/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "ff6a8e94563a227d5acc60",
+            "chunk": "The warehouse alarm code is ZQ-ISO-27c02255d637 and the night guard starts at nine.",
+            "metadata": {},
+            "similarity": 0.81567049,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:29:02.444Z",
+              "createdAt": "2026-10-30T09:28:56.710Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 137
+      },
+      "ms": 592
+    },
+    {
+      "t": "2026-10-30T09:29:08",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03b_97f51862e2/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "ff6a8e94563a227d5acc60",
+            "chunk": "The warehouse alarm code is ZQ-ISO-27c02255d637 and the night guard starts at nine.",
+            "metadata": {},
+            "similarity": 0.81567049,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:29:02.444Z",
+              "createdAt": "2026-10-30T09:28:56.710Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 129
+      },
+      "ms": 523
+    },
+    {
+      "t": "2026-10-30T09:29:09",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03b_97f51862e2/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 153
+      },
+      "ms": 599
+    },
+    {
+      "t": "2026-10-30T09:29:10",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03b_97f51862e2/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "ff6a8e94563a227d5acc60",
+            "chunk": "The warehouse alarm code is ZQ-ISO-27c02255d637 and the night guard starts at nine.",
+            "metadata": {},
+            "similarity": 0.81567049,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:29:02.444Z",
+              "createdAt": "2026-10-30T09:28:56.710Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 145
+      },
+      "ms": 581
+    },
+    {
+      "t": "2026-10-30T09:29:10",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03a_18e4bdffdb/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "8f6161f1367dca9adccc20",
+            "chunk": "The warehouse alarm code is ZQ-ISO-6083f8082a43 and the night guard starts at nine.",
+            "metadata": {},
+            "similarity": 0.83178967,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:28:53.049Z",
+              "createdAt": "2026-10-30T09:28:47.637Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 139
+      },
+      "ms": 542
+    },
+    {
+      "t": "2026-10-30T09:29:11",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03a_18e4bdffdb/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "8f6161f1367dca9adccc20",
+            "chunk": "The warehouse alarm code is ZQ-ISO-6083f8082a43 and the night guard starts at nine.",
+            "metadata": {},
+            "similarity": 0.83178967,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:28:53.049Z",
+              "createdAt": "2026-10-30T09:28:47.637Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 137
+      },
+      "ms": 595
+    },
+    {
+      "t": "2026-10-30T09:29:12",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03a_18e4bdffdb/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 128
+      },
+      "ms": 576
+    },
+    {
+      "t": "2026-10-30T09:29:12",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03a_18e4bdffdb/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "8f6161f1367dca9adccc20",
+            "chunk": "The warehouse alarm code is ZQ-ISO-6083f8082a43 and the night guard starts at nine.",
+            "metadata": {},
+            "similarity": 0.83178967,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:28:53.049Z",
+              "createdAt": "2026-10-30T09:28:47.637Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 122
+      },
+      "ms": 506
+    },
+    {
+      "t": "2026-10-30T09:29:13",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03b_97f51862e2/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "ff6a8e94563a227d5acc60",
+            "chunk": "The warehouse alarm code is ZQ-ISO-27c02255d637 and the night guard starts at nine.",
+            "metadata": {},
+            "similarity": 0.81567049,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:29:02.444Z",
+              "createdAt": "2026-10-30T09:28:56.710Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 156
+      },
+      "ms": 645
+    },
+    {
+      "t": "2026-10-30T09:29:13",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03b_97f51862e2/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "ff6a8e94563a227d5acc60",
+            "chunk": "The warehouse alarm code is ZQ-ISO-27c02255d637 and the night guard starts at nine.",
+            "metadata": {},
+            "similarity": 0.81567049,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:29:02.444Z",
+              "createdAt": "2026-10-30T09:28:56.710Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 119
+      },
+      "ms": 534
+    },
+    {
+      "t": "2026-10-30T09:29:14",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03b_97f51862e2/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 126
+      },
+      "ms": 585
+    },
+    {
+      "t": "2026-10-30T09:29:15",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03b_97f51862e2/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "ff6a8e94563a227d5acc60",
+            "chunk": "The warehouse alarm code is ZQ-ISO-27c02255d637 and the night guard starts at nine.",
+            "metadata": {},
+            "similarity": 0.81567049,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:29:02.444Z",
+              "createdAt": "2026-10-30T09:28:56.710Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 212
+      },
+      "ms": 1455
+    },
+    {
+      "t": "2026-10-30T09:29:36",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03a_18e4bdffdb/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "8f6161f1367dca9adccc20",
+            "chunk": "The warehouse alarm code is ZQ-ISO-6083f8082a43 and the night guard starts at nine.",
+            "metadata": {},
+            "similarity": 0.83178967,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:28:53.049Z",
+              "createdAt": "2026-10-30T09:28:47.637Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 147
+      },
+      "ms": 782
+    },
+    {
+      "t": "2026-10-30T09:29:36",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03a_18e4bdffdb/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "8f6161f1367dca9adccc20",
+            "chunk": "The warehouse alarm code is ZQ-ISO-6083f8082a43 and the night guard starts at nine.",
+            "metadata": {},
+            "similarity": 0.83178967,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:28:53.049Z",
+              "createdAt": "2026-10-30T09:28:47.637Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 156
+      },
+      "ms": 650
+    },
+    {
+      "t": "2026-10-30T09:29:37",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03a_18e4bdffdb/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 120
+      },
+      "ms": 571
+    },
+    {
+      "t": "2026-10-30T09:29:37",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03a_18e4bdffdb/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "8f6161f1367dca9adccc20",
+            "chunk": "The warehouse alarm code is ZQ-ISO-6083f8082a43 and the night guard starts at nine.",
+            "metadata": {},
+            "similarity": 0.83178967,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:28:53.049Z",
+              "createdAt": "2026-10-30T09:28:47.637Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 128
+      },
+      "ms": 593
+    },
+    {
+      "t": "2026-10-30T09:29:38",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03b_97f51862e2/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "ff6a8e94563a227d5acc60",
+            "chunk": "The warehouse alarm code is ZQ-ISO-27c02255d637 and the night guard starts at nine.",
+            "metadata": {},
+            "similarity": 0.81567049,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:29:02.444Z",
+              "createdAt": "2026-10-30T09:28:56.710Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 129
+      },
+      "ms": 532
+    },
+    {
+      "t": "2026-10-30T09:29:39",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03b_97f51862e2/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "ff6a8e94563a227d5acc60",
+            "chunk": "The warehouse alarm code is ZQ-ISO-27c02255d637 and the night guard starts at nine.",
+            "metadata": {},
+            "similarity": 0.81567049,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:29:02.444Z",
+              "createdAt": "2026-10-30T09:28:56.710Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 160
+      },
+      "ms": 648
+    },
+    {
+      "t": "2026-10-30T09:29:39",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03b_97f51862e2/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 121
+      },
+      "ms": 615
+    },
+    {
+      "t": "2026-10-30T09:29:40",
+      "method": "POST",
+      "path": "/ns/memtrust_iso03b_97f51862e2/search",
+      "request_body": {
+        "query": "What is the warehouse alarm code and when does the night guard start?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "ff6a8e94563a227d5acc60",
+            "chunk": "The warehouse alarm code is ZQ-ISO-27c02255d637 and the night guard starts at nine.",
+            "metadata": {},
+            "similarity": 0.81567049,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T09:29:02.444Z",
+              "createdAt": "2026-10-30T09:28:56.710Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 119
+      },
+      "ms": 561
+    },
+    {
+      "t": "2026-10-30T09:29:40",
+      "method": "DELETE",
+      "path": "/ns/memtrust_iso03a_18e4bdffdb",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_iso03a_18e4bdffdb",
+        "deletedDocumentsCount": 1,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 428
+    },
+    {
+      "t": "2026-10-30T09:29:41",
+      "method": "DELETE",
+      "path": "/ns/memtrust_iso03b_97f51862e2",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_iso03b_97f51862e2",
+        "deletedDocumentsCount": 1,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 541
+    }
+  ]
+}
