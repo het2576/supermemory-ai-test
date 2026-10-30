@@ -7,6 +7,8 @@ pre-registered checkpoints 0/5/30/120/300/600s counted from the delete call retu
 
 from __future__ import annotations
 
+import json
+
 import pytest
 
 from src.adapter import AddOptions, SearchOptions
@@ -19,7 +21,9 @@ from src.deletion import (
     wait_found,
     watch_until_gone,
 )
+from src.corrections import seed_chain
 from src.runner import RunOutcome, TestContext, TestDef
+from src.wait import at_checkpoints
 
 
 def _fail_early(cps: list, note: str, result: str = "ERROR") -> RunOutcome:
@@ -247,13 +251,97 @@ def del_05(ctx: TestContext) -> RunOutcome:
     return RunOutcome("PASS", cps, time_to_consistency_s=w.gone_at, notes="" if w.gone_at is not None and w.gone_at <= 120 else f"original gone at {w.gone_at:g}s", extra=extra)
 
 
+# --- DEL-06 ---------------------------------------------------------------------------------
+
+NS_PROBES_S = (0, 5, 30)
+
+
+def _forgotten_surfaces(p, scope: str, query: str, token: str) -> list[str]:
+    """Where the token is still returned when soft-deleted items are asked for (evidence for step 3 and for the probes)."""
+    found = []
+    for mode in ("memories", "hybrid"):
+        if any(token in h.text for h in p.search(scope, query, SearchOptions(mode=mode, include_forgotten=True)).hits):
+            found.append(f"search:{mode}+forgotten")
+    list_memories = getattr(p, "list_memories", None)
+    if list_memories is not None and token in json.dumps(list_memories(scope, include_forgotten=True)[1], default=str):
+        found.append("list:memories+forgotten")
+    return found
+
+
+def del_06(ctx: TestContext) -> RunOutcome:
+    """Docs: a deleted document's memories are 'forgotten' (preserved); a namespace delete removes 'its memory records'.
+    Does the namespace delete also remove the preserved ones? Protocol: docs/decisions.md D12."""
+    p, clock = ctx.provider, ctx.clock
+    if not p.capabilities().namespace_delete:
+        return RunOutcome("SKIPPED", notes="provider has no namespace delete")
+    query = "What is the name of Priya's pet iguana?"
+    cps: list = []
+    scope, toks, err = seed_chain(
+        ctx, "del06", 1, lambda t: [(f"Priya's pet iguana is named {t[0]}. Priya adopted the iguana last spring.", [t[0]])], query, cps
+    )
+    if err:
+        return err
+    token = toks[0]
+    doc_id = [c["id"] for c in cps if c.get("step") == "add_doc1"][-1]
+
+    cleared = _delete_then_watch(ctx, scope, doc_id, query, [token], cps, profile=True, extra={"token": token})
+    if cleared.result != "PASS":
+        return RunOutcome("INCONCLUSIVE", cleared.checkpoints, notes=f"the document delete did not clear the normal surfaces within 120s ({cleared.result}); that is DEL-03's question, not this one", extra=cleared.extra)
+    cps = cleared.checkpoints
+
+    preserved = _forgotten_surfaces(p, scope, query, token)
+    cps.append({"step": "preserved_before_namespace_delete", "surfaces": preserved})
+    extra = {"token": token, "old_document_id": doc_id, "preserved_before_namespace_delete": preserved}
+    if not preserved:
+        return RunOutcome("INCONCLUSIVE", cps, notes="nothing was preserved after the document delete, so there is nothing for the namespace delete to remove", extra=extra)
+
+    deleted = p.delete_scope(scope)
+    cps.append({"step": "namespace_delete", "http": deleted.http_status})
+    extra["namespace_delete_http"] = deleted.http_status
+    if deleted.http_status >= 400:
+        return RunOutcome("INCONCLUSIVE", cps, notes=f"namespace delete was not accepted (HTTP {deleted.http_status})", extra=extra)
+
+    fresh = p.add(scope, "The office plant is a fern that needs water on Mondays.", AddOptions(dreaming="instant"))
+    if not fresh.doc_id:
+        return RunOutcome("ERROR", cps, notes=f"re-creating the namespace failed (HTTP {fresh.http_status})", extra=extra)
+    ready = wait_done(p, scope, fresh.doc_id, clock, timeout_s=300, dreaming=True)
+    if not (ready.value and ready.value.status == "done"):
+        return RunOutcome("ERROR", cps, notes="the re-created namespace never finished processing", extra=extra)
+    cps.append({"step": "namespace_recreated", "elapsed_s": ready.elapsed_s})
+
+    def probe() -> dict:
+        leaks = []
+        for mode in ("chunks", "memories", "hybrid"):
+            for forgotten in (False, True):
+                if any(token in h.text for h in p.search(scope, query, SearchOptions(mode=mode, include_forgotten=forgotten)).hits):  # type: ignore[arg-type]
+                    leaks.append(f"search:{mode}{'+forgotten' if forgotten else ''}")
+        if p.capabilities().profiles and any(token in e for e in p.profile(scope).entries):
+            leaks.append("profile")
+        leaks += _forgotten_surfaces(p, scope, query, token)
+        listed = getattr(p, "list_documents", None)
+        if listed is not None and token in json.dumps(listed(scope)[1], default=str):
+            leaks.append("list:documents")
+        if p.status(scope, doc_id) is not None:
+            leaks.append("document id still resolves")
+        return {"leaks": sorted(set(leaks))}
+
+    probes = at_checkpoints(probe, NS_PROBES_S, clock=clock)
+    cps.extend({"t": c.t, **c.value} for c in probes)
+    leaks = [(c.t, name) for c in probes for name in c.value["leaks"]]
+    if leaks:
+        t, first = leaks[0]
+        return RunOutcome("FAIL", cps, notes=f"after the namespace was deleted and re-created, the old token was returned via {first} at t={t:g}s ({len(leaks)} hit(s) over {len(probes)} probes)", extra=extra)
+    return RunOutcome("PASS", cps, notes=f"preserved before the namespace delete via {preserved}; absent from every surface after it", extra=extra)
+
+
 DEL_01 = TestDef("DEL-01", "DEL", "Delete doc, exact canary search", del_01)
 DEL_02 = TestDef("DEL-02", "DEL", "Delete doc, paraphrase search", del_02)
 DEL_03 = TestDef("DEL-03", "DEL", "Delete source doc, derived memories and profile", del_03)
 DEL_04 = TestDef("DEL-04", "DEL", "Delete while processing", del_04)
 DEL_05 = TestDef("DEL-05", "DEL", "Re-add identical content after delete", del_05)
+DEL_06 = TestDef("DEL-06", "DEL", "Namespace delete vs soft-deleted memories", del_06)
 
-TESTS = [DEL_01, DEL_02, DEL_03, DEL_04, DEL_05]
+TESTS = [DEL_01, DEL_02, DEL_03, DEL_04, DEL_05, DEL_06]
 
 
 @pytest.mark.parametrize("test", TESTS, ids=lambda t: t.id)

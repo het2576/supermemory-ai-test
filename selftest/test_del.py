@@ -6,6 +6,7 @@ from pathlib import Path
 import pytest
 
 from src.clock import FakeClock
+from src.adapter import StatusResult
 from src.providers.mock import Bugs, MockConfig, MockProvider
 from src.runner import run_test
 
@@ -104,3 +105,84 @@ def test_deletion_verdict_boundaries_are_exactly_120_and_600(gone_at, want):
     from src.deletion import deletion_verdict
 
     assert deletion_verdict(gone_at) == want
+
+
+# --- DEL-06 ----------------------------------------------------------------------------------
+
+
+def test_del_06_passes_when_the_namespace_delete_really_erases_the_preserved_memory(tmp_path):
+    r = go("DEL-06", tmp_path)
+    assert r.final == "PASS", (r.per_run, [x["notes"] for x in r.records])
+    assert "preserved before the namespace delete" in r.records[0]["notes"]
+
+
+def test_del_06_fails_when_the_namespace_delete_keeps_the_data(tmp_path):
+    r = go("DEL-06", tmp_path, namespace_delete_keeps_data=True)
+    assert r.final == "FAIL" and r.per_run == ["FAIL"] * 3 and "+forgotten" in r.records[0]["notes"]
+
+
+def test_del_06_is_inconclusive_when_the_document_delete_never_clears_the_normal_surfaces(tmp_path):
+    r = go("DEL-06", tmp_path, delete_noop=True)
+    assert r.final == "INCONCLUSIVE" and "DEL-03's question" in r.records[0]["notes"]
+
+
+def test_del_06_is_inconclusive_when_nothing_is_preserved_to_begin_with(tmp_path):
+    clock = FakeClock()
+    p = MockProvider(MockConfig(forgotten_retrievable=False), clock)
+    r = run_test(TESTS["DEL-06"], p, runs=3, clock=clock, results_base=tmp_path, log=lambda s: None)
+    assert r.final == "INCONCLUSIVE" and "nothing for the namespace delete to remove" in r.records[0]["notes"]
+
+
+def test_del_06_catches_data_that_comes_back_after_the_early_probes(tmp_path):
+    # The namespace delete looks effective, then the old data returns 20s later (a restore, a lagging replica).
+    r = go("DEL-06", tmp_path, namespace_data_returns_after_s=20.0)
+    note = r.records[0]["notes"]
+    assert r.final == "FAIL" and "t=30s" in note, note  # the 0s and 5s probes were clean; only the 30s probe caught it
+
+
+class _Resurrecting(MockProvider):
+    """After the namespace delete, one specific surface starts returning the old data again."""
+
+    def __init__(self, surface, *a, **k):
+        super().__init__(*a, **k)
+        self.surface, self.ns_deleted = surface, False
+
+    def delete_scope(self, scope):
+        self.ns_deleted = True
+        return super().delete_scope(scope)
+
+    def profile(self, scope):
+        res = super().profile(scope)
+        if self.ns_deleted and self.surface == "profile":
+            res.entries.append(f"Priya's pet iguana is named {self.last_token}")
+        return res
+
+    def add(self, scope, content, opts=None):
+        if "iguana" in content:
+            self.last_token = content.split("named ")[1].split(".")[0]
+        return super().add(scope, content, opts)
+
+    def status(self, scope, doc_id):
+        if self.ns_deleted and self.surface == "document" and doc_id == self.first_id:
+            return StatusResult(200, {}, "done", "done")
+        return super().status(scope, doc_id)
+
+    def delete(self, scope, doc_ids):
+        self.first_id = doc_ids[0]
+        return super().delete(scope, doc_ids)
+
+
+def _resurrect(tmp_path, surface):
+    clock = FakeClock()
+    p = _Resurrecting(surface, MockConfig(), clock)
+    return run_test(TESTS["DEL-06"], p, runs=1, clock=clock, results_base=tmp_path, log=lambda s: None)
+
+
+def test_del_06_catches_a_profile_entry_that_returns_after_the_namespace_delete(tmp_path):
+    r = _resurrect(tmp_path, "profile")
+    assert r.final == "FAIL" and "via profile" in r.records[0]["notes"]
+
+
+def test_del_06_catches_a_deleted_document_id_that_resolves_again(tmp_path):
+    r = _resurrect(tmp_path, "document")
+    assert r.final == "FAIL" and "document id still resolves" in r.records[0]["notes"]

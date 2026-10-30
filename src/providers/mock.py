@@ -58,6 +58,8 @@ class Bugs:
     forget_noop: bool = False  # forget() reports success but removes nothing
     forget_delay_s: float = 0.0  # a forgotten memory stays visible this long
     forget_leaves_profile: bool = False  # forgotten memories are gone from search but still in the profile
+    namespace_data_returns_after_s: float = 0.0  # delete_scope hides the data, then it comes back this many seconds later
+    namespace_delete_keeps_data: bool = False  # delete_scope reports success but the namespace's data (incl. soft-deleted memories) survives
     mark_untrusted: bool = False  # returned text is wrapped in <untrusted> tags and each item gets a "trust" field
     ignore_threshold: bool = False  # the threshold parameter is accepted but does nothing
     unframed_old_value: bool = False  # "used to X, but now Y" yields a bare "lives in X" memory with no past framing, plus the new fact
@@ -70,6 +72,7 @@ class MockConfig:
     memory_delay_s: float = 1.0  # extra time after done until derived memories exist
     dynamic_memory_delay_s: float | None = None  # same, for documents added without dreaming="instant" (None = same as instant)
     search_ms: float = 50.0  # what last_latency_ms() reports after a search
+    forgotten_retrievable: bool = True  # documented: soft-deleted memories come back with include_forgotten
     memory_rewriter: Callable[[str], str] | None = None  # models the extractor: content -> memory wording
     scorer: Callable[[str, str], float] | None = None  # (query, text) -> similarity; None = every hit scores 0.8
     bugs: Bugs = field(default_factory=Bugs)
@@ -99,8 +102,16 @@ class MockProvider:
         self._searches = 0
         self._log: list[dict[str, Any]] = []
         self._last_ms: float | None = None
+        self._graveyard: dict[str, tuple[dict[str, _Doc], float]] = {}
 
     # --- helpers -----------------------------------------------------------------------------
+
+    def _restore_due(self, scope: str) -> None:
+        """Bug namespace_data_returns_after_s: a deleted namespace's data reappears once its time has come."""
+        entry = self._graveyard.get(scope)
+        if entry and self.clock.now() >= entry[1]:
+            self._docs.setdefault(scope, {}).update(entry[0])
+            del self._graveyard[scope]
 
     def _record(self, method: str, path: str, req: Any, status: int, body: Any) -> None:
         self._log.append(
@@ -241,6 +252,8 @@ class MockProvider:
     def search(self, scope: str, query: str, opts: SearchOptions | None = None) -> SearchResult:
         o = opts or SearchOptions()
         raw_scope, scope = scope, self._resolve(scope)  # type: ignore[assignment]
+        if scope is not None:
+            self._restore_due(scope)
         if scope is None:
             body = {"error": "invalid namespace"}
             self._record("POST", f"/ns/{raw_scope}/search", {"query": query}, 400, body)
@@ -257,6 +270,16 @@ class MockProvider:
                 if o.mode in ("memories", "hybrid") and self._memory_current(s, d):
                     for k, text in enumerate(self._mem_texts(d)):
                         hits.append(SearchHit(id=f"mem_{d.id}" if k == 0 else f"mem_{d.id}.{k}", kind="memory", text=text, score=score(text), is_latest=self._is_latest(s, d), is_inference=False, raw={}))
+                elif (
+                    o.include_forgotten
+                    and self.config.forgotten_retrievable
+                    and o.mode in ("memories", "hybrid")
+                    and self._memory_ready(d)
+                    and (d.deleted_at is not None or d.forgotten_at is not None)
+                    and not self._is_retraction(d)
+                ):
+                    for k, text in enumerate(self._mem_texts(d)):
+                        hits.append(SearchHit(id=f"mem_{d.id}" if k == 0 else f"mem_{d.id}.{k}", kind="memory", text=text, score=score(text), is_latest=False, is_inference=False, raw={}))
         if b.mark_untrusted:
             for h in hits:
                 h.text = f"<untrusted>{h.text}</untrusted>"
@@ -297,6 +320,7 @@ class MockProvider:
 
     def status(self, scope: str, doc_id: str) -> StatusResult | None:
         scope = self._resolve(scope) or scope
+        self._restore_due(scope)
         d = self._docs.get(scope, {}).get(doc_id)
         if d is None or (d.deleted_at is not None and self._gone(d)):
             self._record("GET", f"/ns/{scope}/document/{doc_id}", None, 404, {"error": "not found"})
@@ -309,6 +333,7 @@ class MockProvider:
 
     def profile(self, scope: str) -> ProfileResult:
         scope = self._resolve(scope) or scope
+        self._restore_due(scope)
         scopes = list(self._docs) if self.config.bugs.profile_bleed else [scope] if scope in self._docs else []
         b = self.config.bugs
         entries = [
@@ -360,9 +385,31 @@ class MockProvider:
         self._record("DELETE", f"/ns/{scope}/memories", {"ids": memory_ids}, 200, body)
         return DeleteResult(200, body, count, errors)
 
+    def list_memories(self, scope: str, include_forgotten: bool = False, limit: int = 100) -> tuple[int, Any]:
+        scope = self._resolve(scope) or scope
+        self._restore_due(scope)
+        items = []
+        for d in self._docs.get(scope, {}).values():
+            hidden = d.deleted_at is not None or d.forgotten_at is not None
+            if self._memory_ready(d) and not self._is_retraction(d) and (not hidden or (include_forgotten and self.config.forgotten_retrievable)):
+                items.extend({"id": f"mem_{d.id}", "memory": t, "isForgotten": hidden} for t in self._mem_texts(d))
+        body = {"memories": items}
+        self._record("GET", f"/ns/{scope}/memories", None, 200, body)
+        return 200, body
+
+    def list_documents(self, scope: str, limit: int = 100) -> tuple[int, Any]:
+        scope = self._resolve(scope) or scope
+        body = {"documents": [{"id": d.id, "content": d.content} for d in self._docs.get(scope, {}).values() if d.deleted_at is None]}
+        self._record("GET", f"/ns/{scope}/documents", None, 200, body)
+        return 200, body
+
     def delete_scope(self, scope: str) -> Outcome:
         scope = self._resolve(scope) or scope
-        self._docs.pop(scope, None)
+        b = self.config.bugs
+        if b.namespace_data_returns_after_s and scope in self._docs:
+            self._graveyard[scope] = (self._docs[scope], self.clock.now() + b.namespace_data_returns_after_s)
+        if not b.namespace_delete_keeps_data:
+            self._docs.pop(scope, None)
         self._record("DELETE", f"/ns/{scope}", {}, 200, {"success": True})
         return Outcome(200, {"success": True})
 

@@ -1220,6 +1220,144 @@
       "timeToConsistencySec": null,
       "notes": "instruction: chunks verbatim, memories absent, hybrid verbatim, profile absent; role cues kept none; marking none",
       "rawArtifacts": "smoke/pilot/runs/2026-10-30/POI-01-run1.json"
+    },
+    {
+      "testId": "POI-02",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T19:01:17.894396+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "planted_system",
+          "chunk_found": true,
+          "memory_found": false,
+          "memory_wait_s": 60.44280200000503
+        },
+        {
+          "step": "planted_other_user",
+          "chunk_found": true,
+          "memory_found": true,
+          "memory_wait_s": 0.679659667017404
+        },
+        {
+          "step": "planted_transcript",
+          "chunk_found": true,
+          "memory_found": true,
+          "memory_wait_s": 0.8450256669893861
+        },
+        {
+          "step": "report_system",
+          "chunks": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "SYSTEM",
+              "administrator"
+            ],
+            "marked_in_text": false
+          },
+          "memories": {
+            "returned": false,
+            "form": "absent",
+            "cues_kept": [],
+            "marked_in_text": false
+          },
+          "hybrid": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "SYSTEM",
+              "administrator"
+            ],
+            "marked_in_text": false
+          },
+          "profile": {
+            "returned": false,
+            "form": "absent",
+            "cues_kept": [],
+            "marked_in_text": false
+          }
+        },
+        {
+          "step": "report_other_user",
+          "chunks": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "alice@example.com",
+              "administrator"
+            ],
+            "marked_in_text": false
+          },
+          "memories": {
+            "returned": true,
+            "form": "rewritten",
+            "cues_kept": [
+              "alice@example.com",
+              "administrator"
+            ],
+            "marked_in_text": false
+          },
+          "hybrid": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "alice@example.com",
+              "administrator"
+            ],
+            "marked_in_text": false
+          },
+          "profile": {
+            "returned": true,
+            "form": "rewritten",
+            "cues_kept": [
+              "alice@example.com",
+              "administrator"
+            ],
+            "marked_in_text": false
+          }
+        },
+        {
+          "step": "report_transcript",
+          "chunks": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "assistant:",
+              "user:"
+            ],
+            "marked_in_text": false
+          },
+          "memories": {
+            "returned": true,
+            "form": "rewritten",
+            "cues_kept": [],
+            "marked_in_text": false
+          },
+          "hybrid": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "assistant:",
+              "user:"
+            ],
+            "marked_in_text": false
+          },
+          "profile": {
+            "returned": true,
+            "form": "rewritten",
+            "cues_kept": [],
+            "marked_in_text": false
+          }
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "system: chunks verbatim, memories absent, hybrid verbatim, profile absent; role cues kept ['SYSTEM', 'administrator']; marking none; other_user: chunks verbatim, memories rewritten, hybrid verbatim, profile rewritten; role cues kept ['administrator', 'alice@example.com']; marking none; transcript: chunks verbatim, memories rewritten, hybrid verbatim, profile rewritten; role cues kept ['assistant:', 'user:']; marking none",
+      "rawArtifacts": "smoke/pilot/runs/2026-10-30/POI-02-run1.json"
     }
   ],
   "summary": [
@@ -1358,6 +1496,13 @@
     },
     {
       "testId": "POI-01",
+      "final": "DOCUMENTED",
+      "perRun": [
+        "DOCUMENTED"
+      ]
+    },
+    {
+      "testId": "POI-02",
       "final": "DOCUMENTED",
       "perRun": [
         "DOCUMENTED"
