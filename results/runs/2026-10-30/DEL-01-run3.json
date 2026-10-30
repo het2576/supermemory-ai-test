@@ -1,0 +1,310 @@
+{
+  "record": {
+    "testId": "DEL-01",
+    "provider": "supermemory",
+    "client": "supermemory-python-sdk",
+    "sdkVersion": "5.0.1",
+    "apiVersion": "v5",
+    "date": "2026-10-30T08:42:07.287728+00:00",
+    "run": 3,
+    "checkpoints": [
+      {
+        "step": "add",
+        "http": 200,
+        "id": "1RUQ5Y9u7Yovfke8DUebi6"
+      },
+      {
+        "step": "done",
+        "elapsed_s": 7.972498250019271,
+        "status": "done"
+      },
+      {
+        "step": "searchable_before_delete",
+        "elapsed_s": 0.6538460000010673,
+        "found": true
+      },
+      {
+        "step": "delete",
+        "http": 200,
+        "count": 1,
+        "errors": []
+      },
+      {
+        "t": 0,
+        "canaryPresent": false,
+        "surfaces": []
+      },
+      {
+        "t": 10,
+        "confirm": true,
+        "canaryPresent": false,
+        "surfaces": []
+      }
+    ],
+    "result": "PASS",
+    "timeToConsistencySec": 0.0,
+    "notes": "",
+    "rawArtifacts": "results/runs/2026-10-30/DEL-01-run3.json"
+  },
+  "extra": {
+    "canary": "ZQ-DEL-0f7a1f903e20",
+    "query": "ZQ-DEL-0f7a1f903e20"
+  },
+  "exchanges": [
+    {
+      "t": "2026-10-30T08:41:43",
+      "method": "POST",
+      "path": "/ns/memtrust_del01_538ec5a65f/document",
+      "request_body": {
+        "content": "Field note: the maintenance code for the pump house is ZQ-DEL-0f7a1f903e20. Keep it with the keys."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "1RUQ5Y9u7Yovfke8DUebi6",
+        "status": "queued"
+      },
+      "ms": 917
+    },
+    {
+      "t": "2026-10-30T08:41:43",
+      "method": "GET",
+      "path": "/ns/memtrust_del01_538ec5a65f/document/1RUQ5Y9u7Yovfke8DUebi6",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "1RUQ5Y9u7Yovfke8DUebi6",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:41:42.888Z",
+          "updatedAt": "2026-10-30T08:41:42.888Z",
+          "filepath": null
+        }
+      },
+      "ms": 444
+    },
+    {
+      "t": "2026-10-30T08:41:46",
+      "method": "GET",
+      "path": "/ns/memtrust_del01_538ec5a65f/document/1RUQ5Y9u7Yovfke8DUebi6",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "1RUQ5Y9u7Yovfke8DUebi6",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:41:42.888Z",
+          "updatedAt": "2026-10-30T08:41:42.888Z",
+          "filepath": null
+        }
+      },
+      "ms": 536
+    },
+    {
+      "t": "2026-10-30T08:41:48",
+      "method": "GET",
+      "path": "/ns/memtrust_del01_538ec5a65f/document/1RUQ5Y9u7Yovfke8DUebi6",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "1RUQ5Y9u7Yovfke8DUebi6",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:41:42.888Z",
+          "updatedAt": "2026-10-30T08:41:42.888Z",
+          "filepath": null
+        }
+      },
+      "ms": 548
+    },
+    {
+      "t": "2026-10-30T08:41:51",
+      "method": "GET",
+      "path": "/ns/memtrust_del01_538ec5a65f/document/1RUQ5Y9u7Yovfke8DUebi6",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "1RUQ5Y9u7Yovfke8DUebi6",
+        "title": "Field note: the maintenance code for the pump hous...",
+        "type": "text",
+        "summary": null,
+        "content": "Field note: the maintenance code for the pump house is ZQ-DEL-0f7a1f903e20. Keep it with the keys.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:41:42.888Z",
+          "updatedAt": "2026-10-30T08:41:48.485Z",
+          "filepath": null
+        }
+      },
+      "ms": 407
+    },
+    {
+      "t": "2026-10-30T08:41:51",
+      "method": "POST",
+      "path": "/ns/memtrust_del01_538ec5a65f/search",
+      "request_body": {
+        "query": "ZQ-DEL-0f7a1f903e20",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "e070c73b033a2f9510764c",
+            "chunk": "Field note: the maintenance code for the pump house is ZQ-DEL-0f7a1f903e20. Keep it with the keys.",
+            "metadata": {},
+            "similarity": 0.75016153,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T08:41:48.485Z",
+              "createdAt": "2026-10-30T08:41:42.888Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 156
+      },
+      "ms": 652
+    },
+    {
+      "t": "2026-10-30T08:41:52",
+      "method": "DELETE",
+      "path": "/ns/memtrust_del01_538ec5a65f/document",
+      "request_body": {
+        "ids": [
+          "1RUQ5Y9u7Yovfke8DUebi6"
+        ]
+      },
+      "http_status": 200,
+      "response_body": {
+        "count": 1,
+        "errors": []
+      },
+      "ms": 448
+    },
+    {
+      "t": "2026-10-30T08:41:52",
+      "method": "POST",
+      "path": "/ns/memtrust_del01_538ec5a65f/search",
+      "request_body": {
+        "query": "ZQ-DEL-0f7a1f903e20",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 139
+      },
+      "ms": 555
+    },
+    {
+      "t": "2026-10-30T08:41:53",
+      "method": "POST",
+      "path": "/ns/memtrust_del01_538ec5a65f/search",
+      "request_body": {
+        "query": "ZQ-DEL-0f7a1f903e20",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 149
+      },
+      "ms": 628
+    },
+    {
+      "t": "2026-10-30T08:41:54",
+      "method": "POST",
+      "path": "/ns/memtrust_del01_538ec5a65f/search",
+      "request_body": {
+        "query": "ZQ-DEL-0f7a1f903e20",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 115
+      },
+      "ms": 612
+    },
+    {
+      "t": "2026-10-30T08:42:05",
+      "method": "POST",
+      "path": "/ns/memtrust_del01_538ec5a65f/search",
+      "request_body": {
+        "query": "ZQ-DEL-0f7a1f903e20",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 122
+      },
+      "ms": 1090
+    },
+    {
+      "t": "2026-10-30T08:42:05",
+      "method": "POST",
+      "path": "/ns/memtrust_del01_538ec5a65f/search",
+      "request_body": {
+        "query": "ZQ-DEL-0f7a1f903e20",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 130
+      },
+      "ms": 610
+    },
+    {
+      "t": "2026-10-30T08:42:06",
+      "method": "POST",
+      "path": "/ns/memtrust_del01_538ec5a65f/search",
+      "request_body": {
+        "query": "ZQ-DEL-0f7a1f903e20",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 175
+      },
+      "ms": 873
+    },
+    {
+      "t": "2026-10-30T08:42:07",
+      "method": "DELETE",
+      "path": "/ns/memtrust_del01_538ec5a65f",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_del01_538ec5a65f",
+        "deletedDocumentsCount": 0,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 620
+    }
+  ]
+}

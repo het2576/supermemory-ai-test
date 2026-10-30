@@ -1,0 +1,859 @@
+{
+  "date": "2026-10-30",
+  "records": [
+    {
+      "testId": "DEL-01",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T08:41:15.665926+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "add",
+          "http": 200,
+          "id": "TQT3WwkQxfSyNXBkyJQCte"
+        },
+        {
+          "step": "done",
+          "elapsed_s": 10.327682541974355,
+          "status": "done"
+        },
+        {
+          "step": "searchable_before_delete",
+          "elapsed_s": 0.6670535409939475,
+          "found": true
+        },
+        {
+          "step": "delete",
+          "http": 200,
+          "count": 1,
+          "errors": []
+        },
+        {
+          "t": 0,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "t": 10,
+          "confirm": true,
+          "canaryPresent": false,
+          "surfaces": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": 0.0,
+      "notes": "",
+      "rawArtifacts": "results/runs/2026-10-30/DEL-01-run1.json"
+    },
+    {
+      "testId": "DEL-01",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T08:41:42.275797+00:00",
+      "run": 2,
+      "checkpoints": [
+        {
+          "step": "add",
+          "http": 200,
+          "id": "MphHbF8ydyRGVo7uSMNDcy"
+        },
+        {
+          "step": "done",
+          "elapsed_s": 10.216369958012365,
+          "status": "done"
+        },
+        {
+          "step": "searchable_before_delete",
+          "elapsed_s": 0.5721161670226138,
+          "found": true
+        },
+        {
+          "step": "delete",
+          "http": 200,
+          "count": 1,
+          "errors": []
+        },
+        {
+          "t": 0,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "t": 10,
+          "confirm": true,
+          "canaryPresent": false,
+          "surfaces": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": 0.0,
+      "notes": "",
+      "rawArtifacts": "results/runs/2026-10-30/DEL-01-run2.json"
+    },
+    {
+      "testId": "DEL-01",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T08:42:07.287728+00:00",
+      "run": 3,
+      "checkpoints": [
+        {
+          "step": "add",
+          "http": 200,
+          "id": "1RUQ5Y9u7Yovfke8DUebi6"
+        },
+        {
+          "step": "done",
+          "elapsed_s": 7.972498250019271,
+          "status": "done"
+        },
+        {
+          "step": "searchable_before_delete",
+          "elapsed_s": 0.6538460000010673,
+          "found": true
+        },
+        {
+          "step": "delete",
+          "http": 200,
+          "count": 1,
+          "errors": []
+        },
+        {
+          "t": 0,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "t": 10,
+          "confirm": true,
+          "canaryPresent": false,
+          "surfaces": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": 0.0,
+      "notes": "",
+      "rawArtifacts": "results/runs/2026-10-30/DEL-01-run3.json"
+    },
+    {
+      "testId": "DEL-02",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T08:42:31.867667+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "add",
+          "http": 200,
+          "id": "HrCHh2BxQnLxCo7CyBcdE4"
+        },
+        {
+          "step": "done",
+          "elapsed_s": 8.015800082997885,
+          "status": "done"
+        },
+        {
+          "step": "searchable_before_delete",
+          "elapsed_s": 0.6884145000076387,
+          "found": true
+        },
+        {
+          "step": "delete",
+          "http": 200,
+          "count": 1,
+          "errors": []
+        },
+        {
+          "t": 0,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "t": 10,
+          "confirm": true,
+          "canaryPresent": false,
+          "surfaces": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": 0.0,
+      "notes": "",
+      "rawArtifacts": "results/runs/2026-10-30/DEL-02-run1.json"
+    },
+    {
+      "testId": "DEL-02",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T08:43:00.772861+00:00",
+      "run": 2,
+      "checkpoints": [
+        {
+          "step": "add",
+          "http": 200,
+          "id": "xA3QdAkv9RNAoxnSB9Cra5"
+        },
+        {
+          "step": "done",
+          "elapsed_s": 12.613722749985754,
+          "status": "done"
+        },
+        {
+          "step": "searchable_before_delete",
+          "elapsed_s": 0.6788022499822546,
+          "found": true
+        },
+        {
+          "step": "delete",
+          "http": 200,
+          "count": 1,
+          "errors": []
+        },
+        {
+          "t": 0,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "t": 10,
+          "confirm": true,
+          "canaryPresent": false,
+          "surfaces": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": 0.0,
+      "notes": "",
+      "rawArtifacts": "results/runs/2026-10-30/DEL-02-run2.json"
+    },
+    {
+      "testId": "DEL-02",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T08:43:24.803349+00:00",
+      "run": 3,
+      "checkpoints": [
+        {
+          "step": "add",
+          "http": 200,
+          "id": "phCyMkG1styjDPD9oNsJgx"
+        },
+        {
+          "step": "done",
+          "elapsed_s": 7.772475708014099,
+          "status": "done"
+        },
+        {
+          "step": "searchable_before_delete",
+          "elapsed_s": 0.5304929580015596,
+          "found": true
+        },
+        {
+          "step": "delete",
+          "http": 200,
+          "count": 1,
+          "errors": []
+        },
+        {
+          "t": 0,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "t": 10,
+          "confirm": true,
+          "canaryPresent": false,
+          "surfaces": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": 0.0,
+      "notes": "",
+      "rawArtifacts": "results/runs/2026-10-30/DEL-02-run3.json"
+    },
+    {
+      "testId": "DEL-03",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T08:44:06.688294+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "add",
+          "http": 200,
+          "id": "LoEtxC5s5PLZxyTd3YfM26"
+        },
+        {
+          "step": "done_and_dreamed",
+          "elapsed_s": 22.835088000021642,
+          "status": "done",
+          "dreaming": "done"
+        },
+        {
+          "step": "memory_before_delete",
+          "elapsed_s": 0.7580542080104351,
+          "found": true
+        },
+        {
+          "step": "profile_before",
+          "token_in_profile": true
+        },
+        {
+          "step": "delete",
+          "http": 200,
+          "count": 1,
+          "errors": []
+        },
+        {
+          "t": 0,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "t": 10,
+          "confirm": true,
+          "canaryPresent": false,
+          "surfaces": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": 0.0,
+      "notes": "",
+      "rawArtifacts": "results/runs/2026-10-30/DEL-03-run1.json"
+    },
+    {
+      "testId": "DEL-03",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T08:44:49.127107+00:00",
+      "run": 2,
+      "checkpoints": [
+        {
+          "step": "add",
+          "http": 200,
+          "id": "cvKVehuzp6ea3EFpeckBd3"
+        },
+        {
+          "step": "done_and_dreamed",
+          "elapsed_s": 23.173097124992637,
+          "status": "done",
+          "dreaming": "done"
+        },
+        {
+          "step": "memory_before_delete",
+          "elapsed_s": 0.6848694159998558,
+          "found": true
+        },
+        {
+          "step": "profile_before",
+          "token_in_profile": true
+        },
+        {
+          "step": "delete",
+          "http": 200,
+          "count": 1,
+          "errors": []
+        },
+        {
+          "t": 0,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "t": 10,
+          "confirm": true,
+          "canaryPresent": false,
+          "surfaces": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": 0.0,
+      "notes": "",
+      "rawArtifacts": "results/runs/2026-10-30/DEL-03-run2.json"
+    },
+    {
+      "testId": "DEL-03",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T08:45:32.366160+00:00",
+      "run": 3,
+      "checkpoints": [
+        {
+          "step": "add",
+          "http": 200,
+          "id": "r23V3ZLJario9vZh5xMWui"
+        },
+        {
+          "step": "done_and_dreamed",
+          "elapsed_s": 23.673993458010955,
+          "status": "done",
+          "dreaming": "done"
+        },
+        {
+          "step": "memory_before_delete",
+          "elapsed_s": 0.8917664589826018,
+          "found": true
+        },
+        {
+          "step": "profile_before",
+          "token_in_profile": true
+        },
+        {
+          "step": "delete",
+          "http": 200,
+          "count": 1,
+          "errors": []
+        },
+        {
+          "t": 0,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "t": 10,
+          "confirm": true,
+          "canaryPresent": false,
+          "surfaces": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": 0.0,
+      "notes": "",
+      "rawArtifacts": "results/runs/2026-10-30/DEL-03-run3.json"
+    },
+    {
+      "testId": "DEL-04",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T08:45:43.146818+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "add",
+          "http": 200,
+          "id": "MdgwmRWq7geJmAdduzKXcN"
+        },
+        {
+          "step": "status_before_delete",
+          "status": "queued"
+        },
+        {
+          "step": "delete_while_processing",
+          "http": 200,
+          "count": 0,
+          "errors": [
+            {
+              "id": "MdgwmRWq7geJmAdduzKXcN",
+              "error": "Document is still processing"
+            }
+          ]
+        },
+        {
+          "step": "done_after_rejected_delete",
+          "elapsed_s": 7.908351124991896,
+          "status": "done"
+        },
+        {
+          "step": "searchable_after_rejected_delete",
+          "elapsed_s": 0.5415925830020569,
+          "found": true
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "rejected as documented; document completed intact",
+      "rawArtifacts": "results/runs/2026-10-30/DEL-04-run1.json"
+    },
+    {
+      "testId": "DEL-04",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T08:45:53.867945+00:00",
+      "run": 2,
+      "checkpoints": [
+        {
+          "step": "add",
+          "http": 200,
+          "id": "nugc24Gc11chPeDEZQ7TMC"
+        },
+        {
+          "step": "status_before_delete",
+          "status": "queued"
+        },
+        {
+          "step": "delete_while_processing",
+          "http": 200,
+          "count": 0,
+          "errors": [
+            {
+              "id": "nugc24Gc11chPeDEZQ7TMC",
+              "error": "Document is still processing"
+            }
+          ]
+        },
+        {
+          "step": "done_after_rejected_delete",
+          "elapsed_s": 7.783545500016771,
+          "status": "done"
+        },
+        {
+          "step": "searchable_after_rejected_delete",
+          "elapsed_s": 0.5805003749846946,
+          "found": true
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "rejected as documented; document completed intact",
+      "rawArtifacts": "results/runs/2026-10-30/DEL-04-run2.json"
+    },
+    {
+      "testId": "DEL-04",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T08:46:02.193029+00:00",
+      "run": 3,
+      "checkpoints": [
+        {
+          "step": "add",
+          "http": 200,
+          "id": "ASXbSBqP54kSGHwmbUvWeW"
+        },
+        {
+          "step": "status_before_delete",
+          "status": "queued"
+        },
+        {
+          "step": "delete_while_processing",
+          "http": 200,
+          "count": 0,
+          "errors": [
+            {
+              "id": "ASXbSBqP54kSGHwmbUvWeW",
+              "error": "Document is still processing"
+            }
+          ]
+        },
+        {
+          "step": "done_after_rejected_delete",
+          "elapsed_s": 5.32485862498288,
+          "status": "done"
+        },
+        {
+          "step": "searchable_after_rejected_delete",
+          "elapsed_s": 0.5575132920057513,
+          "found": true
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "rejected as documented; document completed intact",
+      "rawArtifacts": "results/runs/2026-10-30/DEL-04-run3.json"
+    },
+    {
+      "testId": "DEL-05",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T08:46:49.100260+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "add",
+          "http": 200,
+          "id": "memtrust-del05-d9b7b88e"
+        },
+        {
+          "step": "done",
+          "elapsed_s": 7.826118333003251,
+          "status": "done"
+        },
+        {
+          "step": "searchable_before_delete",
+          "elapsed_s": 0.8684985409781802,
+          "found": true
+        },
+        {
+          "step": "delete",
+          "count": 1,
+          "errors": []
+        },
+        {
+          "t": 0,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "t": 10,
+          "confirm": true,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "step": "readd_same_id",
+          "http": 200,
+          "id": "memtrust-del05-d9b7b88e"
+        },
+        {
+          "step": "searchable_after_readd_same_id",
+          "elapsed_s": 0.566563916974701,
+          "found": true
+        },
+        {
+          "step": "chunk_copies",
+          "n": 1
+        },
+        {
+          "step": "add",
+          "http": 200,
+          "id": "Z8rdYTWGRXaStnc7DiECJH",
+          "variant": "B"
+        },
+        {
+          "step": "done",
+          "elapsed_s": 7.98789391599712,
+          "status": "done",
+          "variant": "B"
+        },
+        {
+          "step": "searchable_before_delete",
+          "elapsed_s": 0.544107666995842,
+          "found": true,
+          "variant": "B"
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": 0.0,
+      "notes": "",
+      "rawArtifacts": "results/runs/2026-10-30/DEL-05-run1.json"
+    },
+    {
+      "testId": "DEL-05",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T08:47:35.746997+00:00",
+      "run": 2,
+      "checkpoints": [
+        {
+          "step": "add",
+          "http": 200,
+          "id": "memtrust-del05-871ded9a"
+        },
+        {
+          "step": "done",
+          "elapsed_s": 7.62692987502669,
+          "status": "done"
+        },
+        {
+          "step": "searchable_before_delete",
+          "elapsed_s": 0.507739708002191,
+          "found": true
+        },
+        {
+          "step": "delete",
+          "count": 1,
+          "errors": []
+        },
+        {
+          "t": 0,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "t": 10,
+          "confirm": true,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "step": "readd_same_id",
+          "http": 200,
+          "id": "memtrust-del05-871ded9a"
+        },
+        {
+          "step": "searchable_after_readd_same_id",
+          "elapsed_s": 1.4284457080066204,
+          "found": true
+        },
+        {
+          "step": "chunk_copies",
+          "n": 1
+        },
+        {
+          "step": "add",
+          "http": 200,
+          "id": "15QfPHEAP7erK7cKqtmzA3",
+          "variant": "B"
+        },
+        {
+          "step": "done",
+          "elapsed_s": 7.78935329199885,
+          "status": "done",
+          "variant": "B"
+        },
+        {
+          "step": "searchable_before_delete",
+          "elapsed_s": 0.7206918750016484,
+          "found": true,
+          "variant": "B"
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": 0.0,
+      "notes": "",
+      "rawArtifacts": "results/runs/2026-10-30/DEL-05-run2.json"
+    },
+    {
+      "testId": "DEL-05",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T08:48:20.025989+00:00",
+      "run": 3,
+      "checkpoints": [
+        {
+          "step": "add",
+          "http": 200,
+          "id": "memtrust-del05-ee458c49"
+        },
+        {
+          "step": "done",
+          "elapsed_s": 7.796023541974137,
+          "status": "done"
+        },
+        {
+          "step": "searchable_before_delete",
+          "elapsed_s": 0.5351575420063455,
+          "found": true
+        },
+        {
+          "step": "delete",
+          "count": 1,
+          "errors": []
+        },
+        {
+          "t": 0,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "t": 10,
+          "confirm": true,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "step": "readd_same_id",
+          "http": 200,
+          "id": "memtrust-del05-ee458c49"
+        },
+        {
+          "step": "searchable_after_readd_same_id",
+          "elapsed_s": 0.6148371669987682,
+          "found": true
+        },
+        {
+          "step": "chunk_copies",
+          "n": 1
+        },
+        {
+          "step": "add",
+          "http": 200,
+          "id": "v2DhBL5EYnpCb4kr5dyUER",
+          "variant": "B"
+        },
+        {
+          "step": "done",
+          "elapsed_s": 7.8392391669913195,
+          "status": "done",
+          "variant": "B"
+        },
+        {
+          "step": "searchable_before_delete",
+          "elapsed_s": 0.5876843749720138,
+          "found": true,
+          "variant": "B"
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": 0.0,
+      "notes": "",
+      "rawArtifacts": "results/runs/2026-10-30/DEL-05-run3.json"
+    }
+  ],
+  "summary": [
+    {
+      "testId": "DEL-01",
+      "final": "PASS",
+      "perRun": [
+        "PASS",
+        "PASS",
+        "PASS"
+      ]
+    },
+    {
+      "testId": "DEL-02",
+      "final": "PASS",
+      "perRun": [
+        "PASS",
+        "PASS",
+        "PASS"
+      ]
+    },
+    {
+      "testId": "DEL-03",
+      "final": "PASS",
+      "perRun": [
+        "PASS",
+        "PASS",
+        "PASS"
+      ]
+    },
+    {
+      "testId": "DEL-04",
+      "final": "PASS",
+      "perRun": [
+        "PASS",
+        "PASS",
+        "PASS"
+      ]
+    },
+    {
+      "testId": "DEL-05",
+      "final": "PASS",
+      "perRun": [
+        "PASS",
+        "PASS",
+        "PASS"
+      ]
+    }
+  ]
+}

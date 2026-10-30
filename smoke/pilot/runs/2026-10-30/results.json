@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-30",
+  "records": [
+    {
+      "testId": "DEL-01",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T08:40:35.433240+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "add",
+          "http": 200,
+          "id": "KEmoUwDnPAaEBTxXH6kccM"
+        },
+        {
+          "step": "done",
+          "elapsed_s": 8.988935374974972,
+          "status": "done"
+        },
+        {
+          "step": "searchable_before_delete",
+          "elapsed_s": 0.6267192910017911,
+          "found": true
+        },
+        {
+          "step": "delete",
+          "http": 200,
+          "count": 1,
+          "errors": []
+        },
+        {
+          "t": 0,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "t": 10,
+          "confirm": true,
+          "canaryPresent": false,
+          "surfaces": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": 0.0,
+      "notes": "",
+      "rawArtifacts": "smoke/pilot/runs/2026-10-30/DEL-01-run1.json"
+    }
+  ],
+  "summary": [
+    {
+      "testId": "DEL-01",
+      "final": "PASS",
+      "perRun": [
+        "PASS"
+      ]
+    }
+  ]
+}

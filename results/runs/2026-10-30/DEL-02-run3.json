@@ -1,0 +1,311 @@
+{
+  "record": {
+    "testId": "DEL-02",
+    "provider": "supermemory",
+    "client": "supermemory-python-sdk",
+    "sdkVersion": "5.0.1",
+    "apiVersion": "v5",
+    "date": "2026-10-30T08:43:24.803349+00:00",
+    "run": 3,
+    "checkpoints": [
+      {
+        "step": "add",
+        "http": 200,
+        "id": "phCyMkG1styjDPD9oNsJgx"
+      },
+      {
+        "step": "done",
+        "elapsed_s": 7.772475708014099,
+        "status": "done"
+      },
+      {
+        "step": "searchable_before_delete",
+        "elapsed_s": 0.5304929580015596,
+        "found": true
+      },
+      {
+        "step": "delete",
+        "http": 200,
+        "count": 1,
+        "errors": []
+      },
+      {
+        "t": 0,
+        "canaryPresent": false,
+        "surfaces": []
+      },
+      {
+        "t": 10,
+        "confirm": true,
+        "canaryPresent": false,
+        "surfaces": []
+      }
+    ],
+    "result": "PASS",
+    "timeToConsistencySec": 0.0,
+    "notes": "",
+    "rawArtifacts": "results/runs/2026-10-30/DEL-02-run3.json"
+  },
+  "extra": {
+    "canary": "ZQ-DEL-405b8fb068da",
+    "place": "Quenmoorb068da",
+    "query": "Who runs the annual lights celebration in that village and when does it begin?"
+  },
+  "exchanges": [
+    {
+      "t": "2026-10-30T08:43:01",
+      "method": "POST",
+      "path": "/ns/memtrust_del02_8f4ddec494/document",
+      "request_body": {
+        "content": "The yearly lantern festival in the village of Quenmoorb068da is organised by Marisol Vance and starts at dusk. Reference ZQ-DEL-405b8fb068da."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "phCyMkG1styjDPD9oNsJgx",
+        "status": "queued"
+      },
+      "ms": 970
+    },
+    {
+      "t": "2026-10-30T08:43:02",
+      "method": "GET",
+      "path": "/ns/memtrust_del02_8f4ddec494/document/phCyMkG1styjDPD9oNsJgx",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "phCyMkG1styjDPD9oNsJgx",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:43:01.526Z",
+          "updatedAt": "2026-10-30T08:43:01.526Z",
+          "filepath": null
+        }
+      },
+      "ms": 423
+    },
+    {
+      "t": "2026-10-30T08:43:04",
+      "method": "GET",
+      "path": "/ns/memtrust_del02_8f4ddec494/document/phCyMkG1styjDPD9oNsJgx",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "phCyMkG1styjDPD9oNsJgx",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:43:01.526Z",
+          "updatedAt": "2026-10-30T08:43:01.526Z",
+          "filepath": null
+        }
+      },
+      "ms": 552
+    },
+    {
+      "t": "2026-10-30T08:43:07",
+      "method": "GET",
+      "path": "/ns/memtrust_del02_8f4ddec494/document/phCyMkG1styjDPD9oNsJgx",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "phCyMkG1styjDPD9oNsJgx",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:43:01.526Z",
+          "updatedAt": "2026-10-30T08:43:01.526Z",
+          "filepath": null
+        }
+      },
+      "ms": 372
+    },
+    {
+      "t": "2026-10-30T08:43:09",
+      "method": "GET",
+      "path": "/ns/memtrust_del02_8f4ddec494/document/phCyMkG1styjDPD9oNsJgx",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "phCyMkG1styjDPD9oNsJgx",
+        "title": "The yearly lantern festival in the village of Quen...",
+        "type": "text",
+        "summary": null,
+        "content": "The yearly lantern festival in the village of Quenmoorb068da is organised by Marisol Vance and starts at dusk. Reference ZQ-DEL-405b8fb068da.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:43:01.526Z",
+          "updatedAt": "2026-10-30T08:43:08.045Z",
+          "filepath": null
+        }
+      },
+      "ms": 396
+    },
+    {
+      "t": "2026-10-30T08:43:10",
+      "method": "POST",
+      "path": "/ns/memtrust_del02_8f4ddec494/search",
+      "request_body": {
+        "query": "Who runs the annual lights celebration in that village and when does it begin?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "ec95f1c8b571ee1ceed2f6",
+            "chunk": "The yearly lantern festival in the village of Quenmoorb068da is organised by Marisol Vance and starts at dusk. Reference ZQ-DEL-405b8fb068da.",
+            "metadata": {},
+            "similarity": 0.62577194,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T08:43:08.045Z",
+              "createdAt": "2026-10-30T08:43:01.526Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 142
+      },
+      "ms": 528
+    },
+    {
+      "t": "2026-10-30T08:43:10",
+      "method": "DELETE",
+      "path": "/ns/memtrust_del02_8f4ddec494/document",
+      "request_body": {
+        "ids": [
+          "phCyMkG1styjDPD9oNsJgx"
+        ]
+      },
+      "http_status": 200,
+      "response_body": {
+        "count": 1,
+        "errors": []
+      },
+      "ms": 483
+    },
+    {
+      "t": "2026-10-30T08:43:11",
+      "method": "POST",
+      "path": "/ns/memtrust_del02_8f4ddec494/search",
+      "request_body": {
+        "query": "Who runs the annual lights celebration in that village and when does it begin?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 110
+      },
+      "ms": 509
+    },
+    {
+      "t": "2026-10-30T08:43:11",
+      "method": "POST",
+      "path": "/ns/memtrust_del02_8f4ddec494/search",
+      "request_body": {
+        "query": "Who runs the annual lights celebration in that village and when does it begin?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 126
+      },
+      "ms": 511
+    },
+    {
+      "t": "2026-10-30T08:43:12",
+      "method": "POST",
+      "path": "/ns/memtrust_del02_8f4ddec494/search",
+      "request_body": {
+        "query": "Who runs the annual lights celebration in that village and when does it begin?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 155
+      },
+      "ms": 549
+    },
+    {
+      "t": "2026-10-30T08:43:22",
+      "method": "POST",
+      "path": "/ns/memtrust_del02_8f4ddec494/search",
+      "request_body": {
+        "query": "Who runs the annual lights celebration in that village and when does it begin?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 140
+      },
+      "ms": 742
+    },
+    {
+      "t": "2026-10-30T08:43:23",
+      "method": "POST",
+      "path": "/ns/memtrust_del02_8f4ddec494/search",
+      "request_body": {
+        "query": "Who runs the annual lights celebration in that village and when does it begin?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 121
+      },
+      "ms": 787
+    },
+    {
+      "t": "2026-10-30T08:43:24",
+      "method": "POST",
+      "path": "/ns/memtrust_del02_8f4ddec494/search",
+      "request_body": {
+        "query": "Who runs the annual lights celebration in that village and when does it begin?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 133
+      },
+      "ms": 642
+    },
+    {
+      "t": "2026-10-30T08:43:24",
+      "method": "DELETE",
+      "path": "/ns/memtrust_del02_8f4ddec494",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_del02_8f4ddec494",
+        "deletedDocumentsCount": 0,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 511
+    }
+  ]
+}

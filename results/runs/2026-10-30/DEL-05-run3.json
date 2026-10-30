@@ -1,0 +1,657 @@
+{
+  "record": {
+    "testId": "DEL-05",
+    "provider": "supermemory",
+    "client": "supermemory-python-sdk",
+    "sdkVersion": "5.0.1",
+    "apiVersion": "v5",
+    "date": "2026-10-30T08:48:20.025989+00:00",
+    "run": 3,
+    "checkpoints": [
+      {
+        "step": "add",
+        "http": 200,
+        "id": "memtrust-del05-ee458c49"
+      },
+      {
+        "step": "done",
+        "elapsed_s": 7.796023541974137,
+        "status": "done"
+      },
+      {
+        "step": "searchable_before_delete",
+        "elapsed_s": 0.5351575420063455,
+        "found": true
+      },
+      {
+        "step": "delete",
+        "count": 1,
+        "errors": []
+      },
+      {
+        "t": 0,
+        "canaryPresent": false,
+        "surfaces": []
+      },
+      {
+        "t": 10,
+        "confirm": true,
+        "canaryPresent": false,
+        "surfaces": []
+      },
+      {
+        "step": "readd_same_id",
+        "http": 200,
+        "id": "memtrust-del05-ee458c49"
+      },
+      {
+        "step": "searchable_after_readd_same_id",
+        "elapsed_s": 0.6148371669987682,
+        "found": true
+      },
+      {
+        "step": "chunk_copies",
+        "n": 1
+      },
+      {
+        "step": "add",
+        "http": 200,
+        "id": "v2DhBL5EYnpCb4kr5dyUER",
+        "variant": "B"
+      },
+      {
+        "step": "done",
+        "elapsed_s": 7.8392391669913195,
+        "status": "done",
+        "variant": "B"
+      },
+      {
+        "step": "searchable_before_delete",
+        "elapsed_s": 0.5876843749720138,
+        "found": true,
+        "variant": "B"
+      }
+    ],
+    "result": "PASS",
+    "timeToConsistencySec": 0.0,
+    "notes": "",
+    "rawArtifacts": "results/runs/2026-10-30/DEL-05-run3.json"
+  },
+  "extra": {
+    "canary": "ZQ-DEL-352eee458c49",
+    "caller_id": "memtrust-del05-ee458c49",
+    "chunk_copies_after_readd": 1
+  },
+  "exchanges": [
+    {
+      "t": "2026-10-30T08:47:36",
+      "method": "POST",
+      "path": "/ns/memtrust_del05a_25aea9de26/document",
+      "request_body": {
+        "content": "Archive note: the vault reference number is ZQ-DEL-352eee458c49.",
+        "id": "memtrust-del05-ee458c49"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "memtrust-del05-ee458c49",
+        "status": "queued"
+      },
+      "ms": 992
+    },
+    {
+      "t": "2026-10-30T08:47:37",
+      "method": "GET",
+      "path": "/ns/memtrust_del05a_25aea9de26/document/memtrust-del05-ee458c49",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "memtrust-del05-ee458c49",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:47:36.440Z",
+          "updatedAt": "2026-10-30T08:47:36.440Z",
+          "filepath": null
+        }
+      },
+      "ms": 444
+    },
+    {
+      "t": "2026-10-30T08:47:39",
+      "method": "GET",
+      "path": "/ns/memtrust_del05a_25aea9de26/document/memtrust-del05-ee458c49",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "memtrust-del05-ee458c49",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:47:36.440Z",
+          "updatedAt": "2026-10-30T08:47:36.440Z",
+          "filepath": null
+        }
+      },
+      "ms": 462
+    },
+    {
+      "t": "2026-10-30T08:47:42",
+      "method": "GET",
+      "path": "/ns/memtrust_del05a_25aea9de26/document/memtrust-del05-ee458c49",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "memtrust-del05-ee458c49",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:47:36.440Z",
+          "updatedAt": "2026-10-30T08:47:36.440Z",
+          "filepath": null
+        }
+      },
+      "ms": 428
+    },
+    {
+      "t": "2026-10-30T08:47:44",
+      "method": "GET",
+      "path": "/ns/memtrust_del05a_25aea9de26/document/memtrust-del05-ee458c49",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "memtrust-del05-ee458c49",
+        "title": "Archive note: the vault reference number is ZQ-DEL...",
+        "type": "text",
+        "summary": null,
+        "content": "Archive note: the vault reference number is ZQ-DEL-352eee458c49.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:47:36.440Z",
+          "updatedAt": "2026-10-30T08:47:42.306Z",
+          "filepath": null
+        }
+      },
+      "ms": 428
+    },
+    {
+      "t": "2026-10-30T08:47:45",
+      "method": "POST",
+      "path": "/ns/memtrust_del05a_25aea9de26/search",
+      "request_body": {
+        "query": "ZQ-DEL-352eee458c49",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "dc8ecf693c31bc2d98111e",
+            "chunk": "Archive note: the vault reference number is ZQ-DEL-352eee458c49.",
+            "metadata": {},
+            "similarity": 0.82830471,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T08:47:42.306Z",
+              "createdAt": "2026-10-30T08:47:36.440Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 121
+      },
+      "ms": 533
+    },
+    {
+      "t": "2026-10-30T08:47:45",
+      "method": "DELETE",
+      "path": "/ns/memtrust_del05a_25aea9de26/document",
+      "request_body": {
+        "ids": [
+          "memtrust-del05-ee458c49"
+        ]
+      },
+      "http_status": 200,
+      "response_body": {
+        "count": 1,
+        "errors": []
+      },
+      "ms": 645
+    },
+    {
+      "t": "2026-10-30T08:47:46",
+      "method": "POST",
+      "path": "/ns/memtrust_del05a_25aea9de26/search",
+      "request_body": {
+        "query": "ZQ-DEL-352eee458c49",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 150
+      },
+      "ms": 716
+    },
+    {
+      "t": "2026-10-30T08:47:46",
+      "method": "POST",
+      "path": "/ns/memtrust_del05a_25aea9de26/search",
+      "request_body": {
+        "query": "ZQ-DEL-352eee458c49",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 145
+      },
+      "ms": 533
+    },
+    {
+      "t": "2026-10-30T08:47:47",
+      "method": "POST",
+      "path": "/ns/memtrust_del05a_25aea9de26/search",
+      "request_body": {
+        "query": "ZQ-DEL-352eee458c49",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 131
+      },
+      "ms": 687
+    },
+    {
+      "t": "2026-10-30T08:47:58",
+      "method": "POST",
+      "path": "/ns/memtrust_del05a_25aea9de26/search",
+      "request_body": {
+        "query": "ZQ-DEL-352eee458c49",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 120
+      },
+      "ms": 702
+    },
+    {
+      "t": "2026-10-30T08:47:58",
+      "method": "POST",
+      "path": "/ns/memtrust_del05a_25aea9de26/search",
+      "request_body": {
+        "query": "ZQ-DEL-352eee458c49",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 125
+      },
+      "ms": 558
+    },
+    {
+      "t": "2026-10-30T08:47:59",
+      "method": "POST",
+      "path": "/ns/memtrust_del05a_25aea9de26/search",
+      "request_body": {
+        "query": "ZQ-DEL-352eee458c49",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 128
+      },
+      "ms": 612
+    },
+    {
+      "t": "2026-10-30T08:48:00",
+      "method": "POST",
+      "path": "/ns/memtrust_del05a_25aea9de26/document",
+      "request_body": {
+        "content": "Archive note: the vault reference number is ZQ-DEL-352eee458c49.",
+        "id": "memtrust-del05-ee458c49"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "memtrust-del05-ee458c49",
+        "status": "queued"
+      },
+      "ms": 1007
+    },
+    {
+      "t": "2026-10-30T08:48:00",
+      "method": "GET",
+      "path": "/ns/memtrust_del05a_25aea9de26/document/memtrust-del05-ee458c49",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "memtrust-del05-ee458c49",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:48:00.337Z",
+          "updatedAt": "2026-10-30T08:48:00.337Z",
+          "filepath": null
+        }
+      },
+      "ms": 425
+    },
+    {
+      "t": "2026-10-30T08:48:03",
+      "method": "GET",
+      "path": "/ns/memtrust_del05a_25aea9de26/document/memtrust-del05-ee458c49",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "memtrust-del05-ee458c49",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:48:00.337Z",
+          "updatedAt": "2026-10-30T08:48:00.337Z",
+          "filepath": null
+        }
+      },
+      "ms": 391
+    },
+    {
+      "t": "2026-10-30T08:48:05",
+      "method": "GET",
+      "path": "/ns/memtrust_del05a_25aea9de26/document/memtrust-del05-ee458c49",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "memtrust-del05-ee458c49",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:48:00.337Z",
+          "updatedAt": "2026-10-30T08:48:00.337Z",
+          "filepath": null
+        }
+      },
+      "ms": 499
+    },
+    {
+      "t": "2026-10-30T08:48:08",
+      "method": "GET",
+      "path": "/ns/memtrust_del05a_25aea9de26/document/memtrust-del05-ee458c49",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "memtrust-del05-ee458c49",
+        "title": "Archive note: the vault reference number is ZQ-DEL...",
+        "type": "text",
+        "summary": null,
+        "content": "Archive note: the vault reference number is ZQ-DEL-352eee458c49.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:48:00.337Z",
+          "updatedAt": "2026-10-30T08:48:06.866Z",
+          "filepath": null
+        }
+      },
+      "ms": 446
+    },
+    {
+      "t": "2026-10-30T08:48:08",
+      "method": "POST",
+      "path": "/ns/memtrust_del05a_25aea9de26/search",
+      "request_body": {
+        "query": "ZQ-DEL-352eee458c49",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "f341f84245149bee0e9444",
+            "chunk": "Archive note: the vault reference number is ZQ-DEL-352eee458c49.",
+            "metadata": {},
+            "similarity": 0.82830471,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T08:48:06.866Z",
+              "createdAt": "2026-10-30T08:48:00.337Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 117
+      },
+      "ms": 612
+    },
+    {
+      "t": "2026-10-30T08:48:09",
+      "method": "POST",
+      "path": "/ns/memtrust_del05a_25aea9de26/search",
+      "request_body": {
+        "query": "ZQ-DEL-352eee458c49",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "f341f84245149bee0e9444",
+            "chunk": "Archive note: the vault reference number is ZQ-DEL-352eee458c49.",
+            "metadata": {},
+            "similarity": 0.82830471,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T08:48:06.866Z",
+              "createdAt": "2026-10-30T08:48:00.337Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 145
+      },
+      "ms": 567
+    },
+    {
+      "t": "2026-10-30T08:48:10",
+      "method": "POST",
+      "path": "/ns/memtrust_del05b_c96c278c30/document",
+      "request_body": {
+        "content": "Archive note: the vault reference number is ZQ-DEL-352eee458c49."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "v2DhBL5EYnpCb4kr5dyUER",
+        "status": "queued"
+      },
+      "ms": 963
+    },
+    {
+      "t": "2026-10-30T08:48:10",
+      "method": "GET",
+      "path": "/ns/memtrust_del05b_c96c278c30/document/v2DhBL5EYnpCb4kr5dyUER",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "v2DhBL5EYnpCb4kr5dyUER",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:48:10.245Z",
+          "updatedAt": "2026-10-30T08:48:10.245Z",
+          "filepath": null
+        }
+      },
+      "ms": 408
+    },
+    {
+      "t": "2026-10-30T08:48:13",
+      "method": "GET",
+      "path": "/ns/memtrust_del05b_c96c278c30/document/v2DhBL5EYnpCb4kr5dyUER",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "v2DhBL5EYnpCb4kr5dyUER",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:48:10.245Z",
+          "updatedAt": "2026-10-30T08:48:10.245Z",
+          "filepath": null
+        }
+      },
+      "ms": 552
+    },
+    {
+      "t": "2026-10-30T08:48:15",
+      "method": "GET",
+      "path": "/ns/memtrust_del05b_c96c278c30/document/v2DhBL5EYnpCb4kr5dyUER",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "v2DhBL5EYnpCb4kr5dyUER",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:48:10.245Z",
+          "updatedAt": "2026-10-30T08:48:10.245Z",
+          "filepath": null
+        }
+      },
+      "ms": 442
+    },
+    {
+      "t": "2026-10-30T08:48:18",
+      "method": "GET",
+      "path": "/ns/memtrust_del05b_c96c278c30/document/v2DhBL5EYnpCb4kr5dyUER",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "v2DhBL5EYnpCb4kr5dyUER",
+        "title": "Archive note: the vault reference number is ZQ-DEL...",
+        "type": "text",
+        "summary": null,
+        "content": "Archive note: the vault reference number is ZQ-DEL-352eee458c49.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:48:10.245Z",
+          "updatedAt": "2026-10-30T08:48:16.205Z",
+          "filepath": null
+        }
+      },
+      "ms": 408
+    },
+    {
+      "t": "2026-10-30T08:48:18",
+      "method": "POST",
+      "path": "/ns/memtrust_del05b_c96c278c30/search",
+      "request_body": {
+        "query": "ZQ-DEL-352eee458c49",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "e19f1cd1bf4e7a0f0ef7cf",
+            "chunk": "Archive note: the vault reference number is ZQ-DEL-352eee458c49.",
+            "metadata": {},
+            "similarity": 0.82830471,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T08:48:16.205Z",
+              "createdAt": "2026-10-30T08:48:10.245Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 140
+      },
+      "ms": 586
+    },
+    {
+      "t": "2026-10-30T08:48:19",
+      "method": "DELETE",
+      "path": "/ns/memtrust_del05a_25aea9de26",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_del05a_25aea9de26",
+        "deletedDocumentsCount": 1,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 584
+    },
+    {
+      "t": "2026-10-30T08:48:20",
+      "method": "DELETE",
+      "path": "/ns/memtrust_del05b_c96c278c30",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_del05b_c96c278c30",
+        "deletedDocumentsCount": 1,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 510
+    }
+  ]
+}

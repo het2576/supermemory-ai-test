@@ -189,6 +189,7 @@ def main() -> None:
     ap.add_argument("--only", help="comma-separated test id prefixes, e.g. DEL-01,ISO")
     ap.add_argument("--runs", type=int, default=3)
     ap.add_argument("--provider", default="supermemory", choices=["supermemory", "mock"])
+    ap.add_argument("--results-dir", default="results", help="use e.g. smoke/pilot for runs that must not count as results")
     args = ap.parse_args()
 
     tests = discover_tests()
@@ -200,7 +201,7 @@ def main() -> None:
         return
     provider, key = make_provider(args.provider)
     for t in tests:
-        run_test(t, provider, runs=args.runs, api_key=key)
+        run_test(t, provider, runs=args.runs, api_key=key, results_base=args.results_dir)
 
 
 if __name__ == "__main__":

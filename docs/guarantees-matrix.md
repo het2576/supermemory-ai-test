@@ -41,6 +41,13 @@ Docs rule: if the docs state a delay, that number replaces 120s. If they promise
 
 Always report raw time-to-consistency (per run, per search mode) whatever the verdict.
 
+### 2.1a Amendment A1 (made after the `prereg-v1` tag, before any DEL, ISO, COR, ABS, POI or LAT run)
+
+These two points were not spelled out in 2.1 and are fixed here before the first product-test run, so they cannot be tuned to results. No threshold changed.
+
+1. **Which surfaces count.** "Present" means the content (the canary, or for DEL-02/03 a unique fake name that only that document contains) comes back from any normal retrieval surface: `search` in `chunks`, `memories` or `hybrid` mode, and for DEL-03 also the profile. Evidence-only surfaces never decide a verdict: search with `include.forgotten`, and the memories list with `include.forgotten`. The docs describe forgotten memories as soft-deleted and preserved, so their presence there is recorded as documented behavior.
+2. **Stays gone.** The first checkpoint at which nothing is present must hold on one more probe 10 seconds later. If the content reappears, that is recorded (`reappeared: true`), the watch continues on the normal schedule, and the time-to-consistency is the first checkpoint that holds.
+
 ### 2.2 ISO (isolation)
 
 | Outcome | Verdict |

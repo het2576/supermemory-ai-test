@@ -1,0 +1,530 @@
+{
+  "record": {
+    "testId": "DEL-03",
+    "provider": "supermemory",
+    "client": "supermemory-python-sdk",
+    "sdkVersion": "5.0.1",
+    "apiVersion": "v5",
+    "date": "2026-10-30T08:44:06.688294+00:00",
+    "run": 1,
+    "checkpoints": [
+      {
+        "step": "add",
+        "http": 200,
+        "id": "LoEtxC5s5PLZxyTd3YfM26"
+      },
+      {
+        "step": "done_and_dreamed",
+        "elapsed_s": 22.835088000021642,
+        "status": "done",
+        "dreaming": "done"
+      },
+      {
+        "step": "memory_before_delete",
+        "elapsed_s": 0.7580542080104351,
+        "found": true
+      },
+      {
+        "step": "profile_before",
+        "token_in_profile": true
+      },
+      {
+        "step": "delete",
+        "http": 200,
+        "count": 1,
+        "errors": []
+      },
+      {
+        "t": 0,
+        "canaryPresent": false,
+        "surfaces": []
+      },
+      {
+        "t": 10,
+        "confirm": true,
+        "canaryPresent": false,
+        "surfaces": []
+      }
+    ],
+    "result": "PASS",
+    "timeToConsistencySec": 0.0,
+    "notes": "",
+    "rawArtifacts": "results/runs/2026-10-30/DEL-03-run1.json"
+  },
+  "extra": {
+    "token": "ZQ-DEL-3563b40b474c",
+    "query": "What is the name of Priya's pet iguana?",
+    "forgotten_visible_with_flag": true
+  },
+  "exchanges": [
+    {
+      "t": "2026-10-30T08:43:25",
+      "method": "POST",
+      "path": "/ns/memtrust_del03_98a89dfd81/document",
+      "request_body": {
+        "content": "Priya's pet iguana is named ZQ-DEL-3563b40b474c. Priya adopted the iguana last spring and feeds it every morning.",
+        "dreaming": "instant"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "LoEtxC5s5PLZxyTd3YfM26",
+        "status": "queued"
+      },
+      "ms": 976
+    },
+    {
+      "t": "2026-10-30T08:43:26",
+      "method": "GET",
+      "path": "/ns/memtrust_del03_98a89dfd81/document/LoEtxC5s5PLZxyTd3YfM26",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "LoEtxC5s5PLZxyTd3YfM26",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:43:25.566Z",
+          "updatedAt": "2026-10-30T08:43:25.566Z",
+          "filepath": null
+        }
+      },
+      "ms": 446
+    },
+    {
+      "t": "2026-10-30T08:43:31",
+      "method": "GET",
+      "path": "/ns/memtrust_del03_98a89dfd81/document/LoEtxC5s5PLZxyTd3YfM26",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "LoEtxC5s5PLZxyTd3YfM26",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:43:25.566Z",
+          "updatedAt": "2026-10-30T08:43:25.566Z",
+          "filepath": null
+        }
+      },
+      "ms": 571
+    },
+    {
+      "t": "2026-10-30T08:43:37",
+      "method": "GET",
+      "path": "/ns/memtrust_del03_98a89dfd81/document/LoEtxC5s5PLZxyTd3YfM26",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "LoEtxC5s5PLZxyTd3YfM26",
+        "title": "Priya's pet iguana is named ZQ-DEL-3563b40b474c. P...",
+        "type": "text",
+        "summary": "Priya adopted a pet iguana last spring, naming it with the unique identifier ZQ-DEL-3563b40b474c. The reptile has become a daily part of her care routine, receiving regular feedings each morning. The brief description logs the adoption event and the specified feeding schedule, useful for tracking animal care patterns or identifying relevant anecdotes about reptile household pets.",
+        "content": "Priya's pet iguana is named ZQ-DEL-3563b40b474c. Priya adopted the iguana last spring and feeds it every morning.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:43:25.566Z",
+          "updatedAt": "2026-10-30T08:43:31.872Z",
+          "filepath": null
+        }
+      },
+      "ms": 566
+    },
+    {
+      "t": "2026-10-30T08:43:43",
+      "method": "GET",
+      "path": "/ns/memtrust_del03_98a89dfd81/document/LoEtxC5s5PLZxyTd3YfM26",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "LoEtxC5s5PLZxyTd3YfM26",
+        "title": "Priya's pet iguana is named ZQ-DEL-3563b40b474c. P...",
+        "type": "text",
+        "summary": "Priya adopted a pet iguana last spring, naming it with the unique identifier ZQ-DEL-3563b40b474c. The reptile has become a daily part of her care routine, receiving regular feedings each morning. The brief description logs the adoption event and the specified feeding schedule, useful for tracking animal care patterns or identifying relevant anecdotes about reptile household pets.",
+        "content": "Priya's pet iguana is named ZQ-DEL-3563b40b474c. Priya adopted the iguana last spring and feeds it every morning.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:43:25.566Z",
+          "updatedAt": "2026-10-30T08:43:31.872Z",
+          "filepath": null
+        }
+      },
+      "ms": 635
+    },
+    {
+      "t": "2026-10-30T08:43:48",
+      "method": "GET",
+      "path": "/ns/memtrust_del03_98a89dfd81/document/LoEtxC5s5PLZxyTd3YfM26",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "LoEtxC5s5PLZxyTd3YfM26",
+        "title": "Priya's pet iguana is named ZQ-DEL-3563b40b474c. P...",
+        "type": "text",
+        "summary": "Priya adopted a pet iguana last spring, naming it with the unique identifier ZQ-DEL-3563b40b474c. The reptile has become a daily part of her care routine, receiving regular feedings each morning. The brief description logs the adoption event and the specified feeding schedule, useful for tracking animal care patterns or identifying relevant anecdotes about reptile household pets.",
+        "content": "Priya's pet iguana is named ZQ-DEL-3563b40b474c. Priya adopted the iguana last spring and feeds it every morning.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "done",
+          "createdAt": "2026-10-30T08:43:25.566Z",
+          "updatedAt": "2026-10-30T08:43:45.290Z",
+          "filepath": null
+        }
+      },
+      "ms": 586
+    },
+    {
+      "t": "2026-10-30T08:43:49",
+      "method": "POST",
+      "path": "/ns/memtrust_del03_98a89dfd81/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "4vW5VzmnERbcewg8HF2S17",
+            "memory": "Priya adopted the iguana last spring.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7786302,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T08:43:45.290Z",
+              "createdAt": "2026-10-30T08:43:45.290Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "SbJBJHC6EYJ8ajuZuaGgJK",
+            "memory": "Priya has a pet iguana named ZQ-DEL-3563b40b474c.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.76491916,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T08:43:45.290Z",
+              "createdAt": "2026-10-30T08:43:45.290Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "Jq2tPNEwPFanmUHkVYFJE3",
+            "memory": "Priya feeds her iguana every morning.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.76439059,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T08:43:45.290Z",
+              "createdAt": "2026-10-30T08:43:45.290Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 299
+      },
+      "ms": 754
+    },
+    {
+      "t": "2026-10-30T08:43:49",
+      "method": "POST",
+      "path": "/ns/memtrust_del03_98a89dfd81/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [
+            {
+              "id": "Jq2tPNEwPFanmUHkVYFJE3",
+              "memory": "[2026-10-30] Priya feeds her iguana every morning."
+            },
+            {
+              "id": "4vW5VzmnERbcewg8HF2S17",
+              "memory": "[2026-10-30] Priya adopted the iguana last spring."
+            },
+            {
+              "id": "SbJBJHC6EYJ8ajuZuaGgJK",
+              "memory": "[2026-10-30] Priya has a pet iguana named ZQ-DEL-3563b40b474c."
+            }
+          ],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 572
+    },
+    {
+      "t": "2026-10-30T08:43:50",
+      "method": "DELETE",
+      "path": "/ns/memtrust_del03_98a89dfd81/document",
+      "request_body": {
+        "ids": [
+          "LoEtxC5s5PLZxyTd3YfM26"
+        ]
+      },
+      "http_status": 200,
+      "response_body": {
+        "count": 1,
+        "errors": []
+      },
+      "ms": 501
+    },
+    {
+      "t": "2026-10-30T08:43:51",
+      "method": "POST",
+      "path": "/ns/memtrust_del03_98a89dfd81/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 131
+      },
+      "ms": 663
+    },
+    {
+      "t": "2026-10-30T08:43:51",
+      "method": "POST",
+      "path": "/ns/memtrust_del03_98a89dfd81/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 126
+      },
+      "ms": 613
+    },
+    {
+      "t": "2026-10-30T08:43:52",
+      "method": "POST",
+      "path": "/ns/memtrust_del03_98a89dfd81/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 135
+      },
+      "ms": 817
+    },
+    {
+      "t": "2026-10-30T08:43:53",
+      "method": "POST",
+      "path": "/ns/memtrust_del03_98a89dfd81/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 478
+    },
+    {
+      "t": "2026-10-30T08:44:03",
+      "method": "POST",
+      "path": "/ns/memtrust_del03_98a89dfd81/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 137
+      },
+      "ms": 867
+    },
+    {
+      "t": "2026-10-30T08:44:04",
+      "method": "POST",
+      "path": "/ns/memtrust_del03_98a89dfd81/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 131
+      },
+      "ms": 625
+    },
+    {
+      "t": "2026-10-30T08:44:05",
+      "method": "POST",
+      "path": "/ns/memtrust_del03_98a89dfd81/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 111
+      },
+      "ms": 612
+    },
+    {
+      "t": "2026-10-30T08:44:05",
+      "method": "POST",
+      "path": "/ns/memtrust_del03_98a89dfd81/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 436
+    },
+    {
+      "t": "2026-10-30T08:44:06",
+      "method": "POST",
+      "path": "/ns/memtrust_del03_98a89dfd81/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "memories",
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "4vW5VzmnERbcewg8HF2S17",
+            "memory": "Priya adopted the iguana last spring.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.7786302,
+            "isLatest": false,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T08:43:50.231Z",
+              "createdAt": "2026-10-30T08:43:45.290Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "SbJBJHC6EYJ8ajuZuaGgJK",
+            "memory": "Priya has a pet iguana named ZQ-DEL-3563b40b474c.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.76491916,
+            "isLatest": false,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T08:43:50.231Z",
+              "createdAt": "2026-10-30T08:43:45.290Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "Jq2tPNEwPFanmUHkVYFJE3",
+            "memory": "Priya feeds her iguana every morning.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.76439059,
+            "isLatest": false,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T08:43:50.231Z",
+              "createdAt": "2026-10-30T08:43:45.290Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 160
+      },
+      "ms": 614
+    },
+    {
+      "t": "2026-10-30T08:44:06",
+      "method": "DELETE",
+      "path": "/ns/memtrust_del03_98a89dfd81",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_del03_98a89dfd81",
+        "deletedDocumentsCount": 0,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 480
+    }
+  ]
+}

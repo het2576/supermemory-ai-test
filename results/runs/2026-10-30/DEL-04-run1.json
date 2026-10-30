@@ -1,0 +1,246 @@
+{
+  "record": {
+    "testId": "DEL-04",
+    "provider": "supermemory",
+    "client": "supermemory-python-sdk",
+    "sdkVersion": "5.0.1",
+    "apiVersion": "v5",
+    "date": "2026-10-30T08:45:43.146818+00:00",
+    "run": 1,
+    "checkpoints": [
+      {
+        "step": "add",
+        "http": 200,
+        "id": "MdgwmRWq7geJmAdduzKXcN"
+      },
+      {
+        "step": "status_before_delete",
+        "status": "queued"
+      },
+      {
+        "step": "delete_while_processing",
+        "http": 200,
+        "count": 0,
+        "errors": [
+          {
+            "id": "MdgwmRWq7geJmAdduzKXcN",
+            "error": "Document is still processing"
+          }
+        ]
+      },
+      {
+        "step": "done_after_rejected_delete",
+        "elapsed_s": 7.908351124991896,
+        "status": "done"
+      },
+      {
+        "step": "searchable_after_rejected_delete",
+        "elapsed_s": 0.5415925830020569,
+        "found": true
+      }
+    ],
+    "result": "PASS",
+    "timeToConsistencySec": null,
+    "notes": "rejected as documented; document completed intact",
+    "rawArtifacts": "results/runs/2026-10-30/DEL-04-run1.json"
+  },
+  "extra": {
+    "canary": "ZQ-DEL-62cdfdeffbb3",
+    "outcome": "rejected"
+  },
+  "exchanges": [
+    {
+      "t": "2026-10-30T08:45:33",
+      "method": "POST",
+      "path": "/ns/memtrust_del04_5c47a99e2f/document",
+      "request_body": {
+        "content": "Race note: the gate combination for the east yard is ZQ-DEL-62cdfdeffbb3."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "MdgwmRWq7geJmAdduzKXcN",
+        "status": "queued"
+      },
+      "ms": 1045
+    },
+    {
+      "t": "2026-10-30T08:45:33",
+      "method": "GET",
+      "path": "/ns/memtrust_del04_5c47a99e2f/document/MdgwmRWq7geJmAdduzKXcN",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "MdgwmRWq7geJmAdduzKXcN",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:45:33.133Z",
+          "updatedAt": "2026-10-30T08:45:33.133Z",
+          "filepath": null
+        }
+      },
+      "ms": 391
+    },
+    {
+      "t": "2026-10-30T08:45:34",
+      "method": "DELETE",
+      "path": "/ns/memtrust_del04_5c47a99e2f/document",
+      "request_body": {
+        "ids": [
+          "MdgwmRWq7geJmAdduzKXcN"
+        ]
+      },
+      "http_status": 200,
+      "response_body": {
+        "count": 0,
+        "errors": [
+          {
+            "id": "MdgwmRWq7geJmAdduzKXcN",
+            "error": "Document is still processing"
+          }
+        ]
+      },
+      "ms": 401
+    },
+    {
+      "t": "2026-10-30T08:45:34",
+      "method": "GET",
+      "path": "/ns/memtrust_del04_5c47a99e2f/document/MdgwmRWq7geJmAdduzKXcN",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "MdgwmRWq7geJmAdduzKXcN",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:45:33.133Z",
+          "updatedAt": "2026-10-30T08:45:33.133Z",
+          "filepath": null
+        }
+      },
+      "ms": 377
+    },
+    {
+      "t": "2026-10-30T08:45:36",
+      "method": "GET",
+      "path": "/ns/memtrust_del04_5c47a99e2f/document/MdgwmRWq7geJmAdduzKXcN",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "MdgwmRWq7geJmAdduzKXcN",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:45:33.133Z",
+          "updatedAt": "2026-10-30T08:45:33.133Z",
+          "filepath": null
+        }
+      },
+      "ms": 383
+    },
+    {
+      "t": "2026-10-30T08:45:39",
+      "method": "GET",
+      "path": "/ns/memtrust_del04_5c47a99e2f/document/MdgwmRWq7geJmAdduzKXcN",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "MdgwmRWq7geJmAdduzKXcN",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:45:33.133Z",
+          "updatedAt": "2026-10-30T08:45:33.133Z",
+          "filepath": null
+        }
+      },
+      "ms": 460
+    },
+    {
+      "t": "2026-10-30T08:45:42",
+      "method": "GET",
+      "path": "/ns/memtrust_del04_5c47a99e2f/document/MdgwmRWq7geJmAdduzKXcN",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "MdgwmRWq7geJmAdduzKXcN",
+        "title": "Race note: the gate combination for the east yard...",
+        "type": "text",
+        "summary": null,
+        "content": "Race note: the gate combination for the east yard is ZQ-DEL-62cdfdeffbb3.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:45:33.133Z",
+          "updatedAt": "2026-10-30T08:45:39.594Z",
+          "filepath": null
+        }
+      },
+      "ms": 656
+    },
+    {
+      "t": "2026-10-30T08:45:42",
+      "method": "POST",
+      "path": "/ns/memtrust_del04_5c47a99e2f/search",
+      "request_body": {
+        "query": "ZQ-DEL-62cdfdeffbb3",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "7fff5603aab34882a614b7",
+            "chunk": "Race note: the gate combination for the east yard is ZQ-DEL-62cdfdeffbb3.",
+            "metadata": {},
+            "similarity": 0.7263149600000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T08:45:39.594Z",
+              "createdAt": "2026-10-30T08:45:33.133Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 137
+      },
+      "ms": 539
+    },
+    {
+      "t": "2026-10-30T08:45:43",
+      "method": "DELETE",
+      "path": "/ns/memtrust_del04_5c47a99e2f",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_del04_5c47a99e2f",
+        "deletedDocumentsCount": 1,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 480
+    }
+  ]
+}

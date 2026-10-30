@@ -1,0 +1,333 @@
+{
+  "record": {
+    "testId": "DEL-01",
+    "provider": "supermemory",
+    "client": "supermemory-python-sdk",
+    "sdkVersion": "5.0.1",
+    "apiVersion": "v5",
+    "date": "2026-10-30T08:41:15.665926+00:00",
+    "run": 1,
+    "checkpoints": [
+      {
+        "step": "add",
+        "http": 200,
+        "id": "TQT3WwkQxfSyNXBkyJQCte"
+      },
+      {
+        "step": "done",
+        "elapsed_s": 10.327682541974355,
+        "status": "done"
+      },
+      {
+        "step": "searchable_before_delete",
+        "elapsed_s": 0.6670535409939475,
+        "found": true
+      },
+      {
+        "step": "delete",
+        "http": 200,
+        "count": 1,
+        "errors": []
+      },
+      {
+        "t": 0,
+        "canaryPresent": false,
+        "surfaces": []
+      },
+      {
+        "t": 10,
+        "confirm": true,
+        "canaryPresent": false,
+        "surfaces": []
+      }
+    ],
+    "result": "PASS",
+    "timeToConsistencySec": 0.0,
+    "notes": "",
+    "rawArtifacts": "results/runs/2026-10-30/DEL-01-run1.json"
+  },
+  "extra": {
+    "canary": "ZQ-DEL-61429566e5d8",
+    "query": "ZQ-DEL-61429566e5d8"
+  },
+  "exchanges": [
+    {
+      "t": "2026-10-30T08:40:49",
+      "method": "POST",
+      "path": "/ns/memtrust_del01_2a836531eb/document",
+      "request_body": {
+        "content": "Field note: the maintenance code for the pump house is ZQ-DEL-61429566e5d8. Keep it with the keys."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "TQT3WwkQxfSyNXBkyJQCte",
+        "status": "queued"
+      },
+      "ms": 1164
+    },
+    {
+      "t": "2026-10-30T08:40:49",
+      "method": "GET",
+      "path": "/ns/memtrust_del01_2a836531eb/document/TQT3WwkQxfSyNXBkyJQCte",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "TQT3WwkQxfSyNXBkyJQCte",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:40:49.215Z",
+          "updatedAt": "2026-10-30T08:40:49.215Z",
+          "filepath": null
+        }
+      },
+      "ms": 489
+    },
+    {
+      "t": "2026-10-30T08:40:52",
+      "method": "GET",
+      "path": "/ns/memtrust_del01_2a836531eb/document/TQT3WwkQxfSyNXBkyJQCte",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "TQT3WwkQxfSyNXBkyJQCte",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:40:49.215Z",
+          "updatedAt": "2026-10-30T08:40:49.215Z",
+          "filepath": null
+        }
+      },
+      "ms": 450
+    },
+    {
+      "t": "2026-10-30T08:40:54",
+      "method": "GET",
+      "path": "/ns/memtrust_del01_2a836531eb/document/TQT3WwkQxfSyNXBkyJQCte",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "TQT3WwkQxfSyNXBkyJQCte",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:40:49.215Z",
+          "updatedAt": "2026-10-30T08:40:49.215Z",
+          "filepath": null
+        }
+      },
+      "ms": 445
+    },
+    {
+      "t": "2026-10-30T08:40:57",
+      "method": "GET",
+      "path": "/ns/memtrust_del01_2a836531eb/document/TQT3WwkQxfSyNXBkyJQCte",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "TQT3WwkQxfSyNXBkyJQCte",
+        "title": "Field note: the maintenance code for the pump hous...",
+        "type": "text",
+        "summary": null,
+        "content": "Field note: the maintenance code for the pump house is ZQ-DEL-61429566e5d8. Keep it with the keys.",
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:40:49.215Z",
+          "updatedAt": "2026-10-30T08:40:56.771Z",
+          "filepath": null
+        }
+      },
+      "ms": 437
+    },
+    {
+      "t": "2026-10-30T08:40:59",
+      "method": "GET",
+      "path": "/ns/memtrust_del01_2a836531eb/document/TQT3WwkQxfSyNXBkyJQCte",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "TQT3WwkQxfSyNXBkyJQCte",
+        "title": "Field note: the maintenance code for the pump hous...",
+        "type": "text",
+        "summary": null,
+        "content": "Field note: the maintenance code for the pump house is ZQ-DEL-61429566e5d8. Keep it with the keys.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:40:49.215Z",
+          "updatedAt": "2026-10-30T08:40:56.771Z",
+          "filepath": null
+        }
+      },
+      "ms": 444
+    },
+    {
+      "t": "2026-10-30T08:41:00",
+      "method": "POST",
+      "path": "/ns/memtrust_del01_2a836531eb/search",
+      "request_body": {
+        "query": "ZQ-DEL-61429566e5d8",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "08c88d9d5187c81656039c",
+            "chunk": "Field note: the maintenance code for the pump house is ZQ-DEL-61429566e5d8. Keep it with the keys.",
+            "metadata": {},
+            "similarity": 0.7654016,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T08:40:56.771Z",
+              "createdAt": "2026-10-30T08:40:49.215Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 168
+      },
+      "ms": 659
+    },
+    {
+      "t": "2026-10-30T08:41:00",
+      "method": "DELETE",
+      "path": "/ns/memtrust_del01_2a836531eb/document",
+      "request_body": {
+        "ids": [
+          "TQT3WwkQxfSyNXBkyJQCte"
+        ]
+      },
+      "http_status": 200,
+      "response_body": {
+        "count": 1,
+        "errors": []
+      },
+      "ms": 467
+    },
+    {
+      "t": "2026-10-30T08:41:01",
+      "method": "POST",
+      "path": "/ns/memtrust_del01_2a836531eb/search",
+      "request_body": {
+        "query": "ZQ-DEL-61429566e5d8",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 126
+      },
+      "ms": 580
+    },
+    {
+      "t": "2026-10-30T08:41:02",
+      "method": "POST",
+      "path": "/ns/memtrust_del01_2a836531eb/search",
+      "request_body": {
+        "query": "ZQ-DEL-61429566e5d8",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 161
+      },
+      "ms": 1148
+    },
+    {
+      "t": "2026-10-30T08:41:03",
+      "method": "POST",
+      "path": "/ns/memtrust_del01_2a836531eb/search",
+      "request_body": {
+        "query": "ZQ-DEL-61429566e5d8",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 128
+      },
+      "ms": 554
+    },
+    {
+      "t": "2026-10-30T08:41:14",
+      "method": "POST",
+      "path": "/ns/memtrust_del01_2a836531eb/search",
+      "request_body": {
+        "query": "ZQ-DEL-61429566e5d8",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 108
+      },
+      "ms": 812
+    },
+    {
+      "t": "2026-10-30T08:41:14",
+      "method": "POST",
+      "path": "/ns/memtrust_del01_2a836531eb/search",
+      "request_body": {
+        "query": "ZQ-DEL-61429566e5d8",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 139
+      },
+      "ms": 566
+    },
+    {
+      "t": "2026-10-30T08:41:15",
+      "method": "POST",
+      "path": "/ns/memtrust_del01_2a836531eb/search",
+      "request_body": {
+        "query": "ZQ-DEL-61429566e5d8",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 148
+      },
+      "ms": 590
+    },
+    {
+      "t": "2026-10-30T08:41:15",
+      "method": "DELETE",
+      "path": "/ns/memtrust_del01_2a836531eb",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_del01_2a836531eb",
+        "deletedDocumentsCount": 0,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 448
+    }
+  ]
+}
