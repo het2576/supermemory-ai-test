@@ -169,3 +169,23 @@ Characterization only (PRD 5.5, D5). No LLM, no exploit claim, no pass/fail: eve
 **Reading rule (fixed now).** "The API marks stored instructions" requires a marking found in (4) in all 3 runs for the same document type. Otherwise the report says no marking was found. Neither outcome is a defect: returning stored text unmarked is what a retrieval API does, and the consumer's prompt is where untrusted text must be delimited. The report ends with a short "how to consume memory safely" note that follows from what was observed.
 
 **Caveats.** Free plan, one account, 4 planted texts, English only, one day. The extractor is a model, so `rewritten` versus `verbatim` can differ between runs; the report gives counts out of 3.
+
+## D12. DEL-06 (namespace delete erases soft-deleted memories), pre-registered 2026-10-31 before any DEL-06 code or run
+
+**Why.** DEL-03 showed that after a document is deleted its derived memory leaves every normal surface but is still returned with `include.forgotten` (3/3 runs). The docs call forgotten memories "excluded from search results but preserved" and describe namespace deletion as the way to erase a tenant's content (`overview/security`: it deletes "the namespace, its memory records and documents exclusive to it"). Whether a namespace delete also removes the preserved memories is not stated anywhere, and it decides whether the DEL-03 observation is a documentation gap (S3) or a privacy defect (S1, private disclosure first).
+
+**Procedure (per run, `dreaming: "instant"`).**
+1. Seed a fresh namespace with one fact carrying a unique token; require the memory to surface (same retry rule as amendment A2, up to 3 attempts with fresh scope and token).
+2. Delete the source document. Wait until the token is gone from every normal surface (chunks, memories, hybrid, profile), up to 120s. If it never goes, stop: INCONCLUSIVE (that is DEL-03's question).
+3. Record whether the token is still returned with `include.forgotten` (search in `memories` and `hybrid`, and the memory list with `include.forgotten` if the provider has one). If it is not, stop: INCONCLUSIVE ("nothing preserved, nothing for the namespace delete to remove"). The expected value, from DEL-03, is that it is.
+4. Delete the namespace. Record the HTTP status.
+5. Re-create the same namespace by adding a new unrelated document to the same ID and wait until it is `done`. A search on a deleted namespace cannot tell "erased" from "hidden"; a re-created one can.
+6. Probe at 0, 5 and 30s after the new document is `done`: search (`chunks`, `memories`, `hybrid`) with and without `include.forgotten`, the memory list with `include.forgotten`, the profile, and a get on the old document ID. The token must not appear anywhere.
+
+| Outcome | Verdict |
+|---|---|
+| Token absent on every surface at every probe, in all 3 runs | PASS |
+| Token returned on any surface at any probe in any run | FAIL candidate: S1, report `n/3` privately before anything is published |
+| Step 2 or 3 stops the run | INCONCLUSIVE, with the reason |
+
+**Caveats.** Free plan, one fact, one account; "absent from the API" is all this can show, not erasure from backups or internal stores, and the report says so.
