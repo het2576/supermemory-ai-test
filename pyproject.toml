@@ -1,0 +1,11 @@
+[project]
+name = "memtrust"
+version = "0.1.0"
+description = "Black-box production-behavior tests for AI memory APIs (first target: Supermemory)"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+# `pytest` alone runs the harness self-tests (mock provider, no network). Product tests: `pytest tests`.
+testpaths = ["selftest"]
+addopts = "-q"

@@ -1,0 +1,2 @@
+supermemory==5.0.1
+pytest>=8

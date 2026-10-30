@@ -1,0 +1,280 @@
+{
+  "outcome": {
+    "result": "PASS",
+    "checkpoints": [
+      {
+        "step": "status_done",
+        "elapsed_s": 9.1579569579917,
+        "status": "done"
+      },
+      {
+        "step": "searchable",
+        "elapsed_s": 0.7395572499954142,
+        "found": true
+      },
+      {
+        "step": "delete",
+        "count": 1,
+        "errors": []
+      },
+      {
+        "t": 0,
+        "canaryPresent": false
+      }
+    ],
+    "time_to_consistency_s": 0,
+    "notes": "",
+    "extra": null
+  },
+  "exchanges": [
+    {
+      "t": "2026-10-30T08:15:02",
+      "method": "POST",
+      "path": "/ns/memtrust_smoke_da3ad223d2/document",
+      "request_body": {
+        "content": "Cycle note. The marker for this note is ZQ-CYCLE-a8bacfed6420."
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "Xq8ng7FXzAgadcawV7KiF9",
+        "status": "queued"
+      },
+      "ms": 1321
+    },
+    {
+      "t": "2026-10-30T08:15:03",
+      "method": "GET",
+      "path": "/ns/memtrust_smoke_da3ad223d2/document/Xq8ng7FXzAgadcawV7KiF9",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Xq8ng7FXzAgadcawV7KiF9",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:15:02.621Z",
+          "updatedAt": "2026-10-30T08:15:02.621Z",
+          "filepath": null
+        }
+      },
+      "ms": 554
+    },
+    {
+      "t": "2026-10-30T08:15:04",
+      "method": "GET",
+      "path": "/ns/memtrust_smoke_da3ad223d2/document/Xq8ng7FXzAgadcawV7KiF9",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Xq8ng7FXzAgadcawV7KiF9",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:15:02.621Z",
+          "updatedAt": "2026-10-30T08:15:02.621Z",
+          "filepath": null
+        }
+      },
+      "ms": 411
+    },
+    {
+      "t": "2026-10-30T08:15:06",
+      "method": "GET",
+      "path": "/ns/memtrust_smoke_da3ad223d2/document/Xq8ng7FXzAgadcawV7KiF9",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Xq8ng7FXzAgadcawV7KiF9",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:15:02.621Z",
+          "updatedAt": "2026-10-30T08:15:02.621Z",
+          "filepath": null
+        }
+      },
+      "ms": 483
+    },
+    {
+      "t": "2026-10-30T08:15:07",
+      "method": "GET",
+      "path": "/ns/memtrust_smoke_da3ad223d2/document/Xq8ng7FXzAgadcawV7KiF9",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Xq8ng7FXzAgadcawV7KiF9",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:15:02.621Z",
+          "updatedAt": "2026-10-30T08:15:02.621Z",
+          "filepath": null
+        }
+      },
+      "ms": 448
+    },
+    {
+      "t": "2026-10-30T08:15:09",
+      "method": "GET",
+      "path": "/ns/memtrust_smoke_da3ad223d2/document/Xq8ng7FXzAgadcawV7KiF9",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Xq8ng7FXzAgadcawV7KiF9",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:15:02.621Z",
+          "updatedAt": "2026-10-30T08:15:02.621Z",
+          "filepath": null
+        }
+      },
+      "ms": 409
+    },
+    {
+      "t": "2026-10-30T08:15:10",
+      "method": "GET",
+      "path": "/ns/memtrust_smoke_da3ad223d2/document/Xq8ng7FXzAgadcawV7KiF9",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Xq8ng7FXzAgadcawV7KiF9",
+        "title": "Cycle note. The marker for this note is ZQ-CYCLE-a...",
+        "type": "text",
+        "summary": null,
+        "content": "Cycle note. The marker for this note is ZQ-CYCLE-a8bacfed6420.",
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:15:02.621Z",
+          "updatedAt": "2026-10-30T08:15:10.035Z",
+          "filepath": null
+        }
+      },
+      "ms": 394
+    },
+    {
+      "t": "2026-10-30T08:15:11",
+      "method": "GET",
+      "path": "/ns/memtrust_smoke_da3ad223d2/document/Xq8ng7FXzAgadcawV7KiF9",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "Xq8ng7FXzAgadcawV7KiF9",
+        "title": "Cycle note. The marker for this note is ZQ-CYCLE-a...",
+        "type": "text",
+        "summary": null,
+        "content": "Cycle note. The marker for this note is ZQ-CYCLE-a8bacfed6420.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T08:15:02.621Z",
+          "updatedAt": "2026-10-30T08:15:10.035Z",
+          "filepath": null
+        }
+      },
+      "ms": 400
+    },
+    {
+      "t": "2026-10-30T08:15:12",
+      "method": "POST",
+      "path": "/ns/memtrust_smoke_da3ad223d2/search",
+      "request_body": {
+        "query": "What is the marker for the cycle note?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "1092a7a003931a0bd8f46c",
+            "chunk": "Cycle note. The marker for this note is ZQ-CYCLE-a8bacfed6420.",
+            "metadata": {},
+            "similarity": 0.77214545,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T08:15:10.035Z",
+              "createdAt": "2026-10-30T08:15:02.621Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 151
+      },
+      "ms": 734
+    },
+    {
+      "t": "2026-10-30T08:15:13",
+      "method": "DELETE",
+      "path": "/ns/memtrust_smoke_da3ad223d2/document",
+      "request_body": {
+        "ids": [
+          "Xq8ng7FXzAgadcawV7KiF9"
+        ]
+      },
+      "http_status": 200,
+      "response_body": {
+        "count": 1,
+        "errors": []
+      },
+      "ms": 444
+    },
+    {
+      "t": "2026-10-30T08:15:13",
+      "method": "POST",
+      "path": "/ns/memtrust_smoke_da3ad223d2/search",
+      "request_body": {
+        "query": "What is the marker for the cycle note?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 107
+      },
+      "ms": 573
+    },
+    {
+      "t": "2026-10-30T08:15:14",
+      "method": "DELETE",
+      "path": "/ns/memtrust_smoke_da3ad223d2",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_smoke_da3ad223d2",
+        "deletedDocumentsCount": 0,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 682
+    }
+  ]
+}
