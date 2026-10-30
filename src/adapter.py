@@ -107,6 +107,10 @@ class MemoryProvider(Protocol):
     #   search_unscoped(self, query: str, mode: str = "hybrid", container_tag: str | None = None) -> SearchResult
     # Tests look it up with getattr and SKIP when it is absent.
     #
+    # Optional: providers that can report the round-trip time of their most recent call implement
+    #   last_latency_ms(self) -> float | None
+    # measured on the HTTP exchange itself (request sent to response read), excluding client-side pacing sleeps.
+    #
     # Optional: providers with an explicit way to forget derived memories implement
     #   forget(self, scope: str, memory_ids: list[str]) -> DeleteResult
     # (a soft delete: the memory is excluded from search but preserved).

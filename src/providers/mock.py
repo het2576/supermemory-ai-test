@@ -66,6 +66,8 @@ class Bugs:
 class MockConfig:
     ingest_delay_s: float = 2.0  # queued -> done, and chunks searchable
     memory_delay_s: float = 1.0  # extra time after done until derived memories exist
+    dynamic_memory_delay_s: float | None = None  # same, for documents added without dreaming="instant" (None = same as instant)
+    search_ms: float = 50.0  # what last_latency_ms() reports after a search
     bugs: Bugs = field(default_factory=Bugs)
 
 
@@ -78,6 +80,7 @@ class _Doc:
     deleted_while_processing: bool = False
     seq: int = 0
     forgotten_at: float | None = None
+    instant: bool = False
 
 
 class MockProvider:
@@ -91,6 +94,7 @@ class MockProvider:
         self._deletes = 0
         self._searches = 0
         self._log: list[dict[str, Any]] = []
+        self._last_ms: float | None = None
 
     # --- helpers -----------------------------------------------------------------------------
 
@@ -102,8 +106,12 @@ class MockProvider:
     def _is_done(self, d: _Doc) -> bool:
         return self.clock.now() - d.created >= self.config.ingest_delay_s
 
+    def _memory_delay(self, d: _Doc) -> float:
+        dyn = self.config.dynamic_memory_delay_s
+        return self.config.memory_delay_s if d.instant or dyn is None else dyn
+
     def _memory_ready(self, d: _Doc) -> bool:
-        return self.clock.now() - d.created >= self.config.ingest_delay_s + self.config.memory_delay_s
+        return self.clock.now() - d.created >= self.config.ingest_delay_s + self._memory_delay(d)
 
     def _gone(self, d: _Doc) -> bool:
         """True once a delete has taken full effect for the source document (chunks)."""
@@ -148,7 +156,7 @@ class MockProvider:
         if b.corrections_ignored:
             return True
         same = sorted((x for x in self._docs[scope].values() if self._slot(x) == self._slot(d) and x.deleted_at is None), key=lambda x: x.seq)
-        newer = [x for x in same if x.seq > d.seq and self._memory_ready(x) and self.clock.now() - x.created >= b.corrections_delay_s + self.config.ingest_delay_s + self.config.memory_delay_s]
+        newer = [x for x in same if x.seq > d.seq and self._memory_ready(x) and self.clock.now() - x.created >= b.corrections_delay_s + self.config.ingest_delay_s + self._memory_delay(x)]
         if b.stale_wins:
             older_exists = any(x.seq < d.seq for x in same)
             return not older_exists
@@ -220,7 +228,7 @@ class MockProvider:
         if old is not None and old.deleted_at is not None and self.config.bugs.readd_ghost:
             ghost = _Doc(f"{doc_id}~ghost", old.content, old.created)
             docs[ghost.id] = ghost
-        docs[doc_id] = _Doc(doc_id, content, self.clock.now(), seq=self._n)
+        docs[doc_id] = _Doc(doc_id, content, self.clock.now(), seq=self._n, instant=o.dreaming == "instant")
         body = {"id": doc_id, "status": "queued"}
         self._record("POST", f"/ns/{scope}/document", {"content": content, "id": o.id}, 200, body)
         return AddResult(200, body, doc_id)
@@ -245,7 +253,11 @@ class MockProvider:
                         hits.append(SearchHit(id=f"mem_{d.id}" if k == 0 else f"mem_{d.id}.{k}", kind="memory", text=text, score=0.8, is_latest=self._is_latest(s, d), is_inference=False, raw={"scope": s}))
         body = {"results": [{"id": h.id, "chunk" if h.kind == "chunk" else "memory": h.text, "similarity": h.score} for h in hits]}
         self._record("POST", f"/ns/{scope}/search", {"query": query, "searchMode": o.mode}, 200, body)
+        self._last_ms = self.config.search_ms
         return SearchResult(200, body, hits)
+
+    def last_latency_ms(self) -> float | None:
+        return self._last_ms
 
     def delete(self, scope: str, doc_ids: list[str]) -> DeleteResult:
         b = self.config.bugs

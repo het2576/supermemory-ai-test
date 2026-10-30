@@ -97,6 +97,11 @@ class SupermemoryProvider:
             }
         )
 
+    def last_latency_ms(self) -> float | None:
+        """Round trip of the most recent HTTP exchange, from the httpx hooks (so no pacing sleep, no SDK overhead)."""
+        last = self._rec.last
+        return float(last["ms"]) if last and last.get("ms") is not None else None
+
     def drain_exchanges(self) -> list[dict[str, Any]]:
         events, self._transport_events = self._transport_events, []
         return self._rec.drain() + events
