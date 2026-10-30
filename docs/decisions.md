@@ -118,3 +118,32 @@ LAT-01..03 run 3 times (pooled n is reported per statistic). LAT-04 runs **once*
 **Search latency is from the HTTP exchange**, not a wall-clock timer around the SDK call, so client-side pacing and SDK overhead are excluded. Searches are sequential (about 3 per second at most): this is not a load test (PRD non-goals).
 
 **Caveats stated up front.** Free plan, one account, short text only, one machine and region, one day. Throughput, long documents and PDFs/URLs are not measured. Results describe this setup, not the service in general.
+
+## D10. ABS protocol, pre-registered 2026-10-30 before any ABS code or run
+
+Mechanical and numbers only (D4). Every ABS test reports `DOCUMENTED`; SKIPPED if the provider exposes no scores. No false-evidence rate in the headline. The top hits for unanswerable queries are stored in the evidence so the labeled qualitative appendix can be written from them later.
+
+**Seed.** One fresh namespace per test and run, 20 short first-person facts about one user, one document each (distinct names and places, no two share a topic), added with `dreaming: "instant"` so memories exist. The test waits for every document to reach `status: done` and `dreamingStatus: done`, and requires at least 18 of the 20 answerable queries to retrieve their fact in some mode at threshold 0 before judging (else INCONCLUSIVE: the seed is not usable).
+
+**Query sets (55, fixed in `tests/test_abs.py`).**
+
+| Class | n | Definition |
+|---|---|---|
+| answerable | 20 | one question per stored fact, paraphrased (never the stored sentence) |
+| near-miss | 20 | same domain as the facts but the asked-for fact was never stated (blood type, shoe size, cat's name where a dog was stated, son's name where a daughter was stated) |
+| off-domain | 10 | general-knowledge questions unrelated to the user |
+| nonsense | 5 | strings that are not words or contain no meaning |
+
+**Measure.** For each query and search mode, `top` = the highest `similarity` among returned results (None if empty). Distributions use `threshold: 0` so nothing is hidden by the server; default behavior uses the parameter omitted (documented default 0.3).
+
+| Test | Calls | Reported |
+|---|---|---|
+| ABS-01 | answerable + near-miss, modes `chunks`, `memories`, `hybrid` at threshold 0, plus `hybrid` at the default | per class: n, empty count, min/p50/max of top; AUC of answerable-vs-near-miss top (Mann-Whitney, ties count half); `gap = min(answerable top) - max(near-miss top)`; separating threshold exists iff gap > 0; best single threshold by balanced accuracy; how many near-miss queries return a nonempty result at the default |
+| ABS-02 | nonsense + off-domain (plus the 20 answerable queries as the reference), same modes and default | same statistics; how many nonsense and off-domain queries return anything at the default 0.3 |
+| ABS-03 | all 55 queries, `hybrid`, `threshold` in {omitted, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8} plus the 0 baseline | per threshold: answerable queries with any result, answerable queries whose correct fact is returned, unanswerable queries (near-miss, off-domain, nonsense) with any result. Also whether `omitted` and `0.3` return identical results, and whether the server-side filter equals filtering the threshold-0 results by `similarity >= t` |
+
+"Correct fact returned" = a returned item's text contains the fact's marker word (a distinctive name or place, listed with the facts).
+
+**Reading rule (fixed now).** A threshold "reliably removes junk" if unanswerable-with-any-result is 0 at that threshold in all 3 runs while answerable-with-correct-fact stays at or above 90% of its threshold-0 value. If no threshold satisfies both, the report says the answerable and unanswerable score ranges overlap and gives the trade-off table. Neither outcome is a bug; it describes what a developer can and cannot do with the API.
+
+**Pooling.** 3 runs per test; pooled counts and percentiles are reported with n. Caveats up front: free plan, one account, 20 short facts, one language, one embedding model chosen by the service, one day. Results do not describe retrieval quality on real data.
