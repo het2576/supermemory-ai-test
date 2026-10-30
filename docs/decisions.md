@@ -76,3 +76,24 @@ The 4-day plan is the ceiling, not the target. Priority order, cutting from the 
 6. POI-03/04, CON stretch
 
 Ship a rough public v0 with whatever categories are complete. The README states which are future work. Any S1 finding still follows the private-disclosure process in PRD section 10 before details go public.
+
+## D8. COR rules, pre-registered 2026-10-30 before any COR test or run
+
+Written after a 1-scope pilot (`smoke/pilot/cor_pilot.py`, excluded from results) that showed how the API represents an update: in `memories` mode only the newer fact is returned, `include.related` lists the older one as a parent with `relation: "updates"`, and the profile holds only the new fact. Chunk search still returns both documents (expected; D3). The pilot informed the *mechanics* below, not the pass/fail thresholds, which come from the matrix (section 2.3) and the PRD.
+
+**Surfaces judged.** "Current" means returned by a normal retrieval surface as a memory: `search` in `memories` mode, memory-kind hits in `hybrid` mode, and the profile. A hit is *stale-current* if it contains an old token and its `isLatest` is not `false`. Raw chunk hits are recorded as evidence and never decide a verdict (D3).
+
+**Precondition (no vacuous pass).** Before each update the previous fact must have surfaced as a memory carrying its exact token. The newest fact must surface too. If the extractor alters a token the attempt is retried with a fresh scope and tokens, up to 3 attempts (same mechanism as amendment A2), else SKIPPED.
+
+**Timing.** All docs are added with `dreaming: "instant"` and awaited to `status: done` + `dreamingStatus: done`. Judgement probes run at 0/10/30s after the newest memory first surfaces, extended to 120s only if one of those probes is wrong. Verdict follows the last probe: correct at the last probe is PASS (a note records the time it converged if early probes were wrong); wrong at the last probe is FAIL. One COR-01 run uses default `dynamic` dreaming to measure the gap; it is reported separately and is not part of the 3-run verdict.
+
+| Test | PASS when | FAIL when | Other |
+|---|---|---|---|
+| COR-01 explicit move (two docs) | new fact current, no stale-current hit on any judged surface | new fact not current, or any stale-current hit | |
+| COR-02 implicit update (no "moved" cue) | new fact current and the old fact is not stale-current in search, **or** both are current and the newer ranks above the older in `memories` mode (PRD: "ranking prefers newer") | new fact not current, or the older ranks above the newer while both are current | profile holding both is a note, not a fail |
+| COR-03 "used to X, now Y" (one doc) | new fact current and no memory presents the old value as current (a hit with the old token, without the new token, and without a past-tense cue: used to, previously, formerly, before, earlier, was, were, lived, no longer, moved from) | the old value presented as current | whether history is kept as a memory is recorded, not judged |
+| COR-04 chain of 3 updates | last value current; first and middle values never stale-current | any earlier value stale-current, or last not current | |
+| COR-05 retraction by text ("forget what I said") | retracted fact is no longer current | n/a | **Characterization.** The docs say retraction is "only via explicit forget calls" (api-facts section 7), so a retained fact is DOCUMENTED, not FAIL |
+| COR-06 explicit forget call | after `memories.forget`, the memory is gone from every judged surface within 120s | still current at 120s | Documented guarantee: forgotten memories are "excluded from search results but preserved". Chunks of the source document legitimately remain |
+
+A stale-current hit is an S2 candidate only after 3/3 repro, a docs check and an issue-tracker check (PRD section 10).
