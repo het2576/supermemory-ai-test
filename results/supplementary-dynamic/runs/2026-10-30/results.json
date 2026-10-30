@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-30",
+  "records": [
+    {
+      "testId": "COR-01",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T15:34:16.697687+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "add_doc1",
+          "attempt": 1,
+          "scope": "memtrust_cor01_987745121c",
+          "http": 200,
+          "id": "AWig34JCfJhPg2FM4Fy4af"
+        },
+        {
+          "step": "processed_doc1",
+          "attempt": 1,
+          "status": "done",
+          "dreaming": "dreaming",
+          "elapsed_s": 897.3660200419836
+        },
+        {
+          "step": "memory_for_doc1",
+          "attempt": 1,
+          "token": "ZQ-COR-fef12789cc58",
+          "found": false,
+          "elapsed_s": 895.8755471660115
+        },
+        {
+          "step": "add_doc1",
+          "attempt": 2,
+          "scope": "memtrust_cor01_b85ffa77c6",
+          "http": 200,
+          "id": "dDkDJh3MdrF5toZtfafPbg"
+        },
+        {
+          "step": "processed_doc1",
+          "attempt": 2,
+          "status": "done",
+          "dreaming": "dreaming",
+          "elapsed_s": 898.0841900839878
+        },
+        {
+          "step": "memory_for_doc1",
+          "attempt": 2,
+          "token": "ZQ-COR-6209acb80afe",
+          "found": false,
+          "elapsed_s": 899.7342027080012
+        },
+        {
+          "step": "add_doc1",
+          "attempt": 3,
+          "scope": "memtrust_cor01_9d7ce587eb",
+          "http": 200,
+          "id": "7LxDJJW2W7PBBVyw8M2vGk"
+        },
+        {
+          "step": "processed_doc1",
+          "attempt": 3,
+          "status": "done",
+          "dreaming": "dreaming",
+          "elapsed_s": 895.8435462909983
+        },
+        {
+          "step": "memory_for_doc1",
+          "attempt": 3,
+          "token": "ZQ-COR-0e1aad794327",
+          "found": false,
+          "elapsed_s": 899.3356957919896
+        }
+      ],
+      "result": "SKIPPED",
+      "timeToConsistencySec": null,
+      "notes": "no memory with the exact token from document 1 surfaced after 3 attempts; the update cannot be judged",
+      "rawArtifacts": "results/supplementary-dynamic/runs/2026-10-30/COR-01-run1.json"
+    }
+  ],
+  "summary": [
+    {
+      "testId": "COR-01",
+      "final": "SKIPPED",
+      "perRun": [
+        "SKIPPED"
+      ]
+    }
+  ]
+}
