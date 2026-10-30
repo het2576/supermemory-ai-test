@@ -1,0 +1,796 @@
+{
+  "record": {
+    "testId": "COR-03",
+    "provider": "supermemory",
+    "client": "supermemory-python-sdk",
+    "sdkVersion": "5.0.1",
+    "apiVersion": "v5",
+    "date": "2026-10-30T13:09:38.084412+00:00",
+    "run": 2,
+    "checkpoints": [
+      {
+        "step": "add_doc1",
+        "attempt": 1,
+        "scope": "memtrust_cor03_d1c157e930",
+        "http": 200,
+        "id": "XHkyPW2LuXLHiDSVULW2po"
+      },
+      {
+        "step": "processed_doc1",
+        "attempt": 1,
+        "status": "done",
+        "dreaming": "done",
+        "elapsed_s": 35.50454474997241
+      },
+      {
+        "step": "memory_for_doc1",
+        "attempt": 1,
+        "token": "ZQ-COR-d55792e85466",
+        "found": true,
+        "elapsed_s": 0.9053169999970123
+      },
+      {
+        "t": 0,
+        "ok": true,
+        "problem": "",
+        "history_kept_as_memory": false,
+        "old_texts": [],
+        "chunks": {
+          "ZQ-COR-d55792e85466": 0,
+          "ZQ-COR-f51dc967d358": 0
+        }
+      },
+      {
+        "t": 10,
+        "ok": true,
+        "problem": "",
+        "history_kept_as_memory": false,
+        "old_texts": [],
+        "chunks": {
+          "ZQ-COR-d55792e85466": 0,
+          "ZQ-COR-f51dc967d358": 0
+        }
+      },
+      {
+        "t": 30,
+        "ok": true,
+        "problem": "",
+        "history_kept_as_memory": false,
+        "old_texts": [],
+        "chunks": {
+          "ZQ-COR-d55792e85466": 0,
+          "ZQ-COR-f51dc967d358": 0
+        }
+      }
+    ],
+    "result": "PASS",
+    "timeToConsistencySec": null,
+    "notes": "old value not kept as a memory (history not preserved)",
+    "rawArtifacts": "results/runs/2026-10-30/COR-03-run2.json"
+  },
+  "extra": {
+    "tokens": {
+      "old": "ZQ-COR-f51dc967d358",
+      "new": "ZQ-COR-d55792e85466"
+    },
+    "dreaming": "instant",
+    "converged_at_s": 0
+  },
+  "exchanges": [
+    {
+      "t": "2026-10-30T13:08:28",
+      "method": "POST",
+      "path": "/ns/memtrust_cor03_d1c157e930/document",
+      "request_body": {
+        "content": "Meera used to live in Alpheria-ZQ-COR-f51dc967d358, but now lives in Brenmoor-ZQ-COR-d55792e85466.",
+        "dreaming": "instant"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "XHkyPW2LuXLHiDSVULW2po",
+        "status": "queued"
+      },
+      "ms": 1614
+    },
+    {
+      "t": "2026-10-30T13:08:28",
+      "method": "GET",
+      "path": "/ns/memtrust_cor03_d1c157e930/document/XHkyPW2LuXLHiDSVULW2po",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "XHkyPW2LuXLHiDSVULW2po",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:08:28.005Z",
+          "updatedAt": "2026-10-30T13:08:28.005Z",
+          "filepath": null
+        }
+      },
+      "ms": 501
+    },
+    {
+      "t": "2026-10-30T13:08:34",
+      "method": "GET",
+      "path": "/ns/memtrust_cor03_d1c157e930/document/XHkyPW2LuXLHiDSVULW2po",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "XHkyPW2LuXLHiDSVULW2po",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:08:28.005Z",
+          "updatedAt": "2026-10-30T13:08:28.005Z",
+          "filepath": null
+        }
+      },
+      "ms": 721
+    },
+    {
+      "t": "2026-10-30T13:08:40",
+      "method": "GET",
+      "path": "/ns/memtrust_cor03_d1c157e930/document/XHkyPW2LuXLHiDSVULW2po",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "XHkyPW2LuXLHiDSVULW2po",
+        "title": "Meera used to live in Alpheria-ZQ-COR-f51dc967d358...",
+        "type": "text",
+        "summary": null,
+        "content": "Meera used to live in Alpheria-ZQ-COR-f51dc967d358, but now lives in Brenmoor-ZQ-COR-d55792e85466.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:08:28.005Z",
+          "updatedAt": "2026-10-30T13:08:37.220Z",
+          "filepath": null
+        }
+      },
+      "ms": 711
+    },
+    {
+      "t": "2026-10-30T13:08:46",
+      "method": "GET",
+      "path": "/ns/memtrust_cor03_d1c157e930/document/XHkyPW2LuXLHiDSVULW2po",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "XHkyPW2LuXLHiDSVULW2po",
+        "title": "Meera used to live in Alpheria-ZQ-COR-f51dc967d358...",
+        "type": "text",
+        "summary": null,
+        "content": "Meera used to live in Alpheria-ZQ-COR-f51dc967d358, but now lives in Brenmoor-ZQ-COR-d55792e85466.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:08:28.005Z",
+          "updatedAt": "2026-10-30T13:08:37.220Z",
+          "filepath": null
+        }
+      },
+      "ms": 1286
+    },
+    {
+      "t": "2026-10-30T13:08:52",
+      "method": "GET",
+      "path": "/ns/memtrust_cor03_d1c157e930/document/XHkyPW2LuXLHiDSVULW2po",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "XHkyPW2LuXLHiDSVULW2po",
+        "title": "Meera used to live in Alpheria-ZQ-COR-f51dc967d358...",
+        "type": "text",
+        "summary": "The statement reports that the individual named Meera formerly resided in the location identified by the composite identifier \u0012AlpheriaZQ-COR-f51dc967d358\u0012. According to the text, she has since moved and now lives in the location denoted by \u0012BrenmoorZQ-COR-d55792e85466\u0012. Both locations are represented by unique alphanumeric tags (f51dc967d358 and d55792e85466), indicating a change of residence from Alpheria to Brenmoor.",
+        "content": "Meera used to live in Alpheria-ZQ-COR-f51dc967d358, but now lives in Brenmoor-ZQ-COR-d55792e85466.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:08:28.005Z",
+          "updatedAt": "2026-10-30T13:08:37.220Z",
+          "filepath": null
+        }
+      },
+      "ms": 611
+    },
+    {
+      "t": "2026-10-30T13:08:58",
+      "method": "GET",
+      "path": "/ns/memtrust_cor03_d1c157e930/document/XHkyPW2LuXLHiDSVULW2po",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "XHkyPW2LuXLHiDSVULW2po",
+        "title": "Meera used to live in Alpheria-ZQ-COR-f51dc967d358...",
+        "type": "text",
+        "summary": "The statement reports that the individual named Meera formerly resided in the location identified by the composite identifier \u0012AlpheriaZQ-COR-f51dc967d358\u0012. According to the text, she has since moved and now lives in the location denoted by \u0012BrenmoorZQ-COR-d55792e85466\u0012. Both locations are represented by unique alphanumeric tags (f51dc967d358 and d55792e85466), indicating a change of residence from Alpheria to Brenmoor.",
+        "content": "Meera used to live in Alpheria-ZQ-COR-f51dc967d358, but now lives in Brenmoor-ZQ-COR-d55792e85466.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:08:28.005Z",
+          "updatedAt": "2026-10-30T13:08:37.220Z",
+          "filepath": null
+        }
+      },
+      "ms": 1037
+    },
+    {
+      "t": "2026-10-30T13:09:03",
+      "method": "GET",
+      "path": "/ns/memtrust_cor03_d1c157e930/document/XHkyPW2LuXLHiDSVULW2po",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "XHkyPW2LuXLHiDSVULW2po",
+        "title": "Meera used to live in Alpheria-ZQ-COR-f51dc967d358...",
+        "type": "text",
+        "summary": "The statement reports that the individual named Meera formerly resided in the location identified by the composite identifier \u0012AlpheriaZQ-COR-f51dc967d358\u0012. According to the text, she has since moved and now lives in the location denoted by \u0012BrenmoorZQ-COR-d55792e85466\u0012. Both locations are represented by unique alphanumeric tags (f51dc967d358 and d55792e85466), indicating a change of residence from Alpheria to Brenmoor.",
+        "content": "Meera used to live in Alpheria-ZQ-COR-f51dc967d358, but now lives in Brenmoor-ZQ-COR-d55792e85466.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "done",
+          "createdAt": "2026-10-30T13:08:28.005Z",
+          "updatedAt": "2026-10-30T13:09:00.527Z",
+          "filepath": null
+        }
+      },
+      "ms": 608
+    },
+    {
+      "t": "2026-10-30T13:09:04",
+      "method": "POST",
+      "path": "/ns/memtrust_cor03_d1c157e930/search",
+      "request_body": {
+        "query": "Where does Meera live?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "xLri4UZFbZNTfK9HFoKYLS",
+            "memory": "Meera now lives in Brenmoor-ZQ-COR-d55792e85466.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.76121229,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:09:00.527Z",
+              "createdAt": "2026-10-30T13:09:00.527Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 376
+      },
+      "ms": 904
+    },
+    {
+      "t": "2026-10-30T13:09:06",
+      "method": "POST",
+      "path": "/ns/memtrust_cor03_d1c157e930/search",
+      "request_body": {
+        "query": "Where does Meera live?",
+        "searchMode": "memories",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "xLri4UZFbZNTfK9HFoKYLS",
+            "memory": "Meera now lives in Brenmoor-ZQ-COR-d55792e85466.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.76121229,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:09:00.527Z",
+              "createdAt": "2026-10-30T13:09:00.527Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 228
+      },
+      "ms": 1713
+    },
+    {
+      "t": "2026-10-30T13:09:07",
+      "method": "POST",
+      "path": "/ns/memtrust_cor03_d1c157e930/search",
+      "request_body": {
+        "query": "Where does Meera live?",
+        "searchMode": "hybrid",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "xLri4UZFbZNTfK9HFoKYLS",
+            "memory": "Meera now lives in Brenmoor-ZQ-COR-d55792e85466.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.76121229,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:09:00.527Z",
+              "createdAt": "2026-10-30T13:09:00.527Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "c2d2783e6a0cf84467ca45",
+            "chunk": "Meera used to live in Alpheria-ZQ-COR-f51dc967d358, but now lives in Brenmoor-ZQ-COR-d55792e85466.",
+            "metadata": {},
+            "similarity": 0.7341059999999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:09:00.527Z",
+              "createdAt": "2026-10-30T13:08:28.005Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 173
+      },
+      "ms": 650
+    },
+    {
+      "t": "2026-10-30T13:09:07",
+      "method": "POST",
+      "path": "/ns/memtrust_cor03_d1c157e930/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [
+            {
+              "id": "xLri4UZFbZNTfK9HFoKYLS",
+              "memory": "[2026-10-30] Meera now lives in Brenmoor-ZQ-COR-d55792e85466."
+            }
+          ],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 736
+    },
+    {
+      "t": "2026-10-30T13:09:08",
+      "method": "POST",
+      "path": "/ns/memtrust_cor03_d1c157e930/search",
+      "request_body": {
+        "query": "Where does Meera live?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "c2d2783e6a0cf84467ca45",
+            "chunk": "Meera used to live in Alpheria-ZQ-COR-f51dc967d358, but now lives in Brenmoor-ZQ-COR-d55792e85466.",
+            "metadata": {},
+            "similarity": 0.7341059999999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:09:00.527Z",
+              "createdAt": "2026-10-30T13:08:28.005Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 150
+      },
+      "ms": 648
+    },
+    {
+      "t": "2026-10-30T13:09:15",
+      "method": "POST",
+      "path": "/ns/memtrust_cor03_d1c157e930/search",
+      "request_body": {
+        "query": "Where does Meera live?",
+        "searchMode": "memories",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "xLri4UZFbZNTfK9HFoKYLS",
+            "memory": "Meera now lives in Brenmoor-ZQ-COR-d55792e85466.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.76121229,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:09:00.527Z",
+              "createdAt": "2026-10-30T13:09:00.527Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 201
+      },
+      "ms": 851
+    },
+    {
+      "t": "2026-10-30T13:09:16",
+      "method": "POST",
+      "path": "/ns/memtrust_cor03_d1c157e930/search",
+      "request_body": {
+        "query": "Where does Meera live?",
+        "searchMode": "hybrid",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "xLri4UZFbZNTfK9HFoKYLS",
+            "memory": "Meera now lives in Brenmoor-ZQ-COR-d55792e85466.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.76121229,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:09:00.527Z",
+              "createdAt": "2026-10-30T13:09:00.527Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "c2d2783e6a0cf84467ca45",
+            "chunk": "Meera used to live in Alpheria-ZQ-COR-f51dc967d358, but now lives in Brenmoor-ZQ-COR-d55792e85466.",
+            "metadata": {},
+            "similarity": 0.7341059999999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:09:00.527Z",
+              "createdAt": "2026-10-30T13:08:28.005Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 223
+      },
+      "ms": 737
+    },
+    {
+      "t": "2026-10-30T13:09:16",
+      "method": "POST",
+      "path": "/ns/memtrust_cor03_d1c157e930/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [
+            {
+              "id": "xLri4UZFbZNTfK9HFoKYLS",
+              "memory": "[2026-10-30] Meera now lives in Brenmoor-ZQ-COR-d55792e85466."
+            }
+          ],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 520
+    },
+    {
+      "t": "2026-10-30T13:09:17",
+      "method": "POST",
+      "path": "/ns/memtrust_cor03_d1c157e930/search",
+      "request_body": {
+        "query": "Where does Meera live?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "c2d2783e6a0cf84467ca45",
+            "chunk": "Meera used to live in Alpheria-ZQ-COR-f51dc967d358, but now lives in Brenmoor-ZQ-COR-d55792e85466.",
+            "metadata": {},
+            "similarity": 0.7341059999999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:09:00.527Z",
+              "createdAt": "2026-10-30T13:08:28.005Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 368
+      },
+      "ms": 1182
+    },
+    {
+      "t": "2026-10-30T13:09:35",
+      "method": "POST",
+      "path": "/ns/memtrust_cor03_d1c157e930/search",
+      "request_body": {
+        "query": "Where does Meera live?",
+        "searchMode": "memories",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "xLri4UZFbZNTfK9HFoKYLS",
+            "memory": "Meera now lives in Brenmoor-ZQ-COR-d55792e85466.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.76121229,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:09:00.527Z",
+              "createdAt": "2026-10-30T13:09:00.527Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 151
+      },
+      "ms": 895
+    },
+    {
+      "t": "2026-10-30T13:09:36",
+      "method": "POST",
+      "path": "/ns/memtrust_cor03_d1c157e930/search",
+      "request_body": {
+        "query": "Where does Meera live?",
+        "searchMode": "hybrid",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "xLri4UZFbZNTfK9HFoKYLS",
+            "memory": "Meera now lives in Brenmoor-ZQ-COR-d55792e85466.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.76121229,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:09:00.527Z",
+              "createdAt": "2026-10-30T13:09:00.527Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "c2d2783e6a0cf84467ca45",
+            "chunk": "Meera used to live in Alpheria-ZQ-COR-f51dc967d358, but now lives in Brenmoor-ZQ-COR-d55792e85466.",
+            "metadata": {},
+            "similarity": 0.7341059999999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:09:00.527Z",
+              "createdAt": "2026-10-30T13:08:28.005Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 172
+      },
+      "ms": 644
+    },
+    {
+      "t": "2026-10-30T13:09:36",
+      "method": "POST",
+      "path": "/ns/memtrust_cor03_d1c157e930/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [
+            {
+              "id": "xLri4UZFbZNTfK9HFoKYLS",
+              "memory": "[2026-10-30] Meera now lives in Brenmoor-ZQ-COR-d55792e85466."
+            }
+          ],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 556
+    },
+    {
+      "t": "2026-10-30T13:09:37",
+      "method": "POST",
+      "path": "/ns/memtrust_cor03_d1c157e930/search",
+      "request_body": {
+        "query": "Where does Meera live?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "c2d2783e6a0cf84467ca45",
+            "chunk": "Meera used to live in Alpheria-ZQ-COR-f51dc967d358, but now lives in Brenmoor-ZQ-COR-d55792e85466.",
+            "metadata": {},
+            "similarity": 0.7341059999999999,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:09:00.527Z",
+              "createdAt": "2026-10-30T13:08:28.005Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 159
+      },
+      "ms": 641
+    },
+    {
+      "t": "2026-10-30T13:09:38",
+      "method": "DELETE",
+      "path": "/ns/memtrust_cor03_d1c157e930",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_cor03_d1c157e930",
+        "deletedDocumentsCount": 1,
+        "deletedMemoriesCount": 1
+      },
+      "ms": 641
+    }
+  ]
+}

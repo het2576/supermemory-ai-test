@@ -1,0 +1,1527 @@
+{
+  "record": {
+    "testId": "COR-02",
+    "provider": "supermemory",
+    "client": "supermemory-python-sdk",
+    "sdkVersion": "5.0.1",
+    "apiVersion": "v5",
+    "date": "2026-10-30T13:05:10.920235+00:00",
+    "run": 2,
+    "checkpoints": [
+      {
+        "step": "add_doc1",
+        "attempt": 1,
+        "scope": "memtrust_cor02_6bea096bda",
+        "http": 200,
+        "id": "o3ezuMqgsabYZsC4J5nFqP"
+      },
+      {
+        "step": "processed_doc1",
+        "attempt": 1,
+        "status": "done",
+        "dreaming": "done",
+        "elapsed_s": 35.84088420798071
+      },
+      {
+        "step": "memory_for_doc1",
+        "attempt": 1,
+        "token": "ZQ-COR-05ae9e95a251",
+        "found": true,
+        "elapsed_s": 0.9228841669973917
+      },
+      {
+        "step": "add_doc2",
+        "attempt": 1,
+        "scope": "memtrust_cor02_6bea096bda",
+        "http": 200,
+        "id": "LdZyH3ETPguS2PhLq4xCar"
+      },
+      {
+        "step": "processed_doc2",
+        "attempt": 1,
+        "status": "done",
+        "dreaming": "done",
+        "elapsed_s": 60.41450899999472
+      },
+      {
+        "step": "memory_for_doc2",
+        "attempt": 1,
+        "token": "ZQ-COR-aa3d2b8674cd",
+        "found": true,
+        "elapsed_s": 0.7075452079880051
+      },
+      {
+        "t": 0,
+        "ok": true,
+        "problem": "",
+        "new_rank": 0,
+        "stale": [],
+        "profile_has_new": true,
+        "chunks": {
+          "ZQ-COR-aa3d2b8674cd": 0,
+          "ZQ-COR-05ae9e95a251": 1
+        }
+      },
+      {
+        "t": 10,
+        "ok": true,
+        "problem": "",
+        "new_rank": 0,
+        "stale": [],
+        "profile_has_new": true,
+        "chunks": {
+          "ZQ-COR-aa3d2b8674cd": 0,
+          "ZQ-COR-05ae9e95a251": 1
+        }
+      },
+      {
+        "t": 30,
+        "ok": true,
+        "problem": "",
+        "new_rank": 0,
+        "stale": [],
+        "profile_has_new": true,
+        "chunks": {
+          "ZQ-COR-aa3d2b8674cd": 0,
+          "ZQ-COR-05ae9e95a251": 1
+        }
+      }
+    ],
+    "result": "PASS",
+    "timeToConsistencySec": null,
+    "notes": "",
+    "rawArtifacts": "results/runs/2026-10-30/COR-02-run2.json"
+  },
+  "extra": {
+    "tokens": {
+      "old": [
+        "ZQ-COR-05ae9e95a251"
+      ],
+      "new": "ZQ-COR-aa3d2b8674cd"
+    },
+    "dreaming": "instant",
+    "converged_at_s": 0
+  },
+  "exchanges": [
+    {
+      "t": "2026-10-30T13:02:53",
+      "method": "POST",
+      "path": "/ns/memtrust_cor02_6bea096bda/document",
+      "request_body": {
+        "content": "Priya works as a data engineer at the company Ardenmoor-ZQ-COR-05ae9e95a251.",
+        "dreaming": "instant"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "o3ezuMqgsabYZsC4J5nFqP",
+        "status": "queued"
+      },
+      "ms": 1626
+    },
+    {
+      "t": "2026-10-30T13:02:54",
+      "method": "GET",
+      "path": "/ns/memtrust_cor02_6bea096bda/document/o3ezuMqgsabYZsC4J5nFqP",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "o3ezuMqgsabYZsC4J5nFqP",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:02:53.193Z",
+          "updatedAt": "2026-10-30T13:02:53.193Z",
+          "filepath": null
+        }
+      },
+      "ms": 484
+    },
+    {
+      "t": "2026-10-30T13:02:59",
+      "method": "GET",
+      "path": "/ns/memtrust_cor02_6bea096bda/document/o3ezuMqgsabYZsC4J5nFqP",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "o3ezuMqgsabYZsC4J5nFqP",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:02:53.193Z",
+          "updatedAt": "2026-10-30T13:02:53.193Z",
+          "filepath": null
+        }
+      },
+      "ms": 708
+    },
+    {
+      "t": "2026-10-30T13:03:05",
+      "method": "GET",
+      "path": "/ns/memtrust_cor02_6bea096bda/document/o3ezuMqgsabYZsC4J5nFqP",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "o3ezuMqgsabYZsC4J5nFqP",
+        "title": "Priya works as a data engineer at the company Arde...",
+        "type": "text",
+        "summary": null,
+        "content": "Priya works as a data engineer at the company Ardenmoor-ZQ-COR-05ae9e95a251.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:02:53.193Z",
+          "updatedAt": "2026-10-30T13:03:02.288Z",
+          "filepath": null
+        }
+      },
+      "ms": 1015
+    },
+    {
+      "t": "2026-10-30T13:03:11",
+      "method": "GET",
+      "path": "/ns/memtrust_cor02_6bea096bda/document/o3ezuMqgsabYZsC4J5nFqP",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "o3ezuMqgsabYZsC4J5nFqP",
+        "title": "Priya works as a data engineer at the company Arde...",
+        "type": "text",
+        "summary": null,
+        "content": "Priya works as a data engineer at the company Ardenmoor-ZQ-COR-05ae9e95a251.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:02:53.193Z",
+          "updatedAt": "2026-10-30T13:03:02.288Z",
+          "filepath": null
+        }
+      },
+      "ms": 632
+    },
+    {
+      "t": "2026-10-30T13:03:17",
+      "method": "GET",
+      "path": "/ns/memtrust_cor02_6bea096bda/document/o3ezuMqgsabYZsC4J5nFqP",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "o3ezuMqgsabYZsC4J5nFqP",
+        "title": "Priya works as a data engineer at the company Arde...",
+        "type": "text",
+        "summary": "Priya is employed as a data engineer at the enterprise Ardenmoor\u2011ZQ\u2011COR\u201105ae9e95a251. The record confirms her role and organizational affiliation within this organization, providing a concise factual statement of her employment position and the company\u2019s unique identifier.",
+        "content": "Priya works as a data engineer at the company Ardenmoor-ZQ-COR-05ae9e95a251.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:02:53.193Z",
+          "updatedAt": "2026-10-30T13:03:02.288Z",
+          "filepath": null
+        }
+      },
+      "ms": 1163
+    },
+    {
+      "t": "2026-10-30T13:03:23",
+      "method": "GET",
+      "path": "/ns/memtrust_cor02_6bea096bda/document/o3ezuMqgsabYZsC4J5nFqP",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "o3ezuMqgsabYZsC4J5nFqP",
+        "title": "Priya works as a data engineer at the company Arde...",
+        "type": "text",
+        "summary": "Priya is employed as a data engineer at the enterprise Ardenmoor\u2011ZQ\u2011COR\u201105ae9e95a251. The record confirms her role and organizational affiliation within this organization, providing a concise factual statement of her employment position and the company\u2019s unique identifier.",
+        "content": "Priya works as a data engineer at the company Ardenmoor-ZQ-COR-05ae9e95a251.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:02:53.193Z",
+          "updatedAt": "2026-10-30T13:03:02.288Z",
+          "filepath": null
+        }
+      },
+      "ms": 1074
+    },
+    {
+      "t": "2026-10-30T13:03:29",
+      "method": "GET",
+      "path": "/ns/memtrust_cor02_6bea096bda/document/o3ezuMqgsabYZsC4J5nFqP",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "o3ezuMqgsabYZsC4J5nFqP",
+        "title": "Priya works as a data engineer at the company Arde...",
+        "type": "text",
+        "summary": "Priya is employed as a data engineer at the enterprise Ardenmoor\u2011ZQ\u2011COR\u201105ae9e95a251. The record confirms her role and organizational affiliation within this organization, providing a concise factual statement of her employment position and the company\u2019s unique identifier.",
+        "content": "Priya works as a data engineer at the company Ardenmoor-ZQ-COR-05ae9e95a251.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "done",
+          "createdAt": "2026-10-30T13:02:53.193Z",
+          "updatedAt": "2026-10-30T13:03:24.691Z",
+          "filepath": null
+        }
+      },
+      "ms": 731
+    },
+    {
+      "t": "2026-10-30T13:03:30",
+      "method": "POST",
+      "path": "/ns/memtrust_cor02_6bea096bda/search",
+      "request_body": {
+        "query": "Which company does Priya work at?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "B2Hg3N8EFZustJeRCi7Wh1",
+            "memory": "Priya works as a data engineer at Ardenmoor-ZQ-COR-05ae9e95a251.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.72828788,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:03:24.691Z",
+              "createdAt": "2026-10-30T13:03:24.691Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 364
+      },
+      "ms": 921
+    },
+    {
+      "t": "2026-10-30T13:03:31",
+      "method": "POST",
+      "path": "/ns/memtrust_cor02_6bea096bda/document",
+      "request_body": {
+        "content": "Priya is a data engineer at the company Belvandria-ZQ-COR-aa3d2b8674cd, and the team there is friendly.",
+        "dreaming": "instant"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "LdZyH3ETPguS2PhLq4xCar",
+        "status": "queued"
+      },
+      "ms": 1138
+    },
+    {
+      "t": "2026-10-30T13:03:31",
+      "method": "GET",
+      "path": "/ns/memtrust_cor02_6bea096bda/document/LdZyH3ETPguS2PhLq4xCar",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "LdZyH3ETPguS2PhLq4xCar",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:03:31.226Z",
+          "updatedAt": "2026-10-30T13:03:31.226Z",
+          "filepath": null
+        }
+      },
+      "ms": 433
+    },
+    {
+      "t": "2026-10-30T13:03:37",
+      "method": "GET",
+      "path": "/ns/memtrust_cor02_6bea096bda/document/LdZyH3ETPguS2PhLq4xCar",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "LdZyH3ETPguS2PhLq4xCar",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:03:31.226Z",
+          "updatedAt": "2026-10-30T13:03:31.226Z",
+          "filepath": null
+        }
+      },
+      "ms": 696
+    },
+    {
+      "t": "2026-10-30T13:03:43",
+      "method": "GET",
+      "path": "/ns/memtrust_cor02_6bea096bda/document/LdZyH3ETPguS2PhLq4xCar",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "LdZyH3ETPguS2PhLq4xCar",
+        "title": "Priya is a data engineer at the company Belvandria...",
+        "type": "text",
+        "summary": null,
+        "content": "Priya is a data engineer at the company Belvandria-ZQ-COR-aa3d2b8674cd, and the team there is friendly.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:03:31.226Z",
+          "updatedAt": "2026-10-30T13:03:38.464Z",
+          "filepath": null
+        }
+      },
+      "ms": 765
+    },
+    {
+      "t": "2026-10-30T13:03:50",
+      "method": "GET",
+      "path": "/ns/memtrust_cor02_6bea096bda/document/LdZyH3ETPguS2PhLq4xCar",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "LdZyH3ETPguS2PhLq4xCar",
+        "title": "Priya is a data engineer at the company Belvandria...",
+        "type": "text",
+        "summary": "The document identifies Priya as a data engineer working for the company Belvandria-ZQ-COR-aa3d2b8674cd.  It highlights that the organization has a collaborative and friendly team culture, suggesting a positive workplace environment for data engineering projects.",
+        "content": "Priya is a data engineer at the company Belvandria-ZQ-COR-aa3d2b8674cd, and the team there is friendly.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:03:31.226Z",
+          "updatedAt": "2026-10-30T13:03:38.464Z",
+          "filepath": null
+        }
+      },
+      "ms": 2633
+    },
+    {
+      "t": "2026-10-30T13:03:56",
+      "method": "GET",
+      "path": "/ns/memtrust_cor02_6bea096bda/document/LdZyH3ETPguS2PhLq4xCar",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "LdZyH3ETPguS2PhLq4xCar",
+        "title": "Priya is a data engineer at the company Belvandria...",
+        "type": "text",
+        "summary": "The document identifies Priya as a data engineer working for the company Belvandria-ZQ-COR-aa3d2b8674cd.  It highlights that the organization has a collaborative and friendly team culture, suggesting a positive workplace environment for data engineering projects.",
+        "content": "Priya is a data engineer at the company Belvandria-ZQ-COR-aa3d2b8674cd, and the team there is friendly.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:03:31.226Z",
+          "updatedAt": "2026-10-30T13:03:38.464Z",
+          "filepath": null
+        }
+      },
+      "ms": 933
+    },
+    {
+      "t": "2026-10-30T13:04:02",
+      "method": "GET",
+      "path": "/ns/memtrust_cor02_6bea096bda/document/LdZyH3ETPguS2PhLq4xCar",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "LdZyH3ETPguS2PhLq4xCar",
+        "title": "Priya is a data engineer at the company Belvandria...",
+        "type": "text",
+        "summary": "The document identifies Priya as a data engineer working for the company Belvandria-ZQ-COR-aa3d2b8674cd.  It highlights that the organization has a collaborative and friendly team culture, suggesting a positive workplace environment for data engineering projects.",
+        "content": "Priya is a data engineer at the company Belvandria-ZQ-COR-aa3d2b8674cd, and the team there is friendly.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:03:31.226Z",
+          "updatedAt": "2026-10-30T13:03:38.464Z",
+          "filepath": null
+        }
+      },
+      "ms": 810
+    },
+    {
+      "t": "2026-10-30T13:04:08",
+      "method": "GET",
+      "path": "/ns/memtrust_cor02_6bea096bda/document/LdZyH3ETPguS2PhLq4xCar",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "LdZyH3ETPguS2PhLq4xCar",
+        "title": "Priya is a data engineer at the company Belvandria...",
+        "type": "text",
+        "summary": "The document identifies Priya as a data engineer working for the company Belvandria-ZQ-COR-aa3d2b8674cd.  It highlights that the organization has a collaborative and friendly team culture, suggesting a positive workplace environment for data engineering projects.",
+        "content": "Priya is a data engineer at the company Belvandria-ZQ-COR-aa3d2b8674cd, and the team there is friendly.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:03:31.226Z",
+          "updatedAt": "2026-10-30T13:03:38.464Z",
+          "filepath": null
+        }
+      },
+      "ms": 678
+    },
+    {
+      "t": "2026-10-30T13:04:14",
+      "method": "GET",
+      "path": "/ns/memtrust_cor02_6bea096bda/document/LdZyH3ETPguS2PhLq4xCar",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "LdZyH3ETPguS2PhLq4xCar",
+        "title": "Priya is a data engineer at the company Belvandria...",
+        "type": "text",
+        "summary": "The document identifies Priya as a data engineer working for the company Belvandria-ZQ-COR-aa3d2b8674cd.  It highlights that the organization has a collaborative and friendly team culture, suggesting a positive workplace environment for data engineering projects.",
+        "content": "Priya is a data engineer at the company Belvandria-ZQ-COR-aa3d2b8674cd, and the team there is friendly.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:03:31.226Z",
+          "updatedAt": "2026-10-30T13:03:38.464Z",
+          "filepath": null
+        }
+      },
+      "ms": 635
+    },
+    {
+      "t": "2026-10-30T13:04:19",
+      "method": "GET",
+      "path": "/ns/memtrust_cor02_6bea096bda/document/LdZyH3ETPguS2PhLq4xCar",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "LdZyH3ETPguS2PhLq4xCar",
+        "title": "Priya is a data engineer at the company Belvandria...",
+        "type": "text",
+        "summary": "The document identifies Priya as a data engineer working for the company Belvandria-ZQ-COR-aa3d2b8674cd.  It highlights that the organization has a collaborative and friendly team culture, suggesting a positive workplace environment for data engineering projects.",
+        "content": "Priya is a data engineer at the company Belvandria-ZQ-COR-aa3d2b8674cd, and the team there is friendly.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:03:31.226Z",
+          "updatedAt": "2026-10-30T13:03:38.464Z",
+          "filepath": null
+        }
+      },
+      "ms": 635
+    },
+    {
+      "t": "2026-10-30T13:04:25",
+      "method": "GET",
+      "path": "/ns/memtrust_cor02_6bea096bda/document/LdZyH3ETPguS2PhLq4xCar",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "LdZyH3ETPguS2PhLq4xCar",
+        "title": "Priya is a data engineer at the company Belvandria...",
+        "type": "text",
+        "summary": "The document identifies Priya as a data engineer working for the company Belvandria-ZQ-COR-aa3d2b8674cd.  It highlights that the organization has a collaborative and friendly team culture, suggesting a positive workplace environment for data engineering projects.",
+        "content": "Priya is a data engineer at the company Belvandria-ZQ-COR-aa3d2b8674cd, and the team there is friendly.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:03:31.226Z",
+          "updatedAt": "2026-10-30T13:03:38.464Z",
+          "filepath": null
+        }
+      },
+      "ms": 1021
+    },
+    {
+      "t": "2026-10-30T13:04:31",
+      "method": "GET",
+      "path": "/ns/memtrust_cor02_6bea096bda/document/LdZyH3ETPguS2PhLq4xCar",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "LdZyH3ETPguS2PhLq4xCar",
+        "title": "Priya is a data engineer at the company Belvandria...",
+        "type": "text",
+        "summary": "The document identifies Priya as a data engineer working for the company Belvandria-ZQ-COR-aa3d2b8674cd.  It highlights that the organization has a collaborative and friendly team culture, suggesting a positive workplace environment for data engineering projects.",
+        "content": "Priya is a data engineer at the company Belvandria-ZQ-COR-aa3d2b8674cd, and the team there is friendly.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "done",
+          "createdAt": "2026-10-30T13:03:31.226Z",
+          "updatedAt": "2026-10-30T13:04:25.688Z",
+          "filepath": null
+        }
+      },
+      "ms": 1118
+    },
+    {
+      "t": "2026-10-30T13:04:32",
+      "method": "POST",
+      "path": "/ns/memtrust_cor02_6bea096bda/search",
+      "request_body": {
+        "query": "Which company does Priya work at?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "7heHMaY1obKte4adwSN2B5",
+            "memory": "Priya works as a data engineer at Belvandria-ZQ-COR-aa3d2b8674cd.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.73067915,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:04:25.688Z",
+              "createdAt": "2026-10-30T13:04:25.688Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "4tTiztNLs3depP5xXB3ux6",
+            "memory": "The team at Belvandria-ZQ-COR-aa3d2b8674cd is friendly.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.5666461,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:04:25.688Z",
+              "createdAt": "2026-10-30T13:04:25.688Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 180
+      },
+      "ms": 704
+    },
+    {
+      "t": "2026-10-30T13:04:33",
+      "method": "POST",
+      "path": "/ns/memtrust_cor02_6bea096bda/search",
+      "request_body": {
+        "query": "Which company does Priya work at?",
+        "searchMode": "memories",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "7heHMaY1obKte4adwSN2B5",
+            "memory": "Priya works as a data engineer at Belvandria-ZQ-COR-aa3d2b8674cd.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.73067915,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:04:25.688Z",
+              "createdAt": "2026-10-30T13:04:25.688Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "B2Hg3N8EFZustJeRCi7Wh1",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Priya works as a data engineer at Ardenmoor-ZQ-COR-05ae9e95a251.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:04:25.688"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "4tTiztNLs3depP5xXB3ux6",
+            "memory": "The team at Belvandria-ZQ-COR-aa3d2b8674cd is friendly.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.5666461,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:04:25.688Z",
+              "createdAt": "2026-10-30T13:04:25.688Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 191
+      },
+      "ms": 688
+    },
+    {
+      "t": "2026-10-30T13:04:33",
+      "method": "POST",
+      "path": "/ns/memtrust_cor02_6bea096bda/search",
+      "request_body": {
+        "query": "Which company does Priya work at?",
+        "searchMode": "hybrid",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "d2116769b0e6fbcd19e0da",
+            "chunk": "Priya is a data engineer at the company Belvandria-ZQ-COR-aa3d2b8674cd, and the team there is friendly.",
+            "metadata": {},
+            "similarity": 0.75084525,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:04:25.688Z",
+              "createdAt": "2026-10-30T13:03:31.226Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "6892056c9f16177f3c3130",
+            "chunk": "Priya works as a data engineer at the company Ardenmoor-ZQ-COR-05ae9e95a251.",
+            "metadata": {},
+            "similarity": 0.73153937,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:03:24.691Z",
+              "createdAt": "2026-10-30T13:02:53.193Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "7heHMaY1obKte4adwSN2B5",
+            "memory": "Priya works as a data engineer at Belvandria-ZQ-COR-aa3d2b8674cd.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.73067915,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:04:25.688Z",
+              "createdAt": "2026-10-30T13:04:25.688Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "B2Hg3N8EFZustJeRCi7Wh1",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Priya works as a data engineer at Ardenmoor-ZQ-COR-05ae9e95a251.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:04:25.688"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "4tTiztNLs3depP5xXB3ux6",
+            "memory": "The team at Belvandria-ZQ-COR-aa3d2b8674cd is friendly.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.5666461,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:04:25.688Z",
+              "createdAt": "2026-10-30T13:04:25.688Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 164
+      },
+      "ms": 707
+    },
+    {
+      "t": "2026-10-30T13:04:34",
+      "method": "POST",
+      "path": "/ns/memtrust_cor02_6bea096bda/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [
+            {
+              "id": "4tTiztNLs3depP5xXB3ux6",
+              "memory": "[2026-10-30] The team at Belvandria-ZQ-COR-aa3d2b8674cd is friendly."
+            },
+            {
+              "id": "7heHMaY1obKte4adwSN2B5",
+              "memory": "[2026-10-30] Priya works as a data engineer at Belvandria-ZQ-COR-aa3d2b8674cd."
+            }
+          ],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 709
+    },
+    {
+      "t": "2026-10-30T13:04:35",
+      "method": "POST",
+      "path": "/ns/memtrust_cor02_6bea096bda/search",
+      "request_body": {
+        "query": "Which company does Priya work at?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "d2116769b0e6fbcd19e0da",
+            "chunk": "Priya is a data engineer at the company Belvandria-ZQ-COR-aa3d2b8674cd, and the team there is friendly.",
+            "metadata": {},
+            "similarity": 0.75084525,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:04:25.688Z",
+              "createdAt": "2026-10-30T13:03:31.226Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "6892056c9f16177f3c3130",
+            "chunk": "Priya works as a data engineer at the company Ardenmoor-ZQ-COR-05ae9e95a251.",
+            "metadata": {},
+            "similarity": 0.73153937,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:03:24.691Z",
+              "createdAt": "2026-10-30T13:02:53.193Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 172
+      },
+      "ms": 643
+    },
+    {
+      "t": "2026-10-30T13:04:44",
+      "method": "POST",
+      "path": "/ns/memtrust_cor02_6bea096bda/search",
+      "request_body": {
+        "query": "Which company does Priya work at?",
+        "searchMode": "memories",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "7heHMaY1obKte4adwSN2B5",
+            "memory": "Priya works as a data engineer at Belvandria-ZQ-COR-aa3d2b8674cd.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.73067915,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:04:25.688Z",
+              "createdAt": "2026-10-30T13:04:25.688Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "B2Hg3N8EFZustJeRCi7Wh1",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Priya works as a data engineer at Ardenmoor-ZQ-COR-05ae9e95a251.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:04:25.688"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "4tTiztNLs3depP5xXB3ux6",
+            "memory": "The team at Belvandria-ZQ-COR-aa3d2b8674cd is friendly.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.5666461,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:04:25.688Z",
+              "createdAt": "2026-10-30T13:04:25.688Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 133
+      },
+      "ms": 1565
+    },
+    {
+      "t": "2026-10-30T13:04:44",
+      "method": "POST",
+      "path": "/ns/memtrust_cor02_6bea096bda/search",
+      "request_body": {
+        "query": "Which company does Priya work at?",
+        "searchMode": "hybrid",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "d2116769b0e6fbcd19e0da",
+            "chunk": "Priya is a data engineer at the company Belvandria-ZQ-COR-aa3d2b8674cd, and the team there is friendly.",
+            "metadata": {},
+            "similarity": 0.75084525,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:04:25.688Z",
+              "createdAt": "2026-10-30T13:03:31.226Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "6892056c9f16177f3c3130",
+            "chunk": "Priya works as a data engineer at the company Ardenmoor-ZQ-COR-05ae9e95a251.",
+            "metadata": {},
+            "similarity": 0.73153937,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:03:24.691Z",
+              "createdAt": "2026-10-30T13:02:53.193Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "7heHMaY1obKte4adwSN2B5",
+            "memory": "Priya works as a data engineer at Belvandria-ZQ-COR-aa3d2b8674cd.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.73067915,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:04:25.688Z",
+              "createdAt": "2026-10-30T13:04:25.688Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "B2Hg3N8EFZustJeRCi7Wh1",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Priya works as a data engineer at Ardenmoor-ZQ-COR-05ae9e95a251.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:04:25.688"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "4tTiztNLs3depP5xXB3ux6",
+            "memory": "The team at Belvandria-ZQ-COR-aa3d2b8674cd is friendly.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.5666461,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:04:25.688Z",
+              "createdAt": "2026-10-30T13:04:25.688Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 180
+      },
+      "ms": 811
+    },
+    {
+      "t": "2026-10-30T13:04:45",
+      "method": "POST",
+      "path": "/ns/memtrust_cor02_6bea096bda/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [
+            {
+              "id": "4tTiztNLs3depP5xXB3ux6",
+              "memory": "[2026-10-30] The team at Belvandria-ZQ-COR-aa3d2b8674cd is friendly."
+            },
+            {
+              "id": "7heHMaY1obKte4adwSN2B5",
+              "memory": "[2026-10-30] Priya works as a data engineer at Belvandria-ZQ-COR-aa3d2b8674cd."
+            }
+          ],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 693
+    },
+    {
+      "t": "2026-10-30T13:04:46",
+      "method": "POST",
+      "path": "/ns/memtrust_cor02_6bea096bda/search",
+      "request_body": {
+        "query": "Which company does Priya work at?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "d2116769b0e6fbcd19e0da",
+            "chunk": "Priya is a data engineer at the company Belvandria-ZQ-COR-aa3d2b8674cd, and the team there is friendly.",
+            "metadata": {},
+            "similarity": 0.75084525,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:04:25.688Z",
+              "createdAt": "2026-10-30T13:03:31.226Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "6892056c9f16177f3c3130",
+            "chunk": "Priya works as a data engineer at the company Ardenmoor-ZQ-COR-05ae9e95a251.",
+            "metadata": {},
+            "similarity": 0.73153937,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:03:24.691Z",
+              "createdAt": "2026-10-30T13:02:53.193Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 159
+      },
+      "ms": 646
+    },
+    {
+      "t": "2026-10-30T13:05:05",
+      "method": "POST",
+      "path": "/ns/memtrust_cor02_6bea096bda/search",
+      "request_body": {
+        "query": "Which company does Priya work at?",
+        "searchMode": "memories",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "7heHMaY1obKte4adwSN2B5",
+            "memory": "Priya works as a data engineer at Belvandria-ZQ-COR-aa3d2b8674cd.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.73067915,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:04:25.688Z",
+              "createdAt": "2026-10-30T13:04:25.688Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "B2Hg3N8EFZustJeRCi7Wh1",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Priya works as a data engineer at Ardenmoor-ZQ-COR-05ae9e95a251.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:04:25.688"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "4tTiztNLs3depP5xXB3ux6",
+            "memory": "The team at Belvandria-ZQ-COR-aa3d2b8674cd is friendly.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.5666461,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:04:25.688Z",
+              "createdAt": "2026-10-30T13:04:25.688Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 1654
+      },
+      "ms": 2481
+    },
+    {
+      "t": "2026-10-30T13:05:07",
+      "method": "POST",
+      "path": "/ns/memtrust_cor02_6bea096bda/search",
+      "request_body": {
+        "query": "Which company does Priya work at?",
+        "searchMode": "hybrid",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "d2116769b0e6fbcd19e0da",
+            "chunk": "Priya is a data engineer at the company Belvandria-ZQ-COR-aa3d2b8674cd, and the team there is friendly.",
+            "metadata": {},
+            "similarity": 0.75084525,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:04:25.688Z",
+              "createdAt": "2026-10-30T13:03:31.226Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "6892056c9f16177f3c3130",
+            "chunk": "Priya works as a data engineer at the company Ardenmoor-ZQ-COR-05ae9e95a251.",
+            "metadata": {},
+            "similarity": 0.73153937,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:03:24.691Z",
+              "createdAt": "2026-10-30T13:02:53.193Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "7heHMaY1obKte4adwSN2B5",
+            "memory": "Priya works as a data engineer at Belvandria-ZQ-COR-aa3d2b8674cd.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.73067915,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:04:25.688Z",
+              "createdAt": "2026-10-30T13:04:25.688Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "B2Hg3N8EFZustJeRCi7Wh1",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Priya works as a data engineer at Ardenmoor-ZQ-COR-05ae9e95a251.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:04:25.688"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "4tTiztNLs3depP5xXB3ux6",
+            "memory": "The team at Belvandria-ZQ-COR-aa3d2b8674cd is friendly.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.5666461,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:04:25.688Z",
+              "createdAt": "2026-10-30T13:04:25.688Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 2372
+      },
+      "ms": 2935
+    },
+    {
+      "t": "2026-10-30T13:05:08",
+      "method": "POST",
+      "path": "/ns/memtrust_cor02_6bea096bda/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [
+            {
+              "id": "4tTiztNLs3depP5xXB3ux6",
+              "memory": "[2026-10-30] The team at Belvandria-ZQ-COR-aa3d2b8674cd is friendly."
+            },
+            {
+              "id": "7heHMaY1obKte4adwSN2B5",
+              "memory": "[2026-10-30] Priya works as a data engineer at Belvandria-ZQ-COR-aa3d2b8674cd."
+            }
+          ],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 591
+    },
+    {
+      "t": "2026-10-30T13:05:10",
+      "method": "POST",
+      "path": "/ns/memtrust_cor02_6bea096bda/search",
+      "request_body": {
+        "query": "Which company does Priya work at?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "d2116769b0e6fbcd19e0da",
+            "chunk": "Priya is a data engineer at the company Belvandria-ZQ-COR-aa3d2b8674cd, and the team there is friendly.",
+            "metadata": {},
+            "similarity": 0.75084525,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:04:25.688Z",
+              "createdAt": "2026-10-30T13:03:31.226Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "6892056c9f16177f3c3130",
+            "chunk": "Priya works as a data engineer at the company Ardenmoor-ZQ-COR-05ae9e95a251.",
+            "metadata": {},
+            "similarity": 0.73153937,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:03:24.691Z",
+              "createdAt": "2026-10-30T13:02:53.193Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 220
+      },
+      "ms": 1761
+    },
+    {
+      "t": "2026-10-30T13:05:10",
+      "method": "DELETE",
+      "path": "/ns/memtrust_cor02_6bea096bda",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_cor02_6bea096bda",
+        "deletedDocumentsCount": 2,
+        "deletedMemoriesCount": 3
+      },
+      "ms": 556
+    }
+  ]
+}

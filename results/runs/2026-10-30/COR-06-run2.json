@@ -1,0 +1,808 @@
+{
+  "record": {
+    "testId": "COR-06",
+    "provider": "supermemory",
+    "client": "supermemory-python-sdk",
+    "sdkVersion": "5.0.1",
+    "apiVersion": "v5",
+    "date": "2026-10-30T13:26:05.373167+00:00",
+    "run": 2,
+    "checkpoints": [
+      {
+        "step": "add_doc1",
+        "attempt": 1,
+        "scope": "memtrust_cor06_3cdb829c35",
+        "http": 200,
+        "id": "vcFrAoHY4AMFw3YVgd9tdY"
+      },
+      {
+        "step": "processed_doc1",
+        "attempt": 1,
+        "status": "done",
+        "dreaming": "done",
+        "elapsed_s": 60.4160562499892
+      },
+      {
+        "step": "memory_for_doc1",
+        "attempt": 1,
+        "token": "ZQ-COR-934e141933c9",
+        "found": true,
+        "elapsed_s": 1.0815828329941723
+      },
+      {
+        "step": "forget",
+        "ids": [
+          "Q7aGkoTgJmpAAmhFx8ptLo"
+        ],
+        "http": 200,
+        "count": 1,
+        "errors": []
+      },
+      {
+        "step": "evidence_include_forgotten",
+        "returned_with_flag": true
+      },
+      {
+        "t": 0,
+        "ok": true,
+        "problem": "",
+        "chunks": {
+          "ZQ-COR-934e141933c9": 0
+        }
+      },
+      {
+        "t": 10,
+        "ok": true,
+        "problem": "",
+        "chunks": {
+          "ZQ-COR-934e141933c9": 0
+        }
+      },
+      {
+        "t": 30,
+        "ok": true,
+        "problem": "",
+        "chunks": {
+          "ZQ-COR-934e141933c9": 0
+        }
+      }
+    ],
+    "result": "PASS",
+    "timeToConsistencySec": null,
+    "notes": "",
+    "rawArtifacts": "results/runs/2026-10-30/COR-06-run2.json"
+  },
+  "extra": {
+    "token": "ZQ-COR-934e141933c9",
+    "forget_count": 1,
+    "returned_with_include_forgotten": true,
+    "converged_at_s": 0
+  },
+  "exchanges": [
+    {
+      "t": "2026-10-30T13:24:24",
+      "method": "POST",
+      "path": "/ns/memtrust_cor06_3cdb829c35/document",
+      "request_body": {
+        "content": "Lena holds a building badge and the badge number is Tavrenn-ZQ-COR-934e141933c9.",
+        "dreaming": "instant"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "vcFrAoHY4AMFw3YVgd9tdY",
+        "status": "queued"
+      },
+      "ms": 1545
+    },
+    {
+      "t": "2026-10-30T13:24:24",
+      "method": "GET",
+      "path": "/ns/memtrust_cor06_3cdb829c35/document/vcFrAoHY4AMFw3YVgd9tdY",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "vcFrAoHY4AMFw3YVgd9tdY",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:24:24.083Z",
+          "updatedAt": "2026-10-30T13:24:24.083Z",
+          "filepath": null
+        }
+      },
+      "ms": 423
+    },
+    {
+      "t": "2026-10-30T13:24:30",
+      "method": "GET",
+      "path": "/ns/memtrust_cor06_3cdb829c35/document/vcFrAoHY4AMFw3YVgd9tdY",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "vcFrAoHY4AMFw3YVgd9tdY",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:24:24.083Z",
+          "updatedAt": "2026-10-30T13:24:24.083Z",
+          "filepath": null
+        }
+      },
+      "ms": 783
+    },
+    {
+      "t": "2026-10-30T13:24:36",
+      "method": "GET",
+      "path": "/ns/memtrust_cor06_3cdb829c35/document/vcFrAoHY4AMFw3YVgd9tdY",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "vcFrAoHY4AMFw3YVgd9tdY",
+        "title": "Lena holds a building badge and the badge number i...",
+        "type": "text",
+        "summary": null,
+        "content": "Lena holds a building badge and the badge number is Tavrenn-ZQ-COR-934e141933c9.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:24:24.083Z",
+          "updatedAt": "2026-10-30T13:24:35.105Z",
+          "filepath": null
+        }
+      },
+      "ms": 752
+    },
+    {
+      "t": "2026-10-30T13:24:42",
+      "method": "GET",
+      "path": "/ns/memtrust_cor06_3cdb829c35/document/vcFrAoHY4AMFw3YVgd9tdY",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "vcFrAoHY4AMFw3YVgd9tdY",
+        "title": "Lena holds a building badge and the badge number i...",
+        "type": "text",
+        "summary": null,
+        "content": "Lena holds a building badge and the badge number is Tavrenn-ZQ-COR-934e141933c9.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:24:24.083Z",
+          "updatedAt": "2026-10-30T13:24:35.105Z",
+          "filepath": null
+        }
+      },
+      "ms": 779
+    },
+    {
+      "t": "2026-10-30T13:24:47",
+      "method": "GET",
+      "path": "/ns/memtrust_cor06_3cdb829c35/document/vcFrAoHY4AMFw3YVgd9tdY",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "vcFrAoHY4AMFw3YVgd9tdY",
+        "title": "Lena holds a building badge and the badge number i...",
+        "type": "text",
+        "summary": null,
+        "content": "Lena holds a building badge and the badge number is Tavrenn-ZQ-COR-934e141933c9.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:24:24.083Z",
+          "updatedAt": "2026-10-30T13:24:35.105Z",
+          "filepath": null
+        }
+      },
+      "ms": 699
+    },
+    {
+      "t": "2026-10-30T13:24:53",
+      "method": "GET",
+      "path": "/ns/memtrust_cor06_3cdb829c35/document/vcFrAoHY4AMFw3YVgd9tdY",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "vcFrAoHY4AMFw3YVgd9tdY",
+        "title": "Lena holds a building badge and the badge number i...",
+        "type": "text",
+        "summary": "The document records that an individual named Lena holds a building badge whose unique identifier is \"Tavrenn-ZQ-COR-934e141933c9.\" The badge number is an alphanumeric string that likely grants access to a facility, and its inclusion suggests a need for record\u2011keeping, audit trails, or identity verification within the building system.",
+        "content": "Lena holds a building badge and the badge number is Tavrenn-ZQ-COR-934e141933c9.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:24:24.083Z",
+          "updatedAt": "2026-10-30T13:24:35.105Z",
+          "filepath": null
+        }
+      },
+      "ms": 850
+    },
+    {
+      "t": "2026-10-30T13:24:59",
+      "method": "GET",
+      "path": "/ns/memtrust_cor06_3cdb829c35/document/vcFrAoHY4AMFw3YVgd9tdY",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "vcFrAoHY4AMFw3YVgd9tdY",
+        "title": "Lena holds a building badge and the badge number i...",
+        "type": "text",
+        "summary": "The document records that an individual named Lena holds a building badge whose unique identifier is \"Tavrenn-ZQ-COR-934e141933c9.\" The badge number is an alphanumeric string that likely grants access to a facility, and its inclusion suggests a need for record\u2011keeping, audit trails, or identity verification within the building system.",
+        "content": "Lena holds a building badge and the badge number is Tavrenn-ZQ-COR-934e141933c9.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:24:24.083Z",
+          "updatedAt": "2026-10-30T13:24:35.105Z",
+          "filepath": null
+        }
+      },
+      "ms": 695
+    },
+    {
+      "t": "2026-10-30T13:25:05",
+      "method": "GET",
+      "path": "/ns/memtrust_cor06_3cdb829c35/document/vcFrAoHY4AMFw3YVgd9tdY",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "vcFrAoHY4AMFw3YVgd9tdY",
+        "title": "Lena holds a building badge and the badge number i...",
+        "type": "text",
+        "summary": "The document records that an individual named Lena holds a building badge whose unique identifier is \"Tavrenn-ZQ-COR-934e141933c9.\" The badge number is an alphanumeric string that likely grants access to a facility, and its inclusion suggests a need for record\u2011keeping, audit trails, or identity verification within the building system.",
+        "content": "Lena holds a building badge and the badge number is Tavrenn-ZQ-COR-934e141933c9.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:24:24.083Z",
+          "updatedAt": "2026-10-30T13:24:35.105Z",
+          "filepath": null
+        }
+      },
+      "ms": 824
+    },
+    {
+      "t": "2026-10-30T13:25:12",
+      "method": "GET",
+      "path": "/ns/memtrust_cor06_3cdb829c35/document/vcFrAoHY4AMFw3YVgd9tdY",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "vcFrAoHY4AMFw3YVgd9tdY",
+        "title": "Lena holds a building badge and the badge number i...",
+        "type": "text",
+        "summary": "The document records that an individual named Lena holds a building badge whose unique identifier is \"Tavrenn-ZQ-COR-934e141933c9.\" The badge number is an alphanumeric string that likely grants access to a facility, and its inclusion suggests a need for record\u2011keeping, audit trails, or identity verification within the building system.",
+        "content": "Lena holds a building badge and the badge number is Tavrenn-ZQ-COR-934e141933c9.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:24:24.083Z",
+          "updatedAt": "2026-10-30T13:24:35.105Z",
+          "filepath": null
+        }
+      },
+      "ms": 1750
+    },
+    {
+      "t": "2026-10-30T13:25:18",
+      "method": "GET",
+      "path": "/ns/memtrust_cor06_3cdb829c35/document/vcFrAoHY4AMFw3YVgd9tdY",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "vcFrAoHY4AMFw3YVgd9tdY",
+        "title": "Lena holds a building badge and the badge number i...",
+        "type": "text",
+        "summary": "The document records that an individual named Lena holds a building badge whose unique identifier is \"Tavrenn-ZQ-COR-934e141933c9.\" The badge number is an alphanumeric string that likely grants access to a facility, and its inclusion suggests a need for record\u2011keeping, audit trails, or identity verification within the building system.",
+        "content": "Lena holds a building badge and the badge number is Tavrenn-ZQ-COR-934e141933c9.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:24:24.083Z",
+          "updatedAt": "2026-10-30T13:24:35.105Z",
+          "filepath": null
+        }
+      },
+      "ms": 1804
+    },
+    {
+      "t": "2026-10-30T13:25:24",
+      "method": "GET",
+      "path": "/ns/memtrust_cor06_3cdb829c35/document/vcFrAoHY4AMFw3YVgd9tdY",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "vcFrAoHY4AMFw3YVgd9tdY",
+        "title": "Lena holds a building badge and the badge number i...",
+        "type": "text",
+        "summary": "The document records that an individual named Lena holds a building badge whose unique identifier is \"Tavrenn-ZQ-COR-934e141933c9.\" The badge number is an alphanumeric string that likely grants access to a facility, and its inclusion suggests a need for record\u2011keeping, audit trails, or identity verification within the building system.",
+        "content": "Lena holds a building badge and the badge number is Tavrenn-ZQ-COR-934e141933c9.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "done",
+          "createdAt": "2026-10-30T13:24:24.083Z",
+          "updatedAt": "2026-10-30T13:25:18.257Z",
+          "filepath": null
+        }
+      },
+      "ms": 980
+    },
+    {
+      "t": "2026-10-30T13:25:25",
+      "method": "POST",
+      "path": "/ns/memtrust_cor06_3cdb829c35/search",
+      "request_body": {
+        "query": "What is the number on Lena's building badge?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "Q7aGkoTgJmpAAmhFx8ptLo",
+            "memory": "Lena's building badge number is Tavrenn-ZQ-COR-934e141933c9.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.8059898,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:25:18.257Z",
+              "createdAt": "2026-10-30T13:25:18.257Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 572
+      },
+      "ms": 1080
+    },
+    {
+      "t": "2026-10-30T13:25:26",
+      "method": "POST",
+      "path": "/ns/memtrust_cor06_3cdb829c35/search",
+      "request_body": {
+        "query": "What is the number on Lena's building badge?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "Q7aGkoTgJmpAAmhFx8ptLo",
+            "memory": "Lena's building badge number is Tavrenn-ZQ-COR-934e141933c9.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.8059898,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:25:18.257Z",
+              "createdAt": "2026-10-30T13:25:18.257Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 176
+      },
+      "ms": 863
+    },
+    {
+      "t": "2026-10-30T13:25:27",
+      "method": "DELETE",
+      "path": "/ns/memtrust_cor06_3cdb829c35/memories",
+      "request_body": {
+        "ids": [
+          "Q7aGkoTgJmpAAmhFx8ptLo"
+        ]
+      },
+      "http_status": 200,
+      "response_body": {
+        "count": 1,
+        "errors": [],
+        "matches": [
+          {
+            "id": "Q7aGkoTgJmpAAmhFx8ptLo",
+            "memory": "Lena's building badge number is Tavrenn-ZQ-COR-934e141933c9."
+          }
+        ]
+      },
+      "ms": 1024
+    },
+    {
+      "t": "2026-10-30T13:25:28",
+      "method": "POST",
+      "path": "/ns/memtrust_cor06_3cdb829c35/search",
+      "request_body": {
+        "query": "What is the number on Lena's building badge?",
+        "searchMode": "memories",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 181
+      },
+      "ms": 816
+    },
+    {
+      "t": "2026-10-30T13:25:31",
+      "method": "POST",
+      "path": "/ns/memtrust_cor06_3cdb829c35/search",
+      "request_body": {
+        "query": "What is the number on Lena's building badge?",
+        "searchMode": "hybrid",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "96f3b6697b51ac259c4d8d",
+            "chunk": "Lena holds a building badge and the badge number is Tavrenn-ZQ-COR-934e141933c9.",
+            "metadata": {},
+            "similarity": 0.79550433,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:25:18.257Z",
+              "createdAt": "2026-10-30T13:24:24.083Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 304
+      },
+      "ms": 2970
+    },
+    {
+      "t": "2026-10-30T13:25:32",
+      "method": "POST",
+      "path": "/ns/memtrust_cor06_3cdb829c35/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 745
+    },
+    {
+      "t": "2026-10-30T13:25:33",
+      "method": "POST",
+      "path": "/ns/memtrust_cor06_3cdb829c35/search",
+      "request_body": {
+        "query": "What is the number on Lena's building badge?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "96f3b6697b51ac259c4d8d",
+            "chunk": "Lena holds a building badge and the badge number is Tavrenn-ZQ-COR-934e141933c9.",
+            "metadata": {},
+            "similarity": 0.79550433,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:25:18.257Z",
+              "createdAt": "2026-10-30T13:24:24.083Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 145
+      },
+      "ms": 686
+    },
+    {
+      "t": "2026-10-30T13:25:38",
+      "method": "POST",
+      "path": "/ns/memtrust_cor06_3cdb829c35/search",
+      "request_body": {
+        "query": "What is the number on Lena's building badge?",
+        "searchMode": "memories",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 162
+      },
+      "ms": 675
+    },
+    {
+      "t": "2026-10-30T13:25:39",
+      "method": "POST",
+      "path": "/ns/memtrust_cor06_3cdb829c35/search",
+      "request_body": {
+        "query": "What is the number on Lena's building badge?",
+        "searchMode": "hybrid",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "96f3b6697b51ac259c4d8d",
+            "chunk": "Lena holds a building badge and the badge number is Tavrenn-ZQ-COR-934e141933c9.",
+            "metadata": {},
+            "similarity": 0.79550433,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:25:18.257Z",
+              "createdAt": "2026-10-30T13:24:24.083Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 157
+      },
+      "ms": 683
+    },
+    {
+      "t": "2026-10-30T13:25:39",
+      "method": "POST",
+      "path": "/ns/memtrust_cor06_3cdb829c35/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 718
+    },
+    {
+      "t": "2026-10-30T13:25:40",
+      "method": "POST",
+      "path": "/ns/memtrust_cor06_3cdb829c35/search",
+      "request_body": {
+        "query": "What is the number on Lena's building badge?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "96f3b6697b51ac259c4d8d",
+            "chunk": "Lena holds a building badge and the badge number is Tavrenn-ZQ-COR-934e141933c9.",
+            "metadata": {},
+            "similarity": 0.79550433,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:25:18.257Z",
+              "createdAt": "2026-10-30T13:24:24.083Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 152
+      },
+      "ms": 715
+    },
+    {
+      "t": "2026-10-30T13:26:00",
+      "method": "POST",
+      "path": "/ns/memtrust_cor06_3cdb829c35/search",
+      "request_body": {
+        "query": "What is the number on Lena's building badge?",
+        "searchMode": "memories",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 364
+      },
+      "ms": 2946
+    },
+    {
+      "t": "2026-10-30T13:26:01",
+      "method": "POST",
+      "path": "/ns/memtrust_cor06_3cdb829c35/search",
+      "request_body": {
+        "query": "What is the number on Lena's building badge?",
+        "searchMode": "hybrid",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "96f3b6697b51ac259c4d8d",
+            "chunk": "Lena holds a building badge and the badge number is Tavrenn-ZQ-COR-934e141933c9.",
+            "metadata": {},
+            "similarity": 0.79550433,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:25:18.257Z",
+              "createdAt": "2026-10-30T13:24:24.083Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 273
+      },
+      "ms": 836
+    },
+    {
+      "t": "2026-10-30T13:26:02",
+      "method": "POST",
+      "path": "/ns/memtrust_cor06_3cdb829c35/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 1332
+    },
+    {
+      "t": "2026-10-30T13:26:03",
+      "method": "POST",
+      "path": "/ns/memtrust_cor06_3cdb829c35/search",
+      "request_body": {
+        "query": "What is the number on Lena's building badge?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "96f3b6697b51ac259c4d8d",
+            "chunk": "Lena holds a building badge and the badge number is Tavrenn-ZQ-COR-934e141933c9.",
+            "metadata": {},
+            "similarity": 0.79550433,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:25:18.257Z",
+              "createdAt": "2026-10-30T13:24:24.083Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 221
+      },
+      "ms": 826
+    },
+    {
+      "t": "2026-10-30T13:26:04",
+      "method": "POST",
+      "path": "/ns/memtrust_cor06_3cdb829c35/search",
+      "request_body": {
+        "query": "What is the number on Lena's building badge?",
+        "searchMode": "memories",
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "Q7aGkoTgJmpAAmhFx8ptLo",
+            "memory": "Lena's building badge number is Tavrenn-ZQ-COR-934e141933c9.",
+            "metadata": {
+              "temporalContext": {
+                "eventDate": null,
+                "documentDate": "2026-10-30"
+              },
+              "sm_forget_batch_id": "JsgvjdWj3ToBbQTZkqR2DY",
+              "temporalEventEndMs": 1793404800000,
+              "temporalEventStartMs": 1793318400000
+            },
+            "similarity": 0.8059898,
+            "isLatest": false,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:25:27.056Z",
+              "createdAt": "2026-10-30T13:25:18.257Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 179
+      },
+      "ms": 914
+    },
+    {
+      "t": "2026-10-30T13:26:05",
+      "method": "DELETE",
+      "path": "/ns/memtrust_cor06_3cdb829c35",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_cor06_3cdb829c35",
+        "deletedDocumentsCount": 1,
+        "deletedMemoriesCount": 1
+      },
+      "ms": 715
+    }
+  ]
+}

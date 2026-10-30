@@ -1,0 +1,1 @@
+First COR-04 attempt (2026-10-30): ERROR, PASS, PASS. Run 1 failed with `APIConnectionError: Connection error` (a network error on the test machine, not a product result). Kept for transparency; COR-04 was rerun as a clean 3-run set and the rerun is the reported result. No threshold or test logic changed between the attempts.

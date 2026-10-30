@@ -1,0 +1,1656 @@
+{
+  "record": {
+    "testId": "COR-04",
+    "provider": "supermemory",
+    "client": "supermemory-python-sdk",
+    "sdkVersion": "5.0.1",
+    "apiVersion": "v5",
+    "date": "2026-10-30T13:32:47.823782+00:00",
+    "run": 2,
+    "checkpoints": [
+      {
+        "step": "add_doc1",
+        "attempt": 1,
+        "scope": "memtrust_cor04_0af393c7fa",
+        "http": 200,
+        "id": "hNnrfdQF7YaK3AbYDGpXs8"
+      },
+      {
+        "step": "processed_doc1",
+        "attempt": 1,
+        "status": "done",
+        "dreaming": "done",
+        "elapsed_s": 30.9944312919979
+      },
+      {
+        "step": "memory_for_doc1",
+        "attempt": 1,
+        "token": "ZQ-COR-53913ffc52d8",
+        "found": true,
+        "elapsed_s": 0.9562253750045784
+      },
+      {
+        "step": "add_doc2",
+        "attempt": 1,
+        "scope": "memtrust_cor04_0af393c7fa",
+        "http": 200,
+        "id": "yDPPWbi7BEHU7FWsFQX6np"
+      },
+      {
+        "step": "processed_doc2",
+        "attempt": 1,
+        "status": "done",
+        "dreaming": "done",
+        "elapsed_s": 36.021368125017034
+      },
+      {
+        "step": "memory_for_doc2",
+        "attempt": 1,
+        "token": "ZQ-COR-2b80f349ea89",
+        "found": true,
+        "elapsed_s": 0.7666842920007184
+      },
+      {
+        "step": "add_doc3",
+        "attempt": 1,
+        "scope": "memtrust_cor04_0af393c7fa",
+        "http": 200,
+        "id": "fDKZbA2TdwUmxDjkn19NGY"
+      },
+      {
+        "step": "processed_doc3",
+        "attempt": 1,
+        "status": "done",
+        "dreaming": "done",
+        "elapsed_s": 37.762674749974394
+      },
+      {
+        "step": "memory_for_doc3",
+        "attempt": 1,
+        "token": "ZQ-COR-47f312817fa8",
+        "found": true,
+        "elapsed_s": 0.9222029579977971
+      },
+      {
+        "t": 0,
+        "ok": true,
+        "problem": "",
+        "new_rank": 0,
+        "stale": [],
+        "profile_has_new": true,
+        "chunks": {
+          "ZQ-COR-47f312817fa8": 2,
+          "ZQ-COR-53913ffc52d8": 1,
+          "ZQ-COR-2b80f349ea89": 0
+        }
+      },
+      {
+        "t": 10,
+        "ok": true,
+        "problem": "",
+        "new_rank": 0,
+        "stale": [],
+        "profile_has_new": true,
+        "chunks": {
+          "ZQ-COR-47f312817fa8": 2,
+          "ZQ-COR-53913ffc52d8": 1,
+          "ZQ-COR-2b80f349ea89": 0
+        }
+      },
+      {
+        "t": 30,
+        "ok": true,
+        "problem": "",
+        "new_rank": 0,
+        "stale": [],
+        "profile_has_new": true,
+        "chunks": {
+          "ZQ-COR-47f312817fa8": 2,
+          "ZQ-COR-53913ffc52d8": 1,
+          "ZQ-COR-2b80f349ea89": 0
+        }
+      }
+    ],
+    "result": "PASS",
+    "timeToConsistencySec": null,
+    "notes": "",
+    "rawArtifacts": "results/runs/2026-10-30/COR-04-run2.json"
+  },
+  "extra": {
+    "tokens": {
+      "old": [
+        "ZQ-COR-53913ffc52d8",
+        "ZQ-COR-2b80f349ea89"
+      ],
+      "new": "ZQ-COR-47f312817fa8"
+    },
+    "dreaming": "instant",
+    "converged_at_s": 0
+  },
+  "exchanges": [
+    {
+      "t": "2026-10-30T13:30:23",
+      "method": "POST",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document",
+      "request_body": {
+        "content": "Sana's project codename is Kelvaria-ZQ-COR-53913ffc52d8.",
+        "dreaming": "instant"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "hNnrfdQF7YaK3AbYDGpXs8",
+        "status": "queued"
+      },
+      "ms": 2122
+    },
+    {
+      "t": "2026-10-30T13:30:23",
+      "method": "GET",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document/hNnrfdQF7YaK3AbYDGpXs8",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "hNnrfdQF7YaK3AbYDGpXs8",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:30:22.589Z",
+          "updatedAt": "2026-10-30T13:30:22.589Z",
+          "filepath": null
+        }
+      },
+      "ms": 651
+    },
+    {
+      "t": "2026-10-30T13:30:30",
+      "method": "GET",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document/hNnrfdQF7YaK3AbYDGpXs8",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "hNnrfdQF7YaK3AbYDGpXs8",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:30:22.589Z",
+          "updatedAt": "2026-10-30T13:30:22.589Z",
+          "filepath": null
+        }
+      },
+      "ms": 1410
+    },
+    {
+      "t": "2026-10-30T13:30:35",
+      "method": "GET",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document/hNnrfdQF7YaK3AbYDGpXs8",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "hNnrfdQF7YaK3AbYDGpXs8",
+        "title": "Sana's project codename is Kelvaria-ZQ-COR-53913ff...",
+        "type": "text",
+        "summary": null,
+        "content": "Sana's project codename is Kelvaria-ZQ-COR-53913ffc52d8.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:30:22.589Z",
+          "updatedAt": "2026-10-30T13:30:33.100Z",
+          "filepath": null
+        }
+      },
+      "ms": 825
+    },
+    {
+      "t": "2026-10-30T13:30:41",
+      "method": "GET",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document/hNnrfdQF7YaK3AbYDGpXs8",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "hNnrfdQF7YaK3AbYDGpXs8",
+        "title": "Sana's project codename is Kelvaria-ZQ-COR-53913ff...",
+        "type": "text",
+        "summary": null,
+        "content": "Sana's project codename is Kelvaria-ZQ-COR-53913ffc52d8.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:30:22.589Z",
+          "updatedAt": "2026-10-30T13:30:33.100Z",
+          "filepath": null
+        }
+      },
+      "ms": 831
+    },
+    {
+      "t": "2026-10-30T13:30:48",
+      "method": "GET",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document/hNnrfdQF7YaK3AbYDGpXs8",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "hNnrfdQF7YaK3AbYDGpXs8",
+        "title": "Sana's project codename is Kelvaria-ZQ-COR-53913ff...",
+        "type": "text",
+        "summary": "This brief record identifies the internal codename for a project overseen by an individual or organization named Sana. The codename is Kelvaria\u2011ZQ\u2011COR\u201153913ffc52d8, indicating that the project belongs to the Kelvaria\u2011ZQ\u2011COR series and incorporates a unique identifier (53913ffc52d8). The document does not provide additional project details\u2014only that the codename has been formally assigned and should be used for all future references, communications, and archival purposes within the relevant system or knowledge base.",
+        "content": "Sana's project codename is Kelvaria-ZQ-COR-53913ffc52d8.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:30:22.589Z",
+          "updatedAt": "2026-10-30T13:30:33.100Z",
+          "filepath": null
+        }
+      },
+      "ms": 1374
+    },
+    {
+      "t": "2026-10-30T13:30:54",
+      "method": "GET",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document/hNnrfdQF7YaK3AbYDGpXs8",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "hNnrfdQF7YaK3AbYDGpXs8",
+        "title": "Sana's project codename is Kelvaria-ZQ-COR-53913ff...",
+        "type": "text",
+        "summary": "This brief record identifies the internal codename for a project overseen by an individual or organization named Sana. The codename is Kelvaria\u2011ZQ\u2011COR\u201153913ffc52d8, indicating that the project belongs to the Kelvaria\u2011ZQ\u2011COR series and incorporates a unique identifier (53913ffc52d8). The document does not provide additional project details\u2014only that the codename has been formally assigned and should be used for all future references, communications, and archival purposes within the relevant system or knowledge base.",
+        "content": "Sana's project codename is Kelvaria-ZQ-COR-53913ffc52d8.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "done",
+          "createdAt": "2026-10-30T13:30:22.589Z",
+          "updatedAt": "2026-10-30T13:30:50.431Z",
+          "filepath": null
+        }
+      },
+      "ms": 854
+    },
+    {
+      "t": "2026-10-30T13:30:54",
+      "method": "POST",
+      "path": "/ns/memtrust_cor04_0af393c7fa/search",
+      "request_body": {
+        "query": "What is the project codename Sana is using?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "8CLBpeisifm2a3ZUy9xTAm",
+            "memory": "Sana's project codename is Kelvaria-ZQ-COR-53913ffc52d8.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.77377987,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:30:50.431Z",
+              "createdAt": "2026-10-30T13:30:50.431Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 293
+      },
+      "ms": 954
+    },
+    {
+      "t": "2026-10-30T13:30:56",
+      "method": "POST",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document",
+      "request_body": {
+        "content": "Sana's project codename changed; the codename is now Drumholt-ZQ-COR-2b80f349ea89.",
+        "dreaming": "instant"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "yDPPWbi7BEHU7FWsFQX6np",
+        "status": "queued"
+      },
+      "ms": 1782
+    },
+    {
+      "t": "2026-10-30T13:30:57",
+      "method": "GET",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document/yDPPWbi7BEHU7FWsFQX6np",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "yDPPWbi7BEHU7FWsFQX6np",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:30:56.463Z",
+          "updatedAt": "2026-10-30T13:30:56.463Z",
+          "filepath": null
+        }
+      },
+      "ms": 423
+    },
+    {
+      "t": "2026-10-30T13:31:03",
+      "method": "GET",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document/yDPPWbi7BEHU7FWsFQX6np",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "yDPPWbi7BEHU7FWsFQX6np",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:30:56.463Z",
+          "updatedAt": "2026-10-30T13:30:56.463Z",
+          "filepath": null
+        }
+      },
+      "ms": 1381
+    },
+    {
+      "t": "2026-10-30T13:31:09",
+      "method": "GET",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document/yDPPWbi7BEHU7FWsFQX6np",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "yDPPWbi7BEHU7FWsFQX6np",
+        "title": "Sana's project codename changed; the codename is n...",
+        "type": "text",
+        "summary": null,
+        "content": "Sana's project codename changed; the codename is now Drumholt-ZQ-COR-2b80f349ea89.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:30:56.463Z",
+          "updatedAt": "2026-10-30T13:31:05.967Z",
+          "filepath": null
+        }
+      },
+      "ms": 1297
+    },
+    {
+      "t": "2026-10-30T13:31:15",
+      "method": "GET",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document/yDPPWbi7BEHU7FWsFQX6np",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "yDPPWbi7BEHU7FWsFQX6np",
+        "title": "Sana's project codename changed; the codename is n...",
+        "type": "text",
+        "summary": "An internal project managed by Sana has had its code designation updated. The new identifier is 'Drumholt-ZQ-COR-2b80f349ea89'. This nomenclature likely follows the organization\u2019s systematic naming convention: a project prefix (Drumholt), a subsystem tag (ZQ), an acronym for the project type (COR), and a unique hexadecimal suffix (2b80f349ea89). Notably, the announcement implies mandatory propogation of the new name across all documentation, communication channels, and versioning systems to avoid ambiguity with legacy references.",
+        "content": "Sana's project codename changed; the codename is now Drumholt-ZQ-COR-2b80f349ea89.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:30:56.463Z",
+          "updatedAt": "2026-10-30T13:31:05.967Z",
+          "filepath": null
+        }
+      },
+      "ms": 648
+    },
+    {
+      "t": "2026-10-30T13:31:21",
+      "method": "GET",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document/yDPPWbi7BEHU7FWsFQX6np",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "yDPPWbi7BEHU7FWsFQX6np",
+        "title": "Sana's project codename changed; the codename is n...",
+        "type": "text",
+        "summary": "An internal project managed by Sana has had its code designation updated. The new identifier is 'Drumholt-ZQ-COR-2b80f349ea89'. This nomenclature likely follows the organization\u2019s systematic naming convention: a project prefix (Drumholt), a subsystem tag (ZQ), an acronym for the project type (COR), and a unique hexadecimal suffix (2b80f349ea89). Notably, the announcement implies mandatory propogation of the new name across all documentation, communication channels, and versioning systems to avoid ambiguity with legacy references.",
+        "content": "Sana's project codename changed; the codename is now Drumholt-ZQ-COR-2b80f349ea89.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:30:56.463Z",
+          "updatedAt": "2026-10-30T13:31:05.967Z",
+          "filepath": null
+        }
+      },
+      "ms": 881
+    },
+    {
+      "t": "2026-10-30T13:31:27",
+      "method": "GET",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document/yDPPWbi7BEHU7FWsFQX6np",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "yDPPWbi7BEHU7FWsFQX6np",
+        "title": "Sana's project codename changed; the codename is n...",
+        "type": "text",
+        "summary": "An internal project managed by Sana has had its code designation updated. The new identifier is 'Drumholt-ZQ-COR-2b80f349ea89'. This nomenclature likely follows the organization\u2019s systematic naming convention: a project prefix (Drumholt), a subsystem tag (ZQ), an acronym for the project type (COR), and a unique hexadecimal suffix (2b80f349ea89). Notably, the announcement implies mandatory propogation of the new name across all documentation, communication channels, and versioning systems to avoid ambiguity with legacy references.",
+        "content": "Sana's project codename changed; the codename is now Drumholt-ZQ-COR-2b80f349ea89.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:30:56.463Z",
+          "updatedAt": "2026-10-30T13:31:05.967Z",
+          "filepath": null
+        }
+      },
+      "ms": 622
+    },
+    {
+      "t": "2026-10-30T13:31:32",
+      "method": "GET",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document/yDPPWbi7BEHU7FWsFQX6np",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "yDPPWbi7BEHU7FWsFQX6np",
+        "title": "Sana's project codename changed; the codename is n...",
+        "type": "text",
+        "summary": "An internal project managed by Sana has had its code designation updated. The new identifier is 'Drumholt-ZQ-COR-2b80f349ea89'. This nomenclature likely follows the organization\u2019s systematic naming convention: a project prefix (Drumholt), a subsystem tag (ZQ), an acronym for the project type (COR), and a unique hexadecimal suffix (2b80f349ea89). Notably, the announcement implies mandatory propogation of the new name across all documentation, communication channels, and versioning systems to avoid ambiguity with legacy references.",
+        "content": "Sana's project codename changed; the codename is now Drumholt-ZQ-COR-2b80f349ea89.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "done",
+          "createdAt": "2026-10-30T13:30:56.463Z",
+          "updatedAt": "2026-10-30T13:31:29.367Z",
+          "filepath": null
+        }
+      },
+      "ms": 708
+    },
+    {
+      "t": "2026-10-30T13:31:33",
+      "method": "POST",
+      "path": "/ns/memtrust_cor04_0af393c7fa/search",
+      "request_body": {
+        "query": "What is the project codename Sana is using?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "5xpt61QCrjab29QGh15Xyt",
+            "memory": "Sana's project codename is Drumholt-ZQ-COR-2b80f349ea89.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.79508013,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:31:29.367Z",
+              "createdAt": "2026-10-30T13:31:29.367Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 161
+      },
+      "ms": 764
+    },
+    {
+      "t": "2026-10-30T13:31:35",
+      "method": "POST",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document",
+      "request_body": {
+        "content": "Sana's project codename changed again; the codename is now Wexmoor-ZQ-COR-47f312817fa8.",
+        "dreaming": "instant"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "fDKZbA2TdwUmxDjkn19NGY",
+        "status": "queued"
+      },
+      "ms": 1488
+    },
+    {
+      "t": "2026-10-30T13:31:35",
+      "method": "GET",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document/fDKZbA2TdwUmxDjkn19NGY",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fDKZbA2TdwUmxDjkn19NGY",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:31:34.774Z",
+          "updatedAt": "2026-10-30T13:31:34.774Z",
+          "filepath": null
+        }
+      },
+      "ms": 588
+    },
+    {
+      "t": "2026-10-30T13:31:41",
+      "method": "GET",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document/fDKZbA2TdwUmxDjkn19NGY",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fDKZbA2TdwUmxDjkn19NGY",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:31:34.774Z",
+          "updatedAt": "2026-10-30T13:31:34.774Z",
+          "filepath": null
+        }
+      },
+      "ms": 862
+    },
+    {
+      "t": "2026-10-30T13:31:47",
+      "method": "GET",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document/fDKZbA2TdwUmxDjkn19NGY",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fDKZbA2TdwUmxDjkn19NGY",
+        "title": "Sana's project codename changed again; the codenam...",
+        "type": "text",
+        "summary": null,
+        "content": "Sana's project codename changed again; the codename is now Wexmoor-ZQ-COR-47f312817fa8.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:31:34.774Z",
+          "updatedAt": "2026-10-30T13:31:44.908Z",
+          "filepath": null
+        }
+      },
+      "ms": 1339
+    },
+    {
+      "t": "2026-10-30T13:31:53",
+      "method": "GET",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document/fDKZbA2TdwUmxDjkn19NGY",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fDKZbA2TdwUmxDjkn19NGY",
+        "title": "Sana's project codename changed again; the codenam...",
+        "type": "text",
+        "summary": null,
+        "content": "Sana's project codename changed again; the codename is now Wexmoor-ZQ-COR-47f312817fa8.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:31:34.774Z",
+          "updatedAt": "2026-10-30T13:31:44.908Z",
+          "filepath": null
+        }
+      },
+      "ms": 953
+    },
+    {
+      "t": "2026-10-30T13:32:01",
+      "method": "GET",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document/fDKZbA2TdwUmxDjkn19NGY",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fDKZbA2TdwUmxDjkn19NGY",
+        "title": "Sana's project codename changed again; the codenam...",
+        "type": "text",
+        "summary": "The project code name for Sana\u2019s initiative has been updated again. The new and final codename assigned is Wexmoor\u2011ZQ\u2011COR\u201147f312817fa8, replacing previous identifiers.",
+        "content": "Sana's project codename changed again; the codename is now Wexmoor-ZQ-COR-47f312817fa8.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:31:34.774Z",
+          "updatedAt": "2026-10-30T13:31:44.908Z",
+          "filepath": null
+        }
+      },
+      "ms": 2525
+    },
+    {
+      "t": "2026-10-30T13:32:07",
+      "method": "GET",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document/fDKZbA2TdwUmxDjkn19NGY",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fDKZbA2TdwUmxDjkn19NGY",
+        "title": "Sana's project codename changed again; the codenam...",
+        "type": "text",
+        "summary": "The project code name for Sana\u2019s initiative has been updated again. The new and final codename assigned is Wexmoor\u2011ZQ\u2011COR\u201147f312817fa8, replacing previous identifiers.",
+        "content": "Sana's project codename changed again; the codename is now Wexmoor-ZQ-COR-47f312817fa8.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:31:34.774Z",
+          "updatedAt": "2026-10-30T13:31:44.908Z",
+          "filepath": null
+        }
+      },
+      "ms": 831
+    },
+    {
+      "t": "2026-10-30T13:32:12",
+      "method": "GET",
+      "path": "/ns/memtrust_cor04_0af393c7fa/document/fDKZbA2TdwUmxDjkn19NGY",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "fDKZbA2TdwUmxDjkn19NGY",
+        "title": "Sana's project codename changed again; the codenam...",
+        "type": "text",
+        "summary": "The project code name for Sana\u2019s initiative has been updated again. The new and final codename assigned is Wexmoor\u2011ZQ\u2011COR\u201147f312817fa8, replacing previous identifiers.",
+        "content": "Sana's project codename changed again; the codename is now Wexmoor-ZQ-COR-47f312817fa8.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "done",
+          "createdAt": "2026-10-30T13:31:34.774Z",
+          "updatedAt": "2026-10-30T13:32:09.711Z",
+          "filepath": null
+        }
+      },
+      "ms": 620
+    },
+    {
+      "t": "2026-10-30T13:32:13",
+      "method": "POST",
+      "path": "/ns/memtrust_cor04_0af393c7fa/search",
+      "request_body": {
+        "query": "What is the project codename Sana is using?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "4VqXTMV1rAFyZQyiB4FxJt",
+            "memory": "Sana's project codename is Wexmoor-ZQ-COR-47f312817fa8.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.80355382,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:32:09.711Z",
+              "createdAt": "2026-10-30T13:32:09.711Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 196
+      },
+      "ms": 920
+    },
+    {
+      "t": "2026-10-30T13:32:14",
+      "method": "POST",
+      "path": "/ns/memtrust_cor04_0af393c7fa/search",
+      "request_body": {
+        "query": "What is the project codename Sana is using?",
+        "searchMode": "memories",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "4VqXTMV1rAFyZQyiB4FxJt",
+            "memory": "Sana's project codename is Wexmoor-ZQ-COR-47f312817fa8.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.80355382,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:32:09.711Z",
+              "createdAt": "2026-10-30T13:32:09.711Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "5xpt61QCrjab29QGh15Xyt",
+                    "relation": "updates",
+                    "version": 2,
+                    "memory": "Sana's project codename is Drumholt-ZQ-COR-2b80f349ea89.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:32:09.711"
+                    }
+                  },
+                  {
+                    "id": "8CLBpeisifm2a3ZUy9xTAm",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Sana's project codename is Kelvaria-ZQ-COR-53913ffc52d8.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:31:29.367"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 199
+      },
+      "ms": 690
+    },
+    {
+      "t": "2026-10-30T13:32:15",
+      "method": "POST",
+      "path": "/ns/memtrust_cor04_0af393c7fa/search",
+      "request_body": {
+        "query": "What is the project codename Sana is using?",
+        "searchMode": "hybrid",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "4VqXTMV1rAFyZQyiB4FxJt",
+            "memory": "Sana's project codename is Wexmoor-ZQ-COR-47f312817fa8.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.80355382,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:32:09.711Z",
+              "createdAt": "2026-10-30T13:32:09.711Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "5xpt61QCrjab29QGh15Xyt",
+                    "relation": "updates",
+                    "version": 2,
+                    "memory": "Sana's project codename is Drumholt-ZQ-COR-2b80f349ea89.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:32:09.711"
+                    }
+                  },
+                  {
+                    "id": "8CLBpeisifm2a3ZUy9xTAm",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Sana's project codename is Kelvaria-ZQ-COR-53913ffc52d8.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:31:29.367"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "5c751ea449dc1d58edcd76",
+            "chunk": "Sana's project codename changed; the codename is now Drumholt-ZQ-COR-2b80f349ea89.",
+            "metadata": {},
+            "similarity": 0.7738314900000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:31:29.367Z",
+              "createdAt": "2026-10-30T13:30:56.463Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "364e39f658893f14d3485a",
+            "chunk": "Sana's project codename is Kelvaria-ZQ-COR-53913ffc52d8.",
+            "metadata": {},
+            "similarity": 0.77377987,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:30:50.431Z",
+              "createdAt": "2026-10-30T13:30:22.589Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "d9d37a0e5f88c661d974cb",
+            "chunk": "Sana's project codename changed again; the codename is now Wexmoor-ZQ-COR-47f312817fa8.",
+            "metadata": {},
+            "similarity": 0.77099055,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:32:09.711Z",
+              "createdAt": "2026-10-30T13:31:34.774Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 186
+      },
+      "ms": 680
+    },
+    {
+      "t": "2026-10-30T13:32:15",
+      "method": "POST",
+      "path": "/ns/memtrust_cor04_0af393c7fa/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [
+            {
+              "id": "4VqXTMV1rAFyZQyiB4FxJt",
+              "memory": "[2026-10-30] Sana's project codename is Wexmoor-ZQ-COR-47f312817fa8."
+            }
+          ],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 755
+    },
+    {
+      "t": "2026-10-30T13:32:16",
+      "method": "POST",
+      "path": "/ns/memtrust_cor04_0af393c7fa/search",
+      "request_body": {
+        "query": "What is the project codename Sana is using?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "5c751ea449dc1d58edcd76",
+            "chunk": "Sana's project codename changed; the codename is now Drumholt-ZQ-COR-2b80f349ea89.",
+            "metadata": {},
+            "similarity": 0.7738314900000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:31:29.367Z",
+              "createdAt": "2026-10-30T13:30:56.463Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "364e39f658893f14d3485a",
+            "chunk": "Sana's project codename is Kelvaria-ZQ-COR-53913ffc52d8.",
+            "metadata": {},
+            "similarity": 0.77377987,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:30:50.431Z",
+              "createdAt": "2026-10-30T13:30:22.589Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "d9d37a0e5f88c661d974cb",
+            "chunk": "Sana's project codename changed again; the codename is now Wexmoor-ZQ-COR-47f312817fa8.",
+            "metadata": {},
+            "similarity": 0.77099055,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:32:09.711Z",
+              "createdAt": "2026-10-30T13:31:34.774Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 181
+      },
+      "ms": 777
+    },
+    {
+      "t": "2026-10-30T13:32:25",
+      "method": "POST",
+      "path": "/ns/memtrust_cor04_0af393c7fa/search",
+      "request_body": {
+        "query": "What is the project codename Sana is using?",
+        "searchMode": "memories",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "4VqXTMV1rAFyZQyiB4FxJt",
+            "memory": "Sana's project codename is Wexmoor-ZQ-COR-47f312817fa8.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.80355382,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:32:09.711Z",
+              "createdAt": "2026-10-30T13:32:09.711Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "5xpt61QCrjab29QGh15Xyt",
+                    "relation": "updates",
+                    "version": 2,
+                    "memory": "Sana's project codename is Drumholt-ZQ-COR-2b80f349ea89.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:32:09.711"
+                    }
+                  },
+                  {
+                    "id": "8CLBpeisifm2a3ZUy9xTAm",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Sana's project codename is Kelvaria-ZQ-COR-53913ffc52d8.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:31:29.367"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 254
+      },
+      "ms": 1622
+    },
+    {
+      "t": "2026-10-30T13:32:26",
+      "method": "POST",
+      "path": "/ns/memtrust_cor04_0af393c7fa/search",
+      "request_body": {
+        "query": "What is the project codename Sana is using?",
+        "searchMode": "hybrid",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "4VqXTMV1rAFyZQyiB4FxJt",
+            "memory": "Sana's project codename is Wexmoor-ZQ-COR-47f312817fa8.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.80355382,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:32:09.711Z",
+              "createdAt": "2026-10-30T13:32:09.711Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "5xpt61QCrjab29QGh15Xyt",
+                    "relation": "updates",
+                    "version": 2,
+                    "memory": "Sana's project codename is Drumholt-ZQ-COR-2b80f349ea89.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:32:09.711"
+                    }
+                  },
+                  {
+                    "id": "8CLBpeisifm2a3ZUy9xTAm",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Sana's project codename is Kelvaria-ZQ-COR-53913ffc52d8.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:31:29.367"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "5c751ea449dc1d58edcd76",
+            "chunk": "Sana's project codename changed; the codename is now Drumholt-ZQ-COR-2b80f349ea89.",
+            "metadata": {},
+            "similarity": 0.7738314900000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:31:29.367Z",
+              "createdAt": "2026-10-30T13:30:56.463Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "364e39f658893f14d3485a",
+            "chunk": "Sana's project codename is Kelvaria-ZQ-COR-53913ffc52d8.",
+            "metadata": {},
+            "similarity": 0.77377987,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:30:50.431Z",
+              "createdAt": "2026-10-30T13:30:22.589Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "d9d37a0e5f88c661d974cb",
+            "chunk": "Sana's project codename changed again; the codename is now Wexmoor-ZQ-COR-47f312817fa8.",
+            "metadata": {},
+            "similarity": 0.77099055,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:32:09.711Z",
+              "createdAt": "2026-10-30T13:31:34.774Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 530
+      },
+      "ms": 1101
+    },
+    {
+      "t": "2026-10-30T13:32:27",
+      "method": "POST",
+      "path": "/ns/memtrust_cor04_0af393c7fa/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [
+            {
+              "id": "4VqXTMV1rAFyZQyiB4FxJt",
+              "memory": "[2026-10-30] Sana's project codename is Wexmoor-ZQ-COR-47f312817fa8."
+            }
+          ],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 840
+    },
+    {
+      "t": "2026-10-30T13:32:27",
+      "method": "POST",
+      "path": "/ns/memtrust_cor04_0af393c7fa/search",
+      "request_body": {
+        "query": "What is the project codename Sana is using?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "5c751ea449dc1d58edcd76",
+            "chunk": "Sana's project codename changed; the codename is now Drumholt-ZQ-COR-2b80f349ea89.",
+            "metadata": {},
+            "similarity": 0.7738314900000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:31:29.367Z",
+              "createdAt": "2026-10-30T13:30:56.463Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "364e39f658893f14d3485a",
+            "chunk": "Sana's project codename is Kelvaria-ZQ-COR-53913ffc52d8.",
+            "metadata": {},
+            "similarity": 0.77377987,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:30:50.431Z",
+              "createdAt": "2026-10-30T13:30:22.589Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "d9d37a0e5f88c661d974cb",
+            "chunk": "Sana's project codename changed again; the codename is now Wexmoor-ZQ-COR-47f312817fa8.",
+            "metadata": {},
+            "similarity": 0.77099055,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:32:09.711Z",
+              "createdAt": "2026-10-30T13:31:34.774Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 166
+      },
+      "ms": 681
+    },
+    {
+      "t": "2026-10-30T13:32:44",
+      "method": "POST",
+      "path": "/ns/memtrust_cor04_0af393c7fa/search",
+      "request_body": {
+        "query": "What is the project codename Sana is using?",
+        "searchMode": "memories",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "4VqXTMV1rAFyZQyiB4FxJt",
+            "memory": "Sana's project codename is Wexmoor-ZQ-COR-47f312817fa8.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.80355382,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:32:09.711Z",
+              "createdAt": "2026-10-30T13:32:09.711Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "5xpt61QCrjab29QGh15Xyt",
+                    "relation": "updates",
+                    "version": 2,
+                    "memory": "Sana's project codename is Drumholt-ZQ-COR-2b80f349ea89.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:32:09.711"
+                    }
+                  },
+                  {
+                    "id": "8CLBpeisifm2a3ZUy9xTAm",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Sana's project codename is Kelvaria-ZQ-COR-53913ffc52d8.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:31:29.367"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 194
+      },
+      "ms": 1070
+    },
+    {
+      "t": "2026-10-30T13:32:45",
+      "method": "POST",
+      "path": "/ns/memtrust_cor04_0af393c7fa/search",
+      "request_body": {
+        "query": "What is the project codename Sana is using?",
+        "searchMode": "hybrid",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "4VqXTMV1rAFyZQyiB4FxJt",
+            "memory": "Sana's project codename is Wexmoor-ZQ-COR-47f312817fa8.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.80355382,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:32:09.711Z",
+              "createdAt": "2026-10-30T13:32:09.711Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "5xpt61QCrjab29QGh15Xyt",
+                    "relation": "updates",
+                    "version": 2,
+                    "memory": "Sana's project codename is Drumholt-ZQ-COR-2b80f349ea89.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:32:09.711"
+                    }
+                  },
+                  {
+                    "id": "8CLBpeisifm2a3ZUy9xTAm",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Sana's project codename is Kelvaria-ZQ-COR-53913ffc52d8.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:31:29.367"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "5c751ea449dc1d58edcd76",
+            "chunk": "Sana's project codename changed; the codename is now Drumholt-ZQ-COR-2b80f349ea89.",
+            "metadata": {},
+            "similarity": 0.7738314900000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:31:29.367Z",
+              "createdAt": "2026-10-30T13:30:56.463Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "364e39f658893f14d3485a",
+            "chunk": "Sana's project codename is Kelvaria-ZQ-COR-53913ffc52d8.",
+            "metadata": {},
+            "similarity": 0.77377987,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:30:50.431Z",
+              "createdAt": "2026-10-30T13:30:22.589Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "d9d37a0e5f88c661d974cb",
+            "chunk": "Sana's project codename changed again; the codename is now Wexmoor-ZQ-COR-47f312817fa8.",
+            "metadata": {},
+            "similarity": 0.77099055,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:32:09.711Z",
+              "createdAt": "2026-10-30T13:31:34.774Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 188
+      },
+      "ms": 688
+    },
+    {
+      "t": "2026-10-30T13:32:46",
+      "method": "POST",
+      "path": "/ns/memtrust_cor04_0af393c7fa/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [
+            {
+              "id": "4VqXTMV1rAFyZQyiB4FxJt",
+              "memory": "[2026-10-30] Sana's project codename is Wexmoor-ZQ-COR-47f312817fa8."
+            }
+          ],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 695
+    },
+    {
+      "t": "2026-10-30T13:32:47",
+      "method": "POST",
+      "path": "/ns/memtrust_cor04_0af393c7fa/search",
+      "request_body": {
+        "query": "What is the project codename Sana is using?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "5c751ea449dc1d58edcd76",
+            "chunk": "Sana's project codename changed; the codename is now Drumholt-ZQ-COR-2b80f349ea89.",
+            "metadata": {},
+            "similarity": 0.7738314900000001,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:31:29.367Z",
+              "createdAt": "2026-10-30T13:30:56.463Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "364e39f658893f14d3485a",
+            "chunk": "Sana's project codename is Kelvaria-ZQ-COR-53913ffc52d8.",
+            "metadata": {},
+            "similarity": 0.77377987,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:30:50.431Z",
+              "createdAt": "2026-10-30T13:30:22.589Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "d9d37a0e5f88c661d974cb",
+            "chunk": "Sana's project codename changed again; the codename is now Wexmoor-ZQ-COR-47f312817fa8.",
+            "metadata": {},
+            "similarity": 0.77099055,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:32:09.711Z",
+              "createdAt": "2026-10-30T13:31:34.774Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 270
+      },
+      "ms": 1023
+    },
+    {
+      "t": "2026-10-30T13:32:47",
+      "method": "DELETE",
+      "path": "/ns/memtrust_cor04_0af393c7fa",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_cor04_0af393c7fa",
+        "deletedDocumentsCount": 3,
+        "deletedMemoriesCount": 3
+      },
+      "ms": 625
+    }
+  ]
+}

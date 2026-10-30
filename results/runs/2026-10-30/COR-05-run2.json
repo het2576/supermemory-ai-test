@@ -1,0 +1,1137 @@
+{
+  "record": {
+    "testId": "COR-05",
+    "provider": "supermemory",
+    "client": "supermemory-python-sdk",
+    "sdkVersion": "5.0.1",
+    "apiVersion": "v5",
+    "date": "2026-10-30T13:21:16.593174+00:00",
+    "run": 2,
+    "checkpoints": [
+      {
+        "step": "add_doc1",
+        "attempt": 1,
+        "scope": "memtrust_cor05_ef98e2a7a1",
+        "http": 200,
+        "id": "3LGkKyBhTfTWMs1Kgjb84H"
+      },
+      {
+        "step": "processed_doc1",
+        "attempt": 1,
+        "status": "done",
+        "dreaming": "done",
+        "elapsed_s": 32.295602166006574
+      },
+      {
+        "step": "memory_for_doc1",
+        "attempt": 1,
+        "token": "ZQ-COR-551ff4b4f790",
+        "found": true,
+        "elapsed_s": 0.8044326250092126
+      },
+      {
+        "step": "add_doc2",
+        "attempt": 1,
+        "scope": "memtrust_cor05_ef98e2a7a1",
+        "http": 200,
+        "id": "1t5amfWhBbjGDBHwzcgxBh"
+      },
+      {
+        "step": "processed_doc2",
+        "attempt": 1,
+        "status": "done",
+        "dreaming": "done",
+        "elapsed_s": 33.22739150002599
+      },
+      {
+        "t": 0,
+        "ok": true,
+        "problem": "",
+        "chunks": {
+          "ZQ-COR-551ff4b4f790": 0
+        }
+      },
+      {
+        "t": 10,
+        "ok": true,
+        "problem": "",
+        "chunks": {
+          "ZQ-COR-551ff4b4f790": 0
+        }
+      },
+      {
+        "t": 30,
+        "ok": true,
+        "problem": "",
+        "chunks": {
+          "ZQ-COR-551ff4b4f790": 0
+        }
+      }
+    ],
+    "result": "PASS",
+    "timeToConsistencySec": null,
+    "notes": "",
+    "rawArtifacts": "results/runs/2026-10-30/COR-05-run2.json"
+  },
+  "extra": {
+    "tokens": {
+      "retracted": "ZQ-COR-551ff4b4f790"
+    },
+    "dreaming": "instant",
+    "converged_at_s": 0
+  },
+  "exchanges": [
+    {
+      "t": "2026-10-30T13:19:34",
+      "method": "POST",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/document",
+      "request_body": {
+        "content": "Dev keeps a gym locker and the lock combination is Orvane-ZQ-COR-551ff4b4f790.",
+        "dreaming": "instant"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "3LGkKyBhTfTWMs1Kgjb84H",
+        "status": "queued"
+      },
+      "ms": 1840
+    },
+    {
+      "t": "2026-10-30T13:19:35",
+      "method": "GET",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/document/3LGkKyBhTfTWMs1Kgjb84H",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "3LGkKyBhTfTWMs1Kgjb84H",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:19:34.519Z",
+          "updatedAt": "2026-10-30T13:19:34.519Z",
+          "filepath": null
+        }
+      },
+      "ms": 495
+    },
+    {
+      "t": "2026-10-30T13:19:41",
+      "method": "GET",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/document/3LGkKyBhTfTWMs1Kgjb84H",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "3LGkKyBhTfTWMs1Kgjb84H",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:19:34.519Z",
+          "updatedAt": "2026-10-30T13:19:34.519Z",
+          "filepath": null
+        }
+      },
+      "ms": 1339
+    },
+    {
+      "t": "2026-10-30T13:19:49",
+      "method": "GET",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/document/3LGkKyBhTfTWMs1Kgjb84H",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "3LGkKyBhTfTWMs1Kgjb84H",
+        "title": "Dev keeps a gym locker and the lock combination is...",
+        "type": "text",
+        "summary": null,
+        "content": "Dev keeps a gym locker and the lock combination is Orvane-ZQ-COR-551ff4b4f790.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:19:34.519Z",
+          "updatedAt": "2026-10-30T13:19:43.588Z",
+          "filepath": null
+        }
+      },
+      "ms": 2283
+    },
+    {
+      "t": "2026-10-30T13:19:54",
+      "method": "GET",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/document/3LGkKyBhTfTWMs1Kgjb84H",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "3LGkKyBhTfTWMs1Kgjb84H",
+        "title": "Dev keeps a gym locker and the lock combination is...",
+        "type": "text",
+        "summary": "This entry records the security combination for a gym locker that belongs to a developer. The four\u2011segment combination string is\u202fOrvane-ZQ-COR-551ff4b4f790. The note may be used for future reference when accessing the locker or verifying access credentials.",
+        "content": "Dev keeps a gym locker and the lock combination is Orvane-ZQ-COR-551ff4b4f790.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:19:34.519Z",
+          "updatedAt": "2026-10-30T13:19:43.588Z",
+          "filepath": null
+        }
+      },
+      "ms": 731
+    },
+    {
+      "t": "2026-10-30T13:20:01",
+      "method": "GET",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/document/3LGkKyBhTfTWMs1Kgjb84H",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "3LGkKyBhTfTWMs1Kgjb84H",
+        "title": "Dev keeps a gym locker and the lock combination is...",
+        "type": "text",
+        "summary": "This entry records the security combination for a gym locker that belongs to a developer. The four\u2011segment combination string is\u202fOrvane-ZQ-COR-551ff4b4f790. The note may be used for future reference when accessing the locker or verifying access credentials.",
+        "content": "Dev keeps a gym locker and the lock combination is Orvane-ZQ-COR-551ff4b4f790.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:19:34.519Z",
+          "updatedAt": "2026-10-30T13:19:43.588Z",
+          "filepath": null
+        }
+      },
+      "ms": 1427
+    },
+    {
+      "t": "2026-10-30T13:20:07",
+      "method": "GET",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/document/3LGkKyBhTfTWMs1Kgjb84H",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "3LGkKyBhTfTWMs1Kgjb84H",
+        "title": "Dev keeps a gym locker and the lock combination is...",
+        "type": "text",
+        "summary": "This entry records the security combination for a gym locker that belongs to a developer. The four\u2011segment combination string is\u202fOrvane-ZQ-COR-551ff4b4f790. The note may be used for future reference when accessing the locker or verifying access credentials.",
+        "content": "Dev keeps a gym locker and the lock combination is Orvane-ZQ-COR-551ff4b4f790.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "done",
+          "createdAt": "2026-10-30T13:19:34.519Z",
+          "updatedAt": "2026-10-30T13:20:02.066Z",
+          "filepath": null
+        }
+      },
+      "ms": 988
+    },
+    {
+      "t": "2026-10-30T13:20:08",
+      "method": "POST",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/search",
+      "request_body": {
+        "query": "What is the combination of Dev's locker?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "B2Z7qUD6jh22Mxsjs6RPkt",
+            "memory": "Dev has a gym locker with the combination Orvane-ZQ-COR-551ff4b4f790.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.81341922,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:20:02.066Z",
+              "createdAt": "2026-10-30T13:20:02.066Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 349
+      },
+      "ms": 803
+    },
+    {
+      "t": "2026-10-30T13:20:09",
+      "method": "POST",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/document",
+      "request_body": {
+        "content": "Dev asked: please forget what I told you earlier about my locker lock, and disregard it entirely.",
+        "dreaming": "instant"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "1t5amfWhBbjGDBHwzcgxBh",
+        "status": "queued"
+      },
+      "ms": 1873
+    },
+    {
+      "t": "2026-10-30T13:20:10",
+      "method": "GET",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/document/1t5amfWhBbjGDBHwzcgxBh",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "1t5amfWhBbjGDBHwzcgxBh",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:20:09.341Z",
+          "updatedAt": "2026-10-30T13:20:09.341Z",
+          "filepath": null
+        }
+      },
+      "ms": 409
+    },
+    {
+      "t": "2026-10-30T13:20:18",
+      "method": "GET",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/document/1t5amfWhBbjGDBHwzcgxBh",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "1t5amfWhBbjGDBHwzcgxBh",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:20:09.341Z",
+          "updatedAt": "2026-10-30T13:20:09.341Z",
+          "filepath": null
+        }
+      },
+      "ms": 2821
+    },
+    {
+      "t": "2026-10-30T13:20:24",
+      "method": "GET",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/document/1t5amfWhBbjGDBHwzcgxBh",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "1t5amfWhBbjGDBHwzcgxBh",
+        "title": "Dev asked: please forget what I told you earlier a...",
+        "type": "text",
+        "summary": null,
+        "content": "Dev asked: please forget what I told you earlier about my locker lock, and disregard it entirely.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:20:09.341Z",
+          "updatedAt": "2026-10-30T13:20:22.177Z",
+          "filepath": null
+        }
+      },
+      "ms": 1346
+    },
+    {
+      "t": "2026-10-30T13:20:30",
+      "method": "GET",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/document/1t5amfWhBbjGDBHwzcgxBh",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "1t5amfWhBbjGDBHwzcgxBh",
+        "title": "Dev asked: please forget what I told you earlier a...",
+        "type": "text",
+        "summary": "The user, presumably a developer, has asked the assistant to forget all previously provided wording regarding the user\u2019s locker lock. The request is a direct instruction to remove that memory from the assistant\u2019s knowledge base and not reference it in future interactions.",
+        "content": "Dev asked: please forget what I told you earlier about my locker lock, and disregard it entirely.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:20:09.341Z",
+          "updatedAt": "2026-10-30T13:20:22.177Z",
+          "filepath": null
+        }
+      },
+      "ms": 956
+    },
+    {
+      "t": "2026-10-30T13:20:36",
+      "method": "GET",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/document/1t5amfWhBbjGDBHwzcgxBh",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "1t5amfWhBbjGDBHwzcgxBh",
+        "title": "Dev asked: please forget what I told you earlier a...",
+        "type": "text",
+        "summary": "The user, presumably a developer, has asked the assistant to forget all previously provided wording regarding the user\u2019s locker lock. The request is a direct instruction to remove that memory from the assistant\u2019s knowledge base and not reference it in future interactions.",
+        "content": "Dev asked: please forget what I told you earlier about my locker lock, and disregard it entirely.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-30T13:20:09.341Z",
+          "updatedAt": "2026-10-30T13:20:22.177Z",
+          "filepath": null
+        }
+      },
+      "ms": 764
+    },
+    {
+      "t": "2026-10-30T13:20:43",
+      "method": "GET",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/document/1t5amfWhBbjGDBHwzcgxBh",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "1t5amfWhBbjGDBHwzcgxBh",
+        "title": "Dev asked: please forget what I told you earlier a...",
+        "type": "text",
+        "summary": "The user, presumably a developer, has asked the assistant to forget all previously provided wording regarding the user\u2019s locker lock. The request is a direct instruction to remove that memory from the assistant\u2019s knowledge base and not reference it in future interactions.",
+        "content": "Dev asked: please forget what I told you earlier about my locker lock, and disregard it entirely.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "done",
+          "createdAt": "2026-10-30T13:20:09.341Z",
+          "updatedAt": "2026-10-30T13:20:39.162Z",
+          "filepath": null
+        }
+      },
+      "ms": 1900
+    },
+    {
+      "t": "2026-10-30T13:20:43",
+      "method": "POST",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/search",
+      "request_body": {
+        "query": "What is the combination of Dev's locker?",
+        "searchMode": "memories",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "ZAovKVrCERuSPge4tEeCxW",
+            "memory": "Dev has requested to forget previously recorded locker lock information.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.73498917,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:20:39.162Z",
+              "createdAt": "2026-10-30T13:20:39.162Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "B2Z7qUD6jh22Mxsjs6RPkt",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Dev has a gym locker with the combination Orvane-ZQ-COR-551ff4b4f790.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:20:39.162"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 177
+      },
+      "ms": 713
+    },
+    {
+      "t": "2026-10-30T13:20:44",
+      "method": "POST",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/search",
+      "request_body": {
+        "query": "What is the combination of Dev's locker?",
+        "searchMode": "hybrid",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "ab1dd1383c193614bfb83f",
+            "chunk": "Dev keeps a gym locker and the lock combination is Orvane-ZQ-COR-551ff4b4f790.",
+            "metadata": {},
+            "similarity": 0.81874132,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:20:02.066Z",
+              "createdAt": "2026-10-30T13:19:34.519Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "ddbcc727cb84236b96bc4a",
+            "chunk": "Dev asked: please forget what I told you earlier about my locker lock, and disregard it entirely.",
+            "metadata": {},
+            "similarity": 0.7353512,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:20:39.162Z",
+              "createdAt": "2026-10-30T13:20:09.341Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "ZAovKVrCERuSPge4tEeCxW",
+            "memory": "Dev has requested to forget previously recorded locker lock information.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.73498917,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:20:39.162Z",
+              "createdAt": "2026-10-30T13:20:39.162Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "B2Z7qUD6jh22Mxsjs6RPkt",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Dev has a gym locker with the combination Orvane-ZQ-COR-551ff4b4f790.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:20:39.162"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 183
+      },
+      "ms": 627
+    },
+    {
+      "t": "2026-10-30T13:20:45",
+      "method": "POST",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [
+            {
+              "id": "ZAovKVrCERuSPge4tEeCxW",
+              "memory": "[2026-10-30] Dev has requested to forget previously recorded locker lock information."
+            }
+          ],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 684
+    },
+    {
+      "t": "2026-10-30T13:20:45",
+      "method": "POST",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/search",
+      "request_body": {
+        "query": "What is the combination of Dev's locker?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "ab1dd1383c193614bfb83f",
+            "chunk": "Dev keeps a gym locker and the lock combination is Orvane-ZQ-COR-551ff4b4f790.",
+            "metadata": {},
+            "similarity": 0.81874132,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:20:02.066Z",
+              "createdAt": "2026-10-30T13:19:34.519Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "ddbcc727cb84236b96bc4a",
+            "chunk": "Dev asked: please forget what I told you earlier about my locker lock, and disregard it entirely.",
+            "metadata": {},
+            "similarity": 0.7353512,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:20:39.162Z",
+              "createdAt": "2026-10-30T13:20:09.341Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 220
+      },
+      "ms": 743
+    },
+    {
+      "t": "2026-10-30T13:20:54",
+      "method": "POST",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/search",
+      "request_body": {
+        "query": "What is the combination of Dev's locker?",
+        "searchMode": "memories",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "ZAovKVrCERuSPge4tEeCxW",
+            "memory": "Dev has requested to forget previously recorded locker lock information.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.73498917,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:20:39.162Z",
+              "createdAt": "2026-10-30T13:20:39.162Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "B2Z7qUD6jh22Mxsjs6RPkt",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Dev has a gym locker with the combination Orvane-ZQ-COR-551ff4b4f790.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:20:39.162"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 158
+      },
+      "ms": 950
+    },
+    {
+      "t": "2026-10-30T13:20:56",
+      "method": "POST",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/search",
+      "request_body": {
+        "query": "What is the combination of Dev's locker?",
+        "searchMode": "hybrid",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "ab1dd1383c193614bfb83f",
+            "chunk": "Dev keeps a gym locker and the lock combination is Orvane-ZQ-COR-551ff4b4f790.",
+            "metadata": {},
+            "similarity": 0.81874132,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:20:02.066Z",
+              "createdAt": "2026-10-30T13:19:34.519Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "ddbcc727cb84236b96bc4a",
+            "chunk": "Dev asked: please forget what I told you earlier about my locker lock, and disregard it entirely.",
+            "metadata": {},
+            "similarity": 0.7353512,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:20:39.162Z",
+              "createdAt": "2026-10-30T13:20:09.341Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "ZAovKVrCERuSPge4tEeCxW",
+            "memory": "Dev has requested to forget previously recorded locker lock information.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.73498917,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:20:39.162Z",
+              "createdAt": "2026-10-30T13:20:39.162Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "B2Z7qUD6jh22Mxsjs6RPkt",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Dev has a gym locker with the combination Orvane-ZQ-COR-551ff4b4f790.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:20:39.162"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 349
+      },
+      "ms": 2452
+    },
+    {
+      "t": "2026-10-30T13:20:57",
+      "method": "POST",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [
+            {
+              "id": "ZAovKVrCERuSPge4tEeCxW",
+              "memory": "[2026-10-30] Dev has requested to forget previously recorded locker lock information."
+            }
+          ],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 717
+    },
+    {
+      "t": "2026-10-30T13:20:57",
+      "method": "POST",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/search",
+      "request_body": {
+        "query": "What is the combination of Dev's locker?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "ab1dd1383c193614bfb83f",
+            "chunk": "Dev keeps a gym locker and the lock combination is Orvane-ZQ-COR-551ff4b4f790.",
+            "metadata": {},
+            "similarity": 0.81874132,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:20:02.066Z",
+              "createdAt": "2026-10-30T13:19:34.519Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "ddbcc727cb84236b96bc4a",
+            "chunk": "Dev asked: please forget what I told you earlier about my locker lock, and disregard it entirely.",
+            "metadata": {},
+            "similarity": 0.7353512,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:20:39.162Z",
+              "createdAt": "2026-10-30T13:20:09.341Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 153
+      },
+      "ms": 698
+    },
+    {
+      "t": "2026-10-30T13:21:14",
+      "method": "POST",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/search",
+      "request_body": {
+        "query": "What is the combination of Dev's locker?",
+        "searchMode": "memories",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "ZAovKVrCERuSPge4tEeCxW",
+            "memory": "Dev has requested to forget previously recorded locker lock information.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.73498917,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:20:39.162Z",
+              "createdAt": "2026-10-30T13:20:39.162Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "B2Z7qUD6jh22Mxsjs6RPkt",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Dev has a gym locker with the combination Orvane-ZQ-COR-551ff4b4f790.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:20:39.162"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 168
+      },
+      "ms": 1025
+    },
+    {
+      "t": "2026-10-30T13:21:14",
+      "method": "POST",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/search",
+      "request_body": {
+        "query": "What is the combination of Dev's locker?",
+        "searchMode": "hybrid",
+        "include": {
+          "related": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "ab1dd1383c193614bfb83f",
+            "chunk": "Dev keeps a gym locker and the lock combination is Orvane-ZQ-COR-551ff4b4f790.",
+            "metadata": {},
+            "similarity": 0.81874132,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:20:02.066Z",
+              "createdAt": "2026-10-30T13:19:34.519Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "ddbcc727cb84236b96bc4a",
+            "chunk": "Dev asked: please forget what I told you earlier about my locker lock, and disregard it entirely.",
+            "metadata": {},
+            "similarity": 0.7353512,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:20:39.162Z",
+              "createdAt": "2026-10-30T13:20:09.341Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [],
+                "children": [],
+                "siblings": []
+              }
+            }
+          },
+          {
+            "id": "ZAovKVrCERuSPge4tEeCxW",
+            "memory": "Dev has requested to forget previously recorded locker lock information.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "similarity": 0.73498917,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:20:39.162Z",
+              "createdAt": "2026-10-30T13:20:39.162Z",
+              "filepath": null
+            },
+            "included": {
+              "related": {
+                "parents": [
+                  {
+                    "id": "B2Z7qUD6jh22Mxsjs6RPkt",
+                    "relation": "updates",
+                    "version": 1,
+                    "memory": "Dev has a gym locker with the combination Orvane-ZQ-COR-551ff4b4f790.",
+                    "metadata": {
+                      "temporalContext": {
+                        "documentDate": "2026-10-30",
+                        "eventDate": null
+                      },
+                      "temporalEventStartMs": 1793318400000,
+                      "temporalEventEndMs": 1793404800000
+                    },
+                    "system": {
+                      "updatedAt": "2026-10-30 13:20:39.162"
+                    }
+                  }
+                ],
+                "children": [],
+                "siblings": []
+              }
+            }
+          }
+        ],
+        "searchTime": 164
+      },
+      "ms": 703
+    },
+    {
+      "t": "2026-10-30T13:21:15",
+      "method": "POST",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [
+            {
+              "id": "ZAovKVrCERuSPge4tEeCxW",
+              "memory": "[2026-10-30] Dev has requested to forget previously recorded locker lock information."
+            }
+          ],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 561
+    },
+    {
+      "t": "2026-10-30T13:21:16",
+      "method": "POST",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1/search",
+      "request_body": {
+        "query": "What is the combination of Dev's locker?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "ab1dd1383c193614bfb83f",
+            "chunk": "Dev keeps a gym locker and the lock combination is Orvane-ZQ-COR-551ff4b4f790.",
+            "metadata": {},
+            "similarity": 0.81874132,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:20:02.066Z",
+              "createdAt": "2026-10-30T13:19:34.519Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "ddbcc727cb84236b96bc4a",
+            "chunk": "Dev asked: please forget what I told you earlier about my locker lock, and disregard it entirely.",
+            "metadata": {},
+            "similarity": 0.7353512,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-30T13:20:39.162Z",
+              "createdAt": "2026-10-30T13:20:09.341Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 128
+      },
+      "ms": 632
+    },
+    {
+      "t": "2026-10-30T13:21:16",
+      "method": "DELETE",
+      "path": "/ns/memtrust_cor05_ef98e2a7a1",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_cor05_ef98e2a7a1",
+        "deletedDocumentsCount": 2,
+        "deletedMemoriesCount": 2
+      },
+      "ms": 534
+    }
+  ]
+}
