@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass, field
-from typing import Any
+from typing import Any, Callable
 
 from ..adapter import (
     AddOptions,
@@ -58,6 +58,7 @@ class Bugs:
     forget_noop: bool = False  # forget() reports success but removes nothing
     forget_delay_s: float = 0.0  # a forgotten memory stays visible this long
     forget_leaves_profile: bool = False  # forgotten memories are gone from search but still in the profile
+    ignore_threshold: bool = False  # the threshold parameter is accepted but does nothing
     unframed_old_value: bool = False  # "used to X, but now Y" yields a bare "lives in X" memory with no past framing, plus the new fact
     corrections_delay_s: float = 0.0  # a superseded fact stays current this long after the newer memory exists
 
@@ -68,6 +69,7 @@ class MockConfig:
     memory_delay_s: float = 1.0  # extra time after done until derived memories exist
     dynamic_memory_delay_s: float | None = None  # same, for documents added without dreaming="instant" (None = same as instant)
     search_ms: float = 50.0  # what last_latency_ms() reports after a search
+    scorer: Callable[[str, str], float] | None = None  # (query, text) -> similarity; None = every hit scores 0.8
     bugs: Bugs = field(default_factory=Bugs)
 
 
@@ -242,15 +244,21 @@ class MockProvider:
             return SearchResult(400, body, [])
         hits: list[SearchHit] = []
         b = self.config.bugs
+        score = lambda text: self.config.scorer(query, text) if self.config.scorer else 0.8  # noqa: E731
         for s in self._scopes_for(scope):
             # newest first is the healthy ranking; old_ranks_first reverses it
             docs = sorted(self._docs[s].values(), key=lambda x: x.seq, reverse=not b.old_ranks_first)
             for d in docs:
                 if o.mode in ("chunks", "hybrid") and self._chunk_visible(d):
-                    hits.append(SearchHit(id=f"chunk_{d.id}", kind="chunk", text=d.content, score=0.8, is_latest=True, is_inference=False, raw={"scope": s}))
+                    hits.append(SearchHit(id=f"chunk_{d.id}", kind="chunk", text=d.content, score=score(d.content), is_latest=True, is_inference=False, raw={"scope": s}))
                 if o.mode in ("memories", "hybrid") and self._memory_current(s, d):
                     for k, text in enumerate(self._mem_texts(d)):
-                        hits.append(SearchHit(id=f"mem_{d.id}" if k == 0 else f"mem_{d.id}.{k}", kind="memory", text=text, score=0.8, is_latest=self._is_latest(s, d), is_inference=False, raw={"scope": s}))
+                        hits.append(SearchHit(id=f"mem_{d.id}" if k == 0 else f"mem_{d.id}.{k}", kind="memory", text=text, score=score(text), is_latest=self._is_latest(s, d), is_inference=False, raw={"scope": s}))
+        threshold = 0.3 if o.threshold is None else o.threshold  # documented default
+        if not b.ignore_threshold:
+            hits = [h for h in hits if h.score >= threshold]
+        if self.config.scorer:
+            hits.sort(key=lambda h: -h.score)
         body = {"results": [{"id": h.id, "chunk" if h.kind == "chunk" else "memory": h.text, "similarity": h.score} for h in hits]}
         self._record("POST", f"/ns/{scope}/search", {"query": query, "searchMode": o.mode}, 200, body)
         self._last_ms = self.config.search_ms
