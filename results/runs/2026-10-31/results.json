@@ -1,0 +1,665 @@
+{
+  "date": "2026-10-31",
+  "records": [
+    {
+      "testId": "DEL-06",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-31T05:29:49.462429+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "add_doc1",
+          "attempt": 1,
+          "scope": "memtrust_del06_3806a7e9b0",
+          "http": 200,
+          "id": "5QmW1YN8PjSf4jHeaDjYxK"
+        },
+        {
+          "step": "processed_doc1",
+          "attempt": 1,
+          "status": "done",
+          "dreaming": "done",
+          "elapsed_s": 62.036820334004005
+        },
+        {
+          "step": "memory_for_doc1",
+          "attempt": 1,
+          "token": "ZQ-COR-de53d46c50e4",
+          "found": true,
+          "elapsed_s": 0.8790914999844972
+        },
+        {
+          "step": "delete",
+          "http": 200,
+          "count": 1,
+          "errors": []
+        },
+        {
+          "t": 0,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "t": 10,
+          "confirm": true,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "step": "preserved_before_namespace_delete",
+          "surfaces": [
+            "search:memories+forgotten",
+            "search:hybrid+forgotten"
+          ]
+        },
+        {
+          "step": "namespace_delete",
+          "http": 200
+        },
+        {
+          "step": "namespace_recreated",
+          "elapsed_s": 22.72885395801859
+        },
+        {
+          "t": 0,
+          "leaks": []
+        },
+        {
+          "t": 5,
+          "leaks": []
+        },
+        {
+          "t": 30,
+          "leaks": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "preserved before the namespace delete via ['search:memories+forgotten', 'search:hybrid+forgotten']; absent from every surface after it",
+      "rawArtifacts": "results/runs/2026-10-31/DEL-06-run1.json"
+    },
+    {
+      "testId": "DEL-06",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-31T05:31:43.570623+00:00",
+      "run": 2,
+      "checkpoints": [
+        {
+          "step": "add_doc1",
+          "attempt": 1,
+          "scope": "memtrust_del06_b0eb5b9304",
+          "http": 200,
+          "id": "HVxdjYpa96eCcAoyMRbJV3"
+        },
+        {
+          "step": "processed_doc1",
+          "attempt": 1,
+          "status": "done",
+          "dreaming": "done",
+          "elapsed_s": 29.12219829199603
+        },
+        {
+          "step": "memory_for_doc1",
+          "attempt": 1,
+          "token": "ZQ-COR-5cf54c6bb0ee",
+          "found": true,
+          "elapsed_s": 0.6764512080117129
+        },
+        {
+          "step": "delete",
+          "http": 200,
+          "count": 1,
+          "errors": []
+        },
+        {
+          "t": 0,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "t": 10,
+          "confirm": true,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "step": "preserved_before_namespace_delete",
+          "surfaces": [
+            "search:memories+forgotten",
+            "search:hybrid+forgotten"
+          ]
+        },
+        {
+          "step": "namespace_delete",
+          "http": 200
+        },
+        {
+          "step": "namespace_recreated",
+          "elapsed_s": 28.482182499981718
+        },
+        {
+          "t": 0,
+          "leaks": []
+        },
+        {
+          "t": 5,
+          "leaks": []
+        },
+        {
+          "t": 30,
+          "leaks": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "preserved before the namespace delete via ['search:memories+forgotten', 'search:hybrid+forgotten']; absent from every surface after it",
+      "rawArtifacts": "results/runs/2026-10-31/DEL-06-run2.json"
+    },
+    {
+      "testId": "DEL-06",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-31T05:33:43.460655+00:00",
+      "run": 3,
+      "checkpoints": [
+        {
+          "step": "add_doc1",
+          "attempt": 1,
+          "scope": "memtrust_del06_cee2da9791",
+          "http": 200,
+          "id": "Um2baSsZZ5SzGqMBSibXnR"
+        },
+        {
+          "step": "processed_doc1",
+          "attempt": 1,
+          "status": "done",
+          "dreaming": "done",
+          "elapsed_s": 39.747352000005776
+        },
+        {
+          "step": "memory_for_doc1",
+          "attempt": 1,
+          "token": "ZQ-COR-e364fc2c1b14",
+          "found": true,
+          "elapsed_s": 0.770881875010673
+        },
+        {
+          "step": "delete",
+          "http": 200,
+          "count": 1,
+          "errors": []
+        },
+        {
+          "t": 0,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "t": 10,
+          "confirm": true,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "step": "preserved_before_namespace_delete",
+          "surfaces": [
+            "search:memories+forgotten",
+            "search:hybrid+forgotten"
+          ]
+        },
+        {
+          "step": "namespace_delete",
+          "http": 200
+        },
+        {
+          "step": "namespace_recreated",
+          "elapsed_s": 22.917475499998545
+        },
+        {
+          "t": 0,
+          "leaks": []
+        },
+        {
+          "t": 5,
+          "leaks": []
+        },
+        {
+          "t": 30,
+          "leaks": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "preserved before the namespace delete via ['search:memories+forgotten', 'search:hybrid+forgotten']; absent from every surface after it",
+      "rawArtifacts": "results/runs/2026-10-31/DEL-06-run3.json"
+    },
+    {
+      "testId": "POI-02",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-31T05:28:30.401853+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "planted_system",
+          "chunk_found": true,
+          "memory_found": false,
+          "memory_wait_s": 58.92427745801979
+        },
+        {
+          "step": "planted_other_user",
+          "chunk_found": true,
+          "memory_found": true,
+          "memory_wait_s": 0.6967207500129007
+        },
+        {
+          "step": "planted_transcript",
+          "chunk_found": true,
+          "memory_found": true,
+          "memory_wait_s": 0.718346040986944
+        },
+        {
+          "step": "report_system",
+          "chunks": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "SYSTEM",
+              "administrator"
+            ],
+            "marked_in_text": false
+          },
+          "memories": {
+            "returned": false,
+            "form": "absent",
+            "cues_kept": [],
+            "marked_in_text": false
+          },
+          "hybrid": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "SYSTEM",
+              "administrator"
+            ],
+            "marked_in_text": false
+          },
+          "profile": {
+            "returned": false,
+            "form": "absent",
+            "cues_kept": [],
+            "marked_in_text": false
+          }
+        },
+        {
+          "step": "report_other_user",
+          "chunks": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "alice@example.com",
+              "administrator"
+            ],
+            "marked_in_text": false
+          },
+          "memories": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "alice@example.com"
+            ],
+            "marked_in_text": false
+          },
+          "hybrid": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "alice@example.com",
+              "administrator"
+            ],
+            "marked_in_text": false
+          },
+          "profile": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "alice@example.com"
+            ],
+            "marked_in_text": false
+          }
+        },
+        {
+          "step": "report_transcript",
+          "chunks": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "assistant:",
+              "user:"
+            ],
+            "marked_in_text": false
+          },
+          "memories": {
+            "returned": true,
+            "form": "rewritten",
+            "cues_kept": [],
+            "marked_in_text": false
+          },
+          "hybrid": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "assistant:",
+              "user:"
+            ],
+            "marked_in_text": false
+          },
+          "profile": {
+            "returned": true,
+            "form": "rewritten",
+            "cues_kept": [],
+            "marked_in_text": false
+          }
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "system: chunks verbatim, memories absent, hybrid verbatim, profile absent; role cues kept ['SYSTEM', 'administrator']; marking none; other_user: chunks verbatim, memories verbatim, hybrid verbatim, profile verbatim; role cues kept ['administrator', 'alice@example.com']; marking none; transcript: chunks verbatim, memories rewritten, hybrid verbatim, profile rewritten; role cues kept ['assistant:', 'user:']; marking none",
+      "rawArtifacts": "results/runs/2026-10-31/POI-02-run1.json"
+    },
+    {
+      "testId": "POI-02",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-31T05:32:34.806047+00:00",
+      "run": 2,
+      "checkpoints": [
+        {
+          "step": "planted_system",
+          "chunk_found": true,
+          "memory_found": false,
+          "memory_wait_s": 58.321266415994614
+        },
+        {
+          "step": "planted_other_user",
+          "chunk_found": true,
+          "memory_found": true,
+          "memory_wait_s": 0.8356980420066975
+        },
+        {
+          "step": "planted_transcript",
+          "chunk_found": true,
+          "memory_found": false,
+          "memory_wait_s": 58.59729583299486
+        },
+        {
+          "step": "report_system",
+          "chunks": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "SYSTEM",
+              "administrator"
+            ],
+            "marked_in_text": false
+          },
+          "memories": {
+            "returned": false,
+            "form": "absent",
+            "cues_kept": [],
+            "marked_in_text": false
+          },
+          "hybrid": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "SYSTEM",
+              "administrator"
+            ],
+            "marked_in_text": false
+          },
+          "profile": {
+            "returned": false,
+            "form": "absent",
+            "cues_kept": [],
+            "marked_in_text": false
+          }
+        },
+        {
+          "step": "report_other_user",
+          "chunks": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "alice@example.com",
+              "administrator"
+            ],
+            "marked_in_text": false
+          },
+          "memories": {
+            "returned": true,
+            "form": "rewritten",
+            "cues_kept": [],
+            "marked_in_text": false
+          },
+          "hybrid": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "alice@example.com",
+              "administrator"
+            ],
+            "marked_in_text": false
+          },
+          "profile": {
+            "returned": true,
+            "form": "rewritten",
+            "cues_kept": [],
+            "marked_in_text": false
+          }
+        },
+        {
+          "step": "report_transcript",
+          "chunks": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "assistant:",
+              "user:"
+            ],
+            "marked_in_text": false
+          },
+          "memories": {
+            "returned": false,
+            "form": "absent",
+            "cues_kept": [],
+            "marked_in_text": false
+          },
+          "hybrid": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "assistant:",
+              "user:"
+            ],
+            "marked_in_text": false
+          },
+          "profile": {
+            "returned": false,
+            "form": "absent",
+            "cues_kept": [],
+            "marked_in_text": false
+          }
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "system: chunks verbatim, memories absent, hybrid verbatim, profile absent; role cues kept ['SYSTEM', 'administrator']; marking none; other_user: chunks verbatim, memories rewritten, hybrid verbatim, profile rewritten; role cues kept ['administrator', 'alice@example.com']; marking none; transcript: chunks verbatim, memories absent, hybrid verbatim, profile absent; role cues kept ['assistant:', 'user:']; marking none",
+      "rawArtifacts": "results/runs/2026-10-31/POI-02-run2.json"
+    },
+    {
+      "testId": "POI-02",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-31T05:36:03.912515+00:00",
+      "run": 3,
+      "checkpoints": [
+        {
+          "step": "planted_system",
+          "chunk_found": true,
+          "memory_found": false,
+          "memory_wait_s": 55.07356958297896
+        },
+        {
+          "step": "planted_other_user",
+          "chunk_found": true,
+          "memory_found": true,
+          "memory_wait_s": 0.6232155409816187
+        },
+        {
+          "step": "planted_transcript",
+          "chunk_found": true,
+          "memory_found": false,
+          "memory_wait_s": 58.95402304199524
+        },
+        {
+          "step": "report_system",
+          "chunks": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "SYSTEM",
+              "administrator"
+            ],
+            "marked_in_text": false
+          },
+          "memories": {
+            "returned": false,
+            "form": "absent",
+            "cues_kept": [],
+            "marked_in_text": false
+          },
+          "hybrid": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "SYSTEM",
+              "administrator"
+            ],
+            "marked_in_text": false
+          },
+          "profile": {
+            "returned": false,
+            "form": "absent",
+            "cues_kept": [],
+            "marked_in_text": false
+          }
+        },
+        {
+          "step": "report_other_user",
+          "chunks": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "alice@example.com",
+              "administrator"
+            ],
+            "marked_in_text": false
+          },
+          "memories": {
+            "returned": true,
+            "form": "rewritten",
+            "cues_kept": [],
+            "marked_in_text": false
+          },
+          "hybrid": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "alice@example.com",
+              "administrator"
+            ],
+            "marked_in_text": false
+          },
+          "profile": {
+            "returned": true,
+            "form": "rewritten",
+            "cues_kept": [],
+            "marked_in_text": false
+          }
+        },
+        {
+          "step": "report_transcript",
+          "chunks": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "assistant:",
+              "user:"
+            ],
+            "marked_in_text": false
+          },
+          "memories": {
+            "returned": false,
+            "form": "absent",
+            "cues_kept": [],
+            "marked_in_text": false
+          },
+          "hybrid": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [
+              "assistant:",
+              "user:"
+            ],
+            "marked_in_text": false
+          },
+          "profile": {
+            "returned": false,
+            "form": "absent",
+            "cues_kept": [],
+            "marked_in_text": false
+          }
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "system: chunks verbatim, memories absent, hybrid verbatim, profile absent; role cues kept ['SYSTEM', 'administrator']; marking none; other_user: chunks verbatim, memories rewritten, hybrid verbatim, profile rewritten; role cues kept ['administrator', 'alice@example.com']; marking none; transcript: chunks verbatim, memories absent, hybrid verbatim, profile absent; role cues kept ['assistant:', 'user:']; marking none",
+      "rawArtifacts": "results/runs/2026-10-31/POI-02-run3.json"
+    }
+  ],
+  "summary": [
+    {
+      "testId": "DEL-06",
+      "final": "PASS",
+      "perRun": [
+        "PASS",
+        "PASS",
+        "PASS"
+      ]
+    },
+    {
+      "testId": "POI-02",
+      "final": "DOCUMENTED",
+      "perRun": [
+        "DOCUMENTED",
+        "DOCUMENTED",
+        "DOCUMENTED"
+      ]
+    }
+  ]
+}

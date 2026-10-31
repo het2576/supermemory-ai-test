@@ -1,0 +1,2542 @@
+{
+  "record": {
+    "testId": "DEL-06",
+    "provider": "supermemory",
+    "client": "supermemory-python-sdk",
+    "sdkVersion": "5.0.1",
+    "apiVersion": "v5",
+    "date": "2026-10-31T05:31:43.570623+00:00",
+    "run": 2,
+    "checkpoints": [
+      {
+        "step": "add_doc1",
+        "attempt": 1,
+        "scope": "memtrust_del06_b0eb5b9304",
+        "http": 200,
+        "id": "HVxdjYpa96eCcAoyMRbJV3"
+      },
+      {
+        "step": "processed_doc1",
+        "attempt": 1,
+        "status": "done",
+        "dreaming": "done",
+        "elapsed_s": 29.12219829199603
+      },
+      {
+        "step": "memory_for_doc1",
+        "attempt": 1,
+        "token": "ZQ-COR-5cf54c6bb0ee",
+        "found": true,
+        "elapsed_s": 0.6764512080117129
+      },
+      {
+        "step": "delete",
+        "http": 200,
+        "count": 1,
+        "errors": []
+      },
+      {
+        "t": 0,
+        "canaryPresent": false,
+        "surfaces": []
+      },
+      {
+        "t": 10,
+        "confirm": true,
+        "canaryPresent": false,
+        "surfaces": []
+      },
+      {
+        "step": "preserved_before_namespace_delete",
+        "surfaces": [
+          "search:memories+forgotten",
+          "search:hybrid+forgotten"
+        ]
+      },
+      {
+        "step": "namespace_delete",
+        "http": 200
+      },
+      {
+        "step": "namespace_recreated",
+        "elapsed_s": 28.482182499981718
+      },
+      {
+        "t": 0,
+        "leaks": []
+      },
+      {
+        "t": 5,
+        "leaks": []
+      },
+      {
+        "t": 30,
+        "leaks": []
+      }
+    ],
+    "result": "PASS",
+    "timeToConsistencySec": null,
+    "notes": "preserved before the namespace delete via ['search:memories+forgotten', 'search:hybrid+forgotten']; absent from every surface after it",
+    "rawArtifacts": "results/runs/2026-10-31/DEL-06-run2.json"
+  },
+  "extra": {
+    "token": "ZQ-COR-5cf54c6bb0ee",
+    "old_document_id": "HVxdjYpa96eCcAoyMRbJV3",
+    "preserved_before_namespace_delete": [
+      "search:memories+forgotten",
+      "search:hybrid+forgotten"
+    ],
+    "namespace_delete_http": 200
+  },
+  "exchanges": [
+    {
+      "t": "2026-10-31T05:29:50",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/document",
+      "request_body": {
+        "content": "Priya's pet iguana is named ZQ-COR-5cf54c6bb0ee. Priya adopted the iguana last spring.",
+        "dreaming": "instant"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "HVxdjYpa96eCcAoyMRbJV3",
+        "status": "queued"
+      },
+      "ms": 942
+    },
+    {
+      "t": "2026-10-31T05:29:50",
+      "method": "GET",
+      "path": "/ns/memtrust_del06_b0eb5b9304/document/HVxdjYpa96eCcAoyMRbJV3",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "HVxdjYpa96eCcAoyMRbJV3",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-31T05:29:50.220Z",
+          "updatedAt": "2026-10-31T05:29:50.220Z",
+          "filepath": null
+        }
+      },
+      "ms": 391
+    },
+    {
+      "t": "2026-10-31T05:29:56",
+      "method": "GET",
+      "path": "/ns/memtrust_del06_b0eb5b9304/document/HVxdjYpa96eCcAoyMRbJV3",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "HVxdjYpa96eCcAoyMRbJV3",
+        "title": "Priya's pet iguana is named ZQ-COR-5cf54c6bb0ee. P...",
+        "type": "text",
+        "summary": null,
+        "content": "Priya's pet iguana is named ZQ-COR-5cf54c6bb0ee. Priya adopted the iguana last spring.",
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-31T05:29:50.220Z",
+          "updatedAt": "2026-10-31T05:29:56.195Z",
+          "filepath": null
+        }
+      },
+      "ms": 583
+    },
+    {
+      "t": "2026-10-31T05:30:02",
+      "method": "GET",
+      "path": "/ns/memtrust_del06_b0eb5b9304/document/HVxdjYpa96eCcAoyMRbJV3",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "HVxdjYpa96eCcAoyMRbJV3",
+        "title": "Priya's pet iguana is named ZQ-COR-5cf54c6bb0ee. P...",
+        "type": "text",
+        "summary": "The document records that Priya adopted an iguana last spring, giving it the handle \"ZQ-COR-5cf54c6bb0ee\". No further biographical or contextual information is provided.",
+        "content": "Priya's pet iguana is named ZQ-COR-5cf54c6bb0ee. Priya adopted the iguana last spring.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-31T05:29:50.220Z",
+          "updatedAt": "2026-10-31T05:29:56.195Z",
+          "filepath": null
+        }
+      },
+      "ms": 639
+    },
+    {
+      "t": "2026-10-31T05:30:07",
+      "method": "GET",
+      "path": "/ns/memtrust_del06_b0eb5b9304/document/HVxdjYpa96eCcAoyMRbJV3",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "HVxdjYpa96eCcAoyMRbJV3",
+        "title": "Priya's pet iguana is named ZQ-COR-5cf54c6bb0ee. P...",
+        "type": "text",
+        "summary": "The document records that Priya adopted an iguana last spring, giving it the handle \"ZQ-COR-5cf54c6bb0ee\". No further biographical or contextual information is provided.",
+        "content": "Priya's pet iguana is named ZQ-COR-5cf54c6bb0ee. Priya adopted the iguana last spring.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-31T05:29:50.220Z",
+          "updatedAt": "2026-10-31T05:29:56.195Z",
+          "filepath": null
+        }
+      },
+      "ms": 602
+    },
+    {
+      "t": "2026-10-31T05:30:13",
+      "method": "GET",
+      "path": "/ns/memtrust_del06_b0eb5b9304/document/HVxdjYpa96eCcAoyMRbJV3",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "HVxdjYpa96eCcAoyMRbJV3",
+        "title": "Priya's pet iguana is named ZQ-COR-5cf54c6bb0ee. P...",
+        "type": "text",
+        "summary": "The document records that Priya adopted an iguana last spring, giving it the handle \"ZQ-COR-5cf54c6bb0ee\". No further biographical or contextual information is provided.",
+        "content": "Priya's pet iguana is named ZQ-COR-5cf54c6bb0ee. Priya adopted the iguana last spring.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-31T05:29:50.220Z",
+          "updatedAt": "2026-10-31T05:29:56.195Z",
+          "filepath": null
+        }
+      },
+      "ms": 555
+    },
+    {
+      "t": "2026-10-31T05:30:19",
+      "method": "GET",
+      "path": "/ns/memtrust_del06_b0eb5b9304/document/HVxdjYpa96eCcAoyMRbJV3",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "HVxdjYpa96eCcAoyMRbJV3",
+        "title": "Priya's pet iguana is named ZQ-COR-5cf54c6bb0ee. P...",
+        "type": "text",
+        "summary": "The document records that Priya adopted an iguana last spring, giving it the handle \"ZQ-COR-5cf54c6bb0ee\". No further biographical or contextual information is provided.",
+        "content": "Priya's pet iguana is named ZQ-COR-5cf54c6bb0ee. Priya adopted the iguana last spring.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "done",
+          "createdAt": "2026-10-31T05:29:50.220Z",
+          "updatedAt": "2026-10-31T05:30:17.878Z",
+          "filepath": null
+        }
+      },
+      "ms": 1326
+    },
+    {
+      "t": "2026-10-31T05:30:20",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "FcYNn7ad8XD21YmCk3h11i",
+            "memory": "Priya has a pet iguana named ZQ-COR-5cf54c6bb0ee.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.77882224,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:30:17.878Z",
+              "createdAt": "2026-10-31T05:30:17.878Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "DJejBhfgVr9cMgBRRsj4eL",
+            "memory": "Priya adopted the iguana last spring.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.7786302,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:30:17.878Z",
+              "createdAt": "2026-10-31T05:30:17.878Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 285
+      },
+      "ms": 675
+    },
+    {
+      "t": "2026-10-31T05:30:20",
+      "method": "DELETE",
+      "path": "/ns/memtrust_del06_b0eb5b9304/document",
+      "request_body": {
+        "ids": [
+          "HVxdjYpa96eCcAoyMRbJV3"
+        ]
+      },
+      "http_status": 200,
+      "response_body": {
+        "count": 1,
+        "errors": []
+      },
+      "ms": 424
+    },
+    {
+      "t": "2026-10-31T05:30:21",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 127
+      },
+      "ms": 580
+    },
+    {
+      "t": "2026-10-31T05:30:21",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 136
+      },
+      "ms": 548
+    },
+    {
+      "t": "2026-10-31T05:30:22",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 139
+      },
+      "ms": 570
+    },
+    {
+      "t": "2026-10-31T05:30:22",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 527
+    },
+    {
+      "t": "2026-10-31T05:30:33",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 145
+      },
+      "ms": 790
+    },
+    {
+      "t": "2026-10-31T05:30:34",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 159
+      },
+      "ms": 603
+    },
+    {
+      "t": "2026-10-31T05:30:34",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [],
+        "searchTime": 140
+      },
+      "ms": 607
+    },
+    {
+      "t": "2026-10-31T05:30:35",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 485
+    },
+    {
+      "t": "2026-10-31T05:30:35",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "memories",
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "FcYNn7ad8XD21YmCk3h11i",
+            "memory": "Priya has a pet iguana named ZQ-COR-5cf54c6bb0ee.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.77882224,
+            "isLatest": false,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:30:20.435Z",
+              "createdAt": "2026-10-31T05:30:17.878Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "DJejBhfgVr9cMgBRRsj4eL",
+            "memory": "Priya adopted the iguana last spring.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.7786302,
+            "isLatest": false,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:30:20.435Z",
+              "createdAt": "2026-10-31T05:30:17.878Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 148
+      },
+      "ms": 558
+    },
+    {
+      "t": "2026-10-31T05:30:36",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "hybrid",
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "FcYNn7ad8XD21YmCk3h11i",
+            "memory": "Priya has a pet iguana named ZQ-COR-5cf54c6bb0ee.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.77882224,
+            "isLatest": false,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:30:20.435Z",
+              "createdAt": "2026-10-31T05:30:17.878Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "DJejBhfgVr9cMgBRRsj4eL",
+            "memory": "Priya adopted the iguana last spring.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.7786302,
+            "isLatest": false,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:30:20.435Z",
+              "createdAt": "2026-10-31T05:30:17.878Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 137
+      },
+      "ms": 533
+    },
+    {
+      "t": "2026-10-31T05:30:36",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/list/memories?limit=100",
+      "request_body": {
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "documents": [],
+        "chunks": [],
+        "memories": [],
+        "pagination": {
+          "currentPage": 1,
+          "limit": 100,
+          "totalItems": 0,
+          "totalPages": 0,
+          "hasMore": false,
+          "nextCursor": null
+        }
+      },
+      "ms": 396
+    },
+    {
+      "t": "2026-10-31T05:30:37",
+      "method": "DELETE",
+      "path": "/ns/memtrust_del06_b0eb5b9304",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_del06_b0eb5b9304",
+        "deletedDocumentsCount": 0,
+        "deletedMemoriesCount": 0
+      },
+      "ms": 432
+    },
+    {
+      "t": "2026-10-31T05:30:38",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/document",
+      "request_body": {
+        "content": "The office plant is a fern that needs water on Mondays.",
+        "dreaming": "instant"
+      },
+      "http_status": 200,
+      "response_body": {
+        "id": "sBe19Wx6ey4bHKsbQYDPMf",
+        "status": "queued"
+      },
+      "ms": 895
+    },
+    {
+      "t": "2026-10-31T05:30:38",
+      "method": "GET",
+      "path": "/ns/memtrust_del06_b0eb5b9304/document/sBe19Wx6ey4bHKsbQYDPMf",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "sBe19Wx6ey4bHKsbQYDPMf",
+        "title": null,
+        "type": "text",
+        "summary": null,
+        "content": null,
+        "metadata": {},
+        "system": {
+          "status": "queued",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-31T05:30:37.969Z",
+          "updatedAt": "2026-10-31T05:30:37.969Z",
+          "filepath": null
+        }
+      },
+      "ms": 373
+    },
+    {
+      "t": "2026-10-31T05:30:44",
+      "method": "GET",
+      "path": "/ns/memtrust_del06_b0eb5b9304/document/sBe19Wx6ey4bHKsbQYDPMf",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "sBe19Wx6ey4bHKsbQYDPMf",
+        "title": "The office plant is a fern that needs water on Mon...",
+        "type": "text",
+        "summary": null,
+        "content": "The office plant is a fern that needs water on Mondays.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-31T05:30:37.969Z",
+          "updatedAt": "2026-10-31T05:30:43.334Z",
+          "filepath": null
+        }
+      },
+      "ms": 581
+    },
+    {
+      "t": "2026-10-31T05:30:49",
+      "method": "GET",
+      "path": "/ns/memtrust_del06_b0eb5b9304/document/sBe19Wx6ey4bHKsbQYDPMf",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "sBe19Wx6ey4bHKsbQYDPMf",
+        "title": "The office plant is a fern that needs water on Mon...",
+        "type": "text",
+        "summary": "The office contains a fern that requires watering every Monday. No other watering or care instructions are given. The plant\u2019s species is unspecified beyond being a fern, but the key piece of operational knowledge is the Monday watering habit.",
+        "content": "The office plant is a fern that needs water on Mondays.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-31T05:30:37.969Z",
+          "updatedAt": "2026-10-31T05:30:43.334Z",
+          "filepath": null
+        }
+      },
+      "ms": 718
+    },
+    {
+      "t": "2026-10-31T05:30:55",
+      "method": "GET",
+      "path": "/ns/memtrust_del06_b0eb5b9304/document/sBe19Wx6ey4bHKsbQYDPMf",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "sBe19Wx6ey4bHKsbQYDPMf",
+        "title": "The office plant is a fern that needs water on Mon...",
+        "type": "text",
+        "summary": "The office contains a fern that requires watering every Monday. No other watering or care instructions are given. The plant\u2019s species is unspecified beyond being a fern, but the key piece of operational knowledge is the Monday watering habit.",
+        "content": "The office plant is a fern that needs water on Mondays.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-31T05:30:37.969Z",
+          "updatedAt": "2026-10-31T05:30:43.334Z",
+          "filepath": null
+        }
+      },
+      "ms": 667
+    },
+    {
+      "t": "2026-10-31T05:31:01",
+      "method": "GET",
+      "path": "/ns/memtrust_del06_b0eb5b9304/document/sBe19Wx6ey4bHKsbQYDPMf",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "sBe19Wx6ey4bHKsbQYDPMf",
+        "title": "The office plant is a fern that needs water on Mon...",
+        "type": "text",
+        "summary": "The office contains a fern that requires watering every Monday. No other watering or care instructions are given. The plant\u2019s species is unspecified beyond being a fern, but the key piece of operational knowledge is the Monday watering habit.",
+        "content": "The office plant is a fern that needs water on Mondays.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "dreaming",
+          "createdAt": "2026-10-31T05:30:37.969Z",
+          "updatedAt": "2026-10-31T05:30:43.334Z",
+          "filepath": null
+        }
+      },
+      "ms": 540
+    },
+    {
+      "t": "2026-10-31T05:31:06",
+      "method": "GET",
+      "path": "/ns/memtrust_del06_b0eb5b9304/document/sBe19Wx6ey4bHKsbQYDPMf",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "id": "sBe19Wx6ey4bHKsbQYDPMf",
+        "title": "The office plant is a fern that needs water on Mon...",
+        "type": "text",
+        "summary": "The office contains a fern that requires watering every Monday. No other watering or care instructions are given. The plant\u2019s species is unspecified beyond being a fern, but the key piece of operational knowledge is the Monday watering habit.",
+        "content": "The office plant is a fern that needs water on Mondays.",
+        "metadata": {},
+        "system": {
+          "status": "done",
+          "dreamingStatus": "done",
+          "createdAt": "2026-10-31T05:30:37.969Z",
+          "updatedAt": "2026-10-31T05:31:04.088Z",
+          "filepath": null
+        }
+      },
+      "ms": 578
+    },
+    {
+      "t": "2026-10-31T05:31:07",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "1b959820de6adbc5b85c07",
+            "chunk": "The office plant is a fern that needs water on Mondays.",
+            "metadata": {},
+            "similarity": 0.56192142,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:30:37.969Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 138
+      },
+      "ms": 543
+    },
+    {
+      "t": "2026-10-31T05:31:07",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "chunks",
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "1b959820de6adbc5b85c07",
+            "chunk": "The office plant is a fern that needs water on Mondays.",
+            "metadata": {},
+            "similarity": 0.56192142,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:30:37.969Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 128
+      },
+      "ms": 547
+    },
+    {
+      "t": "2026-10-31T05:31:08",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "vTQCvyi3R99HKxSPZQSWeH",
+            "memory": "The office plant is a fern.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.5727765,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "YFua74RmnTeq8TiWtrzpZD",
+            "memory": "The office plant needs watering on Mondays.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.54132986,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 143
+      },
+      "ms": 593
+    },
+    {
+      "t": "2026-10-31T05:31:09",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "memories",
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "vTQCvyi3R99HKxSPZQSWeH",
+            "memory": "The office plant is a fern.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.5727765,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "YFua74RmnTeq8TiWtrzpZD",
+            "memory": "The office plant needs watering on Mondays.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.54132986,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 135
+      },
+      "ms": 671
+    },
+    {
+      "t": "2026-10-31T05:31:09",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "vTQCvyi3R99HKxSPZQSWeH",
+            "memory": "The office plant is a fern.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.5727765,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "1b959820de6adbc5b85c07",
+            "chunk": "The office plant is a fern that needs water on Mondays.",
+            "metadata": {},
+            "similarity": 0.56192142,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:30:37.969Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "YFua74RmnTeq8TiWtrzpZD",
+            "memory": "The office plant needs watering on Mondays.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.54132986,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 147
+      },
+      "ms": 566
+    },
+    {
+      "t": "2026-10-31T05:31:10",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "hybrid",
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "vTQCvyi3R99HKxSPZQSWeH",
+            "memory": "The office plant is a fern.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.5727765,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "1b959820de6adbc5b85c07",
+            "chunk": "The office plant is a fern that needs water on Mondays.",
+            "metadata": {},
+            "similarity": 0.56192142,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:30:37.969Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "YFua74RmnTeq8TiWtrzpZD",
+            "memory": "The office plant needs watering on Mondays.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.54132986,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 168
+      },
+      "ms": 613
+    },
+    {
+      "t": "2026-10-31T05:31:10",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [
+            {
+              "id": "YFua74RmnTeq8TiWtrzpZD",
+              "memory": "[2026-10-31] The office plant needs watering on Mondays."
+            },
+            {
+              "id": "vTQCvyi3R99HKxSPZQSWeH",
+              "memory": "[2026-10-31] The office plant is a fern."
+            }
+          ],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 468
+    },
+    {
+      "t": "2026-10-31T05:31:11",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "memories",
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "vTQCvyi3R99HKxSPZQSWeH",
+            "memory": "The office plant is a fern.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.5727765,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "YFua74RmnTeq8TiWtrzpZD",
+            "memory": "The office plant needs watering on Mondays.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.54132986,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 147
+      },
+      "ms": 585
+    },
+    {
+      "t": "2026-10-31T05:31:11",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "hybrid",
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "vTQCvyi3R99HKxSPZQSWeH",
+            "memory": "The office plant is a fern.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.5727765,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "1b959820de6adbc5b85c07",
+            "chunk": "The office plant is a fern that needs water on Mondays.",
+            "metadata": {},
+            "similarity": 0.56192142,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:30:37.969Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "YFua74RmnTeq8TiWtrzpZD",
+            "memory": "The office plant needs watering on Mondays.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.54132986,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 142
+      },
+      "ms": 626
+    },
+    {
+      "t": "2026-10-31T05:31:12",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/list/memories?limit=100",
+      "request_body": {
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "documents": [],
+        "chunks": [],
+        "memories": [
+          {
+            "id": "YFua74RmnTeq8TiWtrzpZD",
+            "memory": "The office plant needs watering on Mondays.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "isStatic": false,
+            "isInference": false,
+            "isLatest": true,
+            "isForgotten": false,
+            "version": 1,
+            "system": {
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "updatedAt": "2026-10-31T05:31:04.088Z"
+            }
+          },
+          {
+            "id": "vTQCvyi3R99HKxSPZQSWeH",
+            "memory": "The office plant is a fern.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "isStatic": false,
+            "isInference": false,
+            "isLatest": true,
+            "isForgotten": false,
+            "version": 1,
+            "system": {
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "updatedAt": "2026-10-31T05:31:04.088Z"
+            }
+          }
+        ],
+        "pagination": {
+          "currentPage": 1,
+          "limit": 100,
+          "totalItems": 2,
+          "totalPages": 1,
+          "hasMore": false,
+          "nextCursor": null
+        }
+      },
+      "ms": 517
+    },
+    {
+      "t": "2026-10-31T05:31:12",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/list/documents?limit=100",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "documents": [
+          {
+            "id": "sBe19Wx6ey4bHKsbQYDPMf",
+            "title": "The office plant is a fern that needs water on Mon...",
+            "type": "text",
+            "summary": "The office contains a fern that requires watering every Monday. No other watering or care instructions are given. The plant\u2019s species is unspecified beyond being a fern, but the key piece of operational knowledge is the Monday watering habit.",
+            "metadata": {},
+            "url": null,
+            "system": {
+              "status": "done",
+              "dreamingStatus": "done",
+              "memoryCount": 2,
+              "createdAt": "2026-10-31T05:30:37.969Z",
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          }
+        ],
+        "chunks": [],
+        "memories": [],
+        "pagination": {
+          "currentPage": 1,
+          "limit": 100,
+          "totalItems": 1,
+          "totalPages": 1,
+          "hasMore": false,
+          "nextCursor": null
+        }
+      },
+      "ms": 410
+    },
+    {
+      "t": "2026-10-31T05:31:13",
+      "method": "GET",
+      "path": "/ns/memtrust_del06_b0eb5b9304/document/HVxdjYpa96eCcAoyMRbJV3",
+      "request_body": null,
+      "http_status": 404,
+      "response_body": {
+        "error": "Document not found",
+        "feedback": "If this keeps happening, looks wrong, or the behavior is confusing, tell us: POST https://api.supermemory.ai/feedback"
+      },
+      "ms": 379
+    },
+    {
+      "t": "2026-10-31T05:31:13",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "1b959820de6adbc5b85c07",
+            "chunk": "The office plant is a fern that needs water on Mondays.",
+            "metadata": {},
+            "similarity": 0.56192142,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:30:37.969Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 165
+      },
+      "ms": 609
+    },
+    {
+      "t": "2026-10-31T05:31:14",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "chunks",
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "1b959820de6adbc5b85c07",
+            "chunk": "The office plant is a fern that needs water on Mondays.",
+            "metadata": {},
+            "similarity": 0.56192142,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:30:37.969Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 146
+      },
+      "ms": 694
+    },
+    {
+      "t": "2026-10-31T05:31:15",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "vTQCvyi3R99HKxSPZQSWeH",
+            "memory": "The office plant is a fern.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.5727765,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "YFua74RmnTeq8TiWtrzpZD",
+            "memory": "The office plant needs watering on Mondays.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.54132986,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 139
+      },
+      "ms": 592
+    },
+    {
+      "t": "2026-10-31T05:31:15",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "memories",
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "vTQCvyi3R99HKxSPZQSWeH",
+            "memory": "The office plant is a fern.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.5727765,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "YFua74RmnTeq8TiWtrzpZD",
+            "memory": "The office plant needs watering on Mondays.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.54132986,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 134
+      },
+      "ms": 543
+    },
+    {
+      "t": "2026-10-31T05:31:16",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "vTQCvyi3R99HKxSPZQSWeH",
+            "memory": "The office plant is a fern.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.5727765,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "1b959820de6adbc5b85c07",
+            "chunk": "The office plant is a fern that needs water on Mondays.",
+            "metadata": {},
+            "similarity": 0.56192142,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:30:37.969Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "YFua74RmnTeq8TiWtrzpZD",
+            "memory": "The office plant needs watering on Mondays.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.54132986,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 167
+      },
+      "ms": 619
+    },
+    {
+      "t": "2026-10-31T05:31:16",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "hybrid",
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "vTQCvyi3R99HKxSPZQSWeH",
+            "memory": "The office plant is a fern.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.5727765,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "1b959820de6adbc5b85c07",
+            "chunk": "The office plant is a fern that needs water on Mondays.",
+            "metadata": {},
+            "similarity": 0.56192142,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:30:37.969Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "YFua74RmnTeq8TiWtrzpZD",
+            "memory": "The office plant needs watering on Mondays.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.54132986,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 149
+      },
+      "ms": 594
+    },
+    {
+      "t": "2026-10-31T05:31:18",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [
+            {
+              "id": "YFua74RmnTeq8TiWtrzpZD",
+              "memory": "[2026-10-31] The office plant needs watering on Mondays."
+            },
+            {
+              "id": "vTQCvyi3R99HKxSPZQSWeH",
+              "memory": "[2026-10-31] The office plant is a fern."
+            }
+          ],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 1374
+    },
+    {
+      "t": "2026-10-31T05:31:18",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "memories",
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "vTQCvyi3R99HKxSPZQSWeH",
+            "memory": "The office plant is a fern.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.5727765,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "YFua74RmnTeq8TiWtrzpZD",
+            "memory": "The office plant needs watering on Mondays.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.54132986,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 151
+      },
+      "ms": 564
+    },
+    {
+      "t": "2026-10-31T05:31:19",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "hybrid",
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "vTQCvyi3R99HKxSPZQSWeH",
+            "memory": "The office plant is a fern.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.5727765,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "1b959820de6adbc5b85c07",
+            "chunk": "The office plant is a fern that needs water on Mondays.",
+            "metadata": {},
+            "similarity": 0.56192142,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:30:37.969Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "YFua74RmnTeq8TiWtrzpZD",
+            "memory": "The office plant needs watering on Mondays.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.54132986,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 151
+      },
+      "ms": 570
+    },
+    {
+      "t": "2026-10-31T05:31:19",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/list/memories?limit=100",
+      "request_body": {
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "documents": [],
+        "chunks": [],
+        "memories": [
+          {
+            "id": "YFua74RmnTeq8TiWtrzpZD",
+            "memory": "The office plant needs watering on Mondays.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "isStatic": false,
+            "isInference": false,
+            "isLatest": true,
+            "isForgotten": false,
+            "version": 1,
+            "system": {
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "updatedAt": "2026-10-31T05:31:04.088Z"
+            }
+          },
+          {
+            "id": "vTQCvyi3R99HKxSPZQSWeH",
+            "memory": "The office plant is a fern.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "isStatic": false,
+            "isInference": false,
+            "isLatest": true,
+            "isForgotten": false,
+            "version": 1,
+            "system": {
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "updatedAt": "2026-10-31T05:31:04.088Z"
+            }
+          }
+        ],
+        "pagination": {
+          "currentPage": 1,
+          "limit": 100,
+          "totalItems": 2,
+          "totalPages": 1,
+          "hasMore": false,
+          "nextCursor": null
+        }
+      },
+      "ms": 422
+    },
+    {
+      "t": "2026-10-31T05:31:20",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/list/documents?limit=100",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "documents": [
+          {
+            "id": "sBe19Wx6ey4bHKsbQYDPMf",
+            "title": "The office plant is a fern that needs water on Mon...",
+            "type": "text",
+            "summary": "The office contains a fern that requires watering every Monday. No other watering or care instructions are given. The plant\u2019s species is unspecified beyond being a fern, but the key piece of operational knowledge is the Monday watering habit.",
+            "metadata": {},
+            "url": null,
+            "system": {
+              "status": "done",
+              "dreamingStatus": "done",
+              "memoryCount": 2,
+              "createdAt": "2026-10-31T05:30:37.969Z",
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          }
+        ],
+        "chunks": [],
+        "memories": [],
+        "pagination": {
+          "currentPage": 1,
+          "limit": 100,
+          "totalItems": 1,
+          "totalPages": 1,
+          "hasMore": false,
+          "nextCursor": null
+        }
+      },
+      "ms": 474
+    },
+    {
+      "t": "2026-10-31T05:31:20",
+      "method": "GET",
+      "path": "/ns/memtrust_del06_b0eb5b9304/document/HVxdjYpa96eCcAoyMRbJV3",
+      "request_body": null,
+      "http_status": 404,
+      "response_body": {
+        "error": "Document not found",
+        "feedback": "If this keeps happening, looks wrong, or the behavior is confusing, tell us: POST https://api.supermemory.ai/feedback"
+      },
+      "ms": 409
+    },
+    {
+      "t": "2026-10-31T05:31:37",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "chunks"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "1b959820de6adbc5b85c07",
+            "chunk": "The office plant is a fern that needs water on Mondays.",
+            "metadata": {},
+            "similarity": 0.56192142,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:30:37.969Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 149
+      },
+      "ms": 721
+    },
+    {
+      "t": "2026-10-31T05:31:37",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "chunks",
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "1b959820de6adbc5b85c07",
+            "chunk": "The office plant is a fern that needs water on Mondays.",
+            "metadata": {},
+            "similarity": 0.56192142,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:30:37.969Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 126
+      },
+      "ms": 522
+    },
+    {
+      "t": "2026-10-31T05:31:38",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "memories"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "vTQCvyi3R99HKxSPZQSWeH",
+            "memory": "The office plant is a fern.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.5727765,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "YFua74RmnTeq8TiWtrzpZD",
+            "memory": "The office plant needs watering on Mondays.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.54132986,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 148
+      },
+      "ms": 572
+    },
+    {
+      "t": "2026-10-31T05:31:38",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "memories",
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "vTQCvyi3R99HKxSPZQSWeH",
+            "memory": "The office plant is a fern.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.5727765,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "YFua74RmnTeq8TiWtrzpZD",
+            "memory": "The office plant needs watering on Mondays.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.54132986,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 104
+      },
+      "ms": 498
+    },
+    {
+      "t": "2026-10-31T05:31:39",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "hybrid"
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "vTQCvyi3R99HKxSPZQSWeH",
+            "memory": "The office plant is a fern.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.5727765,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "1b959820de6adbc5b85c07",
+            "chunk": "The office plant is a fern that needs water on Mondays.",
+            "metadata": {},
+            "similarity": 0.56192142,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:30:37.969Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "YFua74RmnTeq8TiWtrzpZD",
+            "memory": "The office plant needs watering on Mondays.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.54132986,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 135
+      },
+      "ms": 553
+    },
+    {
+      "t": "2026-10-31T05:31:40",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "hybrid",
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "vTQCvyi3R99HKxSPZQSWeH",
+            "memory": "The office plant is a fern.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.5727765,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "1b959820de6adbc5b85c07",
+            "chunk": "The office plant is a fern that needs water on Mondays.",
+            "metadata": {},
+            "similarity": 0.56192142,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:30:37.969Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "YFua74RmnTeq8TiWtrzpZD",
+            "memory": "The office plant needs watering on Mondays.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.54132986,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 134
+      },
+      "ms": 526
+    },
+    {
+      "t": "2026-10-31T05:31:40",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/profile",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "profile": {
+          "static": [],
+          "dynamic": [
+            {
+              "id": "YFua74RmnTeq8TiWtrzpZD",
+              "memory": "[2026-10-31] The office plant needs watering on Mondays."
+            },
+            {
+              "id": "vTQCvyi3R99HKxSPZQSWeH",
+              "memory": "[2026-10-31] The office plant is a fern."
+            }
+          ],
+          "buckets": {
+            "preferences": []
+          }
+        }
+      },
+      "ms": 431
+    },
+    {
+      "t": "2026-10-31T05:31:41",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "memories",
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "vTQCvyi3R99HKxSPZQSWeH",
+            "memory": "The office plant is a fern.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.5727765,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "YFua74RmnTeq8TiWtrzpZD",
+            "memory": "The office plant needs watering on Mondays.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.54132986,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 151
+      },
+      "ms": 619
+    },
+    {
+      "t": "2026-10-31T05:31:41",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/search",
+      "request_body": {
+        "query": "What is the name of Priya's pet iguana?",
+        "searchMode": "hybrid",
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "results": [
+          {
+            "id": "vTQCvyi3R99HKxSPZQSWeH",
+            "memory": "The office plant is a fern.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.5727765,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "1b959820de6adbc5b85c07",
+            "chunk": "The office plant is a fern that needs water on Mondays.",
+            "metadata": {},
+            "similarity": 0.56192142,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:30:37.969Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "YFua74RmnTeq8TiWtrzpZD",
+            "memory": "The office plant needs watering on Mondays.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "similarity": 0.54132986,
+            "isLatest": true,
+            "isInference": false,
+            "system": {
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          }
+        ],
+        "searchTime": 127
+      },
+      "ms": 639
+    },
+    {
+      "t": "2026-10-31T05:31:42",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/list/memories?limit=100",
+      "request_body": {
+        "include": {
+          "forgotten": true
+        }
+      },
+      "http_status": 200,
+      "response_body": {
+        "documents": [],
+        "chunks": [],
+        "memories": [
+          {
+            "id": "YFua74RmnTeq8TiWtrzpZD",
+            "memory": "The office plant needs watering on Mondays.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "isStatic": false,
+            "isInference": false,
+            "isLatest": true,
+            "isForgotten": false,
+            "version": 1,
+            "system": {
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "updatedAt": "2026-10-31T05:31:04.088Z"
+            }
+          },
+          {
+            "id": "vTQCvyi3R99HKxSPZQSWeH",
+            "memory": "The office plant is a fern.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-31",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793404800000,
+              "temporalEventEndMs": 1793491200000
+            },
+            "isStatic": false,
+            "isInference": false,
+            "isLatest": true,
+            "isForgotten": false,
+            "version": 1,
+            "system": {
+              "createdAt": "2026-10-31T05:31:04.088Z",
+              "updatedAt": "2026-10-31T05:31:04.088Z"
+            }
+          }
+        ],
+        "pagination": {
+          "currentPage": 1,
+          "limit": 100,
+          "totalItems": 2,
+          "totalPages": 1,
+          "hasMore": false,
+          "nextCursor": null
+        }
+      },
+      "ms": 386
+    },
+    {
+      "t": "2026-10-31T05:31:42",
+      "method": "POST",
+      "path": "/ns/memtrust_del06_b0eb5b9304/list/documents?limit=100",
+      "request_body": {},
+      "http_status": 200,
+      "response_body": {
+        "documents": [
+          {
+            "id": "sBe19Wx6ey4bHKsbQYDPMf",
+            "title": "The office plant is a fern that needs water on Mon...",
+            "type": "text",
+            "summary": "The office contains a fern that requires watering every Monday. No other watering or care instructions are given. The plant\u2019s species is unspecified beyond being a fern, but the key piece of operational knowledge is the Monday watering habit.",
+            "metadata": {},
+            "url": null,
+            "system": {
+              "status": "done",
+              "dreamingStatus": "done",
+              "memoryCount": 2,
+              "createdAt": "2026-10-31T05:30:37.969Z",
+              "updatedAt": "2026-10-31T05:31:04.088Z",
+              "filepath": null
+            }
+          }
+        ],
+        "chunks": [],
+        "memories": [],
+        "pagination": {
+          "currentPage": 1,
+          "limit": 100,
+          "totalItems": 1,
+          "totalPages": 1,
+          "hasMore": false,
+          "nextCursor": null
+        }
+      },
+      "ms": 432
+    },
+    {
+      "t": "2026-10-31T05:31:43",
+      "method": "GET",
+      "path": "/ns/memtrust_del06_b0eb5b9304/document/HVxdjYpa96eCcAoyMRbJV3",
+      "request_body": null,
+      "http_status": 404,
+      "response_body": {
+        "error": "Document not found",
+        "feedback": "If this keeps happening, looks wrong, or the behavior is confusing, tell us: POST https://api.supermemory.ai/feedback"
+      },
+      "ms": 455
+    },
+    {
+      "t": "2026-10-31T05:31:43",
+      "method": "DELETE",
+      "path": "/ns/memtrust_del06_b0eb5b9304",
+      "request_body": null,
+      "http_status": 200,
+      "response_body": {
+        "status": "deleted",
+        "namespace": "memtrust_del06_b0eb5b9304",
+        "deletedDocumentsCount": 1,
+        "deletedMemoriesCount": 2
+      },
+      "ms": 525
+    }
+  ]
+}
