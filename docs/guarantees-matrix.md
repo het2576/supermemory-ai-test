@@ -91,7 +91,7 @@ Per-run verdicts combine in `aggregate()` in `src/runner.py`, which implements t
 
 ## 3. Test-design changes forced by the docs
 
-| PRD item | Change | Why |
+| Planned test (original plan) | Change | Why |
 |---|---|---|
 | DEL-04 delete during processing | Becomes "does the API reject it and leave the doc intact", not "never becomes searchable". | Docs: processing docs cannot be deleted; they come back in `errors`. |
 | DEL-03 derived facts | Check `memories` list with `include.forgotten`, search with and without `include.forgotten`, and profile. | Docs say derived memories are forgotten on document delete, but forgetting is a soft delete. |

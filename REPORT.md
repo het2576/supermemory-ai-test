@@ -246,7 +246,7 @@ Default-mode dreaming (F-002): the server's timestamps for the three LAT-04 name
 | [F-002](findings/F-002-dynamic-dreaming-no-memories.md) | Default `dreaming: "dynamic"` took about 4 h to produce memories; docs say "several minutes" | S2/S3 | Final; already reported publicly (claude-supermemory #156) |
 | [F-003](findings/F-003-default-threshold-never-abstains.md) | The default search threshold never abstains; scores are not calibrated for "I don't know" | S3 | Final for this setup |
 
-Severity scale from the PRD: S1 privacy or security (private disclosure first), S2 correctness, S3 documentation or developer experience. No S1 finding was made.
+Severity scale used throughout: S1 privacy or security (private disclosure first), S2 correctness (a stale or wrong result), S3 documentation or developer experience. No S1 finding was made.
 
 ## Smaller observations
 
@@ -257,7 +257,7 @@ Severity scale from the PRD: S1 privacy or security (private disclosure first), 
 
 ## Limits
 
-One free-plan account, one machine and region, one day. Short English text; 20-fact namespaces; no long documents, PDFs, URLs, connectors or concurrency. One run of each default-mode sample. Server behavior can change; the date and SDK version are in every evidence file. "Gone from every API surface" is not "erased from every store".
+One free-plan account, one machine and region, one day. Commit dates and tags are as recorded by git on my machine (history was rewritten once, before the first publish, to leave out a private planning document; content, order and dates of everything else are unchanged); they are not an independent timestamp. Short English text; 20-fact namespaces; no long documents, PDFs, URLs, connectors or concurrency. One run of each default-mode sample. Server behavior can change; the date and SDK version are in every evidence file. "Gone from every API surface" is not "erased from every store".
 
 ## Reproduce
 

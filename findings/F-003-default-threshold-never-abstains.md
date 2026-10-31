@@ -1,7 +1,7 @@
 # F-003: the default search `threshold` (0.3) never abstains; similarity scores are not calibrated for "I don't know"
 
 **Status: final for this setup** (3 runs, `results/runs/2026-10-30/ABS-0*.json`; generated tables in REPORT.md).
-**Severity (PRD section 10): S3** (developer experience / documentation). Not a bug: the parameter works exactly as documented. The gap is guidance.
+**Severity (scale in REPORT.md): S3** (developer experience / documentation). Not a bug: the parameter works exactly as documented. The gap is guidance.
 **Novelty:** no matching upstream issue was looked for beyond the docs (this is a property of the scoring, not a defect report).
 
 ## What was observed

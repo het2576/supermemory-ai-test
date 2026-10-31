@@ -1,6 +1,6 @@
 # memtrust decisions
 
-Resolved during the PRD review. Where this file and `prd.md` disagree, this file wins. Verdict thresholds in D1 and D2 are the pre-registered ones: commit them and tag `prereg-v1` before the first real run. Later changes are amendments (see D1), never silent edits.
+Resolved during the review of the original planning document (the PRD), which is a private working document and is not part of this repository; where these notes cite "the PRD", the decision is restated here. Where the PRD and this file disagreed, this file won. Verdict thresholds in D1 and D2 are the pre-registered ones: commit them and tag `prereg-v1` before the first real run. Later changes are amendments (see D1), never silent edits.
 
 ## D1. Pre-registered verdict thresholds
 

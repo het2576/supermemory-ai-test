@@ -1,7 +1,7 @@
 # F-001: memories derived from a deleted document are preserved and still returned by `include.forgotten`; the docs word this four different ways
 
 **Status: final for this setup.** DEL-03 (3 runs) and the namespace-delete control DEL-06 (3 runs) are done.
-**Severity (PRD section 10): S3** (documentation), **privacy-relevant**. It is not an S1 defect: the control showed that deleting the namespace removes the preserved memories as far as the API can show (see below), and other tenants never saw them (ISO).
+**Severity (scale in REPORT.md): S3** (documentation), **privacy-relevant**. It is not an S1 defect: the control showed that deleting the namespace removes the preserved memories as far as the API can show (see below), and other tenants never saw them (ISO).
 **Novelty:** two searches of GitHub on 2026-10-31 found no issue in `supermemoryai/supermemory` about this. That is "I found none", not "none exists".
 
 ## What was observed

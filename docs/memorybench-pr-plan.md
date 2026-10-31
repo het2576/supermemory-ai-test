@@ -1,6 +1,6 @@
 # MemoryBench: issue and porting plan
 
-Goal G4 in the PRD: make memtrust useful to MemoryBench. This is an **issue plus a porting plan**, not a PR, because MemoryBench is TypeScript/Bun and memtrust is Python, and because the current MemoryBench interfaces cannot express most of the suite. Facts below were read on 2026-10-31 from the sources named; anything not stated there is marked **unknown**.
+Goal: make memtrust useful to MemoryBench. This is an **issue plus a porting plan**, not a PR, because MemoryBench is TypeScript/Bun and memtrust is Python, and because the current MemoryBench interfaces cannot express most of the suite. Facts below were read on 2026-10-31 from the sources named; anything not stated there is marked **unknown**.
 
 ## What MemoryBench is (from its own pages)
 

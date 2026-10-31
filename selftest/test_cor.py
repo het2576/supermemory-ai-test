@@ -76,7 +76,7 @@ def test_profile_keeping_the_old_fact_fails_the_strict_tests(tmp_path):
 
 def test_implicit_update_tolerates_both_facts_current_if_the_newer_ranks_first(tmp_path):
     r = go("COR-02", tmp_path, corrections_ignored=True)
-    assert r.final == "PASS"  # both current, newest first, which is what the PRD asks for
+    assert r.final == "PASS"  # both current, newest first, which is what the plan asks for
     assert go("COR-02", tmp_path, profile_keeps_stale=True).final == "PASS"  # profile is not ranked: a note only
 
 

@@ -184,7 +184,7 @@ def del_04(ctx: TestContext) -> RunOutcome:
         return RunOutcome("PASS", cps, notes="rejected as documented; document completed intact", extra={"canary": c, "outcome": "rejected"})
 
     if deleted.count == 1 and not deleted.errors:
-        # Accepted although the docs say it is rejected. The PRD assertion applies: it must never become searchable.
+        # Accepted although the docs say it is rejected. The original assertion applies: it must never become searchable.
         ready = wait_done(p, scope, added.doc_id, clock, timeout_s=60)
         w = watch_until_gone(lambda: present_surfaces(p, scope, c, [c]), clock, schedule=(0, 5, 30, 120))
         present_at_end = bool(w.checkpoints[-1]["canaryPresent"]) or w.reappeared

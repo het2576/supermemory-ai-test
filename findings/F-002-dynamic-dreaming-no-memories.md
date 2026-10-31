@@ -1,7 +1,7 @@
 # F-002: default `dreaming: "dynamic"` produced no memory for about 4 hours (8 of 8 documents unavailable at 30 minutes; 5 of 5 arrived at 4h04m)
 
 **Status: final for this setup.** The 2-hour follow-up watch was killed when the session ended, but the server's own timestamps on the leftover namespaces answer the question it was meant to answer (see "When the memories did arrive").
-**Severity (PRD section 10): S2/S3.** Not a privacy issue (no S1 process needed). In the default mode memories arrived about 4 hours after the document, and the docs set an expectation of "several minutes".
+**Severity (scale in REPORT.md): S2/S3.** Not a privacy issue (no S1 process needed). In the default mode memories arrived about 4 hours after the document, and the docs set an expectation of "several minutes".
 **Novelty: corroborates a report that is already public** (see "Upstream"). It is not a new discovery and should not be presented as one.
 
 ## What was observed
