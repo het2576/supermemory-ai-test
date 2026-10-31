@@ -14,3 +14,7 @@ Caveats: free plan, one account, one machine, one short document per namespace (
 ## Addendum (LAT-04, same day)
 
 The caveat above guessed that a lone document might be waiting for a batch. LAT-04 tested that: a namespace with three related documents also produced no memory and no `dreamingStatus: done` within 30 minutes, as did two lone-document namespaces. See `findings/F-002-dynamic-dreaming-no-memories.md`.
+
+## Addendum 2 (2026-10-31): the memories did arrive
+
+The LAT-04 namespaces survived the end of the session. Their server timestamps show dreaming completing about 4 hours 4 minutes after `add` for all five documents, in one 26-second window. Raw responses: `server-timestamps-lat04.json`. See `findings/F-002-dynamic-dreaming-no-memories.md`.

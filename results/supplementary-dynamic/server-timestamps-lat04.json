@@ -1,0 +1,332 @@
+{
+  "captured_at": "2026-10-31T05:24:49.549841Z",
+  "note": "Read-only listing of the three default-mode (dreaming: dynamic) namespaces left by the LAT-04 long observation that was killed when the session ended. Server-side timestamps, not client polling.",
+  "namespaces": {
+    "memtrust_lat04a_88b6eccbe5": {
+      "documents": {
+        "documents": [
+          {
+            "id": "Yr97KDc44E713hoaYquu95",
+            "title": "Odalys keeps the spare key to the archive room in...",
+            "type": "text",
+            "summary": "This note records that Odalys holds a spare key to the archive room, which she keeps in a blue tin. The reference ZQ-LAT-ff2babd48755 likely identifies the location or key type. This information is useful for locating the archive access key for future retrieval or security protocols.",
+            "metadata": {},
+            "url": null,
+            "system": {
+              "status": "done",
+              "dreamingStatus": "done",
+              "memoryCount": 1,
+              "createdAt": "2026-10-30T17:45:53.766Z",
+              "updatedAt": "2026-10-30T21:49:27.822Z",
+              "filepath": null
+            }
+          }
+        ],
+        "chunks": [],
+        "memories": [],
+        "pagination": {
+          "currentPage": 1,
+          "limit": 100,
+          "totalItems": 1,
+          "totalPages": 1,
+          "hasMore": false,
+          "nextCursor": null
+        }
+      },
+      "memories": {
+        "documents": [],
+        "chunks": [],
+        "memories": [
+          {
+            "id": "WLmcC5DesUy2oXEYbmncBH",
+            "memory": "Odaly keeps the spare key to the archive room in a blue tin.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "isStatic": false,
+            "isInference": false,
+            "isLatest": true,
+            "isForgotten": false,
+            "version": 1,
+            "system": {
+              "createdAt": "2026-10-30T21:49:27.822Z",
+              "updatedAt": "2026-10-30T21:49:27.822Z"
+            }
+          }
+        ],
+        "pagination": {
+          "currentPage": 1,
+          "limit": 100,
+          "totalItems": 1,
+          "totalPages": 1,
+          "hasMore": false,
+          "nextCursor": null
+        }
+      }
+    },
+    "memtrust_lat04b_8cea99c143": {
+      "documents": {
+        "documents": [
+          {
+            "id": "hD6s2Nxxp3MCftNVRkt5BR",
+            "title": "Bertrand drives a rented truck on the northern del...",
+            "type": "text",
+            "summary": "Bertrand, a delivery operator, is driving a rented truck along the designated northern delivery route, identified by reference ZQ-LAT-3e31bfe1f03d. This statement captures a logistics event that can be used for fleet management and route tracking purposes.",
+            "metadata": {},
+            "url": null,
+            "system": {
+              "status": "done",
+              "dreamingStatus": "done",
+              "memoryCount": 1,
+              "createdAt": "2026-10-30T17:45:54.911Z",
+              "updatedAt": "2026-10-30T21:49:30.824Z",
+              "filepath": null
+            }
+          }
+        ],
+        "chunks": [],
+        "memories": [],
+        "pagination": {
+          "currentPage": 1,
+          "limit": 100,
+          "totalItems": 1,
+          "totalPages": 1,
+          "hasMore": false,
+          "nextCursor": null
+        }
+      },
+      "memories": {
+        "documents": [],
+        "chunks": [],
+        "memories": [
+          {
+            "id": "MkEuNZBSwSEFGjxtd3iunr",
+            "memory": "Bertrand drives a rented truck on the northern delivery route (ref ZQ-LAT-3e31bfe1f03d).",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "isStatic": false,
+            "isInference": false,
+            "isLatest": true,
+            "isForgotten": false,
+            "version": 1,
+            "system": {
+              "createdAt": "2026-10-30T21:49:30.824Z",
+              "updatedAt": "2026-10-30T21:49:30.824Z"
+            }
+          }
+        ],
+        "pagination": {
+          "currentPage": 1,
+          "limit": 100,
+          "totalItems": 1,
+          "totalPages": 1,
+          "hasMore": false,
+          "nextCursor": null
+        }
+      }
+    },
+    "memtrust_lat04c_6e2b44157a": {
+      "documents": {
+        "documents": [
+          {
+            "id": "1gEesRZSGUzagR2hWgmrnv",
+            "title": "Every Friday Rosalind files the survey report (ref...",
+            "type": "text",
+            "summary": "Every Friday, Rosalind files a survey report identified by reference ZQ\u2011LAT\u2011fb580bdfff4f. This routine submission consolidates survey data collected by the harbour survey team and is part of the\u202fZQ\u2011LAT reporting framework. The document details the status of surveys conducted during the week and is retained for compliance, audit trails, and future reference.",
+            "metadata": {},
+            "url": null,
+            "system": {
+              "status": "done",
+              "dreamingStatus": "done",
+              "memoryCount": 1,
+              "createdAt": "2026-10-30T17:46:00.413Z",
+              "updatedAt": "2026-10-30T21:49:53.484Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "wXcV53SbJevQwjioPUhFc1",
+            "title": "A survey boat belonging to Rosalind is moored at t...",
+            "type": "text",
+            "summary": "A survey vessel owned by Rosalind is moored at the east pier, with the vessel\u2019s location logged under reference ZQ\u2011LAT\u2011669bf9584644. The mooring record indicates the boat\u2019s readiness for upcoming harbour surveys and includes details such as berth location, dock schedule, and any required maintenance checks. This information is essential for scheduling survey operations and managing berth allocations.",
+            "metadata": {},
+            "url": null,
+            "system": {
+              "status": "done",
+              "dreamingStatus": "done",
+              "memoryCount": 1,
+              "createdAt": "2026-10-30T17:45:59.118Z",
+              "updatedAt": "2026-10-30T21:49:53.484Z",
+              "filepath": null
+            }
+          },
+          {
+            "id": "zCSQRbPQR2nMBrTBd8bFnk",
+            "title": "The harbour survey team is led by Rosalind (ref ZQ...",
+            "type": "text",
+            "summary": "The harbour survey team, headed by Rosalind, operates under the reference ZQ\u2011LAT\u2011b185b7522584. This leadership role encompasses coordinating survey crews, approving survey methodologies, and ensuring compliance with regulatory standards. It also involves reporting on survey findings to senior management and maintaining the quality assurance protocols required for harbour assessments.",
+            "metadata": {},
+            "url": null,
+            "system": {
+              "status": "done",
+              "dreamingStatus": "done",
+              "memoryCount": 1,
+              "createdAt": "2026-10-30T17:45:58.074Z",
+              "updatedAt": "2026-10-30T21:49:53.484Z",
+              "filepath": null
+            }
+          }
+        ],
+        "chunks": [],
+        "memories": [],
+        "pagination": {
+          "currentPage": 1,
+          "limit": 100,
+          "totalItems": 3,
+          "totalPages": 1,
+          "hasMore": false,
+          "nextCursor": null
+        }
+      },
+      "memories": {
+        "documents": [],
+        "chunks": [],
+        "memories": [
+          {
+            "id": "HM6y5b7KRPQg6ZCsS6de5A",
+            "memory": "Rosalind files the survey report every Friday.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "isStatic": false,
+            "isInference": false,
+            "isLatest": true,
+            "isForgotten": false,
+            "version": 1,
+            "system": {
+              "createdAt": "2026-10-30T21:49:53.484Z",
+              "updatedAt": "2026-10-30T21:49:53.484Z"
+            }
+          },
+          {
+            "id": "e7szeBTVtJgq6atZZyZGGX",
+            "memory": "Rosalind owns a survey boat moored at the east pier.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "isStatic": false,
+            "isInference": false,
+            "isLatest": true,
+            "isForgotten": false,
+            "version": 1,
+            "system": {
+              "createdAt": "2026-10-30T21:49:53.484Z",
+              "updatedAt": "2026-10-30T21:49:53.484Z"
+            }
+          },
+          {
+            "id": "e1VjkPQZHTpxdEoJ9gkgfA",
+            "memory": "Rosalind leads the harbour survey team.",
+            "metadata": {
+              "temporalContext": {
+                "documentDate": "2026-10-30",
+                "eventDate": null
+              },
+              "temporalEventStartMs": 1793318400000,
+              "temporalEventEndMs": 1793404800000
+            },
+            "isStatic": false,
+            "isInference": false,
+            "isLatest": true,
+            "isForgotten": false,
+            "version": 1,
+            "system": {
+              "createdAt": "2026-10-30T21:49:53.484Z",
+              "updatedAt": "2026-10-30T21:49:53.484Z"
+            }
+          }
+        ],
+        "pagination": {
+          "currentPage": 1,
+          "limit": 100,
+          "totalItems": 3,
+          "totalPages": 1,
+          "hasMore": false,
+          "nextCursor": null
+        }
+      }
+    }
+  },
+  "derived": {
+    "per_document": [
+      {
+        "namespace": "memtrust_lat04a_88b6eccbe5",
+        "doc": "Yr97KDc44E713hoaYquu95",
+        "added": "2026-10-30T17:45:53.766Z",
+        "dreaming_done_updatedAt": "2026-10-30T21:49:27.822Z",
+        "seconds": 14614.056,
+        "status": "done",
+        "dreamingStatus": "done"
+      },
+      {
+        "namespace": "memtrust_lat04b_8cea99c143",
+        "doc": "hD6s2Nxxp3MCftNVRkt5BR",
+        "added": "2026-10-30T17:45:54.911Z",
+        "dreaming_done_updatedAt": "2026-10-30T21:49:30.824Z",
+        "seconds": 14615.913,
+        "status": "done",
+        "dreamingStatus": "done"
+      },
+      {
+        "namespace": "memtrust_lat04c_6e2b44157a",
+        "doc": "1gEesRZSGUzagR2hWgmrnv",
+        "added": "2026-10-30T17:46:00.413Z",
+        "dreaming_done_updatedAt": "2026-10-30T21:49:53.484Z",
+        "seconds": 14633.071,
+        "status": "done",
+        "dreamingStatus": "done"
+      },
+      {
+        "namespace": "memtrust_lat04c_6e2b44157a",
+        "doc": "wXcV53SbJevQwjioPUhFc1",
+        "added": "2026-10-30T17:45:59.118Z",
+        "dreaming_done_updatedAt": "2026-10-30T21:49:53.484Z",
+        "seconds": 14634.366,
+        "status": "done",
+        "dreamingStatus": "done"
+      },
+      {
+        "namespace": "memtrust_lat04c_6e2b44157a",
+        "doc": "zCSQRbPQR2nMBrTBd8bFnk",
+        "added": "2026-10-30T17:45:58.074Z",
+        "dreaming_done_updatedAt": "2026-10-30T21:49:53.484Z",
+        "seconds": 14635.41,
+        "status": "done",
+        "dreamingStatus": "done"
+      }
+    ],
+    "min_s": 14614.056,
+    "max_s": 14635.41
+  }
+}

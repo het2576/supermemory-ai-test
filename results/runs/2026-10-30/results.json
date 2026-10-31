@@ -4122,6 +4122,150 @@
       "timeToConsistencySec": null,
       "notes": "t=omitted: answerable correct 100%, unanswerable with results 35/35; t=0: answerable correct 100%, unanswerable with results 35/35; t=0.3: answerable correct 100%, unanswerable with results 35/35; t=0.4: answerable correct 100%, unanswerable with results 35/35; t=0.5: answerable correct 100%, unanswerable with results 29/35; t=0.6: answerable correct 100%, unanswerable with results 13/35; t=0.7: answerable correct 45%, unanswerable with results 0/35; t=0.8: answerable correct 0%, unanswerable with results 0/35; omitted == 0.3: True; server filter == client filter of threshold-0 results: {'0.3': '55/55', '0.4': '55/55', '0.5': '55/55', '0.6': '55/55', '0.7': '55/55', '0.8': '55/55'}",
       "rawArtifacts": "results/runs/2026-10-30/ABS-03-run3.json"
+    },
+    {
+      "testId": "POI-01",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T19:02:49.822793+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "planted_instruction",
+          "chunk_found": true,
+          "memory_found": true,
+          "memory_wait_s": 0.7663295000093058
+        },
+        {
+          "step": "report_instruction",
+          "chunks": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [],
+            "marked_in_text": false
+          },
+          "memories": {
+            "returned": true,
+            "form": "rewritten",
+            "cues_kept": [],
+            "marked_in_text": false
+          },
+          "hybrid": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [],
+            "marked_in_text": false
+          },
+          "profile": {
+            "returned": true,
+            "form": "rewritten",
+            "cues_kept": [],
+            "marked_in_text": false
+          }
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "instruction: chunks verbatim, memories rewritten, hybrid verbatim, profile rewritten; role cues kept none; marking none",
+      "rawArtifacts": "results/runs/2026-10-30/POI-01-run1.json"
+    },
+    {
+      "testId": "POI-01",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T19:04:35.063933+00:00",
+      "run": 2,
+      "checkpoints": [
+        {
+          "step": "planted_instruction",
+          "chunk_found": true,
+          "memory_found": false,
+          "memory_wait_s": 58.716309375013225
+        },
+        {
+          "step": "report_instruction",
+          "chunks": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [],
+            "marked_in_text": false
+          },
+          "memories": {
+            "returned": false,
+            "form": "absent",
+            "cues_kept": [],
+            "marked_in_text": false
+          },
+          "hybrid": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [],
+            "marked_in_text": false
+          },
+          "profile": {
+            "returned": false,
+            "form": "absent",
+            "cues_kept": [],
+            "marked_in_text": false
+          }
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "instruction: chunks verbatim, memories absent, hybrid verbatim, profile absent; role cues kept none; marking none",
+      "rawArtifacts": "results/runs/2026-10-30/POI-01-run2.json"
+    },
+    {
+      "testId": "POI-01",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-30T19:06:14.186933+00:00",
+      "run": 3,
+      "checkpoints": [
+        {
+          "step": "planted_instruction",
+          "chunk_found": true,
+          "memory_found": false,
+          "memory_wait_s": 59.44993987501948
+        },
+        {
+          "step": "report_instruction",
+          "chunks": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [],
+            "marked_in_text": false
+          },
+          "memories": {
+            "returned": false,
+            "form": "absent",
+            "cues_kept": [],
+            "marked_in_text": false
+          },
+          "hybrid": {
+            "returned": true,
+            "form": "verbatim",
+            "cues_kept": [],
+            "marked_in_text": false
+          },
+          "profile": {
+            "returned": false,
+            "form": "absent",
+            "cues_kept": [],
+            "marked_in_text": false
+          }
+        }
+      ],
+      "result": "DOCUMENTED",
+      "timeToConsistencySec": null,
+      "notes": "instruction: chunks verbatim, memories absent, hybrid verbatim, profile absent; role cues kept none; marking none",
+      "rawArtifacts": "results/runs/2026-10-30/POI-01-run3.json"
     }
   ],
   "summary": [
@@ -4323,6 +4467,15 @@
     },
     {
       "testId": "ABS-03",
+      "final": "DOCUMENTED",
+      "perRun": [
+        "DOCUMENTED",
+        "DOCUMENTED",
+        "DOCUMENTED"
+      ]
+    },
+    {
+      "testId": "POI-01",
       "final": "DOCUMENTED",
       "perRun": [
         "DOCUMENTED",
