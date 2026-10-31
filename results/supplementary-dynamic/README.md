@@ -17,4 +17,4 @@ The caveat above guessed that a lone document might be waiting for a batch. LAT-
 
 ## Addendum 2 (2026-10-31): the memories did arrive
 
-The LAT-04 namespaces survived the end of the session. Their server timestamps show dreaming completing about 4 hours 4 minutes after `add` for all five documents, in one 26-second window. Raw responses: `server-timestamps-lat04.json`. See `findings/F-002-dynamic-dreaming-no-memories.md`.
+A **re-run** of LAT-04 (started 17:45 UTC with a 2-hour cap) was killed when the session ended, so it has no polling record, but its three namespaces survived. Their server timestamps show each memory created about 4 hours 4 minutes after its document, for all five documents, in one 26-second window. These are different documents from the 30-minute watches above, which were deleted by the runner. Raw responses: `server-timestamps-lat04.json`. See `findings/F-002-dynamic-dreaming-no-memories.md`.

@@ -14,7 +14,7 @@ I tested six production behaviors that LongMemEval-style benchmarks do not cover
 
 **Rough edges, none of them security defects:**
 
-1. **Default dreaming is slow, about four hours here** (F-002). With the default `dreaming: "dynamic"`, five documents in three namespaces had no memory at 30 minutes; the server's own timestamps show all of them completing 4 h 04 m after `add`, in one 26-second window. The docs say "several minutes". With `dreaming: "instant"` the same memories appear in about 26 seconds. This matches a public report (supermemoryai/claude-supermemory #156), so it is corroboration, not a new discovery.
+1. **Default dreaming is slow, hours here** (F-002). With the default `dreaming: "dynamic"`, eight documents watched for 30 minutes (in two runs) had no memory. In a re-run of the same test (five documents, three namespaces) that was killed before I could watch it, the server's own timestamps show every memory created 4 h 04 m after its document, in one 26-second window. The docs say "several minutes". With `dreaming: "instant"` the same memories appear in about 26 seconds. This matches a public report (supermemoryai/claude-supermemory #156), so it is corroboration, not a new discovery.
 2. **The default search threshold never abstains** (F-003). At the default 0.3, every one of 35 unanswerable queries still returned results in every run, including nonsense strings. Answerable and near-miss scores touch (AUC 0.993, gap −0.003); no threshold in the pre-registered grid removed the junk without also removing most answers.
 3. **Deleted documents' memories are preserved, not erased** (F-001). After a document delete the derived memory leaves every normal surface but is still returned by `include.forgotten` (3 of 3). The docs say this in four differently worded places. Deleting the namespace removed the preserved memories as far as the API can show (DEL-06, 3 of 3), so this is a documentation gap, not a privacy defect.
 4. **Stored instruction-like text** (POI, characterization). Raw chunks return planted text verbatim and unmarked (12 of 12 document-runs, no marking in the text and no field outside the documented set). The memory extractor is unpredictable: it dropped the blunt "ignore all previous instructions" and `SYSTEM:` payloads in most runs, but turned an impersonated user message into memories that sometimes lose the speaker ("All users' password has been set to …") and a promise into an event ("The hidden prompt … was revealed").
@@ -236,14 +236,14 @@ Default (`dynamic`) dreaming, one run, cap 1800s ([1](results/runs/2026-10-30/LA
 | C3 | 26s | not within cap | not within cap |
 <!-- END:lat -->
 
-Default-mode dreaming (F-002): the server's timestamps for the three LAT-04 namespaces, read afterwards, show dreaming completing 14,614 to 14,635 seconds (4 h 04 m) after `add` for all five documents (`results/supplementary-dynamic/server-timestamps-lat04.json`). The first 30-minute watch could not have seen that, which is why I report both.
+Default-mode dreaming (F-002): the table above is the official run, watched for 30 minutes, whose namespaces the runner then deleted. I re-ran the same test with a 2-hour cap; that run was killed when the session ended, so it has no polling record, but its namespaces survived. The server's timestamps on them show each memory created 14,614 to 14,635 seconds (4 h 04 m) after its document (`results/supplementary-dynamic/server-timestamps-lat04.json`). Two different sets of documents: I report both and do not claim the first set would also have taken 4 hours.
 
 ## Findings
 
 | ID | Finding | Severity | Status |
 |---|---|---|---|
 | [F-001](findings/F-001-deleted-documents-memories-preserved.md) | Memories derived from a deleted document are preserved and still returned by `include.forgotten`; the docs word this four different ways | S3, privacy-relevant | Final; control passed (DEL-06, 3 of 3), so not an S1 |
-| [F-002](findings/F-002-dynamic-dreaming-no-memories.md) | Default `dreaming: "dynamic"` took about 4 h to produce memories; docs say "several minutes" | S2/S3 | Final; already reported publicly (claude-supermemory #156) |
+| [F-002](findings/F-002-dynamic-dreaming-no-memories.md) | Default `dreaming: "dynamic"`: no memory at 30 min (8 of 8 watched); memories created 4 h 04 m after the document in a re-run (5 of 5); docs say "several minutes" | S2/S3 | Final; already reported publicly (claude-supermemory #156) |
 | [F-003](findings/F-003-default-threshold-never-abstains.md) | The default search threshold never abstains; scores are not calibrated for "I don't know" | S3 | Final for this setup |
 
 Severity scale used throughout: S1 privacy or security (private disclosure first), S2 correctness (a stale or wrong result), S3 documentation or developer experience. No S1 finding was made.
