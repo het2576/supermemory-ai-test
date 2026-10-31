@@ -22,16 +22,21 @@ DATE_GLOB = "runs/*"
 
 
 def load(results: Path) -> dict[str, Any]:
-    """{"summary": [...], "runs": {test_id: [payload per run, in run order]}, "files": {test_id: [paths]}}"""
-    day = sorted((results / "runs").iterdir())[-1]
-    summary = json.loads((day / "results.json").read_text())["summary"]
+    """Merge every day folder: {"summary": [...], "runs": {test_id: [payload per run, in run order]}, "files": {test_id: [paths]}}.
+    A test that appears on more than one day (a rerun) is taken from the latest day only."""
+    summary: dict[str, dict] = {}
     runs: dict[str, list[dict]] = {}
     files: dict[str, list[Path]] = {}
-    for f in sorted(day.glob("*-run*.json"), key=lambda p: (p.name.rsplit("-run", 1)[0], int(re.search(r"run(\d+)", p.name).group(1)))):  # type: ignore[union-attr]
-        tid = f.name.rsplit("-run", 1)[0]
-        runs.setdefault(tid, []).append(json.loads(f.read_text()))
-        files.setdefault(tid, []).append(f)
-    return {"summary": summary, "runs": runs, "files": files, "day": day}
+    for day in sorted(d for d in (results / "runs").iterdir() if (d / "results.json").exists()):
+        for entry in json.loads((day / "results.json").read_text())["summary"]:
+            tid = entry["testId"]
+            summary[tid] = entry
+            runs[tid], files[tid] = [], []
+            found = sorted(day.glob(f"{tid}-run*.json"), key=lambda f: int(re.search(r"run(\d+)", f.name).group(1)))  # type: ignore[union-attr]
+            for f in found:
+                runs[tid].append(json.loads(f.read_text()))
+                files[tid].append(f)
+    return {"summary": list(summary.values()), "runs": runs, "files": files}
 
 
 def _runs(per_run: list[str]) -> str:

@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-31",
+  "records": [
+    {
+      "testId": "DEL-06",
+      "provider": "supermemory",
+      "client": "supermemory-python-sdk",
+      "sdkVersion": "5.0.1",
+      "apiVersion": "v5",
+      "date": "2026-10-31T05:27:06.869194+00:00",
+      "run": 1,
+      "checkpoints": [
+        {
+          "step": "add_doc1",
+          "attempt": 1,
+          "scope": "memtrust_del06_599633c6c5",
+          "http": 200,
+          "id": "B6Mn9nubgBHvrpA9JkPtvE"
+        },
+        {
+          "step": "processed_doc1",
+          "attempt": 1,
+          "status": "done",
+          "dreaming": "done",
+          "elapsed_s": 34.17256962499232
+        },
+        {
+          "step": "memory_for_doc1",
+          "attempt": 1,
+          "token": "ZQ-COR-68e811714dd9",
+          "found": true,
+          "elapsed_s": 0.7094164580048528
+        },
+        {
+          "step": "delete",
+          "http": 200,
+          "count": 1,
+          "errors": []
+        },
+        {
+          "t": 0,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "t": 10,
+          "confirm": true,
+          "canaryPresent": false,
+          "surfaces": []
+        },
+        {
+          "step": "preserved_before_namespace_delete",
+          "surfaces": [
+            "search:memories+forgotten",
+            "search:hybrid+forgotten"
+          ]
+        },
+        {
+          "step": "namespace_delete",
+          "http": 200
+        },
+        {
+          "step": "namespace_recreated",
+          "elapsed_s": 22.720743791025598
+        },
+        {
+          "t": 0,
+          "leaks": []
+        },
+        {
+          "t": 5,
+          "leaks": []
+        },
+        {
+          "t": 30,
+          "leaks": []
+        }
+      ],
+      "result": "PASS",
+      "timeToConsistencySec": null,
+      "notes": "preserved before the namespace delete via ['search:memories+forgotten', 'search:hybrid+forgotten']; absent from every surface after it",
+      "rawArtifacts": "smoke/pilot/runs/2026-10-31/DEL-06-run1.json"
+    }
+  ],
+  "summary": [
+    {
+      "testId": "DEL-06",
+      "final": "PASS",
+      "perRun": [
+        "PASS"
+      ]
+    }
+  ]
+}

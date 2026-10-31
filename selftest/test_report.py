@@ -72,6 +72,9 @@ def test_poi_block_counts_forms_over_runs_and_lists_unexpected_fields(tmp_path):
 
     for n, mem in enumerate(("absent", "absent", "rewritten"), 1):
         run_file(day, "POI-01", n, "DOCUMENTED", extra={"reports": {"instruction": {"chunks": surf("verbatim"), "memories": surf(mem, extra=["provenance"] if n == 3 else [])}}})
+    rj = json.loads((day / "results.json").read_text())
+    rj["summary"].append({"testId": "POI-01", "final": "DOCUMENTED", "perRun": ["DOCUMENTED"] * 3})
+    (day / "results.json").write_text(json.dumps(rj))  # a test counts only once it has finished all its runs
     text = report.block_poi(report.load(results), tmp_path)
     assert "| POI-01 instruction | chunks | verbatim 3/3 | - | 0/3 | none |" in text
     assert "| POI-01 instruction | memories | absent 2/3, rewritten 1/3 | - | 0/3 | provenance |" in text
@@ -101,3 +104,26 @@ def test_the_gap_between_searchable_and_done_is_a_median_not_a_maximum(tmp_path)
     (day / "results.json").write_text(json.dumps({"date": "x", "records": [], "summary": [{"testId": "LAT-01", "final": "DOCUMENTED", "perRun": ["DOCUMENTED"]}]}))
     text = report.block_lat(report.load(results), tmp_path)
     assert "3 of 3 documents (median gap 2.0s)" in text  # gaps are 1, 2 and 9
+
+
+def test_results_from_several_days_are_merged_and_a_rerun_takes_the_latest_day(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    results = make_results(tmp_path)  # day 2026-10-30 has DEL-01, ISO-01, LAT-01
+    day2 = results / "runs" / "2026-10-31"
+    day2.mkdir()
+    run_file(day2, "POI-02", 1, "DOCUMENTED")
+    run_file(day2, "DEL-01", 1, "FAIL", ttc=None, notes="rerun")  # DEL-01 rerun on the next day: only this one counts
+    (day2 / "results.json").write_text(json.dumps({"date": "2026-10-31", "records": [], "summary": [
+        {"testId": "POI-02", "final": "DOCUMENTED", "perRun": ["DOCUMENTED"]}, {"testId": "DEL-01", "final": "FAIL", "perRun": ["FAIL"]}]}))
+    data = report.load(results)
+    by_id = {s["testId"]: s for s in data["summary"]}
+    assert set(by_id) == {"DEL-01", "ISO-01", "LAT-01", "POI-02"}  # nothing from the first day was dropped
+    assert by_id["DEL-01"]["final"] == "FAIL" and len(data["files"]["DEL-01"]) == 1 and "2026-10-31" in data["files"]["DEL-01"][0].as_posix()
+    assert len(data["files"]["ISO-01"]) == 3 and "2026-10-30" in data["files"]["ISO-01"][0].as_posix()
+
+
+def test_a_test_that_never_finished_is_left_out_not_half_reported(tmp_path):
+    results = make_results(tmp_path)
+    run_file(results / "runs" / "2026-10-30", "POI-02", 1, "DOCUMENTED")  # run file exists, but no summary entry: interrupted
+    data = report.load(results)
+    assert "POI-02" not in data["files"] and "POI-02" not in [s["testId"] for s in data["summary"]]
